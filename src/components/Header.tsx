@@ -13,11 +13,9 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const openWhatsAppVisit = () => {
+    const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
+    window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
     setIsMenuOpen(false);
   };
 
@@ -105,7 +103,7 @@ const Header = () => {
               </DropdownMenu>
 
               <Button 
-                onClick={() => scrollToSection("agendar")}
+                onClick={openWhatsAppVisit}
                 className="bg-red-600 hover:bg-red-700 text-white hidden md:block text-xs sm:text-sm px-3 sm:px-4 py-2"
               >
                 Agende uma Visita
@@ -176,7 +174,7 @@ const Header = () => {
                 </div>
 
                 <Button 
-                  onClick={() => scrollToSection("agendar")}
+                  onClick={openWhatsAppVisit}
                   className="bg-red-600 hover:bg-red-700 text-white mt-3 w-full"
                 >
                   Agende uma Visita

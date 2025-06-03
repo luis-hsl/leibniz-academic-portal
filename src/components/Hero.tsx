@@ -3,11 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const openWhatsAppVisit = () => {
+    const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
+    window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
   };
 
   const openWhatsApp = () => {
@@ -40,7 +38,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4 sm:px-0">
             <Button 
-              onClick={() => scrollToSection("agendar")}
+              onClick={openWhatsAppVisit}
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 hover-scale w-full sm:w-auto"
             >
