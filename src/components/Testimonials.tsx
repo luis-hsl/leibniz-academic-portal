@@ -8,25 +8,29 @@ const Testimonials = () => {
       name: "Ana Carolina Silva",
       course: "Medicina - UFMT",
       text: "O Colégio Leibniz foi fundamental na minha aprovação. Os professores são excepcionais e o material do Sistema Bernoulli é completo e atualizado.",
-      year: "2023"
+      year: "2023",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "João Pedro Santos",
       course: "Engenharia - UFSCar",
       text: "A metodologia do colégio me preparou não só para o vestibular, mas para a vida acadêmica. Gratidão eterna por todo apoio recebido.",
-      year: "2023"
+      year: "2023",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Maria Eduarda Costa",
       course: "Direito - UNEMAT",
       text: "Encontrei no Leibniz mais que uma escola, encontrei uma família. O acompanhamento individual fez toda a diferença na minha aprovação.",
-      year: "2022"
+      year: "2022",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Gabriel Oliveira",
       course: "Odontologia - UFMT",
       text: "Os simulados e as aulas de revisão foram essenciais. O Colégio Leibniz tem os melhores professores de Rondonópolis.",
-      year: "2022"
+      year: "2022",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=400&fit=crop&crop=face"
     }
   ];
 
@@ -57,10 +61,17 @@ const Testimonials = () => {
                     "{testimonial.text}"
                   </p>
                   
-                  <div className="border-t pt-4">
-                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-red-600 font-semibold">{testimonial.course}</p>
-                    <p className="text-sm text-gray-500">Aprovado em {testimonial.year}</p>
+                  <div className="border-t pt-4 flex items-center gap-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                      <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                      <p className="text-red-600 font-semibold">{testimonial.course}</p>
+                      <p className="text-sm text-gray-500">Aprovado em {testimonial.year}</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
