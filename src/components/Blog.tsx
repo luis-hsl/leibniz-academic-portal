@@ -2,36 +2,37 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const posts = [
     {
-      title: "Como se preparar para o ENEM 2024",
-      excerpt: "Dicas essenciais e cronograma de estudos para maximizar sua performance no ENEM.",
-      date: "15 Mai 2024",
-      author: "Prof. Carlos Silva",
+      title: "ENEM 2024: Principais mudanças e como se preparar",
+      excerpt: "O Exame Nacional do Ensino Médio trouxe algumas novidades importantes. Entenda as principais mudanças na estrutura da prova.",
+      date: "15 Nov 2024",
+      author: "Equipe Pedagógica",
       category: "Vestibular"
     },
     {
       title: "A importância da educação socioemocional",
-      excerpt: "Entenda como desenvolvemos as competências socioemocionais dos nossos alunos.",
-      date: "12 Mai 2024",
-      author: "Psicóloga Ana Costa",
+      excerpt: "Competências socioemocionais são fundamentais para o sucesso acadêmico e pessoal dos estudantes.",
+      date: "10 Nov 2024",
+      author: "Prof. Ana Santos",
       category: "Educação"
     },
     {
-      title: "Projeto Científico conquista 1º lugar",
-      excerpt: "Alunos do Ensino Médio vencem feira de ciências regional com projeto inovador.",
-      date: "10 Mai 2024",
-      author: "Prof. Maria Santos",
-      category: "Projetos"
+      title: "Sistema Bernoulli: metodologia de aprovação",
+      excerpt: "Conheça os pilares da metodologia Bernoulli que tem levado estudantes às melhores universidades.",
+      date: "5 Nov 2024",
+      author: "Coordenação Acadêmica",
+      category: "Metodologia"
     },
     {
-      title: "Metodologia Bernoulli: diferenciais",
-      excerpt: "Conheça os pilares da metodologia que nos torna referência em aprovações.",
-      date: "08 Mai 2024",
-      author: "Coordenação Pedagógica",
-      category: "Metodologia"
+      title: "Projeto de Ciências conquista reconhecimento",
+      excerpt: "Alunos do Ensino Médio desenvolveram projeto inovador sobre sustentabilidade premiado nacionalmente.",
+      date: "28 Out 2024",
+      author: "Prof. Carlos Eduardo",
+      category: "Projetos"
     }
   ];
 
@@ -83,9 +84,11 @@ const Blog = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
-              Ver Todas as Notícias
-            </Button>
+            <Link to="/blog">
+              <Button className="bg-red-600 hover:bg-red-700 text-white">
+                Ver Todas as Notícias
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
