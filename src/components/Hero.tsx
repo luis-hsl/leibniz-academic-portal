@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
 
@@ -16,7 +15,16 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-red-600 text-white py-20">
+    <section 
+      id="inicio" 
+      className="relative text-white py-20"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
@@ -85,4 +93,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
