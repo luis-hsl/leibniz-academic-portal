@@ -10,6 +10,10 @@ const Hero = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open("https://wa.me/5566996781284", "_blank");
+  };
+
   return (
     <section id="inicio" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-red-600 text-white py-20">
       <div className="container mx-auto px-4">
@@ -33,12 +37,12 @@ const Hero = () => {
               Agende uma Visita
             </Button>
             <Button 
-              onClick={() => scrollToSection("sobre")}
+              onClick={openWhatsApp}
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-4"
             >
-              Conheça Nossa História
+              Fale com um Atendente
             </Button>
           </div>
 
