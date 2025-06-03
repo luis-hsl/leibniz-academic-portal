@@ -1,7 +1,14 @@
 
 import { useState } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +20,13 @@ const Header = () => {
     }
     setIsMenuOpen(false);
   };
+
+  const studentPortals = [
+    { name: "Portal Bernoulli", url: "https://mb4.bernoulli.com.br/login" },
+    { name: "Portal do Professor", url: "https://www.sponteeducacional.net.br/" },
+    { name: "Portal do Aluno", url: "https://portal.sponteeducacional.net.br/Default.aspx" },
+    { name: "Portal Redação", url: "https://app.redacaonline.com.br/colegio-leibniz/aluno/login" }
+  ];
 
   return (
     <>
@@ -40,36 +54,53 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png" 
-                alt="Colégio Leibniz" 
-                className="h-24 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png" 
+                  alt="Colégio Leibniz" 
+                  className="h-16 w-auto"
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-8">
-              <button onClick={() => scrollToSection("inicio")} className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-red-600 transition-colors">
                 Início
-              </button>
-              <button onClick={() => scrollToSection("sobre")} className="text-gray-700 hover:text-red-600 transition-colors">
-                Sobre
-              </button>
-              <button onClick={() => scrollToSection("ensino")} className="text-gray-700 hover:text-red-600 transition-colors">
+              </Link>
+              <Link to="/sobre-nos" className="text-gray-700 hover:text-red-600 transition-colors">
+                Sobre Nós
+              </Link>
+              <Link to="/niveis-ensino" className="text-gray-700 hover:text-red-600 transition-colors">
                 Níveis de Ensino
-              </button>
-              <button onClick={() => scrollToSection("depoimentos")} className="text-gray-700 hover:text-red-600 transition-colors">
-                Depoimentos
-              </button>
-              <button onClick={() => scrollToSection("blog")} className="text-gray-700 hover:text-red-600 transition-colors">
-                Blog
-              </button>
-              <button onClick={() => scrollToSection("contato")} className="text-gray-700 hover:text-red-600 transition-colors">
+              </Link>
+              <Link to="/o-colegio" className="text-gray-700 hover:text-red-600 transition-colors">
+                O Colégio
+              </Link>
+              <Link to="/contato" className="text-gray-700 hover:text-red-600 transition-colors">
                 Contato
-              </button>
+              </Link>
             </nav>
 
             <div className="flex items-center space-x-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="hidden md:flex items-center space-x-1">
+                    <span>Área do Aluno</span>
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  {studentPortals.map((portal) => (
+                    <DropdownMenuItem key={portal.name} asChild>
+                      <a href={portal.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                        {portal.name}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               <Button 
                 onClick={() => scrollToSection("agendar")}
                 className="bg-red-600 hover:bg-red-700 text-white hidden md:block"
@@ -91,24 +122,38 @@ const Header = () => {
           {isMenuOpen && (
             <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
               <div className="flex flex-col space-y-2">
-                <button onClick={() => scrollToSection("inicio")} className="text-left text-gray-700 hover:text-red-600 py-2">
+                <Link to="/" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
                   Início
-                </button>
-                <button onClick={() => scrollToSection("sobre")} className="text-left text-gray-700 hover:text-red-600 py-2">
-                  Sobre
-                </button>
-                <button onClick={() => scrollToSection("ensino")} className="text-left text-gray-700 hover:text-red-600 py-2">
+                </Link>
+                <Link to="/sobre-nos" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                  Sobre Nós
+                </Link>
+                <Link to="/niveis-ensino" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
                   Níveis de Ensino
-                </button>
-                <button onClick={() => scrollToSection("depoimentos")} className="text-left text-gray-700 hover:text-red-600 py-2">
-                  Depoimentos
-                </button>
-                <button onClick={() => scrollToSection("blog")} className="text-left text-gray-700 hover:text-red-600 py-2">
-                  Blog
-                </button>
-                <button onClick={() => scrollToSection("contato")} className="text-left text-gray-700 hover:text-red-600 py-2">
+                </Link>
+                <Link to="/o-colegio" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                  O Colégio
+                </Link>
+                <Link to="/contato" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
                   Contato
-                </button>
+                </Link>
+                
+                {/* Mobile Student Portals */}
+                <div className="pt-2 border-t">
+                  <p className="text-sm text-gray-500 mb-2">Área do Aluno:</p>
+                  {studentPortals.map((portal) => (
+                    <a 
+                      key={portal.name}
+                      href={portal.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block text-left text-gray-700 hover:text-red-600 py-1 pl-4 text-sm"
+                    >
+                      {portal.name}
+                    </a>
+                  ))}
+                </div>
+
                 <Button 
                   onClick={() => scrollToSection("agendar")}
                   className="bg-red-600 hover:bg-red-700 text-white mt-2"
