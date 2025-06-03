@@ -37,45 +37,45 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Blog e Notícias</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Blog e Notícias</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Fique por dentro das novidades, dicas educacionais e conquistas da nossa comunidade escolar.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {posts.map((post, index) => (
-              <Card key={index} className="hover-scale shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+              <Card key={index} className="hover-scale shadow-lg h-full flex flex-col">
+                <CardHeader className="flex-shrink-0">
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-2 flex-wrap gap-2">
                     <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-xs font-semibold">
                       {post.category}
                     </span>
                     <div className="flex items-center space-x-1">
                       <Calendar className="h-4 w-4" />
-                      <span>{post.date}</span>
+                      <span className="text-xs sm:text-sm">{post.date}</span>
                     </div>
                   </div>
-                  <CardTitle className="text-xl text-gray-900 hover:text-red-600 transition-colors">
+                  <CardTitle className="text-lg sm:text-xl text-gray-900 hover:text-red-600 transition-colors leading-tight">
                     {post.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                <CardContent className="flex-grow flex flex-col justify-between">
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base flex-grow">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
                       <User className="h-4 w-4" />
-                      <span>{post.author}</span>
+                      <span className="text-xs sm:text-sm">{post.author}</span>
                     </div>
-                    <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700">
+                    <Button variant="ghost" size="sm" className="text-red-600 hover:text-red-700 text-xs sm:text-sm px-2 py-1">
                       Ler mais
-                      <ArrowRight className="h-4 w-4 ml-1" />
+                      <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
                     </Button>
                   </div>
                 </CardContent>
@@ -83,9 +83,9 @@ const Blog = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link to="/blog">
-              <Button className="bg-red-600 hover:bg-red-700 text-white">
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 sm:px-8 sm:py-3">
                 Ver Todas as Notícias
               </Button>
             </Link>

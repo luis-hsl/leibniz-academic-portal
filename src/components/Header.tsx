@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-blue-900 text-white py-2 px-4">
+      <div className="bg-blue-900 text-white py-2 px-4 hidden md:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <span className="flex items-center">
@@ -43,7 +43,7 @@ const Header = () => {
               admleibniz@gmail.com
             </span>
           </div>
-          <div className="hidden md:block">
+          <div>
             <span>WhatsApp: (66) 99678-1284</span>
           </div>
         </div>
@@ -51,49 +51,49 @@ const Header = () => {
 
       {/* Main header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <Link to="/">
                 <img 
                   src="/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png" 
                   alt="Colégio Leibniz" 
-                  className="h-16 w-auto"
+                  className="h-12 sm:h-16 w-auto"
                 />
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-red-600 transition-colors">
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
+              <Link to="/" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 Início
               </Link>
-              <Link to="/sobre-nos" className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/sobre-nos" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 Sobre Nós
               </Link>
-              <Link to="/niveis-ensino" className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/niveis-ensino" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 Níveis de Ensino
               </Link>
-              <Link to="/o-colegio" className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/o-colegio" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 O Colégio
               </Link>
-              <Link to="/blog" className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/blog" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 Blog
               </Link>
-              <Link to="/contato" className="text-gray-700 hover:text-red-600 transition-colors">
+              <Link to="/contato" className="text-gray-700 hover:text-red-600 transition-colors text-sm xl:text-base">
                 Contato
               </Link>
             </nav>
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="hidden md:flex items-center space-x-1">
+                  <Button variant="outline" className="hidden md:flex items-center space-x-1 text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2">
                     <span>Área do Aluno</span>
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3 w-3 sm:h-4 sm:w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuContent align="end" className="w-48 z-50">
                   {studentPortals.map((portal) => (
                     <DropdownMenuItem key={portal.name} asChild>
                       <a href={portal.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
@@ -106,7 +106,7 @@ const Header = () => {
 
               <Button 
                 onClick={() => scrollToSection("agendar")}
-                className="bg-red-600 hover:bg-red-700 text-white hidden md:block"
+                className="bg-red-600 hover:bg-red-700 text-white hidden md:block text-xs sm:text-sm px-3 sm:px-4 py-2"
               >
                 Agende uma Visita
               </Button>
@@ -124,36 +124,51 @@ const Header = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
-              <div className="flex flex-col space-y-2">
-                <Link to="/" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+              <div className="flex flex-col space-y-3">
+                <Link to="/" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   Início
                 </Link>
-                <Link to="/sobre-nos" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/sobre-nos" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   Sobre Nós
                 </Link>
-                <Link to="/niveis-ensino" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/niveis-ensino" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   Níveis de Ensino
                 </Link>
-                <Link to="/o-colegio" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/o-colegio" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   O Colégio
                 </Link>
-                <Link to="/blog" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/blog" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   Blog
                 </Link>
-                <Link to="/contato" className="text-left text-gray-700 hover:text-red-600 py-2" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contato" className="text-left text-gray-700 hover:text-red-600 py-2 text-base" onClick={() => setIsMenuOpen(false)}>
                   Contato
                 </Link>
                 
+                {/* Mobile Top Bar Info */}
+                <div className="pt-3 border-t md:hidden">
+                  <div className="flex flex-col space-y-2 text-sm text-gray-600">
+                    <span className="flex items-center">
+                      <Phone className="h-4 w-4 mr-2" />
+                      (66) 3421-8824
+                    </span>
+                    <span className="flex items-center">
+                      <Mail className="h-4 w-4 mr-2" />
+                      admleibniz@gmail.com
+                    </span>
+                    <span>WhatsApp: (66) 99678-1284</span>
+                  </div>
+                </div>
+                
                 {/* Mobile Student Portals */}
-                <div className="pt-2 border-t">
-                  <p className="text-sm text-gray-500 mb-2">Área do Aluno:</p>
+                <div className="pt-3 border-t">
+                  <p className="text-sm text-gray-500 mb-3">Área do Aluno:</p>
                   {studentPortals.map((portal) => (
                     <a 
                       key={portal.name}
                       href={portal.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block text-left text-gray-700 hover:text-red-600 py-1 pl-4 text-sm"
+                      className="block text-left text-gray-700 hover:text-red-600 py-2 pl-4 text-sm"
                     >
                       {portal.name}
                     </a>
@@ -162,7 +177,7 @@ const Header = () => {
 
                 <Button 
                   onClick={() => scrollToSection("agendar")}
-                  className="bg-red-600 hover:bg-red-700 text-white mt-2"
+                  className="bg-red-600 hover:bg-red-700 text-white mt-3 w-full"
                 >
                   Agende uma Visita
                 </Button>

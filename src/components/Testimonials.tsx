@@ -54,12 +54,12 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-20 bg-blue-50">
-      <div className="container mx-auto px-4">
+    <section id="depoimentos" className="py-12 sm:py-16 md:py-20 bg-blue-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Nossos Alunos Aprovados</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Nossos Alunos Aprovados</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Conheça alguns dos nossos alunos que realizaram o sonho da aprovação nas melhores universidades.
             </p>
           </div>
@@ -74,38 +74,39 @@ const Testimonials = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3 lg:basis-1/4">
-                  <div className="p-2">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4">
+                  <div className="p-1 sm:p-2">
                     <img 
                       src={student.image} 
                       alt={student.name}
                       className="w-full h-auto rounded-lg shadow-lg hover-scale transition-transform duration-300"
                     />
+                    <p className="text-center mt-2 text-xs sm:text-sm text-gray-600 font-medium">{student.name}</p>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="hidden sm:flex -left-12" />
+            <CarouselNext className="hidden sm:flex -right-12" />
           </Carousel>
 
           {/* Statistics */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <h3 className="text-3xl font-bold text-red-600">95%</h3>
-              <p className="text-gray-600">Taxa de Aprovação</p>
+          <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
+            <div className="p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-red-600">95%</h3>
+              <p className="text-gray-600 text-sm sm:text-base">Taxa de Aprovação</p>
             </div>
-            <div>
-              <h3 className="text-3xl font-bold text-blue-600">1000+</h3>
-              <p className="text-gray-600">Alunos Aprovados</p>
+            <div className="p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue-600">1000+</h3>
+              <p className="text-gray-600 text-sm sm:text-base">Alunos Aprovados</p>
             </div>
-            <div>
-              <h3 className="text-3xl font-bold text-green-600">50+</h3>
-              <p className="text-gray-600">Universidades</p>
+            <div className="p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-green-600">50+</h3>
+              <p className="text-gray-600 text-sm sm:text-base">Universidades</p>
             </div>
-            <div>
-              <h3 className="text-3xl font-bold text-purple-600">21</h3>
-              <p className="text-gray-600">Anos de Tradição</p>
+            <div className="p-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-purple-600">21</h3>
+              <p className="text-gray-600 text-sm sm:text-base">Anos de Tradição</p>
             </div>
           </div>
         </div>
