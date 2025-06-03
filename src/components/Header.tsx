@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,7 +43,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png" 
                 alt="Colégio Leibniz" 
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
             </div>
 
