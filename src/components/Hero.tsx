@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
 
@@ -40,9 +39,8 @@ const Hero = () => {
               onClick={openWhatsApp}
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-4"
+              className="border-white text-white bg-transparent text-lg px-8 py-4"
             >
-              Fale com um Atendente
             </Button>
           </div>
 
