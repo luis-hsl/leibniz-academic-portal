@@ -20,7 +20,7 @@ const Hero = () => {
       id="inicio" 
       className="relative text-white py-20"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
