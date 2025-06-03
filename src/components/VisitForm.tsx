@@ -33,12 +33,13 @@ const VisitForm = () => {
       return;
     }
 
-    // Here you would typically send the data to a backend
-    console.log("Form submitted:", formData);
+    // Send WhatsApp message with form data
+    const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
+    window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
     
     toast({
-      title: "Visita agendada com sucesso!",
-      description: "Entraremos em contato em breve para confirmar sua visita.",
+      title: "Redirecionando para WhatsApp!",
+      description: "Você será direcionado para o WhatsApp para finalizar o agendamento.",
     });
 
     // Reset form

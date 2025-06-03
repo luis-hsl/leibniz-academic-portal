@@ -3,7 +3,8 @@ import WhatsAppIcon from "./WhatsAppIcon";
 
 const WhatsAppButton = () => {
   const openWhatsApp = () => {
-    window.open("https://wa.me/5566996781284", "_blank");
+    const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
+    window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
   };
 
   return (
