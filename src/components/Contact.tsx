@@ -28,9 +28,9 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-white">Localização</h3>
             </div>
             <div className="space-y-2 text-white">
-              <p className="font-medium">Avenida Paulista, 720</p>
-              <p className="font-medium">Parque Sagrada Família</p>
-              <p className="font-medium">Rondonópolis - MT, 78735-223</p>
+              <p className="text-white">Avenida Paulista, 720</p>
+              <p className="text-white">Parque Sagrada Família</p>
+              <p className="text-white">Rondonópolis - MT, 78735-223</p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const Contact = () => {
             <div className="space-y-3 text-white">
               <a 
                 href="tel:6634218824" 
-                className="flex items-center hover:text-yellow-300 transition-colors font-medium"
+                className="flex items-center hover:text-yellow-300 transition-colors text-white"
               >
                 <Phone className="h-4 w-4 mr-2" />
                 (66) 3421-8824
@@ -52,14 +52,14 @@ const Contact = () => {
                 href="https://wa.me/5566996781284" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center hover:text-green-300 transition-colors font-medium"
+                className="flex items-center hover:text-green-300 transition-colors text-white"
               >
                 <Phone className="h-4 w-4 mr-2" />
                 (66) 99678-1284
               </a>
               <a 
                 href="mailto:admleibniz@gmail.com"
-                className="flex items-center hover:text-blue-300 transition-colors font-medium"
+                className="flex items-center hover:text-blue-300 transition-colors text-white"
               >
                 <Mail className="h-4 w-4 mr-2" />
                 admleibniz@gmail.com
@@ -74,9 +74,9 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-white">Horário de Funcionamento</h3>
             </div>
             <div className="space-y-2 text-white">
-              <p className="font-medium">Segunda à sexta: 7h às 23h</p>
-              <p className="font-medium">Sábado: 7h às 18h</p>
-              <p className="font-medium">Domingo: Fechado</p>
+              <p className="text-white">Segunda à sexta: 7h às 23h</p>
+              <p className="text-white">Sábado: 7h às 18h</p>
+              <p className="text-white">Domingo: Fechado</p>
             </div>
           </div>
         </div>
