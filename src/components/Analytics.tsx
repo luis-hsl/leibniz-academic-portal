@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 // Configuração do Google Analytics 4 e Google Tag Manager
 const GOOGLE_TAG_MANAGER_ID = 'GTM-XXXXXXX'; // Substitua pelo seu ID do GTM se tiver
 const GOOGLE_ANALYTICS_ID = 'G-ZXK4Z9SHTX'; // ID fornecido pelo usuário
+const GOOGLE_TAG_ID = 'AW-17141679234'; // Google Tag ID
 
 const Analytics = () => {
   useEffect(() => {
@@ -26,18 +27,29 @@ const Analytics = () => {
     ga4Script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`;
     document.head.appendChild(ga4Script);
 
-    const ga4Config = document.createElement('script');
-    ga4Config.innerHTML = `
+    // Google Tag (AW)
+    const googleTagScript = document.createElement('script');
+    googleTagScript.async = true;
+    googleTagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
+    document.head.appendChild(googleTagScript);
+
+    const configScript = document.createElement('script');
+    configScript.innerHTML = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      
+      // Configurar Google Analytics
       gtag('config', '${GOOGLE_ANALYTICS_ID}', {
         page_title: document.title,
         page_location: window.location.href,
         send_page_view: true
       });
+      
+      // Configurar Google Tag
+      gtag('config', '${GOOGLE_TAG_ID}');
     `;
-    document.head.appendChild(ga4Config);
+    document.head.appendChild(configScript);
 
     // Track custom events
     window.gtag = window.gtag || function() {
