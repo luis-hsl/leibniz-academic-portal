@@ -93,13 +93,76 @@ export const trackEvent = (eventName: string, parameters: Record<string, any> = 
   }
 };
 
-// Eventos específicos do site
+// Funções de conversão do Google Ads
+export const trackFormConversion = (url?: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-17141679234/PkufCLzAvtMaEIKJ5e0_',
+      'event_callback': callback
+    });
+  }
+};
+
+export const trackVisitConversion = (url?: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-17141679234/mqKZCL_AvtMaEIKJ5e0_',
+      'event_callback': callback
+    });
+  }
+};
+
+export const trackAttendantConversion = (url?: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-17141679234/f3YLCMLAvtMaEIKJ5e0_',
+      'value': 15.0,
+      'currency': 'BRL',
+      'event_callback': callback
+    });
+  }
+};
+
+export const trackWhatsAppConversion = (url?: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    const callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-17141679234/74YpCMXAvtMaEIKJ5e0_',
+      'value': 10.0,
+      'currency': 'BRL',
+      'event_callback': callback
+    });
+  }
+};
+
+// Eventos específicos do site (mantidos para compatibilidade)
 export const trackWhatsAppClick = (source: string) => {
   trackEvent('whatsapp_click', {
     event_category: 'contact',
     event_label: source,
     source: source
   });
+  // Também rastrear como conversão
+  trackWhatsAppConversion();
 };
 
 export const trackFormSubmission = (formType: string) => {
@@ -108,6 +171,8 @@ export const trackFormSubmission = (formType: string) => {
     event_label: formType,
     form_type: formType
   });
+  // Também rastrear como conversão
+  trackFormConversion();
 };
 
 export const trackVisitRequest = (source: string) => {
@@ -116,6 +181,8 @@ export const trackVisitRequest = (source: string) => {
     event_label: source,
     source: source
   });
+  // Também rastrear como conversão
+  trackVisitConversion();
 };
 
 export const trackPageView = (pageName: string) => {

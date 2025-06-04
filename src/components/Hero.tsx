@@ -1,14 +1,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
+import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 
 const Hero = () => {
   const openWhatsAppVisit = () => {
+    trackVisitConversion();
     const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
   };
 
   const openWhatsApp = () => {
+    trackAttendantConversion();
     const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
   };

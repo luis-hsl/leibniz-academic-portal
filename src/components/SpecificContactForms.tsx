@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormConversion } from "@/components/Analytics";
 
 interface FormData {
   name: string;
@@ -48,6 +49,9 @@ const SpecificContactForm = ({ title, description, defaultLevel, whatsappMessage
       });
       return;
     }
+
+    // Track conversion
+    trackFormConversion();
 
     // Send structured WhatsApp message
     const structuredMessage = encodeURIComponent(

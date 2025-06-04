@@ -1,10 +1,10 @@
 
 import WhatsAppIcon from "./WhatsAppIcon";
-import { trackWhatsAppClick } from "./Analytics";
+import { trackWhatsAppConversion } from "./Analytics";
 
 const WhatsAppButton = () => {
   const openWhatsApp = () => {
-    trackWhatsAppClick('floating_button');
+    trackWhatsAppConversion();
     
     const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
