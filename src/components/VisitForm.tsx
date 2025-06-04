@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -189,7 +190,7 @@ const VisitForm = () => {
                     <MapPin className="h-6 w-6 text-yellow-300" />
                     <h3 className="text-xl font-bold">Localização</h3>
                   </div>
-                  <p className="text-blue-100">
+                  <p className="text-white">
                     Avenida Paulista, 720<br />
                     Parque Sagrada Família<br />
                     Rondonópolis - MT, 78735-223
@@ -203,7 +204,7 @@ const VisitForm = () => {
                     <Phone className="h-6 w-6 text-yellow-300" />
                     <h3 className="text-xl font-bold">Contatos</h3>
                   </div>
-                  <div className="space-y-2 text-blue-100">
+                  <div className="space-y-2 text-white">
                     <p>📞 (66) 3421-8824</p>
                     <p>📱 (66) 99678-1284</p>
                     <p>✉️ admleibniz@gmail.com</p>
@@ -217,7 +218,7 @@ const VisitForm = () => {
                     <Clock className="h-6 w-6 text-yellow-300" />
                     <h3 className="text-xl font-bold">Horário de Funcionamento</h3>
                   </div>
-                  <div className="space-y-1 text-blue-100">
+                  <div className="space-y-1 text-white">
                     <p>Segunda a Sexta: 7h às 22h</p>
                     <p>Sábado: 7h às 12h</p>
                     <p>Domingo: Fechado</p>
