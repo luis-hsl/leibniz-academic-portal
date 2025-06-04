@@ -188,7 +188,7 @@ const VisitForm = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <MapPin className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold">Localização</h3>
+                    <h3 className="text-xl font-bold text-white">Localização</h3>
                   </div>
                   <p className="text-white">
                     Avenida Paulista, 720<br />
@@ -202,12 +202,12 @@ const VisitForm = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <Phone className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold">Contatos</h3>
+                    <h3 className="text-xl font-bold text-white">Contatos</h3>
                   </div>
                   <div className="space-y-2 text-white">
-                    <p>📞 (66) 3421-8824</p>
-                    <p>📱 (66) 99678-1284</p>
-                    <p>✉️ admleibniz@gmail.com</p>
+                    <p className="text-white">📞 (66) 3421-8824</p>
+                    <p className="text-white">📱 (66) 99678-1284</p>
+                    <p className="text-white">✉️ admleibniz@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -216,12 +216,12 @@ const VisitForm = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <Clock className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold">Horário de Funcionamento</h3>
+                    <h3 className="text-xl font-bold text-white">Horário de Funcionamento</h3>
                   </div>
                   <div className="space-y-1 text-white">
-                    <p>Segunda a Sexta: 7h às 22h</p>
-                    <p>Sábado: 7h às 12h</p>
-                    <p>Domingo: Fechado</p>
+                    <p className="text-white">Segunda a Sexta: 7h às 22h</p>
+                    <p className="text-white">Sábado: 7h às 12h</p>
+                    <p className="text-white">Domingo: Fechado</p>
                   </div>
                 </CardContent>
               </Card>
