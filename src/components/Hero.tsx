@@ -26,7 +26,7 @@ const Hero = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in leading-tight text-white">
             Prepare-se para o 
             <span className="text-yellow-300 block mt-2">Sucesso Acadêmico</span>
             no Colégio Leibniz
@@ -48,7 +48,7 @@ const Hero = () => {
               onClick={openWhatsApp}
               variant="outline"
               size="lg"
-              className="border-white text-black bg-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+              className="border-white text-white bg-transparent hover:bg-white hover:text-black text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             >
               Fale com um Atendente
             </Button>
@@ -60,28 +60,28 @@ const Hero = () => {
               <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
                 <Award className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">21+</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">21+</h3>
               <p className="text-blue-100 text-sm sm:text-base">Anos de Experiência</p>
             </div>
             <div className="text-center">
               <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
                 <Users className="h-6 w-6 sm:h-8 sm:w-8 text-green-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">1000+</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">1000+</h3>
               <p className="text-blue-100 text-sm sm:text-base">Alunos Aprovados</p>
             </div>
             <div className="text-center">
               <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
                 <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-blue-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">5</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">5</h3>
               <p className="text-blue-100 text-sm sm:text-base">Níveis de Ensino</p>
             </div>
             <div className="text-center">
               <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
                 <Star className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">95%</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">95%</h3>
               <p className="text-blue-100 text-sm sm:text-base">Taxa de Aprovação</p>
             </div>
           </div>
