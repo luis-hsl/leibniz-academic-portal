@@ -57,8 +57,8 @@ const EducationLevels = () => {
               <Card key={index} className="hover-scale shadow-lg border-0 overflow-hidden h-full">
                 <CardHeader className={`${level.color} text-white`}>
                   <div className="flex items-center space-x-3">
-                    <level.icon className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
-                    <CardTitle className="text-lg sm:text-xl leading-tight">{level.title}</CardTitle>
+                    <level.icon className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0 text-white" />
+                    <CardTitle className="text-lg sm:text-xl leading-tight text-white">{level.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">

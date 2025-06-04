@@ -34,7 +34,7 @@ const About = () => {
             <Card className="bg-blue-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Target className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Missão</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Missão</h3>
                 <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
                   Oferecer educação de qualidade e alta performance, preparando alunos 
                   para os desafios acadêmicos e da vida.
@@ -45,7 +45,7 @@ const About = () => {
             <Card className="bg-green-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Eye className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Visão</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Visão</h3>
                 <p className="text-green-100 text-sm sm:text-base leading-relaxed">
                   Ser referência no ensino de qualidade, com foco em aprovações 
                   em universidades de excelência.
@@ -56,7 +56,7 @@ const About = () => {
             <Card className="bg-red-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Heart className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Valores</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Valores</h3>
                 <p className="text-red-100 text-sm sm:text-base leading-relaxed">
                   Excelência, respeito, integridade, inovação e empatia 
                   norteiam todas as nossas ações.
@@ -67,7 +67,7 @@ const About = () => {
             <Card className="bg-purple-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Lightbulb className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Metodologia</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Metodologia</h3>
                 <p className="text-purple-100 text-sm sm:text-base leading-relaxed">
                   Sistema Bernoulli de Ensino com metodologias inovadoras 
                   e corpo docente especializado.
