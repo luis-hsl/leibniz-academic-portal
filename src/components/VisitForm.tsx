@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { trackFormSubmission, trackVisitRequest } from "@/components/Analytics";
 
 const VisitForm = () => {
   const { toast } = useToast();
@@ -32,6 +32,10 @@ const VisitForm = () => {
       });
       return;
     }
+
+    // Track form submission
+    trackFormSubmission('visit_form');
+    trackVisitRequest('main_form');
 
     // Send WhatsApp message with form data
     const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
@@ -62,8 +66,8 @@ const VisitForm = () => {
   };
 
   return (
-    <section id="agendar" className="py-20 bg-gradient-to-br from-red-600 to-blue-800">
-      <div className="container mx-auto px-4">
+    <section id="agendar" className="section-padding bg-gradient-to-br from-red-600 to-blue-800">
+      <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Agende Sua Visita</h2>

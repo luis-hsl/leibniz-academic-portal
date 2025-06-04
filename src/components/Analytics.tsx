@@ -1,0 +1,121 @@
+
+import { useEffect } from 'react';
+
+// Configuração do Google Analytics 4 e Google Tag Manager
+const GOOGLE_TAG_MANAGER_ID = 'GTM-XXXXXXX'; // Substitua pelo seu ID do GTM
+const GOOGLE_ANALYTICS_ID = 'G-XXXXXXXXXX'; // Substitua pelo seu ID do GA4
+
+const Analytics = () => {
+  useEffect(() => {
+    // Google Tag Manager
+    const gtmScript = document.createElement('script');
+    gtmScript.innerHTML = `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','${GOOGLE_TAG_MANAGER_ID}');
+    `;
+    document.head.appendChild(gtmScript);
+
+    // Google Analytics 4
+    const ga4Script = document.createElement('script');
+    ga4Script.async = true;
+    ga4Script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`;
+    document.head.appendChild(ga4Script);
+
+    const ga4Config = document.createElement('script');
+    ga4Config.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GOOGLE_ANALYTICS_ID}', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+    `;
+    document.head.appendChild(ga4Config);
+
+    // Track custom events
+    window.gtag = window.gtag || function() {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(arguments);
+    };
+
+    return () => {
+      // Cleanup scripts if component unmounts
+      const scripts = document.querySelectorAll('script[src*="googletagmanager"], script[src*="gtag"]');
+      scripts.forEach(script => script.remove());
+    };
+  }, []);
+
+  return (
+    <>
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${GOOGLE_TAG_MANAGER_ID}`}
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
+    </>
+  );
+};
+
+// Função para rastrear eventos customizados
+export const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, {
+      event_category: 'engagement',
+      event_label: parameters.label || '',
+      value: parameters.value || 0,
+      ...parameters
+    });
+  }
+};
+
+// Eventos específicos do site
+export const trackWhatsAppClick = (source: string) => {
+  trackEvent('whatsapp_click', {
+    event_category: 'contact',
+    event_label: source,
+    source: source
+  });
+};
+
+export const trackFormSubmission = (formType: string) => {
+  trackEvent('form_submission', {
+    event_category: 'lead_generation',
+    event_label: formType,
+    form_type: formType
+  });
+};
+
+export const trackVisitRequest = (source: string) => {
+  trackEvent('visit_request', {
+    event_category: 'conversion',
+    event_label: source,
+    source: source
+  });
+};
+
+export const trackPageView = (pageName: string) => {
+  trackEvent('page_view', {
+    event_category: 'navigation',
+    event_label: pageName,
+    page_name: pageName
+  });
+};
+
+// Declaração de tipos para TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
+export default Analytics;
