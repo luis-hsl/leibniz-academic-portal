@@ -48,7 +48,7 @@ const Hero = () => {
               onClick={openWhatsApp}
               variant="outline"
               size="lg"
-              className="border-white text-white bg-transparent hover:bg-white hover:text-black text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
+              className="border-white bg-white text-black hover:bg-gray-100 hover:text-black text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             >
               Fale com um Atendente
             </Button>
