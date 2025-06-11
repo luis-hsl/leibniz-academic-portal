@@ -21,6 +21,10 @@ const Header = () => {
     { name: "Contato", href: "/contato" },
   ];
 
+  const desktopNavigation = navigation.filter(item => 
+    item.name !== "Blog" && item.name !== "Contato"
+  );
+
   const openWhatsApp = () => {
     const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
@@ -97,7 +101,7 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex space-x-6 lg:space-x-8">
-            {navigation.map((item) => (
+            {desktopNavigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
