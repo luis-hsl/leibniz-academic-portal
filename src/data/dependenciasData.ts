@@ -1,4 +1,3 @@
-
 export const exteriorImages = [
   {
     src: "/lovable-uploads/af862d6b-0e89-43bc-9100-4955d3958008.png",
@@ -187,6 +186,31 @@ export const libraryImages = [
     src: "/lovable-uploads/ff8ae830-5570-4d92-91dc-a628d9a5ea07.png",
     alt: "Vista geral da biblioteca",
     title: "Vista Geral da Biblioteca"
+  },
+  {
+    src: "/lovable-uploads/d0c969a9-4172-45ec-9259-4434014e9ab5.png",
+    alt: "Biblioteca do Fundamental 2 com cadeiras coloridas e bancadas",
+    title: "Biblioteca Fundamental 2 - Vista Geral"
+  },
+  {
+    src: "/lovable-uploads/515ba1f1-7740-43ba-a854-6403931cb17b.png",
+    alt: "Bancadas de estudo com cadeiras verdes e roxas",
+    title: "Bancadas de Estudo Coloridas"
+  },
+  {
+    src: "/lovable-uploads/2131945a-a322-4886-8182-49ba419b6a65.png",
+    alt: "Área de estudos com organização de materiais ao fundo",
+    title: "Área de Estudos Organizada"
+  },
+  {
+    src: "/lovable-uploads/ed467776-2aae-4468-b18b-c4313e03d169.png",
+    alt: "Espaço amplo da biblioteca com bancadas laterais",
+    title: "Espaço Amplo de Estudos"
+  },
+  {
+    src: "/lovable-uploads/6bf1cc55-6cec-432f-9744-3a661fec9c7d.png",
+    alt: "Vista completa da biblioteca com mobiliário moderno",
+    title: "Biblioteca Completa"
   }
 ];
 

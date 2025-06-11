@@ -84,7 +84,7 @@ const Dependencias = () => {
 
       <DependencySection
         title="Biblioteca"
-        description="Um ambiente tranquilo e organizado para estudos, pesquisas e desenvolvimento do hábito da leitura."
+        description="Espaço amplo e moderno para estudos, pesquisas e desenvolvimento do hábito da leitura, com bancadas individuais, cadeiras coloridas e ambiente climatizado especialmente planejado para estudantes do Fundamental 2."
         images={libraryImages}
         bgColor="bg-indigo-50"
       />
