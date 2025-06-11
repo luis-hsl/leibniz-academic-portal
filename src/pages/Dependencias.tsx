@@ -1,4 +1,5 @@
 
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -196,19 +197,39 @@ const Dependencias = () => {
 
   const laboratoryImages = [
     {
-      src: "/lovable-uploads/16a1f204-d542-4654-83c4-55b68c82078e.png",
-      alt: "Modelo anatômico no laboratório",
-      title: "Modelos Anatômicos"
+      src: "/lovable-uploads/c9bb821a-68e3-4d82-aaae-2dc132ee706f.png",
+      alt: "Modelo anatômico detalhado com órgãos e sistemas",
+      title: "Modelos Anatômicos Completos"
     },
     {
-      src: "/lovable-uploads/31600a44-501e-4d74-b12c-31dac2d684b5.png",
-      alt: "Equipamentos do laboratório de ciências",
-      title: "Equipamentos Científicos"
+      src: "/lovable-uploads/1ac225fc-f303-46bf-b9f4-f335627d9bd8.png",
+      alt: "Modelo do olho humano para estudos de anatomia",
+      title: "Modelo do Olho Humano"
     },
     {
-      src: "/lovable-uploads/6adde15a-4b00-40b7-ae8a-0f6f9794083d.png",
-      alt: "Vista completa do laboratório",
+      src: "/lovable-uploads/97d5f54d-71d6-4ab4-b7cb-bc50a36712e9.png",
+      alt: "Laboratório completo com esqueleto, modelos e microscópio",
       title: "Laboratório de Ciências"
+    },
+    {
+      src: "/lovable-uploads/b746d8cf-8be9-4b7f-88ed-79f822ea4331.png",
+      alt: "Bancada do laboratório com microscópio e materiais científicos",
+      title: "Bancada de Experimentos"
+    },
+    {
+      src: "/lovable-uploads/b84fb48b-b3fc-4b7f-b75d-3220360f85b1.png",
+      alt: "Vista ampla do laboratório com todos os equipamentos",
+      title: "Vista Geral do Laboratório"
+    },
+    {
+      src: "/lovable-uploads/a6ce93cf-11cd-4356-b75f-6824b92f3a06.png",
+      alt: "Microscópio profissional com tubos de ensaio",
+      title: "Microscópio e Vidrarias"
+    },
+    {
+      src: "/lovable-uploads/eba9432f-aee4-4815-97b2-cac86e13794a.png",
+      alt: "Equipamentos científicos organizados na bancada",
+      title: "Equipamentos Científicos"
     }
   ];
 
@@ -293,7 +314,7 @@ const Dependencias = () => {
 
       <DependencySection
         title="Laboratório de Química e Física"
-        description="Laboratórios totalmente equipados para experimentos e estudos práticos de ciências."
+        description="Laboratório completo equipado com modelos anatômicos, microscópios profissionais, vidrarias e materiais didáticos para experimentos práticos em química, física e biologia."
         images={laboratoryImages}
         bgColor="bg-green-50"
       />
@@ -305,3 +326,4 @@ const Dependencias = () => {
 };
 
 export default Dependencias;
+
