@@ -11,6 +11,7 @@ import NiveisEnsino from "./pages/NiveisEnsino";
 import OColegio from "./pages/OColegio";
 import ContatoPage from "./pages/ContatoPage";
 import BlogPage from "./pages/BlogPage";
+import Dependencias from "./pages/Dependencias";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/niveis-ensino" element={<NiveisEnsino />} />
           <Route path="/o-colegio" element={<OColegio />} />
+          <Route path="/dependencias" element={<Dependencias />} />
           <Route path="/contato" element={<ContatoPage />} />
           <Route path="/blog" element={<BlogPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
