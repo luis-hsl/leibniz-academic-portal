@@ -68,23 +68,25 @@ const Testimonials = () => {
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="p-2 sm:p-3">
-                    <div className="bg-white rounded-xl shadow-lg p-4 text-center hover:shadow-xl transition-shadow duration-300">
-                      <div className="mb-4">
-                        <OptimizedImage
-                          src={student.image}
-                          alt={student.name}
-                          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
-                          width={280}
-                          height={350}
-                          priority={index === 0}
-                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                        />
-                      </div>
-                      <h3 className="text-sm sm:text-base font-semibold text-gray-800 leading-tight">
-                        {student.name}
-                      </h3>
-                      <div className="mt-2 px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full inline-block">
-                        APROVADO
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      <OptimizedImage
+                        src={student.image}
+                        alt={student.name}
+                        className="w-full h-48 sm:h-56 md:h-64 object-cover"
+                        width={280}
+                        height={350}
+                        priority={index === 0}
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                      />
+                      <div className="p-3">
+                        <h3 className="text-sm sm:text-base font-semibold text-gray-800 leading-tight text-center">
+                          {student.name}
+                        </h3>
+                        <div className="mt-2 text-center">
+                          <span className="px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full inline-block">
+                            APROVADO
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
