@@ -57,6 +57,34 @@ export const roboticsImages = [
   }
 ];
 
+export const cantinaImages = [
+  {
+    src: "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
+    alt: "Vista geral da cantina com mesas e bancos para refeições",
+    title: "Área Principal da Cantina"
+  },
+  {
+    src: "/lovable-uploads/74989e08-8e10-473e-a8dd-d20727a2db27.png",
+    alt: "Cantina ampla com estrutura metálica e área de alimentação",
+    title: "Espaço Amplo para Refeições"
+  },
+  {
+    src: "/lovable-uploads/a6d62752-c8c3-482d-82a0-f35b4ec58927.png",
+    alt: "Área moderna da cantina com decoração colorida e iluminação",
+    title: "Ambiente Moderno e Acolhedor"
+  },
+  {
+    src: "/lovable-uploads/fdfd6f64-ba1f-48f9-88d6-a55ec0bd923a.png",
+    alt: "Cantina com mesas organizadas e balcão de atendimento",
+    title: "Organização e Funcionalidade"
+  },
+  {
+    src: "/lovable-uploads/7caa7932-a5c6-4e8e-9aa0-877e678fe6b5.png",
+    alt: "Vista completa da cantina com luminária decorativa no teto",
+    title: "Design e Conforto"
+  }
+];
+
 export const auditoriumImages: any[] = [];
 export const fundamental2CorridorImages: any[] = [];
 export const educationInfantilImages: any[] = [];
