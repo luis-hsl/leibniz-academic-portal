@@ -1,8 +1,8 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import OptimizedImage from "@/components/OptimizedImage";
-import { Card, CardContent } from "@/components/ui/card";
+import DependencySection from "@/components/DependencySection";
 
 const Dependencias = () => {
   const exteriorImages = [
@@ -43,6 +43,21 @@ const Dependencias = () => {
       src: "/lovable-uploads/54c661a9-afc2-42a8-9e6b-97449b09c464.png",
       alt: "Vista ampla do auditório",
       title: "Vista Ampla do Auditório"
+    },
+    {
+      src: "/lovable-uploads/93122a4c-90de-43d7-8075-925e0d78bffd.png",
+      alt: "Auditório - Vista frontal",
+      title: "Vista Frontal"
+    },
+    {
+      src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.png",
+      alt: "Auditório - Palco e projeção",
+      title: "Palco e Projeção"
+    },
+    {
+      src: "/lovable-uploads/cff685be-0b22-48b2-8d79-757fa809f3f5.png",
+      alt: "Auditório - Sistema de som e imagem",
+      title: "Sistema de Som e Imagem"
     }
   ];
 
@@ -58,57 +73,14 @@ const Dependencias = () => {
       title: "Área de Convivência"
     },
     {
-      src: "/lovable-uploads/93122a4c-90de-43d7-8075-925e0d78bffd.png",
-      alt: "Corredor com armários",
-      title: "Área dos Armários"
-    },
-    {
-      src: "/lovable-uploads/cff685be-0b22-48b2-8d79-757fa809f3f5.png",
-      alt: "Hall principal com painel informativo",
-      title: "Hall Principal"
-    },
-    {
       src: "/lovable-uploads/aca46dea-1ef5-4fcb-a765-f2b73ee37a19.png",
       alt: "Entrada do Fundamental 2",
       title: "Entrada do Fundamental 2"
     },
     {
-      src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.png",
-      alt: "Área recreativa com ping pong",
-      title: "Área Recreativa"
-    },
-    {
       src: "/lovable-uploads/5a719721-a1be-4350-a778-bf16da792606.png",
       alt: "Espaço de convivência completo",
       title: "Espaço de Convivência"
-    }
-  ];
-
-  const activityImages = [
-    {
-      src: "/lovable-uploads/cf73da90-9069-4857-a1c6-6417668d6778.png",
-      alt: "Atividades com blocos de montar",
-      title: "Atividades Lúdicas"
-    },
-    {
-      src: "/lovable-uploads/f35e233f-387d-4720-8125-06b62238c93d.png",
-      alt: "Projeto educacional com tecnologia",
-      title: "Tecnologia Educacional"
-    },
-    {
-      src: "/lovable-uploads/dbf03d17-eb84-4ba0-8fde-39c0efb382bc.png",
-      alt: "Atividades de robótica",
-      title: "Robótica Educacional"
-    },
-    {
-      src: "/lovable-uploads/285522b2-b6c8-4b77-9656-1832cd7b74fe.png",
-      alt: "Sala de atividades interativas",
-      title: "Atividades Interativas"
-    },
-    {
-      src: "/lovable-uploads/06505cf8-0420-4a4b-bb7d-a29359c05e65.png",
-      alt: "Estudantes em atividade colaborativa",
-      title: "Aprendizado Colaborativo"
     }
   ];
 
@@ -142,82 +114,6 @@ const Dependencias = () => {
       src: "/lovable-uploads/0efe3d3e-ae28-406d-909f-5e3005b0b790.png",
       alt: "Atividades em grupo de robótica",
       title: "Atividades em Grupo"
-    },
-    {
-      src: "/lovable-uploads/404e6516-885c-4a75-b6d0-63bcf2ae99dd.png",
-      alt: "Construção com blocos programáveis",
-      title: "Blocos Programáveis"
-    },
-    {
-      src: "/lovable-uploads/fffef8c8-7333-47c0-bb87-e8d611ef31ad.png",
-      alt: "Projeto colaborativo de robótica",
-      title: "Projeto Colaborativo"
-    },
-    {
-      src: "/lovable-uploads/abf107dd-1170-4195-920d-7c3fb16dc74c.png",
-      alt: "Modelo robótico criado pelos estudantes",
-      title: "Modelo Robótico"
-    },
-    {
-      src: "/lovable-uploads/6d28cb0b-afec-4460-8d5a-6bc12f427982.png",
-      alt: "Sala de robótica com estudantes em atividade",
-      title: "Sala de Robótica"
-    }
-  ];
-
-  const cafeteriaImages = [
-    {
-      src: "/lovable-uploads/62af054d-f4c7-4390-97c5-5d01fae9cd02.png",
-      alt: "Vista geral da cantina do colégio",
-      title: "Cantina - Vista Geral"
-    },
-    {
-      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
-      alt: "Área de convivência da cantina",
-      title: "Área de Convivência"
-    },
-    {
-      src: "/lovable-uploads/a442947a-aec8-4b15-a88a-0fd80eb13319.png",
-      alt: "Espaço da cantina com mesas",
-      title: "Área de Alimentação"
-    },
-    {
-      src: "/lovable-uploads/5cce79ec-901e-4fec-bacb-26dd7f1da01f.png",
-      alt: "Vista lateral da cantina",
-      title: "Vista Lateral da Cantina"
-    },
-    {
-      src: "/lovable-uploads/fd22cc08-a2d0-4fe0-a710-65bdba10521b.png",
-      alt: "Interior da cantina",
-      title: "Interior da Cantina"
-    }
-  ];
-
-  const laboratoryImages = [
-    {
-      src: "/lovable-uploads/16a1f204-d542-4654-83c4-55b68c82078e.png",
-      alt: "Modelo anatômico no laboratório",
-      title: "Modelos Anatômicos"
-    },
-    {
-      src: "/lovable-uploads/31600a44-501e-4d74-b12c-31dac2d684b5.png",
-      alt: "Equipamentos do laboratório de ciências",
-      title: "Equipamentos Científicos"
-    },
-    {
-      src: "/lovable-uploads/6adde15a-4b00-40b7-ae8a-0f6f9794083d.png",
-      alt: "Vista completa do laboratório",
-      title: "Laboratório de Ciências"
-    },
-    {
-      src: "/lovable-uploads/b29218f7-e48d-4349-a4e0-ed1c1d8ece4d.png",
-      alt: "Microscópio e equipamentos de laboratório",
-      title: "Microscópios e Equipamentos"
-    },
-    {
-      src: "/lovable-uploads/0f62b73d-0e16-4787-b968-7c26a7a95d88.png",
-      alt: "Laboratório completo com esqueleto e equipamentos",
-      title: "Laboratório Completo"
     }
   ];
 
@@ -277,300 +173,113 @@ const Dependencias = () => {
     }
   ];
 
+  const cafeteriaImages = [
+    {
+      src: "/lovable-uploads/62af054d-f4c7-4390-97c5-5d01fae9cd02.png",
+      alt: "Vista geral da cantina do colégio",
+      title: "Cantina - Vista Geral"
+    },
+    {
+      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
+      alt: "Área de convivência da cantina",
+      title: "Área de Convivência"
+    },
+    {
+      src: "/lovable-uploads/a442947a-aec8-4b15-a88a-0fd80eb13319.png",
+      alt: "Espaço da cantina com mesas",
+      title: "Área de Alimentação"
+    }
+  ];
+
+  const laboratoryImages = [
+    {
+      src: "/lovable-uploads/16a1f204-d542-4654-83c4-55b68c82078e.png",
+      alt: "Modelo anatômico no laboratório",
+      title: "Modelos Anatômicos"
+    },
+    {
+      src: "/lovable-uploads/31600a44-501e-4d74-b12c-31dac2d684b5.png",
+      alt: "Equipamentos do laboratório de ciências",
+      title: "Equipamentos Científicos"
+    },
+    {
+      src: "/lovable-uploads/6adde15a-4b00-40b7-ae8a-0f6f9794083d.png",
+      alt: "Vista completa do laboratório",
+      title: "Laboratório de Ciências"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-red-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-white">Nossas Dependências</h1>
-            <p className="text-xl leading-relaxed text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white">Nossas Dependências</h1>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white px-4 sm:px-0">
               Conheça os espaços modernos e equipados que proporcionam a melhor experiência educacional para nossos alunos.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Exterior Images Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Estrutura Externa</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Nossa infraestrutura moderna e bem localizada oferece um ambiente seguro e acolhedor.
-              </p>
-            </div>
+      <DependencySection
+        title="Estrutura Externa"
+        description="Nossa infraestrutura moderna e bem localizada oferece um ambiente seguro e acolhedor."
+        images={exteriorImages}
+        bgColor="bg-white"
+      />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {exteriorImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <DependencySection
+        title="Auditório"
+        description="Espaço moderno e confortável para apresentações, palestras e eventos educacionais e culturais."
+        images={auditoriumImages}
+        bgColor="bg-red-50"
+      />
 
-      {/* Auditorium Section */}
-      <section className="py-20 bg-red-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Auditório</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Espaço moderno e confortável para apresentações, palestras e eventos educacionais e culturais.
-              </p>
-            </div>
+      <DependencySection
+        title="Corredor do Fundamental 2"
+        description="Espaços amplos e organizados que proporcionam um ambiente acolhedor para os estudantes do Ensino Fundamental 2."
+        images={fundamental2CorridorImages}
+        bgColor="bg-yellow-50"
+      />
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {auditoriumImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <DependencySection
+        title="Robótica Educacional"
+        description="Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional."
+        images={roboticsImages}
+        bgColor="bg-gradient-to-r from-blue-50 to-cyan-50"
+      />
 
-      {/* Fundamental 2 Corridor Section */}
-      <section className="py-20 bg-yellow-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Corredor do Fundamental 2</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Espaços amplos e organizados que proporcionam um ambiente acolhedor para os estudantes do Ensino Fundamental 2.
-              </p>
-            </div>
+      <DependencySection
+        title="Laboratório de Robótica e Informática"
+        description="Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica."
+        images={roboticsLabImages}
+        bgColor="bg-purple-50"
+      />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {fundamental2CorridorImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <DependencySection
+        title="Biblioteca"
+        description="Um ambiente tranquilo e organizado para estudos, pesquisas e desenvolvimento do hábito da leitura."
+        images={libraryImages}
+        bgColor="bg-indigo-50"
+      />
 
-      {/* Robotics Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Robótica Educacional</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional.
-              </p>
-            </div>
+      <DependencySection
+        title="Cantina"
+        description="Ambiente acolhedor e moderno para alimentação e convivência dos estudantes."
+        images={cafeteriaImages}
+        bgColor="bg-orange-50"
+      />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {roboticsImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Robotics Lab Section */}
-      <section className="py-20 bg-purple-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Laboratório de Robótica e Informática</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {roboticsLabImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Library Section */}
-      <section className="py-20 bg-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Biblioteca</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Um ambiente tranquilo e organizado para estudos, pesquisas e desenvolvimento do hábito da leitura.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {libraryImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Cafeteria Section */}
-      <section className="py-20 bg-orange-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Cantina</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ambiente acolhedor e moderno para alimentação e convivência dos estudantes.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cafeteriaImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Laboratory Section */}
-      <section className="py-20 bg-green-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Laboratório de Química e Física</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Laboratórios totalmente equipados para experimentos e estudos práticos de ciências.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {laboratoryImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Activities Section */}
-      <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Atividades Educacionais</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Espaços dedicados ao desenvolvimento de habilidades através de atividades práticas e inovadoras.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {activityImages.map((image, index) => (
-                <Card key={index} className="hover-scale shadow-lg">
-                  <CardContent className="p-0">
-                    <OptimizedImage
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover rounded-t-lg"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <DependencySection
+        title="Laboratório de Química e Física"
+        description="Laboratórios totalmente equipados para experimentos e estudos práticos de ciências."
+        images={laboratoryImages}
+        bgColor="bg-green-50"
+      />
 
       <Footer />
       <WhatsAppButton />
