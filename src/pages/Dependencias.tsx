@@ -63,7 +63,7 @@ const Dependencias = () => {
 
       <DependencySection
         title="Robótica Educacional"
-        description="Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional."
+        description="Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional, trabalhando com blocos LEGO educacionais, tablets e projetos colaborativos que estimulam a criatividade, lógica e resolução de problemas."
         images={roboticsImages}
         bgColor="bg-gradient-to-r from-blue-50 to-cyan-50"
       />
