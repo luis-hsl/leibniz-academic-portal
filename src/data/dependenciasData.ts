@@ -1,4 +1,3 @@
-
 // Arquivo com imagens das dependências do colégio
 
 export const areaExternaImages = [
@@ -182,7 +181,34 @@ export const auditoriumImages = [
   }
 ];
 
-export const fundamental2CorridorImages: any[] = [];
+export const fundamental2CorridorImages = [
+  {
+    src: "/lovable-uploads/de3ef360-e9dc-4aa3-b7da-5ccc786b5302.png",
+    alt: "Corredor amplo do Fundamental II com armários de estudantes e decoração escolar",
+    title: "Corredor Principal dos Alunos"
+  },
+  {
+    src: "/lovable-uploads/7ebd443d-3795-4923-a927-9c4ca8c6bcb7.png",
+    alt: "Vista do corredor com pilares coloridos e acesso às salas de aula",
+    title: "Circulação e Acesso às Salas"
+  },
+  {
+    src: "/lovable-uploads/22d3b4cd-8bec-4517-8026-1fe3347a34a5.png",
+    alt: "Área do corredor com armários dos estudantes e mesa de ping pong",
+    title: "Espaço de Convivência Estudantil"
+  },
+  {
+    src: "/lovable-uploads/34b750bb-9f28-4238-afe2-dcee63f5bda8.png",
+    alt: "Corredor com painéis informativos e área de matrícula da escola",
+    title: "Informações e Comunicação Escolar"
+  },
+  {
+    src: "/lovable-uploads/02179b84-4e05-4e1a-9929-0e6e5c890211.png",
+    alt: "Área de recreação no corredor com mesa de ping pong e mesas de apoio",
+    title: "Espaço de Lazer e Descanso"
+  }
+];
+
 export const educationInfantilImages: any[] = [];
 export const laboratoriosImages: any[] = [];
 export const quadraEsportivaImages: any[] = [];

@@ -14,7 +14,8 @@ import {
   laboratorisFisicaQuimicaImages,
   laboratorioTecnologiaImages,
   bibliotecaImages,
-  auditoriumImages
+  auditoriumImages,
+  fundamental2CorridorImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -29,7 +30,8 @@ const Dependencias = () => {
     "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
     "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
     "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
-    "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png"
+    "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png",
+    "/lovable-uploads/de3ef360-e9dc-4aa3-b7da-5ccc786b5302.png"
   ];
 
   return (
@@ -92,6 +94,13 @@ const Dependencias = () => {
         description="Nosso auditório é um espaço amplo e moderno, especialmente projetado para eventos, apresentações e atividades educacionais do Ensino Fundamental II. Com capacidade para grande número de estudantes, sistema de projeção avançado e cadeiras confortáveis, oferecemos o ambiente ideal para palestras, cerimônias, apresentações teatrais e eventos acadêmicos que enriquecem a experiência educacional dos nossos alunos."
         images={auditoriumImages}
         bgColor="bg-teal-50"
+      />
+
+      <DependencySection
+        title="Corredor do Fundamental II"
+        description="Nossos corredores do Ensino Fundamental II são espaços amplos e bem organizados, projetados para facilitar a circulação dos estudantes entre as salas de aula. Com armários individuais para os alunos, áreas de convivência com mesas de ping pong, painéis informativos e uma arquitetura moderna com pilares coloridos, criamos um ambiente que promove a socialização e o bem-estar dos nossos estudantes durante os intervalos e momentos de descanso."
+        images={fundamental2CorridorImages}
+        bgColor="bg-cyan-50"
       />
 
       <Footer />
