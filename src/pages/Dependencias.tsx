@@ -10,7 +10,11 @@ import ResourcePreloader from "@/components/ResourcePreloader";
 import {
   auditoriumImages,
   fundamental2CorridorImages,
-  roboticsImages
+  roboticsImages,
+  educationInfantilImages,
+  bibliotecaImages,
+  laboratoriosImages,
+  quadraEsportivaImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -42,6 +46,34 @@ const Dependencias = () => {
       />
 
       <DependencySection
+        title="Educação Infantil"
+        description="Ambientes especialmente projetados para os primeiros anos escolares, com espaços coloridos, seguros e estimulantes que favorecem o desenvolvimento integral das crianças."
+        images={educationInfantilImages}
+        bgColor="bg-blue-50"
+      />
+
+      <DependencySection
+        title="Biblioteca"
+        description="Um acervo completo e atualizado em um ambiente silencioso e confortável, ideal para pesquisas, estudos e desenvolvimento do hábito da leitura."
+        images={bibliotecaImages}
+        bgColor="bg-green-50"
+      />
+
+      <DependencySection
+        title="Laboratórios"
+        description="Laboratórios modernos e bem equipados para ciências, informática e experimentos multidisciplinares, proporcionando aprendizado prático e inovador."
+        images={laboratoriosImages}
+        bgColor="bg-purple-50"
+      />
+
+      <DependencySection
+        title="Quadra Esportiva"
+        description="Espaço amplo e seguro para práticas esportivas diversas, educação física e desenvolvimento da coordenação motora e trabalho em equipe."
+        images={quadraEsportivaImages}
+        bgColor="bg-orange-50"
+      />
+
+      <DependencySection
         title="Corredor do Fundamental 2"
         description="Espaços amplos e organizados que proporcionam um ambiente acolhedor para os estudantes do Ensino Fundamental 2."
         images={fundamental2CorridorImages}
@@ -62,4 +94,3 @@ const Dependencias = () => {
 };
 
 export default Dependencias;
-

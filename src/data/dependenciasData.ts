@@ -1,5 +1,4 @@
 
-
 export const auditoriumImages = [
   {
     src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.webp",
@@ -104,3 +103,79 @@ export const roboticsImages = [
   }
 ];
 
+export const educationInfantilImages = [
+  {
+    src: "/lovable-uploads/1ac225fc-f303-46bf-b9f4-f335627d9bd8.webp",
+    alt: "Sala de aula da Educação Infantil com ambiente colorido e acolhedor",
+    title: "Ambiente Acolhedor"
+  },
+  {
+    src: "/lovable-uploads/6bf1cc55-6cec-432f-9744-3a661fec9c7d.webp",
+    alt: "Atividades lúdicas na Educação Infantil",
+    title: "Aprendizado Lúdico"
+  },
+  {
+    src: "/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.webp",
+    alt: "Espaço de recreação da Educação Infantil",
+    title: "Espaço de Recreação"
+  },
+  {
+    src: "/lovable-uploads/7423a40c-6f3d-4d7d-9973-21c7a3c1a901.webp",
+    alt: "Área externa para brincadeiras da Educação Infantil",
+    title: "Área Externa"
+  }
+];
+
+export const bibliotecaImages = [
+  {
+    src: "/lovable-uploads/234c1ebb-2420-49b2-abe6-c8ed4ea8107f.webp",
+    alt: "Biblioteca com amplo acervo de livros e ambiente de estudo",
+    title: "Acervo Completo"
+  },
+  {
+    src: "/lovable-uploads/285522b2-b6c8-4b77-9656-1832cd7b74fe.webp",
+    alt: "Área de leitura da biblioteca com mesas de estudo",
+    title: "Área de Leitura"
+  },
+  {
+    src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.webp",
+    alt: "Espaço de consulta e pesquisa na biblioteca",
+    title: "Espaço de Pesquisa"
+  }
+];
+
+export const laboratoriosImages = [
+  {
+    src: "/lovable-uploads/1c627c8b-a33f-40a7-8874-7251974f84f8.webp",
+    alt: "Laboratório de ciências com equipamentos modernos",
+    title: "Laboratório de Ciências"
+  },
+  {
+    src: "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.webp",
+    alt: "Laboratório de informática com computadores atualizados",
+    title: "Laboratório de Informática"
+  },
+  {
+    src: "/lovable-uploads/217e1761-9771-4e0e-abf5-3e0d84202460.webp",
+    alt: "Laboratório multidisciplinar para experimentos",
+    title: "Laboratório Multidisciplinar"
+  }
+];
+
+export const quadraEsportivaImages = [
+  {
+    src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.webp",
+    alt: "Quadra esportiva coberta para atividades físicas",
+    title: "Quadra Coberta"
+  },
+  {
+    src: "/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.webp",
+    alt: "Espaço para práticas esportivas diversas",
+    title: "Práticas Esportivas"
+  },
+  {
+    src: "/lovable-uploads/2a0bab9b-519e-479e-8b46-e0237fa78fdb.webp",
+    alt: "Área de educação física com equipamentos completos",
+    title: "Educação Física Completa"
+  }
+];
