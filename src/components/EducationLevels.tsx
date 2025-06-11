@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Baby, BookOpen, GraduationCap, Trophy, Palette } from "lucide-react";
+import { Baby, BookOpen, GraduationCap, Trophy, Palette, Bot } from "lucide-react";
 
 const EducationLevels = () => {
   const levels = [
@@ -31,6 +31,13 @@ const EducationLevels = () => {
       description: "Metodologias inovadoras e corpo docente especializado para máxima performance.",
       color: "bg-red-500",
       details: "Simulados, revisões intensivas e acompanhamento personalizado."
+    },
+    {
+      icon: Bot,
+      title: "Robótica",
+      description: "Programação e construção de robôs para desenvolver raciocínio lógico e criatividade.",
+      color: "bg-orange-500",
+      details: "Projetos práticos com Arduino, sensores e programação visual para todas as idades."
     },
     {
       icon: Palette,
