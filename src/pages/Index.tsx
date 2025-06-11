@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import EducationLevels from "@/components/EducationLevels";
 import CollegeGallery from "@/components/CollegeGallery";
-import SpecificContactForms from "@/components/SpecificContactForms";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import VisitForm from "@/components/VisitForm";
@@ -50,7 +49,6 @@ const Index = () => {
       <About />
       <EducationLevels />
       <CollegeGallery />
-      <SpecificContactForms />
       <FAQ />
       <Testimonials />
       <VisitForm />
