@@ -15,7 +15,7 @@ const SEOHead = ({
   description = "Prepare-se para o Sucesso Acadêmico no Colégio Leibniz - Sistema Bernoulli de Ensino, tradição e referência em vestibulares e preparatórios para o ENEM.",
   keywords = "colégio, leibniz, bernoulli, ensino, vestibular, enem, educação, escola, preparatório",
   image = "/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png",
-  url = window.location.href,
+  url = typeof window !== 'undefined' ? window.location.href : '',
   type = "website"
 }: SEOHeadProps) => {
   
@@ -24,7 +24,7 @@ const SEOHead = ({
     document.title = title;
     
     // Atualizar meta tags
-    const updateMetaTag = (name: string, content: string, property?: string) => {
+    const updateMetaTag = (name: string, content: string, property?: boolean) => {
       const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
       let tag = document.querySelector(selector) as HTMLMetaElement;
       
