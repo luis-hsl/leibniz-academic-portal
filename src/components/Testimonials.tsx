@@ -1,4 +1,5 @@
 
+
 import { 
   Carousel,
   CarouselContent,
@@ -73,9 +74,9 @@ const Testimonials = () => {
                         <OptimizedImage
                           src={student.image}
                           alt={student.name}
-                          className="w-full h-80 sm:h-96 md:h-[400px] lg:h-[500px] object-contain"
-                          width={400}
-                          height={500}
+                          className="w-full h-80 sm:h-96 md:h-[450px] lg:h-[550px] object-contain"
+                          width={450}
+                          height={550}
                           priority={index === 0}
                           sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 33vw, 33vw"
                         />
@@ -124,3 +125,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
