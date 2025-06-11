@@ -41,7 +41,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
                 alt="Colégio Leibniz Logo" 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
             </Link>
             
@@ -92,7 +92,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
               alt="Colégio Leibniz Logo" 
-              className="h-10 lg:h-12 w-auto"
+              className="h-14 lg:h-16 w-auto"
             />
           </Link>
           
@@ -112,7 +112,7 @@ const Header = () => {
           
           <Button 
             onClick={openWhatsApp}
-            className="bg-green-600 hover:bg-green-700 text-white font-medium px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base"
+            className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg"
           >
             Fale Conosco
           </Button>
