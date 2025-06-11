@@ -118,6 +118,62 @@ const Dependencias = () => {
     }
   ];
 
+  const roboticsLabImages = [
+    {
+      src: "/lovable-uploads/2a0bab9b-519e-479e-8b46-e0237fa78fdb.png",
+      alt: "Laboratório de informática com notebooks",
+      title: "Laboratório de Informática"
+    },
+    {
+      src: "/lovable-uploads/7423a40c-6f3d-4d7d-9973-21c7a3c1a901.png",
+      alt: "Espaço de tecnologia e robótica",
+      title: "Espaço de Tecnologia"
+    },
+    {
+      src: "/lovable-uploads/e7862eb8-26ca-4bd7-a8c8-762e82f81567.png",
+      alt: "Notebooks para atividades de programação",
+      title: "Estação de Programação"
+    },
+    {
+      src: "/lovable-uploads/0de370e3-e936-4ab4-aaea-bf29a0cb4302.png",
+      alt: "Mesa colaborativa com notebooks",
+      title: "Mesa Colaborativa"
+    },
+    {
+      src: "/lovable-uploads/bb09e5fc-f8d4-40c8-8cf7-b5321f19558a.png",
+      alt: "Área de trabalho em grupo",
+      title: "Área de Trabalho em Grupo"
+    }
+  ];
+
+  const libraryImages = [
+    {
+      src: "/lovable-uploads/4c024769-a9ce-4393-95fe-6c9dd3ec9a67.png",
+      alt: "Área de estudos da biblioteca",
+      title: "Área de Estudos"
+    },
+    {
+      src: "/lovable-uploads/f790d44d-4a8f-4a7c-905e-58638b0e5c20.png",
+      alt: "Mesas de estudo individuais",
+      title: "Mesas de Estudo Individuais"
+    },
+    {
+      src: "/lovable-uploads/7d8ad68e-8e97-44bf-8b31-5206a130bb7c.png",
+      alt: "Espaço de leitura e pesquisa",
+      title: "Espaço de Leitura"
+    },
+    {
+      src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
+      alt: "Área de estudos com acervo",
+      title: "Área de Estudos com Acervo"
+    },
+    {
+      src: "/lovable-uploads/ff8ae830-5570-4d92-91dc-a628d9a5ea07.png",
+      alt: "Vista geral da biblioteca",
+      title: "Vista Geral da Biblioteca"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -147,6 +203,68 @@ const Dependencias = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exteriorImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Robotics Lab Section */}
+      <section className="py-20 bg-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Laboratório de Robótica e Informática</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {roboticsLabImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Library Section */}
+      <section className="py-20 bg-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Biblioteca</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Um ambiente tranquilo e organizado para estudos, pesquisas e desenvolvimento do hábito da leitura.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {libraryImages.map((image, index) => (
                 <Card key={index} className="hover-scale shadow-lg">
                   <CardContent className="p-0">
                     <OptimizedImage
