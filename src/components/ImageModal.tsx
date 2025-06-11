@@ -24,7 +24,7 @@ const ImageModal = ({ src, alt, title, isOpen, onClose }: ImageModalProps) => {
           <OptimizedImage
             src={src}
             alt={alt}
-            className="w-full h-auto max-h-[80vh] object-contain"
+            className="w-auto h-auto max-w-full max-h-[80vh] object-contain mx-auto"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
             <h3 className="text-white text-xl font-semibold">{title}</h3>
