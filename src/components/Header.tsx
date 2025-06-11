@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,11 +40,14 @@ const Header = () => {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center flex-shrink-0">
               <img 
                 src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
                 alt="Colégio Leibniz Logo" 
-                className="h-16 w-auto"
+                className="h-12 w-auto object-contain"
+                loading="eager"
+                width="120"
+                height="48"
               />
             </Link>
             
@@ -53,14 +55,14 @@ const Header = () => {
               <Button 
                 onClick={openWhatsApp}
                 size="sm"
-                className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-2"
+                className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-2 flex-shrink-0"
               >
                 WhatsApp
               </Button>
               
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" className="p-2">
+                  <Button variant="outline" size="sm" className="p-2 flex-shrink-0">
                     <Menu className="h-4 w-4" />
                   </Button>
                 </SheetTrigger>
