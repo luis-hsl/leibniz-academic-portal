@@ -1,3 +1,4 @@
+
 export const exteriorImages = [
   {
     src: "/lovable-uploads/af862d6b-0e89-43bc-9100-4955d3958008.png",
@@ -23,22 +24,12 @@ export const exteriorImages = [
 
 export const auditoriumImages = [
   {
-    src: "/lovable-uploads/ddddefe2-e093-407d-84b9-afa08a8e5921.png",
-    alt: "Auditório durante apresentação",
-    title: "Auditório - Apresentação"
-  },
-  {
-    src: "/lovable-uploads/54c661a9-afc2-42a8-9e6b-97449b09c464.png",
-    alt: "Vista ampla do auditório",
-    title: "Vista Ampla do Auditório"
-  },
-  {
-    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.png",
+    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.webp",
     alt: "Estudantes do Colégio Leibniz em palestra no auditório",
     title: "Palestra Educativa"
   },
   {
-    src: "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.png",
+    src: "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.webp",
     alt: "Vista panorâmica do auditório lotado durante evento",
     title: "Evento Completo"
   }
@@ -69,84 +60,54 @@ export const fundamental2CorridorImages = [
 
 export const roboticsImages = [
   {
-    src: "/lovable-uploads/b3723d45-a264-4843-b4d0-972b4248ed48.png",
-    alt: "Estudantes trabalhando com projetos de robótica",
-    title: "Projetos de Robótica"
-  },
-  {
-    src: "/lovable-uploads/76fd015e-3b13-4dad-ac69-2a64077cd6ac.png",
-    alt: "Atividades de programação e robótica",
-    title: "Programação e Robótica"
-  },
-  {
-    src: "/lovable-uploads/1c627c8b-a33f-40a7-8874-7251974f84f8.png",
-    alt: "Trabalho colaborativo em robótica",
-    title: "Trabalho Colaborativo"
-  },
-  {
-    src: "/lovable-uploads/edc952d5-b9be-4538-8ab1-518de9bfea74.png",
-    alt: "Estudantes em atividade de robótica educacional",
-    title: "Robótica Educacional"
-  },
-  {
-    src: "/lovable-uploads/d198bf33-8762-4383-8e14-11d19c41c264.png",
-    alt: "Criança com jogo educacional",
-    title: "Jogos Educacionais"
-  },
-  {
-    src: "/lovable-uploads/0efe3d3e-ae28-406d-909f-5e3005b0b790.png",
-    alt: "Atividades em grupo de robótica",
-    title: "Atividades em Grupo"
-  },
-  {
-    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.png",
-    alt: "Estudantes construindo projetos com blocos LEGO educacionais",
-    title: "Construção com LEGO Educacional"
-  },
-  {
-    src: "/lovable-uploads/f599e5cd-5b79-4f7b-afd0-42bbda705030.png",
-    alt: "Trabalho em equipe com peças LEGO e tablet",
-    title: "Integração Digital e Física"
-  },
-  {
-    src: "/lovable-uploads/64302fdf-eb23-464b-b608-91ca30516953.png",
-    alt: "Colaboração em projetos de robótica educacional",
-    title: "Aprendizado Colaborativo"
-  },
-  {
-    src: "/lovable-uploads/947a0e74-eed4-4678-b5d1-461afe061b68.png",
+    src: "/lovable-uploads/947a0e74-eed4-4678-b5d1-461afe061b68.webp",
     alt: "Estudantes do Fundamental trabalhando com jogos educativos",
     title: "Jogos e Atividades Educativas"
   },
   {
-    src: "/lovable-uploads/d9fa7d75-7e20-41b9-b112-1d22802b82aa.png",
+    src: "/lovable-uploads/d9fa7d75-7e20-41b9-b112-1d22802b82aa.webp",
     alt: "Criança explorando materiais educacionais de ciências",
     title: "Exploração Científica"
   },
   {
-    src: "/lovable-uploads/99cf7ec5-cf4f-4850-9909-77baa9e7dc86.png",
+    src: "/lovable-uploads/99cf7ec5-cf4f-4850-9909-77baa9e7dc86.webp",
     alt: "Estudante concentrado montando peças LEGO",
     title: "Concentração e Criatividade"
   },
   {
-    src: "/lovable-uploads/cb195725-a946-4244-a438-4d3fa42cee59.png",
+    src: "/lovable-uploads/cb195725-a946-4244-a438-4d3fa42cee59.webp",
     alt: "Estudante focada em atividade de construção",
     title: "Desenvolvimento de Habilidades"
   },
   {
-    src: "/lovable-uploads/0aee9786-721a-42ee-b980-a8fd864de2bb.png",
+    src: "/lovable-uploads/0aee9786-721a-42ee-b980-a8fd864de2bb.webp",
     alt: "Atividade educacional com blocos e histórias",
     title: "Narrativa e Construção"
   },
   {
-    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.png",
+    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.webp",
     alt: "Projeto LEGO SPIKE de robótica avançada",
     title: "Robótica LEGO SPIKE"
   },
   {
-    src: "/lovable-uploads/15e96c60-fb6c-4706-a00f-f8287784c004.png",
+    src: "/lovable-uploads/15e96c60-fb6c-4706-a00f-f8287784c004.webp",
     alt: "Ambiente colaborativo de robótica com múltiplas atividades",
     title: "Laboratório de Robótica Colaborativo"
+  },
+  {
+    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.webp",
+    alt: "Estudantes construindo projetos com blocos LEGO educacionais",
+    title: "Construção com LEGO Educacional"
+  },
+  {
+    src: "/lovable-uploads/f599e5cd-5b79-4f7b-afd0-42bbda705030.webp",
+    alt: "Trabalho em equipe com peças LEGO e tablet",
+    title: "Integração Digital e Física"
+  },
+  {
+    src: "/lovable-uploads/64302fdf-eb23-464b-b608-91ca30516953.webp",
+    alt: "Colaboração em projetos de robótica educacional",
+    title: "Aprendizado Colaborativo"
   }
 ];
 
@@ -223,52 +184,27 @@ export const technologyLabImages = [
 
 export const libraryImages = [
   {
-    src: "/lovable-uploads/4c024769-a9ce-4393-95fe-6c9dd3ec9a67.png",
-    alt: "Área de estudos da biblioteca",
-    title: "Área de Estudos"
-  },
-  {
-    src: "/lovable-uploads/f790d44d-4a8f-4a7c-905e-58638b0e5c20.png",
-    alt: "Mesas de estudo individuais",
-    title: "Mesas de Estudo Individuais"
-  },
-  {
-    src: "/lovable-uploads/7d8ad68e-8e97-44bf-8b31-5206a130bb7c.png",
-    alt: "Espaço de leitura e pesquisa",
-    title: "Espaço de Leitura"
-  },
-  {
-    src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
-    alt: "Área de estudos com acervo",
-    title: "Área de Estudos com Acervo"
-  },
-  {
-    src: "/lovable-uploads/ff8ae830-5570-4d92-91dc-a628d9a5ea07.png",
-    alt: "Vista geral da biblioteca",
-    title: "Vista Geral da Biblioteca"
-  },
-  {
-    src: "/lovable-uploads/d0c969a9-4172-45ec-9259-4434014e9ab5.png",
+    src: "/lovable-uploads/d0c969a9-4172-45ec-9259-4434014e9ab5.webp",
     alt: "Biblioteca do Fundamental 2 com cadeiras coloridas e bancadas",
     title: "Biblioteca Fundamental 2 - Vista Geral"
   },
   {
-    src: "/lovable-uploads/515ba1f1-7740-43ba-a854-6403931cb17b.png",
+    src: "/lovable-uploads/515ba1f1-7740-43ba-a854-6403931cb17b.webp",
     alt: "Bancadas de estudo com cadeiras verdes e roxas",
     title: "Bancadas de Estudo Coloridas"
   },
   {
-    src: "/lovable-uploads/2131945a-a322-4886-8182-49ba419b6a65.png",
+    src: "/lovable-uploads/2131945a-a322-4886-8182-49ba419b6a65.webp",
     alt: "Área de estudos com organização de materiais ao fundo",
     title: "Área de Estudos Organizada"
   },
   {
-    src: "/lovable-uploads/ed467776-2aae-4468-b18b-c4313e03d169.png",
+    src: "/lovable-uploads/ed467776-2aae-4468-b18b-c4313e03d169.webp",
     alt: "Espaço amplo da biblioteca com bancadas laterais",
     title: "Espaço Amplo de Estudos"
   },
   {
-    src: "/lovable-uploads/6bf1cc55-6cec-432f-9744-3a661fec9c7d.png",
+    src: "/lovable-uploads/6bf1cc55-6cec-432f-9744-3a661fec9c7d.webp",
     alt: "Vista completa da biblioteca com mobiliário moderno",
     title: "Biblioteca Completa"
   }

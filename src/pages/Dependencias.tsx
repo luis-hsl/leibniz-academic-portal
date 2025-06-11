@@ -20,11 +20,11 @@ import {
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
-  // Critical images for preloading (first 3 images from first section)
+  // Critical images for preloading (first WebP images from first sections)
   const criticalImages = [
-    "/lovable-uploads/af862d6b-0e89-43bc-9100-4955d3958008.png",
-    "/lovable-uploads/9b4349e8-2668-497c-9e72-df6bc6962ec9.png",
-    "/lovable-uploads/234c1ebb-2420-49b2-abe6-c8ed4ea8107f.png"
+    "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.webp",
+    "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.webp",
+    "/lovable-uploads/947a0e74-eed4-4678-b5d1-461afe061b68.webp"
   ];
 
   return (
