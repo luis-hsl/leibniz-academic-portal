@@ -34,7 +34,11 @@ const DependencySection = ({ title, description, images, bgColor = "bg-white" }:
                   <OptimizedImage
                     src={image.src}
                     alt={image.alt}
+                    width={400}
+                    height={256}
                     className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg"
+                    priority={index < 3}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="p-3 sm:p-4">
                     <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">{image.title}</h3>

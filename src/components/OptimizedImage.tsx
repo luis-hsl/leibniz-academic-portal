@@ -9,33 +9,65 @@ interface OptimizedImageProps {
   height?: number;
   priority?: boolean;
   placeholder?: string;
+  sizes?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   className = "",
-  width,
-  height,
+  width = 400,
+  height = 300,
   priority = false,
-  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzlDQTNBRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhcnJlZ2FuZG8uLi48L3RleHQ+PC9zdmc+"
+  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzlDQTNBRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhcnJlZ2FuZG8uLi48L3RleHQ+PC9zdmc+",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState<string>('');
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // Generate WebP and AVIF sources if possible
+  const generateModernSources = (originalSrc: string) => {
+    const sources = [];
+    const baseSrc = originalSrc.replace(/\.[^/.]+$/, "");
+    
+    // Add AVIF source (most efficient)
+    sources.push({
+      srcSet: `${baseSrc}.avif`,
+      type: 'image/avif'
+    });
+    
+    // Add WebP source (good fallback)
+    sources.push({
+      srcSet: `${baseSrc}.webp`,
+      type: 'image/webp'
+    });
+    
+    return sources;
+  };
+
+  const modernSources = generateModernSources(src);
+
   useEffect(() => {
-    if (priority) return;
+    if (priority) {
+      setCurrentSrc(src);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
+          setCurrentSrc(src);
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '100px' }
+      { 
+        threshold: 0.1, 
+        rootMargin: '50px' // Reduced from 100px for better performance
+      }
     );
 
     if (imgRef.current) {
@@ -43,7 +75,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [priority]);
+  }, [priority, src]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -58,12 +90,19 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <div 
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={{ 
+        width: width ? `${width}px` : '100%', 
+        height: height ? `${height}px` : 'auto',
+        aspectRatio: width && height ? `${width}/${height}` : undefined
+      }}
     >
       {!isInView && !priority ? (
         <div 
           className="w-full h-full bg-gray-100 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
+          style={{ 
+            width: width ? `${width}px` : '100%', 
+            height: height ? `${height}px` : '100%' 
+          }}
         >
           <span className="text-gray-400 text-sm">Carregando...</span>
         </div>
@@ -73,27 +112,48 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <img
               src={placeholder}
               alt=""
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+              width={width}
+              height={height}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
                 isLoaded ? 'opacity-0' : 'opacity-100'
               }`}
               style={{ filter: 'blur(2px)' }}
             />
           )}
           {!hasError ? (
-            <img
-              src={src}
-              alt={alt}
-              onLoad={handleLoad}
-              onError={handleError}
-              className={`w-full h-full object-cover transition-opacity duration-500 ${
-                isLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              loading={priority ? 'eager' : 'lazy'}
-              decoding="async"
-              fetchPriority={priority ? 'high' : 'low'}
-            />
+            <picture>
+              {modernSources.map((source, index) => (
+                <source
+                  key={index}
+                  srcSet={source.srcSet}
+                  type={source.type}
+                  sizes={sizes}
+                />
+              ))}
+              <img
+                src={currentSrc}
+                alt={alt}
+                width={width}
+                height={height}
+                onLoad={handleLoad}
+                onError={handleError}
+                className={`w-full h-full object-cover transition-opacity duration-300 ${
+                  isLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
+                loading={priority ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchPriority={priority ? 'high' : 'low'}
+                sizes={sizes}
+              />
+            </picture>
           ) : (
-            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+            <div 
+              className="w-full h-full bg-gray-100 flex items-center justify-center"
+              style={{ 
+                width: width ? `${width}px` : '100%', 
+                height: height ? `${height}px` : '100%' 
+              }}
+            >
               <span className="text-gray-500 text-sm">Imagem não disponível</span>
             </div>
           )}

@@ -1,9 +1,11 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import DependencySection from "@/components/DependencySection";
 import SEOHead from "@/components/SEOHead";
 import OptimizedAnalytics from "@/components/OptimizedAnalytics";
+import ResourcePreloader from "@/components/ResourcePreloader";
 
 const Dependencias = () => {
   const exteriorImages = [
@@ -21,11 +23,6 @@ const Dependencias = () => {
       src: "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.png",
       alt: "Entrada principal do Colégio Leibniz",
       title: "Entrada Principal"
-    },
-    {
-      src: "/lovable-uploads/43fb40dd-018a-40da-b5ac-a9161820b532.png",
-      alt: "Vista geral do Colégio Leibniz",
-      title: "Vista Geral"
     }
   ];
 
@@ -190,6 +187,13 @@ const Dependencias = () => {
     }
   ];
 
+  // Critical images for preloading (first 3 images from first section)
+  const criticalImages = [
+    "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
+    "/lovable-uploads/3fce4e95-adc0-4137-88a7-07d5fc5d853a.png",
+    "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.png"
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEOHead 
@@ -197,6 +201,7 @@ const Dependencias = () => {
         description="Conheça os espaços modernos e equipados do Colégio Leibniz que proporcionam a melhor experiência educacional para nossos alunos."
         keywords="dependências, infraestrutura, laboratórios, biblioteca, colégio leibniz"
       />
+      <ResourcePreloader criticalImages={criticalImages} />
       <OptimizedAnalytics />
       <Header />
       
