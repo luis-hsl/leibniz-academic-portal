@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -162,19 +163,34 @@ const Dependencias = () => {
 
   const cafeteriaImages = [
     {
-      src: "/lovable-uploads/62af054d-f4c7-4390-97c5-5d01fae9cd02.png",
-      alt: "Vista geral da cantina do colégio",
-      title: "Cantina - Vista Geral"
+      src: "/lovable-uploads/947f79fe-f4d4-4f24-aec1-0704879100d2.png",
+      alt: "Pátio coberto da cantina com mesas e bancos",
+      title: "Pátio Coberto - Vista 1"
     },
     {
-      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
-      alt: "Área de convivência da cantina",
+      src: "/lovable-uploads/bc6da1a4-5a47-45e2-b0b4-e12a8125329a.png",
+      alt: "Área ampla da cantina com vista completa",
+      title: "Pátio Coberto - Vista 2"
+    },
+    {
+      src: "/lovable-uploads/a522d74e-f638-462b-994b-48eb15ae3563.png",
+      alt: "Espaço da cantina com mesas e área de lanche",
+      title: "Área de Alimentação"
+    },
+    {
+      src: "/lovable-uploads/fa442d9f-bb20-4911-9779-d77fb9f77121.png",
+      alt: "Vista da cantina com bancos e área de convivência",
       title: "Área de Convivência"
     },
     {
-      src: "/lovable-uploads/a442947a-aec8-4b15-a88a-0fd80eb13319.png",
-      alt: "Espaço da cantina com mesas",
-      title: "Área de Alimentação"
+      src: "/lovable-uploads/06f48c7a-4292-4d0c-846f-32e41b8a8905.png",
+      alt: "Espaço completo da cantina com iluminação moderna",
+      title: "Espaço Completo"
+    },
+    {
+      src: "/lovable-uploads/4e211de7-a47a-45fe-9533-2010f9447a81.png",
+      alt: "Vista lateral da cantina com decoração temática",
+      title: "Vista Lateral"
     }
   ];
 
@@ -270,7 +286,7 @@ const Dependencias = () => {
 
       <DependencySection
         title="Cantina"
-        description="Ambiente acolhedor e moderno para alimentação e convivência dos estudantes."
+        description="Ambiente acolhedor e moderno para alimentação e convivência dos estudantes do Fundamental 1 e 2, com pátio coberto amplo e bem iluminado."
         images={cafeteriaImages}
         bgColor="bg-orange-50"
       />
