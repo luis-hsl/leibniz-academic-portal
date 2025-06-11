@@ -80,7 +80,7 @@ const CollegeGallery = () => {
               {collegeImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/2">
                   <div className="p-1 sm:p-2">
-                    <div className="relative rounded-lg overflow-hidden shadow-lg hover-scale transition-transform duration-300">
+                    <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
                       <OptimizedImage
                         src={image.src}
                         alt={image.alt}
