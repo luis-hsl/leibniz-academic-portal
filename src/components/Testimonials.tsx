@@ -64,21 +64,28 @@ const Testimonials = () => {
               dragFree: false,
             }}
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-4 md:-ml-6">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="p-1 sm:p-2">
-                    <div className="text-center">
-                      <OptimizedImage
-                        src={student.image}
-                        alt={student.name}
-                        className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300"
-                        width={300}
-                        height={400}
-                        priority={index === 0} // Only first image gets priority
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                      />
-                      <p className="text-center mt-3 text-sm sm:text-base text-gray-700 font-medium">{student.name}</p>
+                <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="p-2 sm:p-3">
+                    <div className="bg-white rounded-xl shadow-lg p-4 text-center hover:shadow-xl transition-shadow duration-300">
+                      <div className="mb-4">
+                        <OptimizedImage
+                          src={student.image}
+                          alt={student.name}
+                          className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
+                          width={280}
+                          height={350}
+                          priority={index === 0}
+                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                        />
+                      </div>
+                      <h3 className="text-sm sm:text-base font-semibold text-gray-800 leading-tight">
+                        {student.name}
+                      </h3>
+                      <div className="mt-2 px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full inline-block">
+                        APROVADO
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
