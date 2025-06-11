@@ -44,12 +44,12 @@ const DependencySection = ({ title, description, images, bgColor = "bg-white" }:
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {images.map((image, index) => (
-              <Card key={index} className="hover-scale shadow-lg cursor-pointer" onClick={() => handleImageClick(image)}>
+              <Card key={index} className="shadow-lg cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick(image)}>
                 <CardContent className="p-0">
                   <OptimizedImage
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg transition-transform hover:scale-105"
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-3 sm:p-4">
                     <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">{image.title}</h3>
