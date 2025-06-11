@@ -87,7 +87,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold mb-6 text-center text-white">Nossa Localização</h3>
             <div className="aspect-video rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.2345678901234!2d-54.634567890123456!3d-16.467890123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939dcabd6a3f5c1f%3A0x7f8b5d2c1e4a3b6d!2sAvenida%20Paulista%2C%20720%20-%20Parque%20Sagrada%20Fam%C3%ADlia%2C%20Rondon%C3%B3polis%20-%20MT%2C%2078735-223%2C%20Brazil!5e0!3m2!1sen!2sbr!4v1704067200000!5m2!1sen!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.234567890123!2d-54.644722!3d-16.469167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939dcabd6a3f5c1f%3A0x7f8b5d2c1e4a3b6d!2sAv.%20Paulista%2C%20720%20-%20Parque%20Sagrada%20Fam%C3%ADlia%2C%20Rondon%C3%B3polis%20-%20MT%2C%2078735-223!5e0!3m2!1spt-BR!2sbr!4v1704067200000!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
