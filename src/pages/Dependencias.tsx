@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -31,6 +30,57 @@ const Dependencias = () => {
       src: "/lovable-uploads/43fb40dd-018a-40da-b5ac-a9161820b532.png",
       alt: "Vista geral do Colégio Leibniz",
       title: "Vista Geral"
+    }
+  ];
+
+  const auditoriumImages = [
+    {
+      src: "/lovable-uploads/ddddefe2-e093-407d-84b9-afa08a8e5921.png",
+      alt: "Auditório durante apresentação",
+      title: "Auditório - Apresentação"
+    },
+    {
+      src: "/lovable-uploads/54c661a9-afc2-42a8-9e6b-97449b09c464.png",
+      alt: "Vista ampla do auditório",
+      title: "Vista Ampla do Auditório"
+    }
+  ];
+
+  const fundamental2CorridorImages = [
+    {
+      src: "/lovable-uploads/a463fe68-c2d3-4f63-bfb2-5883d43bbe5e.png",
+      alt: "Corredor do Fundamental 2",
+      title: "Corredor Principal"
+    },
+    {
+      src: "/lovable-uploads/7e951399-c37f-4736-9f36-46470bb77e0f.png",
+      alt: "Área de convivência do Fundamental 2",
+      title: "Área de Convivência"
+    },
+    {
+      src: "/lovable-uploads/93122a4c-90de-43d7-8075-925e0d78bffd.png",
+      alt: "Corredor com armários",
+      title: "Área dos Armários"
+    },
+    {
+      src: "/lovable-uploads/cff685be-0b22-48b2-8d79-757fa809f3f5.png",
+      alt: "Hall principal com painel informativo",
+      title: "Hall Principal"
+    },
+    {
+      src: "/lovable-uploads/aca46dea-1ef5-4fcb-a765-f2b73ee37a19.png",
+      alt: "Entrada do Fundamental 2",
+      title: "Entrada do Fundamental 2"
+    },
+    {
+      src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.png",
+      alt: "Área recreativa com ping pong",
+      title: "Área Recreativa"
+    },
+    {
+      src: "/lovable-uploads/5a719721-a1be-4350-a778-bf16da792606.png",
+      alt: "Espaço de convivência completo",
+      title: "Espaço de Convivência"
     }
   ];
 
@@ -256,6 +306,68 @@ const Dependencias = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exteriorImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Auditorium Section */}
+      <section className="py-20 bg-red-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Auditório</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Espaço moderno e confortável para apresentações, palestras e eventos educacionais e culturais.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {auditoriumImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fundamental 2 Corridor Section */}
+      <section className="py-20 bg-yellow-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Corredor do Fundamental 2</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Espaços amplos e organizados que proporcionam um ambiente acolhedor para os estudantes do Ensino Fundamental 2.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {fundamental2CorridorImages.map((image, index) => (
                 <Card key={index} className="hover-scale shadow-lg">
                   <CardContent className="p-0">
                     <OptimizedImage
