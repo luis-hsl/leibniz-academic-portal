@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -12,11 +11,6 @@ const Dependencias = () => {
       src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
       alt: "Fachada do Colégio Leibniz",
       title: "Fachada Principal"
-    },
-    {
-      src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
-      alt: "Vista externa do Colégio Leibniz",
-      title: "Vista Externa"
     },
     {
       src: "/lovable-uploads/3fce4e95-adc0-4137-88a7-07d5fc5d853a.png",
