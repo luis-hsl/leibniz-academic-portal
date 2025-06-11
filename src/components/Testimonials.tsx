@@ -76,7 +76,7 @@ const Testimonials = () => {
 
           <Carousel
             setApi={setApi}
-            className="w-full max-w-6xl mx-auto"
+            className="w-full max-w-6xl mx-auto relative"
             opts={{
               align: "center",
               loop: true,
@@ -86,7 +86,7 @@ const Testimonials = () => {
           >
             <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4 lg:-ml-6">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 lg:pl-6 basis-1/2 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 lg:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div className="p-1 sm:p-2 md:p-3">
                     <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-slide-up group"
                          style={{ animationDelay: `${index * 0.1}s` }}>
@@ -98,7 +98,7 @@ const Testimonials = () => {
                           width={300}
                           height={400}
                           priority={index === 0}
-                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
@@ -107,15 +107,33 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 sm:-left-6 md:-left-8 lg:-left-12 hover:scale-110 transition-transform duration-200" />
-            <CarouselNext className="-right-4 sm:-right-6 md:-right-8 lg:-right-12 hover:scale-110 transition-transform duration-200" />
+            
+            {/* Navigation arrows - visible on all screen sizes */}
+            <CarouselPrevious className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-lg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <CarouselNext className="absolute -right-2 sm:-right-4 md:-right-8 lg:-right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-lg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </Carousel>
 
-          {/* Mobile touch indicators */}
-          <div className="flex justify-center mt-4 sm:hidden">
-            <p className="text-sm text-gray-500 text-center px-4">
-              👈 Deslize para ver mais estudantes 👉
-            </p>
+          {/* Mobile indicators and instructions */}
+          <div className="flex flex-col items-center mt-6 sm:mt-8 space-y-3">
+            {/* Dots indicator for mobile */}
+            <div className="flex justify-center space-x-2 sm:hidden">
+              {studentImages.map((_, index) => (
+                <div 
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+            </div>
+            
+            {/* Touch instructions for mobile */}
+            <div className="text-center sm:hidden">
+              <p className="text-sm text-gray-500 px-4">
+                👈 Deslize para ver mais estudantes 👉
+              </p>
+              <p className="text-xs text-gray-400 mt-1 px-4">
+                Use as setas ou arraste para navegar pelas fotos
+              </p>
+            </div>
           </div>
 
           <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 text-center">
