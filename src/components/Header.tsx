@@ -45,7 +45,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
                 alt="Colégio Leibniz Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
             
@@ -96,7 +96,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
               alt="Colégio Leibniz Logo" 
-              className="h-14 lg:h-16 w-auto"
+              className="h-18 lg:h-20 w-auto"
             />
           </Link>
           
