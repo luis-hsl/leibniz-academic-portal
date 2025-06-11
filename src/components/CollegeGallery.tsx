@@ -33,9 +33,9 @@ const CollegeGallery = () => {
     return () => clearInterval(interval);
   }, [api]);
 
-  // Combine all dependency images into one array
+  // Combine all dependency images into one array - prioritizing external area images
   const allDependencyImages = [
-    // Área Externa
+    // Área Externa - garantindo que sejam as primeiras
     ...areaExternaImages,
     // Robótica
     ...roboticsImages,
@@ -51,11 +51,11 @@ const CollegeGallery = () => {
     ...auditoriumImages,
     // Corredor do Fundamental II
     ...fundamental2CorridorImages
-  ].filter(image => 
-    // Remove as imagens especificadas pelo usuário
-    !image.title.toLowerCase().includes('infraestrutura completa') &&
-    !image.title.toLowerCase().includes('design e conforto')
-  );
+  ];
+
+  console.log('Total images loaded:', allDependencyImages.length);
+  console.log('Area Externa images:', areaExternaImages.length);
+  console.log('First few images:', allDependencyImages.slice(0, 5).map(img => img.title));
 
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
@@ -80,7 +80,7 @@ const CollegeGallery = () => {
           >
             <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {allDependencyImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={`${image.title}-${index}`} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1 sm:p-2">
                     <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 bg-white">
                       <OptimizedImage
@@ -89,13 +89,17 @@ const CollegeGallery = () => {
                         className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
                         width={400}
                         height={300}
-                        priority={index < 6} // First 6 images get priority
+                        priority={index < 8} // Increase priority for first 8 images (including all external area)
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 sm:p-4">
                         <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight">
                           {image.title}
                         </h3>
+                        {/* Debug info for troubleshooting */}
+                        <p className="text-white/70 text-xs mt-1">
+                          {index + 1} de {allDependencyImages.length}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -128,6 +132,9 @@ const CollegeGallery = () => {
               </p>
               <p className="text-xs text-gray-400 mt-1 px-4">
                 Use as setas ou arraste para navegar pelas fotos
+              </p>
+              <p className="text-xs text-gray-500 mt-1 px-4">
+                Total: {allDependencyImages.length} imagens
               </p>
             </div>
           </div>
