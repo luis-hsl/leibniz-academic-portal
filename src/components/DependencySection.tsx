@@ -1,8 +1,6 @@
 
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import OptimizedImage from "./OptimizedImage";
-import ImageModal from "./ImageModal";
 
 interface ImageData {
   src: string;
@@ -18,19 +16,6 @@ interface DependencySectionProps {
 }
 
 const DependencySection = ({ title, description, images, bgColor = "bg-white" }: DependencySectionProps) => {
-  const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleImageClick = (image: ImageData) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
     <section className={`py-12 sm:py-16 md:py-20 ${bgColor}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +29,7 @@ const DependencySection = ({ title, description, images, bgColor = "bg-white" }:
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {images.map((image, index) => (
-              <Card key={index} className="shadow-lg cursor-pointer hover:shadow-xl transition-shadow" onClick={() => handleImageClick(image)}>
+              <Card key={index} className="shadow-lg">
                 <CardContent className="p-0">
                   <OptimizedImage
                     src={image.src}
@@ -60,16 +45,6 @@ const DependencySection = ({ title, description, images, bgColor = "bg-white" }:
           </div>
         </div>
       </div>
-
-      {selectedImage && (
-        <ImageModal
-          src={selectedImage.src}
-          alt={selectedImage.alt}
-          title={selectedImage.title}
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-        />
-      )}
     </section>
   );
 };
