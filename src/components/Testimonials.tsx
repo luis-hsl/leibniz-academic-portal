@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -68,16 +67,18 @@ const Testimonials = () => {
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/3">
                   <div className="p-2 sm:p-3">
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                      <OptimizedImage
-                        src={student.image}
-                        alt={student.name}
-                        className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
-                        width={350}
-                        height={450}
-                        priority={index === 0}
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 33vw, 33vw"
-                      />
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                      <div className="flex-1 flex items-center justify-center bg-gray-50">
+                        <OptimizedImage
+                          src={student.image}
+                          alt={student.name}
+                          className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-contain"
+                          width={350}
+                          height={450}
+                          priority={index === 0}
+                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 33vw, 33vw"
+                        />
+                      </div>
                       <div className="p-4">
                         <h3 className="text-base sm:text-lg font-semibold text-gray-800 leading-tight text-center">
                           {student.name}
