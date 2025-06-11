@@ -4,36 +4,55 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ErrorMonitoringComponent from "@/components/ErrorMonitoring";
-import Index from "./pages/Index";
-import SobreNos from "./pages/SobreNos";
-import NiveisEnsino from "./pages/NiveisEnsino";
-import OColegio from "./pages/OColegio";
-import ContatoPage from "./pages/ContatoPage";
-import BlogPage from "./pages/BlogPage";
-import Dependencias from "./pages/Dependencias";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
 
-const queryClient = new QueryClient();
+// Lazy load das páginas para reduzir bundle inicial
+const Index = lazy(() => import("./pages/Index"));
+const SobreNos = lazy(() => import("./pages/SobreNos"));
+const NiveisEnsino = lazy(() => import("./pages/NiveisEnsino"));
+const OColegio = lazy(() => import("./pages/OColegio"));
+const ContatoPage = lazy(() => import("./pages/ContatoPage"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const Dependencias = lazy(() => import("./pages/Dependencias"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes
+    },
+  },
+});
+
+// Componente de loading otimizado
+const PageLoader = () => (
+  <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className="animate-pulse">
+      <div className="bg-gray-200 h-8 w-48 mx-auto mb-4 rounded"></div>
+      <div className="bg-gray-200 h-4 w-32 mx-auto rounded"></div>
+    </div>
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ErrorMonitoringComponent />
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre-nos" element={<SobreNos />} />
-          <Route path="/niveis-ensino" element={<NiveisEnsino />} />
-          <Route path="/o-colegio" element={<OColegio />} />
-          <Route path="/dependencias" element={<Dependencias />} />
-          <Route path="/contato" element={<ContatoPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/sobre-nos" element={<SobreNos />} />
+            <Route path="/niveis-ensino" element={<NiveisEnsino />} />
+            <Route path="/o-colegio" element={<OColegio />} />
+            <Route path="/dependencias" element={<Dependencias />} />
+            <Route path="/contato" element={<ContatoPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

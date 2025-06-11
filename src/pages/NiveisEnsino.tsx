@@ -1,9 +1,11 @@
 
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import EducationLevels from "@/components/EducationLevels";
+
+// Lazy load do componente não crítico
+const EducationLevels = lazy(() => import("@/components/EducationLevels"));
 
 const NiveisEnsino = () => {
   useEffect(() => {
@@ -26,7 +28,14 @@ const NiveisEnsino = () => {
         </div>
       </section>
 
-      <EducationLevels />
+      <Suspense fallback={
+        <div className="py-20 text-center">
+          <div className="animate-pulse bg-gray-200 h-8 w-48 mx-auto mb-4 rounded"></div>
+          <div className="animate-pulse bg-gray-200 h-4 w-96 mx-auto rounded"></div>
+        </div>
+      }>
+        <EducationLevels />
+      </Suspense>
       
       <Footer />
       <WhatsAppButton />

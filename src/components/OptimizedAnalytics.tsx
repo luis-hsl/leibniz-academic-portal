@@ -10,35 +10,35 @@ const OptimizedAnalytics = () => {
     // Só carregar em produção
     if (process.env.NODE_ENV !== 'production') return;
 
-    // Carregar scripts de forma otimizada
-    const loadScript = (src: string, id: string) => {
-      if (document.getElementById(id)) return;
-      
+    // Carregar scripts de forma otimizada e lazy
+    const loadAnalytics = () => {
       const script = document.createElement('script');
-      script.id = id;
       script.async = true;
-      script.src = src;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`;
       document.head.appendChild(script);
+
+      // Configurar gtag de forma mais leve
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      
+      gtag('js', new Date());
+      gtag('config', GOOGLE_ANALYTICS_ID, {
+        send_page_view: true,
+        transport_type: 'beacon'
+      });
+      gtag('config', GOOGLE_TAG_ID);
+
+      window.gtag = gtag;
     };
 
-    // Carregar Google Analytics de forma otimizada
-    loadScript(`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`, 'gtag-script');
-
-    // Configurar gtag de forma mais leve
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+    // Carregar analytics após o page load para não bloquear renderização
+    if (document.readyState === 'complete') {
+      loadAnalytics();
+    } else {
+      window.addEventListener('load', loadAnalytics);
     }
-    
-    gtag('js', new Date());
-    gtag('config', GOOGLE_ANALYTICS_ID, {
-      send_page_view: true,
-      transport_type: 'beacon'
-    });
-    gtag('config', GOOGLE_TAG_ID);
-
-    // Adicionar gtag globalmente
-    window.gtag = gtag;
 
   }, []);
 
