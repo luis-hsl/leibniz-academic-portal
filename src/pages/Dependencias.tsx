@@ -8,15 +8,9 @@ import SEOHead from "@/components/SEOHead";
 import OptimizedAnalytics from "@/components/OptimizedAnalytics";
 import ResourcePreloader from "@/components/ResourcePreloader";
 import {
-  exteriorImages,
   auditoriumImages,
   fundamental2CorridorImages,
-  roboticsImages,
-  roboticsLabImages,
-  technologyLabImages,
-  libraryImages,
-  cafeteriaImages,
-  laboratoryImages
+  roboticsImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -41,13 +35,6 @@ const Dependencias = () => {
       <DependenciasHero />
 
       <DependencySection
-        title="Estrutura Externa"
-        description="Nossa infraestrutura moderna e bem localizada oferece um ambiente seguro e acolhedor."
-        images={exteriorImages}
-        bgColor="bg-white"
-      />
-
-      <DependencySection
         title="Auditório"
         description="Espaço moderno e confortável para apresentações, palestras e eventos educacionais e culturais."
         images={auditoriumImages}
@@ -66,41 +53,6 @@ const Dependencias = () => {
         description="Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional, trabalhando com blocos LEGO educacionais, tablets e projetos colaborativos que estimulam a criatividade, lógica e resolução de problemas."
         images={roboticsImages}
         bgColor="bg-gradient-to-r from-blue-50 to-cyan-50"
-      />
-
-      <DependencySection
-        title="Laboratório de Robótica e Informática"
-        description="Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica através de atividades práticas com blocos educacionais e tablets."
-        images={roboticsLabImages}
-        bgColor="bg-purple-50"
-      />
-
-      <DependencySection
-        title="Laboratório de Tecnologia e Informática"
-        description="Ambiente moderno e colorido equipado com laptops e mobiliário ergonômico, proporcionando espaços colaborativos e individuais para o aprendizado de tecnologia e informática."
-        images={technologyLabImages}
-        bgColor="bg-cyan-50"
-      />
-
-      <DependencySection
-        title="Biblioteca"
-        description="Espaço amplo e moderno para estudos, pesquisas e desenvolvimento do hábito da leitura, com bancadas individuais, cadeiras coloridas e ambiente climatizado especialmente planejado para estudantes do Fundamental 2."
-        images={libraryImages}
-        bgColor="bg-indigo-50"
-      />
-
-      <DependencySection
-        title="Cantina"
-        description="Ambiente acolhedor e moderno para alimentação e convivência dos estudantes do Fundamental 1 e 2, com pátio coberto amplo e bem iluminado."
-        images={cafeteriaImages}
-        bgColor="bg-orange-50"
-      />
-
-      <DependencySection
-        title="Laboratório de Química e Física"
-        description="Laboratório completo equipado com modelos anatômicos, microscópios profissionais, vidrarias e materiais didáticos para experimentos práticos em química, física e biologia."
-        images={laboratoryImages}
-        bgColor="bg-green-50"
       />
 
       <Footer />
