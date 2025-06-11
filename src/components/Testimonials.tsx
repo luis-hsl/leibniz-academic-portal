@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
+import OptimizedImage from "./OptimizedImage";
 
 const Testimonials = () => {
   const [api, setApi] = useState<any>();
@@ -17,7 +18,7 @@ const Testimonials = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 3000); // Change slide every 3 seconds
+    }, 4000); // Increased from 3s to 4s for better UX
 
     return () => clearInterval(interval);
   }, [api]);
@@ -70,16 +71,22 @@ const Testimonials = () => {
             opts={{
               align: "center",
               loop: true,
+              skipSnaps: false,
+              dragFree: false,
             }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4">
                   <div className="p-1 sm:p-2">
-                    <img 
-                      src={student.image} 
+                    <OptimizedImage
+                      src={student.image}
                       alt={student.name}
                       className="w-full h-auto rounded-lg shadow-lg hover-scale transition-transform duration-300"
+                      width={300}
+                      height={400}
+                      priority={index < 4} // Preload first 4 images
+                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                     />
                     <p className="text-center mt-2 text-xs sm:text-sm text-gray-600 font-medium">{student.name}</p>
                   </div>
