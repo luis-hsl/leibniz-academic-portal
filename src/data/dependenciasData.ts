@@ -1,12 +1,12 @@
 
 export const auditoriumImages = [
   {
-    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.webp",
+    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.png",
     alt: "Estudantes do Colégio Leibniz em palestra no auditório",
     title: "Palestra Educativa"
   },
   {
-    src: "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.webp",
+    src: "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.png",
     alt: "Vista panorâmica do auditório lotado durante evento",
     title: "Evento Completo"
   }
@@ -52,52 +52,52 @@ export const fundamental2CorridorImages = [
 
 export const roboticsImages = [
   {
-    src: "/lovable-uploads/947a0e74-eed4-4678-b5d1-461afe061b68.webp",
+    src: "/lovable-uploads/947a0e74-eed4-4678-b5d1-461afe061b68.png",
     alt: "Estudantes do Fundamental trabalhando com jogos educativos",
     title: "Jogos e Atividades Educativas"
   },
   {
-    src: "/lovable-uploads/d9fa7d75-7e20-41b9-b112-1d22802b82aa.webp",
+    src: "/lovable-uploads/d9fa7d75-7e20-41b9-b112-1d22802b82aa.png",
     alt: "Criança explorando materiais educacionais de ciências",
     title: "Exploração Científica"
   },
   {
-    src: "/lovable-uploads/99cf7ec5-cf4f-4850-9909-77baa9e7dc86.webp",
+    src: "/lovable-uploads/99cf7ec5-cf4f-4850-9909-77baa9e7dc86.png",
     alt: "Estudante concentrado montando peças LEGO",
     title: "Concentração e Criatividade"
   },
   {
-    src: "/lovable-uploads/cb195725-a946-4244-a438-4d3fa42cee59.webp",
+    src: "/lovable-uploads/cb195725-a946-4244-a438-4d3fa42cee59.png",
     alt: "Estudante focada em atividade de construção",
     title: "Desenvolvimento de Habilidades"
   },
   {
-    src: "/lovable-uploads/0aee9786-721a-42ee-b980-a8fd864de2bb.webp",
+    src: "/lovable-uploads/0aee9786-721a-42ee-b980-a8fd864de2bb.png",
     alt: "Atividade educacional com blocos e histórias",
     title: "Narrativa e Construção"
   },
   {
-    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.webp",
+    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.png",
     alt: "Projeto LEGO SPIKE de robótica avançada",
     title: "Robótica LEGO SPIKE"
   },
   {
-    src: "/lovable-uploads/15e96c60-fb6c-4706-a00f-f8287784c004.webp",
+    src: "/lovable-uploads/15e96c60-fb6c-4706-a00f-f8287784c004.png",
     alt: "Ambiente colaborativo de robótica com múltiplas atividades",
     title: "Laboratório de Robótica Colaborativo"
   },
   {
-    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.webp",
+    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.png",
     alt: "Estudantes construindo projetos com blocos LEGO educacionais",
     title: "Construção com LEGO Educacional"
   },
   {
-    src: "/lovable-uploads/f599e5cd-5b79-4f7b-afd0-42bbda705030.webp",
+    src: "/lovable-uploads/f599e5cd-5b79-4f7b-afd0-42bbda705030.png",
     alt: "Trabalho em equipe com peças LEGO e tablet",
     title: "Integração Digital e Física"
   },
   {
-    src: "/lovable-uploads/64302fdf-eb23-464b-b608-91ca30516953.webp",
+    src: "/lovable-uploads/64302fdf-eb23-464b-b608-91ca30516953.png",
     alt: "Colaboração em projetos de robótica educacional",
     title: "Aprendizado Colaborativo"
   }
