@@ -141,9 +141,36 @@ export const laboratorioTecnologiaImages = [
   }
 ];
 
+export const bibliotecaImages = [
+  {
+    src: "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
+    alt: "Biblioteca com mesas individuais, cadeiras coloridas e estantes organizadas",
+    title: "Ambiente de Estudos Organizado"
+  },
+  {
+    src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
+    alt: "Mesa de estudos com cadeiras coloridas e materiais didáticos ao fundo",
+    title: "Espaço de Leitura e Pesquisa"
+  },
+  {
+    src: "/lovable-uploads/b35c7e60-bba3-49ce-b2da-b3c53d7bbfd4.png",
+    alt: "Vista completa da biblioteca com mesas e acervo bibliográfico",
+    title: "Acervo e Mobiliário Moderno"
+  },
+  {
+    src: "/lovable-uploads/f4ddf793-391d-4150-b0a5-bbf5d030f138.png",
+    alt: "Área de estudos com mesas em formato de ilha e boa iluminação",
+    title: "Organização e Conforto"
+  },
+  {
+    src: "/lovable-uploads/a5aa0c52-0f65-4c9c-9435-d330f4b339e1.png",
+    alt: "Biblioteca ampla com ambiente climatizado e mobiliário funcional",
+    title: "Infraestrutura Completa"
+  }
+];
+
 export const auditoriumImages: any[] = [];
 export const fundamental2CorridorImages: any[] = [];
 export const educationInfantilImages: any[] = [];
-export const bibliotecaImages: any[] = [];
 export const laboratoriosImages: any[] = [];
 export const quadraEsportivaImages: any[] = [];

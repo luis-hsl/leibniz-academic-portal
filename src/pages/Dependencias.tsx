@@ -12,7 +12,8 @@ import {
   roboticsImages,
   cantinaImages,
   laboratorisFisicaQuimicaImages,
-  laboratorioTecnologiaImages
+  laboratorioTecnologiaImages,
+  bibliotecaImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -25,7 +26,8 @@ const Dependencias = () => {
     "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
     "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
     "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
-    "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png"
+    "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
+    "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png"
   ];
 
   return (
@@ -74,6 +76,13 @@ const Dependencias = () => {
         description="Nosso laboratório de tecnologia oferece um ambiente moderno e colorido, equipado com computadores de última geração e laptops para desenvolvimento de projetos tecnológicos. Com mobiliário ergonômico e design inspirador, este espaço promove a aprendizagem digital e prepara os alunos para os desafios do futuro, desenvolvendo competências em programação, design e inovação tecnológica."
         images={laboratorioTecnologiaImages}
         bgColor="bg-purple-50"
+      />
+
+      <DependencySection
+        title="Biblioteca do Ensino Fundamental II e Médio"
+        description="Nossa biblioteca oferece um ambiente tranquilo e organizado, especialmente projetado para estudantes do Ensino Fundamental II e Médio. Com mesas individuais de estudo, cadeiras coloridas e ergonômicas, ambiente climatizado e um acervo completo de materiais didáticos, proporcionamos o espaço ideal para leitura, pesquisa e desenvolvimento acadêmico dos nossos alunos."
+        images={bibliotecaImages}
+        bgColor="bg-indigo-50"
       />
 
       <Footer />
