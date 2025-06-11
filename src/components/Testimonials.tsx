@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -18,11 +17,12 @@ const Testimonials = () => {
 
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 4000); // Increased from 3s to 4s for better UX
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [api]);
 
+  // Reduced to only 4 most important student testimonials for faster loading
   const studentImages = [
     {
       name: "Giovana Orsi Thum",
@@ -39,18 +39,6 @@ const Testimonials = () => {
     {
       name: "Anna Clara Fengler",
       image: "/lovable-uploads/5b4f42a7-4972-4f23-b843-e49d4adf1303.png"
-    },
-    {
-      name: "Ana Clara Souza Pavoni",
-      image: "/lovable-uploads/1f5a261a-6444-4793-baa6-afa4956dd5e9.png"
-    },
-    {
-      name: "Gabriela Pagnussat",
-      image: "/lovable-uploads/ded2dc00-13ab-4eb8-a346-987b7d93d086.png"
-    },
-    {
-      name: "José Victor Polizel",
-      image: "/lovable-uploads/6b5df189-e011-4283-9be5-bfd59aff2d24.png"
     }
   ];
 
@@ -77,7 +65,7 @@ const Testimonials = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/3 lg:basis-1/4">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/4">
                   <div className="p-1 sm:p-2">
                     <OptimizedImage
                       src={student.image}
@@ -85,8 +73,8 @@ const Testimonials = () => {
                       className="w-full h-auto rounded-lg shadow-lg hover-scale transition-transform duration-300"
                       width={300}
                       height={400}
-                      priority={index < 4} // Preload first 4 images
-                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                      priority={index === 0} // Only first image gets priority
+                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                     />
                     <p className="text-center mt-2 text-xs sm:text-sm text-gray-600 font-medium">{student.name}</p>
                   </div>
@@ -97,7 +85,6 @@ const Testimonials = () => {
             <CarouselNext className="hidden sm:flex -right-12" />
           </Carousel>
 
-          {/* Statistics */}
           <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
             <div className="p-4">
               <h3 className="text-2xl sm:text-3xl font-bold text-red-600">95%</h3>

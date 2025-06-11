@@ -1,9 +1,28 @@
-
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
+import { useEffect } from "react";
 
 const Hero = () => {
+  const heroBackgroundImage = "/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png";
+
+  useEffect(() => {
+    // Preload hero background image with high priority
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = heroBackgroundImage;
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+
+    return () => {
+      const existingLink = document.querySelector(`link[href="${heroBackgroundImage}"]`);
+      if (existingLink) {
+        existingLink.remove();
+      }
+    };
+  }, []);
+
   const openWhatsAppVisit = () => {
     trackVisitConversion();
     const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
@@ -21,7 +40,7 @@ const Hero = () => {
       id="inicio" 
       className="relative text-white py-12 sm:py-16 md:py-20 min-h-screen flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${heroBackgroundImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
