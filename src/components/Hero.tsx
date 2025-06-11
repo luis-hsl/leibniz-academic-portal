@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Star, Award, Users, BookOpen } from "lucide-react";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 import { useEffect } from "react";
 
@@ -75,38 +74,6 @@ const Hero = () => {
             >
               Fale com um Atendente
             </Button>
-          </div>
-
-          {/* Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 px-4 sm:px-0">
-            <div className="text-center">
-              <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
-                <Award className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">21+</h3>
-              <p className="text-blue-100 text-sm sm:text-base">Anos de Experiência</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
-                <Users className="h-6 w-6 sm:h-8 sm:w-8 text-green-300" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">1000+</h3>
-              <p className="text-blue-100 text-sm sm:text-base">Alunos Aprovados</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
-                <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-blue-300" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">5</h3>
-              <p className="text-blue-100 text-sm sm:text-base">Níveis de Ensino</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/10 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-4 flex items-center justify-center">
-                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-300" />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">95%</h3>
-              <p className="text-blue-100 text-sm sm:text-base">Taxa de Aprovação</p>
-            </div>
           </div>
         </div>
       </div>
