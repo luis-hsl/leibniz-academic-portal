@@ -1,5 +1,6 @@
 
 
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -131,6 +132,44 @@ const Dependencias = () => {
       src: "/lovable-uploads/c18f8e5f-bc6c-4a00-a957-3b15732f2c18.png",
       alt: "Colaboração em projetos de tecnologia educacional",
       title: "Tecnologia Educacional"
+    }
+  ];
+
+  const technologyLabImages = [
+    {
+      src: "/lovable-uploads/34e11b1c-1a6b-4749-9602-04fd10c81e6f.png",
+      alt: "Laboratório de informática com múltiplos laptops organizados",
+      title: "Laboratório de Informática"
+    },
+    {
+      src: "/lovable-uploads/d10b4196-a7c1-419e-b1fb-8c9df3abeb74.png",
+      alt: "Bancadas com laptops para atividades educacionais",
+      title: "Bancadas de Tecnologia"
+    },
+    {
+      src: "/lovable-uploads/13a0cd8a-1bb4-4ffb-a749-b0ec8d3826d6.png",
+      alt: "Ambiente colorido com laptops e área de convivência",
+      title: "Ambiente Integrado"
+    },
+    {
+      src: "/lovable-uploads/5de72961-eb20-4281-b183-ad74234a1278.png",
+      alt: "Estações de trabalho com laptops e mobiliário moderno",
+      title: "Estações de Trabalho"
+    },
+    {
+      src: "/lovable-uploads/dd233b6a-99f3-49ae-80b2-0a240a5134e0.png",
+      alt: "Área colaborativa com poltronas coloridas e laptops",
+      title: "Área Colaborativa"
+    },
+    {
+      src: "/lovable-uploads/8845be22-8db0-4929-9f2a-b79c484efa1a.png",
+      alt: "Mesa redonda com laptops para trabalho em grupo",
+      title: "Trabalho em Grupo"
+    },
+    {
+      src: "/lovable-uploads/5eec5a9a-26ca-435b-9780-79b0326b9129.png",
+      alt: "Vista detalhada da área de trabalho colaborativo",
+      title: "Detalhes do Espaço"
     }
   ];
 
@@ -299,6 +338,13 @@ const Dependencias = () => {
       />
 
       <DependencySection
+        title="Laboratório de Tecnologia e Informática"
+        description="Ambiente moderno e colorido equipado com laptops e mobiliário ergonômico, proporcionando espaços colaborativos e individuais para o aprendizado de tecnologia e informática."
+        images={technologyLabImages}
+        bgColor="bg-cyan-50"
+      />
+
+      <DependencySection
         title="Biblioteca"
         description="Um ambiente tranquilo e organizado para estudos, pesquisas e desenvolvimento do hábito da leitura."
         images={libraryImages}
@@ -326,4 +372,5 @@ const Dependencias = () => {
 };
 
 export default Dependencias;
+
 
