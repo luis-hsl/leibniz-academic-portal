@@ -62,6 +62,59 @@ const Dependencias = () => {
     }
   ];
 
+  const roboticsImages = [
+    {
+      src: "/lovable-uploads/b3723d45-a264-4843-b4d0-972b4248ed48.png",
+      alt: "Estudantes trabalhando com projetos de robótica",
+      title: "Projetos de Robótica"
+    },
+    {
+      src: "/lovable-uploads/76fd015e-3b13-4dad-ac69-2a64077cd6ac.png",
+      alt: "Atividades de programação e robótica",
+      title: "Programação e Robótica"
+    },
+    {
+      src: "/lovable-uploads/1c627c8b-a33f-40a7-8874-7251974f84f8.png",
+      alt: "Trabalho colaborativo em robótica",
+      title: "Trabalho Colaborativo"
+    },
+    {
+      src: "/lovable-uploads/edc952d5-b9be-4538-8ab1-518de9bfea74.png",
+      alt: "Estudantes em atividade de robótica educacional",
+      title: "Robótica Educacional"
+    },
+    {
+      src: "/lovable-uploads/d198bf33-8762-4383-8e14-11d19c41c264.png",
+      alt: "Criança com jogo educacional",
+      title: "Jogos Educacionais"
+    },
+    {
+      src: "/lovable-uploads/0efe3d3e-ae28-406d-909f-5e3005b0b790.png",
+      alt: "Atividades em grupo de robótica",
+      title: "Atividades em Grupo"
+    },
+    {
+      src: "/lovable-uploads/404e6516-885c-4a75-b6d0-63bcf2ae99dd.png",
+      alt: "Construção com blocos programáveis",
+      title: "Blocos Programáveis"
+    },
+    {
+      src: "/lovable-uploads/fffef8c8-7333-47c0-bb87-e8d611ef31ad.png",
+      alt: "Projeto colaborativo de robótica",
+      title: "Projeto Colaborativo"
+    },
+    {
+      src: "/lovable-uploads/abf107dd-1170-4195-920d-7c3fb16dc74c.png",
+      alt: "Modelo robótico criado pelos estudantes",
+      title: "Modelo Robótico"
+    },
+    {
+      src: "/lovable-uploads/6d28cb0b-afec-4460-8d5a-6bc12f427982.png",
+      alt: "Sala de robótica com estudantes em atividade",
+      title: "Sala de Robótica"
+    }
+  ];
+
   const cafeteriaImages = [
     {
       src: "/lovable-uploads/62af054d-f4c7-4390-97c5-5d01fae9cd02.png",
@@ -203,6 +256,37 @@ const Dependencias = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exteriorImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Robotics Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Robótica Educacional</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Nossos estudantes desenvolvem habilidades do futuro através de atividades práticas de robótica, programação e tecnologia educacional.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {roboticsImages.map((image, index) => (
                 <Card key={index} className="hover-scale shadow-lg">
                   <CardContent className="p-0">
                     <OptimizedImage
