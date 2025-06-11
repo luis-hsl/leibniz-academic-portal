@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -43,21 +42,6 @@ const Dependencias = () => {
       src: "/lovable-uploads/54c661a9-afc2-42a8-9e6b-97449b09c464.png",
       alt: "Vista ampla do auditório",
       title: "Vista Ampla do Auditório"
-    },
-    {
-      src: "/lovable-uploads/93122a4c-90de-43d7-8075-925e0d78bffd.png",
-      alt: "Auditório - Vista frontal",
-      title: "Vista Frontal"
-    },
-    {
-      src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.png",
-      alt: "Auditório - Palco e projeção",
-      title: "Palco e Projeção"
-    },
-    {
-      src: "/lovable-uploads/cff685be-0b22-48b2-8d79-757fa809f3f5.png",
-      alt: "Auditório - Sistema de som e imagem",
-      title: "Sistema de Som e Imagem"
     }
   ];
 
