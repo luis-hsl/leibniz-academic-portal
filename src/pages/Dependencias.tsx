@@ -101,29 +101,34 @@ const Dependencias = () => {
 
   const roboticsLabImages = [
     {
-      src: "/lovable-uploads/2a0bab9b-519e-479e-8b46-e0237fa78fdb.png",
-      alt: "Laboratório de informática com notebooks",
-      title: "Laboratório de Informática"
+      src: "/lovable-uploads/217e1761-9771-4e0e-abf5-3e0d84202460.png",
+      alt: "Estudantes trabalhando com blocos de construção e tablet",
+      title: "Atividades com Blocos LEGO"
     },
     {
-      src: "/lovable-uploads/7423a40c-6f3d-4d7d-9973-21c7a3c1a901.png",
-      alt: "Espaço de tecnologia e robótica",
-      title: "Espaço de Tecnologia"
+      src: "/lovable-uploads/cc1f4e03-f73f-46d6-99e2-57db9dfbfa3a.png",
+      alt: "Trabalho colaborativo com tecnologia educacional",
+      title: "Programação e Construção"
     },
     {
-      src: "/lovable-uploads/e7862eb8-26ca-4bd7-a8c8-762e82f81567.png",
-      alt: "Notebooks para atividades de programação",
-      title: "Estação de Programação"
+      src: "/lovable-uploads/64a37913-63fb-4430-aea1-d1b8e5246f0b.png",
+      alt: "Desenvolvimento de projetos de robótica",
+      title: "Projetos de Robótica"
     },
     {
-      src: "/lovable-uploads/0de370e3-e936-4ab4-aaea-bf29a0cb4302.png",
-      alt: "Mesa colaborativa com notebooks",
-      title: "Mesa Colaborativa"
+      src: "/lovable-uploads/ef57bdc4-306d-4419-bf60-3195f5452cf3.png",
+      alt: "Atividades educacionais com blocos e tablet",
+      title: "Aprendizado Digital"
     },
     {
-      src: "/lovable-uploads/bb09e5fc-f8d4-40c8-8cf7-b5321f19558a.png",
-      alt: "Área de trabalho em grupo",
-      title: "Área de Trabalho em Grupo"
+      src: "/lovable-uploads/20a589dd-e1bd-4dcb-9d9a-6ed05abcfd4f.png",
+      alt: "Estudantes em equipe trabalhando com robótica",
+      title: "Trabalho em Equipe"
+    },
+    {
+      src: "/lovable-uploads/c18f8e5f-bc6c-4a00-a957-3b15732f2c18.png",
+      alt: "Colaboração em projetos de tecnologia educacional",
+      title: "Tecnologia Educacional"
     }
   ];
 
@@ -251,7 +256,7 @@ const Dependencias = () => {
 
       <DependencySection
         title="Laboratório de Robótica e Informática"
-        description="Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica."
+        description="Espaços modernos equipados com tecnologia de ponta para desenvolver habilidades em programação e robótica através de atividades práticas com blocos educacionais e tablets."
         images={roboticsLabImages}
         bgColor="bg-purple-50"
       />
