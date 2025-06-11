@@ -169,7 +169,19 @@ export const bibliotecaImages = [
   }
 ];
 
-export const auditoriumImages: any[] = [];
+export const auditoriumImages = [
+  {
+    src: "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png",
+    alt: "Auditório do Fundamental II com estudantes assistindo apresentação",
+    title: "Espaço de Apresentações e Eventos"
+  },
+  {
+    src: "/lovable-uploads/590184c3-c7d0-4201-ae5d-e44a878d985b.png",
+    alt: "Vista panorâmica do auditório com cadeiras azuis e sistema de projeção",
+    title: "Ambiente Moderno para Palestras"
+  }
+];
+
 export const fundamental2CorridorImages: any[] = [];
 export const educationInfantilImages: any[] = [];
 export const laboratoriosImages: any[] = [];

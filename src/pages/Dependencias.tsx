@@ -13,7 +13,8 @@ import {
   cantinaImages,
   laboratorisFisicaQuimicaImages,
   laboratorioTecnologiaImages,
-  bibliotecaImages
+  bibliotecaImages,
+  auditoriumImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -27,7 +28,8 @@ const Dependencias = () => {
     "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
     "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
     "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
-    "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png"
+    "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
+    "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png"
   ];
 
   return (
@@ -83,6 +85,13 @@ const Dependencias = () => {
         description="Nossa biblioteca oferece um ambiente tranquilo e organizado, especialmente projetado para estudantes do Ensino Fundamental II e Médio. Com mesas individuais de estudo, cadeiras coloridas e ergonômicas, ambiente climatizado e um acervo completo de materiais didáticos, proporcionamos o espaço ideal para leitura, pesquisa e desenvolvimento acadêmico dos nossos alunos."
         images={bibliotecaImages}
         bgColor="bg-indigo-50"
+      />
+
+      <DependencySection
+        title="Auditório do Fundamental II"
+        description="Nosso auditório é um espaço amplo e moderno, especialmente projetado para eventos, apresentações e atividades educacionais do Ensino Fundamental II. Com capacidade para grande número de estudantes, sistema de projeção avançado e cadeiras confortáveis, oferecemos o ambiente ideal para palestras, cerimônias, apresentações teatrais e eventos acadêmicos que enriquecem a experiência educacional dos nossos alunos."
+        images={auditoriumImages}
+        bgColor="bg-teal-50"
       />
 
       <Footer />
