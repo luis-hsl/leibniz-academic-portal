@@ -66,24 +66,24 @@ const Testimonials = () => {
           >
             <CarouselContent className="-ml-4 md:-ml-6">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/3">
                   <div className="p-2 sm:p-3">
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                       <OptimizedImage
                         src={student.image}
                         alt={student.name}
-                        className="w-full h-48 sm:h-56 md:h-64 object-cover"
-                        width={280}
-                        height={350}
+                        className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
+                        width={350}
+                        height={450}
                         priority={index === 0}
-                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 33vw, 33vw"
                       />
-                      <div className="p-3">
-                        <h3 className="text-sm sm:text-base font-semibold text-gray-800 leading-tight text-center">
+                      <div className="p-4">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-800 leading-tight text-center">
                           {student.name}
                         </h3>
-                        <div className="mt-2 text-center">
-                          <span className="px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full inline-block">
+                        <div className="mt-3 text-center">
+                          <span className="px-4 py-2 bg-red-100 text-red-700 text-sm font-medium rounded-full inline-block">
                             APROVADO
                           </span>
                         </div>
