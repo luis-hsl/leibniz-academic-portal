@@ -29,9 +29,36 @@ export const areaExternaImages = [
   }
 ];
 
+export const roboticsImages = [
+  {
+    src: "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
+    alt: "Alunas trabalhando com robótica educacional e peças LEGO",
+    title: "Robótica Educacional com LEGO"
+  },
+  {
+    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
+    alt: "Estudantes programando e construindo projetos de robótica",
+    title: "Programação e Construção"
+  },
+  {
+    src: "/lovable-uploads/ea6b1bb4-f98d-4c9b-895c-8df1f343f616.png",
+    alt: "Aluna desenvolvendo projeto de robótica com tablet",
+    title: "Desenvolvimento de Projetos"
+  },
+  {
+    src: "/lovable-uploads/f4034a18-5a52-4ae5-9168-5c3528da52fc.png",
+    alt: "Alunos colaborando em atividades de robótica na biblioteca",
+    title: "Trabalho Colaborativo"
+  },
+  {
+    src: "/lovable-uploads/55eeb127-c656-4cd6-9074-0742538d94b0.png",
+    alt: "Estudantes felizes apresentando seus projetos de robótica",
+    title: "Apresentação de Projetos"
+  }
+];
+
 export const auditoriumImages: any[] = [];
 export const fundamental2CorridorImages: any[] = [];
-export const roboticsImages: any[] = [];
 export const educationInfantilImages: any[] = [];
 export const bibliotecaImages: any[] = [];
 export const laboratoriosImages: any[] = [];
