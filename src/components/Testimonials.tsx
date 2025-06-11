@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -86,22 +85,17 @@ const Testimonials = () => {
           >
             <CarouselContent className="-ml-2 sm:-ml-4 md:-ml-6">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-2 sm:pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 md:pl-6 basis-auto">
                   <div className="p-2 sm:p-3 md:p-4">
                     <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-slide-up group"
                          style={{ animationDelay: `${index * 0.1}s` }}>
-                      <div className="aspect-[3/4] relative">
-                        <OptimizedImage
-                          src={student.image}
-                          alt={`${student.name} - ${student.course} - ${student.university}`}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                          width={300}
-                          height={400}
-                          priority={index === 0}
-                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      <OptimizedImage
+                        src={student.image}
+                        alt={`${student.name} - ${student.course} - ${student.university}`}
+                        className="transition-transform duration-700 group-hover:scale-110"
+                        priority={index === 0}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
                 </CarouselItem>
