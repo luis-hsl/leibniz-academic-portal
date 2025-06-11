@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,19 +9,24 @@ import ResourcePreloader from "@/components/ResourcePreloader";
 const Dependencias = () => {
   const exteriorImages = [
     {
-      src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
-      alt: "Fachada do Colégio Leibniz",
+      src: "/lovable-uploads/af862d6b-0e89-43bc-9100-4955d3958008.png",
+      alt: "Fachada principal do Colégio Leibniz",
       title: "Fachada Principal"
     },
     {
-      src: "/lovable-uploads/3fce4e95-adc0-4137-88a7-07d5fc5d853a.png",
-      alt: "Fachada lateral do Colégio Leibniz",
-      title: "Fachada Lateral"
+      src: "/lovable-uploads/9b4349e8-2668-497c-9e72-df6bc6962ec9.png",
+      alt: "Vista lateral da estrutura do Colégio Leibniz",
+      title: "Vista Lateral"
     },
     {
-      src: "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.png",
+      src: "/lovable-uploads/234c1ebb-2420-49b2-abe6-c8ed4ea8107f.png",
       alt: "Entrada principal do Colégio Leibniz",
       title: "Entrada Principal"
+    },
+    {
+      src: "/lovable-uploads/9c845d4f-e5ef-4be4-8d88-454847ec7bda.png",
+      alt: "Fachada frontal com logo do Colégio Leibniz",
+      title: "Fachada com Logo"
     }
   ];
 
@@ -189,9 +193,9 @@ const Dependencias = () => {
 
   // Critical images for preloading (first 3 images from first section)
   const criticalImages = [
-    "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
-    "/lovable-uploads/3fce4e95-adc0-4137-88a7-07d5fc5d853a.png",
-    "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.png"
+    "/lovable-uploads/af862d6b-0e89-43bc-9100-4955d3958008.png",
+    "/lovable-uploads/9b4349e8-2668-497c-9e72-df6bc6962ec9.png",
+    "/lovable-uploads/234c1ebb-2420-49b2-abe6-c8ed4ea8107f.png"
   ];
 
   return (

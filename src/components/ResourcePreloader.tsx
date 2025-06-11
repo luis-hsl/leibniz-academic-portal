@@ -36,7 +36,7 @@ const ResourcePreloader = ({
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
-        link.fetchPriority = 'low';
+        link.fetchPriority = 'high'; // Changed to high for WebP images
         document.head.appendChild(link);
       }
     });
