@@ -10,7 +10,8 @@ import ResourcePreloader from "@/components/ResourcePreloader";
 import {
   areaExternaImages,
   roboticsImages,
-  cantinaImages
+  cantinaImages,
+  laboratorisFisicaQuimicaImages
 } from "@/data/dependenciasData";
 
 const Dependencias = () => {
@@ -21,7 +22,8 @@ const Dependencias = () => {
     "/lovable-uploads/e0091d38-7b95-4e2c-9841-17f48704f260.png",
     "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
     "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
-    "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png"
+    "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
+    "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png"
   ];
 
   return (
@@ -56,6 +58,13 @@ const Dependencias = () => {
         description="Nossa cantina oferece um ambiente amplo, moderno e acolhedor onde os alunos podem fazer suas refeições com conforto e segurança. Com design colorido e funcional, o espaço conta com mesas organizadas, boa iluminação e um balcão de atendimento que garante praticidade no dia a dia escolar."
         images={cantinaImages}
         bgColor="bg-orange-50"
+      />
+
+      <DependencySection
+        title="Laboratório de Física e Química"
+        description="Nosso laboratório de física e química está equipado com modernos instrumentos científicos, microscópios de alta qualidade, modelos anatômicos detalhados e materiais para experimentos práticos. Este espaço permite que os alunos explorem conceitos científicos através da experimentação hands-on, desenvolvendo o pensamento crítico e a curiosidade científica."
+        images={laboratorisFisicaQuimicaImages}
+        bgColor="bg-green-50"
       />
 
       <Footer />

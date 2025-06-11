@@ -85,6 +85,34 @@ export const cantinaImages = [
   }
 ];
 
+export const laboratorisFisicaQuimicaImages = [
+  {
+    src: "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
+    alt: "Laboratório com modelo anatômico e equipamentos científicos",
+    title: "Equipamentos de Anatomia e Biologia"
+  },
+  {
+    src: "/lovable-uploads/0ad86512-9c93-4583-b77e-05424dd376d3.png",
+    alt: "Modelo detalhado do olho humano para estudos de anatomia",
+    title: "Modelo Anatômico do Olho"
+  },
+  {
+    src: "/lovable-uploads/5fc30a69-0a87-4c59-95a5-f0a0ba588a09.png",
+    alt: "Laboratório equipado com esqueleto, microscópio e materiais didáticos",
+    title: "Espaço Completo de Ciências"
+  },
+  {
+    src: "/lovable-uploads/b6f2e52f-1522-45ea-9c01-14ed7c201373.png",
+    alt: "Ambiente do laboratório com modelos anatômicos e microscópio",
+    title: "Instrumentos de Pesquisa Científica"
+  },
+  {
+    src: "/lovable-uploads/8dc0f337-c520-4999-b679-8713d1295980.png",
+    alt: "Microscópio e tubos de ensaio para experimentos práticos",
+    title: "Equipamentos para Experimentação"
+  }
+];
+
 export const auditoriumImages: any[] = [];
 export const fundamental2CorridorImages: any[] = [];
 export const educationInfantilImages: any[] = [];
