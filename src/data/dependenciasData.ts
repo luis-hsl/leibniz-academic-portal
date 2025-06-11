@@ -31,6 +31,16 @@ export const auditoriumImages = [
     src: "/lovable-uploads/54c661a9-afc2-42a8-9e6b-97449b09c464.png",
     alt: "Vista ampla do auditório",
     title: "Vista Ampla do Auditório"
+  },
+  {
+    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.png",
+    alt: "Estudantes do Colégio Leibniz em palestra no auditório",
+    title: "Palestra Educativa"
+  },
+  {
+    src: "/lovable-uploads/f026aed9-f96e-450d-bb0c-222bbcfea1ed.png",
+    alt: "Vista panorâmica do auditório lotado durante evento",
+    title: "Evento Completo"
   }
 ];
 
