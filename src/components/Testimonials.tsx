@@ -23,39 +23,35 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [api]);
 
-  // Dados dos alunos aprovados com mais detalhes
+  // Imagens dos alunos aprovados
   const studentImages = [
     {
       name: "Giovana Orsi Thum",
       image: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
       course: "MEDICINA",
       university: "UFMT",
-      year: "2023",
-      color: "bg-gradient-to-br from-pink-400 to-red-500"
+      year: "2023"
     },
     {
       name: "Matheus Cláudio",
       image: "/lovable-uploads/cd4e09f3-0765-415c-b018-59d5dffc9698.png",
       course: "MEDICINA",
       university: "UNIDERP - Campo Grande",
-      year: "2023",
-      color: "bg-gradient-to-br from-blue-400 to-blue-600"
+      year: "2023"
     },
     {
       name: "Luan Miyata",
       image: "/lovable-uploads/43c34112-dd8d-4178-83c9-299688722356.png",
       course: "MEDICINA",
       university: "UNIMAR - Universidade de Marília",
-      year: "2023",
-      color: "bg-gradient-to-br from-green-400 to-green-600"
+      year: "2023"
     },
     {
       name: "Anna Clara Fengler",
       image: "/lovable-uploads/5b4f42a7-4972-4f23-b843-e49d4adf1303.png",
       course: "MEDICINA",
       university: "Universidade de Vassouras - RJ",
-      year: "2023",
-      color: "bg-gradient-to-br from-purple-400 to-purple-600"
+      year: "2023"
     }
   ];
 
@@ -91,67 +87,20 @@ const Testimonials = () => {
             <CarouselContent className="-ml-2 sm:-ml-4 md:-ml-6">
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="pl-2 sm:pl-4 md:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="p-1 sm:p-2 md:p-3">
-                    <div className={`${student.color} rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 h-full relative overflow-hidden group animate-slide-up`}
+                  <div className="p-2 sm:p-3 md:p-4">
+                    <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-slide-up group"
                          style={{ animationDelay: `${index * 0.1}s` }}>
-                      
-                      {/* Padrão de fundo decorativo com animação */}
-                      <div className="absolute inset-0 opacity-10 transition-opacity duration-300 group-hover:opacity-20">
-                        <div className="absolute top-4 right-4 w-16 h-16 sm:w-20 sm:h-20 border-4 border-white rounded-full transition-transform duration-500 group-hover:rotate-45"></div>
-                        <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-16 sm:h-16 border-4 border-white rounded-full transition-transform duration-500 group-hover:-rotate-45"></div>
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-32 sm:h-32 border-4 border-white rounded-full transition-transform duration-700 group-hover:scale-110"></div>
-                      </div>
-                      
-                      {/* Header com logo */}
-                      <div className="relative z-10 text-center mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <div className="flex items-center justify-center gap-2 mb-2">
-                          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center">
-                            <div className="w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full"></div>
-                          </div>
-                          <span className="text-white font-bold text-sm sm:text-lg">Colégio Leibniz</span>
-                        </div>
-                        <div className="bg-black text-yellow-400 px-2 py-1 sm:px-3 sm:py-1 rounded-full inline-block font-bold text-xs sm:text-sm transform -rotate-3 transition-transform duration-300 group-hover:rotate-0">
-                          APROVADO!
-                        </div>
-                      </div>
-
-                      {/* Nome do aluno */}
-                      <div className="relative z-10 text-center mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <div className="bg-yellow-400 text-black px-2 py-1 sm:px-3 sm:py-1 rounded-lg inline-block font-bold text-xs sm:text-sm mb-2 shadow-md">
-                          {student.name.toUpperCase()}
-                        </div>
-                        <div className="text-white text-xs opacity-90">
-                          {student.year}
-                        </div>
-                      </div>
-
-                      {/* Foto do aluno com dimensionamento responsivo */}
-                      <div className="relative z-10 flex justify-center mb-4">
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:border-yellow-300">
-                          <OptimizedImage
-                            src={student.image}
-                            alt={student.name}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                            width={128}
-                            height={128}
-                            priority={index === 0}
-                            sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, (max-width: 1024px) 112px, 128px"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Curso */}
-                      <div className="relative z-10 text-center mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <div className="bg-red-600 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-black text-lg sm:text-xl md:text-2xl lg:text-3xl shadow-lg transform rotate-1 transition-transform duration-300 group-hover:rotate-0">
-                          {student.course}
-                        </div>
-                      </div>
-
-                      {/* Universidade */}
-                      <div className="relative z-10 text-center transition-transform duration-300 group-hover:scale-105">
-                        <div className="bg-blue-600 text-white px-2 py-2 sm:px-3 sm:py-2 rounded-lg font-bold text-xs sm:text-sm shadow-md">
-                          {student.university}
-                        </div>
+                      <div className="aspect-[3/4] relative">
+                        <OptimizedImage
+                          src={student.image}
+                          alt={`${student.name} - ${student.course} - ${student.university}`}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          width={300}
+                          height={400}
+                          priority={index === 0}
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                     </div>
                   </div>
