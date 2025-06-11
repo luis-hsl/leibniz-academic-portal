@@ -1,7 +1,10 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import DependencySection from "@/components/DependencySection";
+import SEOHead from "@/components/SEOHead";
+import OptimizedAnalytics from "@/components/OptimizedAnalytics";
 
 const Dependencias = () => {
   const exteriorImages = [
@@ -195,6 +198,12 @@ const Dependencias = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Nossas Dependências - Colégio Leibniz"
+        description="Conheça os espaços modernos e equipados do Colégio Leibniz que proporcionam a melhor experiência educacional para nossos alunos."
+        keywords="dependências, infraestrutura, laboratórios, biblioteca, colégio leibniz"
+      />
+      <OptimizedAnalytics />
       <Header />
       
       {/* Hero Section */}

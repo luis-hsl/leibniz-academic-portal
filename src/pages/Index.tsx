@@ -13,7 +13,9 @@ import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Analytics from "@/components/Analytics";
+import OptimizedAnalytics from "@/components/OptimizedAnalytics";
+import SEOHead from "@/components/SEOHead";
+import LightErrorMonitoringComponent from "@/components/LightErrorMonitoring";
 
 const Index = () => {
   useEffect(() => {
@@ -22,7 +24,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Analytics />
+      <SEOHead />
+      <OptimizedAnalytics />
+      <LightErrorMonitoringComponent />
       <Header />
       <Hero />
       <About />

@@ -18,7 +18,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   priority = false,
-  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+"
+  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzlDQTNBRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhcnJlZ2FuZG8uLi48L3RleHQ+PC9zdmc+"
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -35,7 +35,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { threshold: 0.1, rootMargin: '100px' }
     );
 
     if (imgRef.current) {
@@ -51,7 +51,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleError = () => {
     setHasError(true);
-    console.error(`Failed to load image: ${src}`);
+    console.warn(`Failed to load image: ${src}`);
   };
 
   return (
@@ -62,7 +62,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     >
       {!isInView && !priority ? (
         <div 
-          className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center"
+          className="w-full h-full bg-gray-100 animate-pulse flex items-center justify-center"
           style={{ width, height }}
         >
           <span className="text-gray-400 text-sm">Carregando...</span>
@@ -73,9 +73,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <img
               src={placeholder}
               alt=""
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                 isLoaded ? 'opacity-0' : 'opacity-100'
               }`}
+              style={{ filter: 'blur(2px)' }}
             />
           )}
           {!hasError ? (
@@ -84,15 +85,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
               alt={alt}
               onLoad={handleLoad}
               onError={handleError}
-              className={`w-full h-full object-cover transition-opacity duration-300 ${
+              className={`w-full h-full object-cover transition-opacity duration-500 ${
                 isLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               loading={priority ? 'eager' : 'lazy'}
               decoding="async"
+              fetchPriority={priority ? 'high' : 'low'}
             />
           ) : (
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500 text-sm">Erro ao carregar imagem</span>
+            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-500 text-sm">Imagem não disponível</span>
             </div>
           )}
         </>
