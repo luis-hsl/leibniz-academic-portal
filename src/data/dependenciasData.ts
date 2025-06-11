@@ -1,3 +1,4 @@
+
 // Arquivo com imagens das dependências do colégio
 
 export const areaExternaImages = [
@@ -76,11 +77,6 @@ export const cantinaImages = [
     src: "/lovable-uploads/fdfd6f64-ba1f-48f9-88d6-a55ec0bd923a.png",
     alt: "Cantina com mesas organizadas e balcão de atendimento",
     title: "Organização e Funcionalidade"
-  },
-  {
-    src: "/lovable-uploads/7caa7932-a5c6-4e8e-9aa0-877e678fe6b5.png",
-    alt: "Vista completa da cantina com luminária decorativa no teto",
-    title: "Design e Conforto"
   }
 ];
 
@@ -160,11 +156,6 @@ export const bibliotecaImages = [
     src: "/lovable-uploads/f4ddf793-391d-4150-b0a5-bbf5d030f138.png",
     alt: "Área de estudos com mesas em formato de ilha e boa iluminação",
     title: "Organização e Conforto"
-  },
-  {
-    src: "/lovable-uploads/a5aa0c52-0f65-4c9c-9435-d330f4b339e1.png",
-    alt: "Biblioteca ampla com ambiente climatizado e mobiliário funcional",
-    title: "Infraestrutura Completa"
   }
 ];
 

@@ -8,6 +8,16 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import OptimizedImage from "./OptimizedImage";
+import {
+  areaExternaImages,
+  roboticsImages,
+  cantinaImages,
+  laboratorisFisicaQuimicaImages,
+  laboratorioTecnologiaImages,
+  bibliotecaImages,
+  auditoriumImages,
+  fundamental2CorridorImages
+} from "@/data/dependenciasData";
 
 const CollegeGallery = () => {
   const [api, setApi] = useState<any>();
@@ -23,37 +33,29 @@ const CollegeGallery = () => {
     return () => clearInterval(interval);
   }, [api]);
 
-  // Reduced to only the most important college images for faster loading
-  const collegeImages = [
-    // Fachada do colégio - most important
-    {
-      src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
-      alt: "Fachada do Colégio Leibniz",
-      priority: true
-    },
-    {
-      src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
-      alt: "Vista externa do Colégio Leibniz",
-      priority: false
-    },
-    // Laboratório de robótica - high priority
-    {
-      src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
-      alt: "Laboratório de Robótica - Atividade em grupo"
-    },
-    {
-      src: "/lovable-uploads/bb09e5fc-f8d4-40c8-8cf7-b5321f19558a.png",
-      alt: "Biblioteca - Área de estudos"
-    },
-    {
-      src: "/lovable-uploads/93122a4c-90de-43d7-8075-925e0d78bffd.png",
-      alt: "Auditório - Vista frontal"
-    },
-    {
-      src: "/lovable-uploads/1e70538d-2aaa-4cdf-a14a-fb6bba03dbff.png",
-      alt: "Entrada principal do Colégio Leibniz"
-    }
-  ];
+  // Combine all dependency images into one array
+  const allDependencyImages = [
+    // Área Externa
+    ...areaExternaImages,
+    // Robótica
+    ...roboticsImages,
+    // Cantina
+    ...cantinaImages,
+    // Laboratórios de Física e Química
+    ...laboratorisFisicaQuimicaImages,
+    // Laboratório de Tecnologia
+    ...laboratorioTecnologiaImages,
+    // Biblioteca
+    ...bibliotecaImages,
+    // Auditório
+    ...auditoriumImages,
+    // Corredor do Fundamental II
+    ...fundamental2CorridorImages
+  ].filter(image => 
+    // Remove as imagens especificadas pelo usuário
+    !image.title.toLowerCase().includes('infraestrutura completa') &&
+    !image.title.toLowerCase().includes('design e conforto')
+  );
 
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
@@ -77,7 +79,7 @@ const CollegeGallery = () => {
             }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {collegeImages.map((image, index) => (
+              {allDependencyImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/2">
                   <div className="p-1 sm:p-2">
                     <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
@@ -87,9 +89,14 @@ const CollegeGallery = () => {
                         className="w-full h-64 sm:h-80 md:h-96 object-cover"
                         width={600}
                         height={400}
-                        priority={image.priority || index === 0} // First image gets priority
+                        priority={index < 3} // First 3 images get priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                       />
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <h3 className="text-white font-semibold text-sm md:text-base">
+                          {image.title}
+                        </h3>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
