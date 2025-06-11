@@ -70,7 +70,7 @@ const CollegeGallery = () => {
 
           <Carousel
             setApi={setApi}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full max-w-5xl mx-auto relative"
             opts={{
               align: "center",
               loop: true,
@@ -80,20 +80,20 @@ const CollegeGallery = () => {
           >
             <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {allDependencyImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/2">
+                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1 sm:p-2">
-                    <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
+                    <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 bg-white">
                       <OptimizedImage
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
-                        width={600}
-                        height={400}
-                        priority={index < 3} // First 3 images get priority
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                        className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
+                        width={400}
+                        height={300}
+                        priority={index < 6} // First 6 images get priority
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-4">
-                        <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 sm:p-4">
+                        <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight">
                           {image.title}
                         </h3>
                       </div>
@@ -102,15 +102,34 @@ const CollegeGallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 sm:-left-8 md:-left-12" />
-            <CarouselNext className="-right-4 sm:-right-8 md:-right-12" />
+            
+            {/* Navigation arrows - visible on all screen sizes */}
+            <CarouselPrevious className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-lg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+            <CarouselNext className="absolute -right-2 sm:-right-4 md:-right-8 lg:-right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-lg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
           </Carousel>
 
-          {/* Mobile touch indicators */}
-          <div className="flex justify-center mt-4 sm:hidden">
-            <p className="text-sm text-gray-500 text-center px-4">
-              👈 Deslize para ver mais imagens 👉
-            </p>
+          {/* Mobile indicators and instructions */}
+          <div className="flex flex-col items-center mt-6 sm:mt-8 space-y-3">
+            {/* Dots indicator for mobile */}
+            <div className="flex justify-center space-x-2 sm:hidden">
+              {allDependencyImages.slice(0, 5).map((_, index) => (
+                <div 
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+              <span className="text-xs text-gray-500 ml-2">+{allDependencyImages.length - 5}</span>
+            </div>
+            
+            {/* Touch instructions for mobile */}
+            <div className="text-center sm:hidden">
+              <p className="text-sm text-gray-500 px-4">
+                👈 Deslize para ver mais imagens 👉
+              </p>
+              <p className="text-xs text-gray-400 mt-1 px-4">
+                Use as setas ou arraste para navegar pelas fotos
+              </p>
+            </div>
           </div>
         </div>
       </div>
