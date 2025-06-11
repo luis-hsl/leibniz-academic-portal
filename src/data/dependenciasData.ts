@@ -1,4 +1,3 @@
-
 // Arquivo com imagens das dependências do colégio
 
 export const areaExternaImages = [
@@ -49,11 +48,6 @@ export const roboticsImages = [
     src: "/lovable-uploads/f4034a18-5a52-4ae5-9168-5c3528da52fc.png",
     alt: "Alunos colaborando em atividades de robótica na biblioteca",
     title: "Trabalho Colaborativo"
-  },
-  {
-    src: "/lovable-uploads/55eeb127-c656-4cd6-9074-0742538d94b0.png",
-    alt: "Estudantes felizes apresentando seus projetos de robótica",
-    title: "Apresentação de Projetos"
   }
 ];
 
