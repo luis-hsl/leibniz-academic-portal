@@ -75,25 +75,25 @@ const CollegeGallery = () => {
               align: "center",
               loop: true,
               skipSnaps: false,
-              dragFree: false,
+              dragFree: true,
             }}
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
               {allDependencyImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/2">
+                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/2">
                   <div className="p-1 sm:p-2">
                     <div className="relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
                       <OptimizedImage
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                        className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
                         width={600}
                         height={400}
                         priority={index < 3} // First 3 images get priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <h3 className="text-white font-semibold text-sm md:text-base">
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-4">
+                        <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base">
                           {image.title}
                         </h3>
                       </div>
@@ -102,9 +102,16 @@ const CollegeGallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex -left-12" />
-            <CarouselNext className="hidden sm:flex -right-12" />
+            <CarouselPrevious className="-left-4 sm:-left-8 md:-left-12" />
+            <CarouselNext className="-right-4 sm:-right-8 md:-right-12" />
           </Carousel>
+
+          {/* Mobile touch indicators */}
+          <div className="flex justify-center mt-4 sm:hidden">
+            <p className="text-sm text-gray-500 text-center px-4">
+              👈 Deslize para ver mais imagens 👉
+            </p>
+          </div>
         </div>
       </div>
     </section>
