@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
@@ -25,35 +26,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState<string>('');
+  const [fallbackSrc, setFallbackSrc] = useState<string>('');
   const imgRef = useRef<HTMLImageElement>(null);
 
-  // Only generate modern sources for images that already have WebP extension
-  const generateModernSources = (originalSrc: string) => {
-    const sources = [];
-    
-    // Only add modern formats if the original is already in a modern format
+  // Generate fallback source (PNG from WebP)
+  const generateFallbackSrc = (originalSrc: string) => {
     if (originalSrc.endsWith('.webp')) {
-      const baseSrc = originalSrc.replace(/\.webp$/, "");
-      
-      // Add AVIF source (most efficient)
-      sources.push({
-        srcSet: `${baseSrc}.avif`,
-        type: 'image/avif'
-      });
-      
-      // Keep the original WebP
-      sources.push({
-        srcSet: originalSrc,
-        type: 'image/webp'
-      });
+      return originalSrc.replace(/\.webp$/, '.png');
     }
-    
-    return sources;
+    return originalSrc;
   };
 
-  const modernSources = generateModernSources(src);
-
   useEffect(() => {
+    setFallbackSrc(generateFallbackSrc(src));
+    
     if (priority) {
       setCurrentSrc(src);
       return;
@@ -85,8 +71,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const handleError = () => {
-    setHasError(true);
-    console.warn(`Failed to load image: ${src}`);
+    console.warn(`Failed to load image: ${currentSrc}`);
+    
+    // Try fallback to PNG if we haven't already
+    if (currentSrc.endsWith('.webp') && !hasError) {
+      console.log(`Trying fallback PNG: ${fallbackSrc}`);
+      setCurrentSrc(fallbackSrc);
+    } else {
+      setHasError(true);
+    }
   };
 
   return (
@@ -124,51 +117,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             />
           )}
           {!hasError ? (
-            <>
-              {modernSources.length > 0 ? (
-                <picture>
-                  {modernSources.map((source, index) => (
-                    <source
-                      key={index}
-                      srcSet={source.srcSet}
-                      type={source.type}
-                      sizes={sizes}
-                    />
-                  ))}
-                  <img
-                    src={currentSrc}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                    onLoad={handleLoad}
-                    onError={handleError}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${
-                      isLoaded ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    loading={priority ? 'eager' : 'lazy'}
-                    decoding="async"
-                    fetchPriority={priority ? 'high' : 'low'}
-                    sizes={sizes}
-                  />
-                </picture>
-              ) : (
-                <img
-                  src={currentSrc}
-                  alt={alt}
-                  width={width}
-                  height={height}
-                  onLoad={handleLoad}
-                  onError={handleError}
-                  className={`w-full h-full object-cover transition-opacity duration-300 ${
-                    isLoaded ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  loading={priority ? 'eager' : 'lazy'}
-                  decoding="async"
-                  fetchPriority={priority ? 'high' : 'low'}
-                  sizes={sizes}
-                />
-              )}
-            </>
+            <img
+              src={currentSrc}
+              alt={alt}
+              width={width}
+              height={height}
+              onLoad={handleLoad}
+              onError={handleError}
+              className={`w-full h-full object-cover transition-opacity duration-300 ${
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              loading={priority ? 'eager' : 'lazy'}
+              decoding="async"
+              fetchPriority={priority ? 'high' : 'low'}
+              sizes={sizes}
+            />
           ) : (
             <div 
               className="w-full h-full bg-gray-100 flex items-center justify-center"
