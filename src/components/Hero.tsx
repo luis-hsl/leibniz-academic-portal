@@ -1,10 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Star, Award, Users, BookOpen } from "lucide-react";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 import { useEffect } from "react";
 
 const Hero = () => {
-  const heroBackgroundImage = "/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png";
+  const heroBackgroundImage = "/lovable-uploads/de8be048-fb1c-4f6c-a24a-d1e77df57761.png";
 
   useEffect(() => {
     // Preload hero background image with high priority
