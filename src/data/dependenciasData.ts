@@ -113,6 +113,34 @@ export const laboratorisFisicaQuimicaImages = [
   }
 ];
 
+export const laboratorioTecnologiaImages = [
+  {
+    src: "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
+    alt: "Sala de informática com computadores e cadeiras coloridas organizadas",
+    title: "Ambiente Tecnológico Moderno"
+  },
+  {
+    src: "/lovable-uploads/d164773b-f87d-4545-b26c-556579879929.png",
+    alt: "Vista do laboratório com laptops e ambiente colorido ao fundo",
+    title: "Espaço de Aprendizagem Digital"
+  },
+  {
+    src: "/lovable-uploads/ab36d915-0a98-4e2d-b81c-78fe5e3e334c.png",
+    alt: "Laboratório de informática com laptops e mobiliário colorido",
+    title: "Tecnologia e Design"
+  },
+  {
+    src: "/lovable-uploads/7164d697-742e-4ac2-8dcc-63701e0bf01d.png",
+    alt: "Computadores organizados na bancada do laboratório",
+    title: "Equipamentos de Última Geração"
+  },
+  {
+    src: "/lovable-uploads/5814f72e-8902-454f-ade2-817bb032b306.png",
+    alt: "Aluno utilizando laptop em mesa circular com ambiente colorido",
+    title: "Aprendizagem Interativa"
+  }
+];
+
 export const auditoriumImages: any[] = [];
 export const fundamental2CorridorImages: any[] = [];
 export const educationInfantilImages: any[] = [];
