@@ -62,6 +62,62 @@ const Dependencias = () => {
     }
   ];
 
+  const cafeteriaImages = [
+    {
+      src: "/lovable-uploads/62af054d-f4c7-4390-97c5-5d01fae9cd02.png",
+      alt: "Vista geral da cantina do colégio",
+      title: "Cantina - Vista Geral"
+    },
+    {
+      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
+      alt: "Área de convivência da cantina",
+      title: "Área de Convivência"
+    },
+    {
+      src: "/lovable-uploads/a442947a-aec8-4b15-a88a-0fd80eb13319.png",
+      alt: "Espaço da cantina com mesas",
+      title: "Área de Alimentação"
+    },
+    {
+      src: "/lovable-uploads/5cce79ec-901e-4fec-bacb-26dd7f1da01f.png",
+      alt: "Vista lateral da cantina",
+      title: "Vista Lateral da Cantina"
+    },
+    {
+      src: "/lovable-uploads/fd22cc08-a2d0-4fe0-a710-65bdba10521b.png",
+      alt: "Interior da cantina",
+      title: "Interior da Cantina"
+    }
+  ];
+
+  const laboratoryImages = [
+    {
+      src: "/lovable-uploads/16a1f204-d542-4654-83c4-55b68c82078e.png",
+      alt: "Modelo anatômico no laboratório",
+      title: "Modelos Anatômicos"
+    },
+    {
+      src: "/lovable-uploads/31600a44-501e-4d74-b12c-31dac2d684b5.png",
+      alt: "Equipamentos do laboratório de ciências",
+      title: "Equipamentos Científicos"
+    },
+    {
+      src: "/lovable-uploads/6adde15a-4b00-40b7-ae8a-0f6f9794083d.png",
+      alt: "Vista completa do laboratório",
+      title: "Laboratório de Ciências"
+    },
+    {
+      src: "/lovable-uploads/b29218f7-e48d-4349-a4e0-ed1c1d8ece4d.png",
+      alt: "Microscópio e equipamentos de laboratório",
+      title: "Microscópios e Equipamentos"
+    },
+    {
+      src: "/lovable-uploads/0f62b73d-0e16-4787-b968-7c26a7a95d88.png",
+      alt: "Laboratório completo com esqueleto e equipamentos",
+      title: "Laboratório Completo"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -91,6 +147,68 @@ const Dependencias = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exteriorImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cafeteria Section */}
+      <section className="py-20 bg-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Cantina</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ambiente acolhedor e moderno para alimentação e convivência dos estudantes.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cafeteriaImages.map((image, index) => (
+                <Card key={index} className="hover-scale shadow-lg">
+                  <CardContent className="p-0">
+                    <OptimizedImage
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover rounded-t-lg"
+                    />
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900">{image.title}</h3>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Laboratory Section */}
+      <section className="py-20 bg-green-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Laboratório de Química e Física</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Laboratórios totalmente equipados para experimentos e estudos práticos de ciências.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {laboratoryImages.map((image, index) => (
                 <Card key={index} className="hover-scale shadow-lg">
                   <CardContent className="p-0">
                     <OptimizedImage
