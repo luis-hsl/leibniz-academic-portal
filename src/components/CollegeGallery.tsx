@@ -1,3 +1,4 @@
+
 import { 
   Carousel,
   CarouselContent,
@@ -7,16 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import OptimizedImage from "./OptimizedImage";
-import {
-  areaExternaImages,
-  roboticsImages,
-  cantinaImages,
-  laboratorisFisicaQuimicaImages,
-  laboratorioTecnologiaImages,
-  bibliotecaImages,
-  auditoriumImages,
-  fundamental2CorridorImages
-} from "@/data/dependenciasData";
+import { dependenciasCarouselImages } from "@/data/sharedImages";
 
 const CollegeGallery = () => {
   const [api, setApi] = useState<any>();
@@ -31,18 +23,6 @@ const CollegeGallery = () => {
 
     return () => clearInterval(interval);
   }, [api]);
-
-  // Combine all dependency images into one array - prioritizing external area images
-  const allDependencyImages = [
-    ...areaExternaImages,
-    ...roboticsImages,
-    ...cantinaImages,
-    ...laboratorisFisicaQuimicaImages,
-    ...laboratorioTecnologiaImages,
-    ...bibliotecaImages,
-    ...auditoriumImages,
-    ...fundamental2CorridorImages
-  ];
 
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
@@ -66,7 +46,7 @@ const CollegeGallery = () => {
             }}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {allDependencyImages.map((image, index) => (
+              {dependenciasCarouselImages.map((image, index) => (
                 <CarouselItem key={`${image.title}-${index}`} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <div className="relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl bg-white">
@@ -84,7 +64,7 @@ const CollegeGallery = () => {
                           {image.title}
                         </h3>
                         <p className="text-white/70 text-sm md:text-base mt-2">
-                          {index + 1} de {allDependencyImages.length}
+                          {index + 1} de {dependenciasCarouselImages.length}
                         </p>
                       </div>
                     </div>
@@ -102,13 +82,13 @@ const CollegeGallery = () => {
           <div className="flex flex-col items-center mt-8 md:mt-12 space-y-4">
             {/* Dots indicator for mobile */}
             <div className="flex justify-center space-x-2 md:hidden">
-              {allDependencyImages.slice(0, 5).map((_, index) => (
+              {dependenciasCarouselImages.slice(0, 5).map((_, index) => (
                 <div 
                   key={index}
                   className="w-3 h-3 rounded-full bg-gray-300"
                 />
               ))}
-              <span className="text-sm text-gray-500 ml-3">+{allDependencyImages.length - 5}</span>
+              <span className="text-sm text-gray-500 ml-3">+{dependenciasCarouselImages.length - 5}</span>
             </div>
             
             {/* Touch instructions for mobile */}
@@ -120,7 +100,7 @@ const CollegeGallery = () => {
                 Use as setas ou arraste para navegar pelas fotos
               </p>
               <p className="text-sm text-gray-600 mt-2 font-medium">
-                Total: {allDependencyImages.length} imagens
+                Total: {dependenciasCarouselImages.length} imagens
               </p>
             </div>
           </div>
