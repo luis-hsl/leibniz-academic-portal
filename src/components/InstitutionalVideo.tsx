@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
 interface InstitutionalVideoProps {
@@ -14,6 +15,16 @@ const InstitutionalVideo = ({ size = "large", className = "" }: InstitutionalVid
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const scrollToVisitForm = () => {
+    const visitFormSection = document.getElementById('agendar');
+    if (visitFormSection) {
+      visitFormSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   const isSmall = size === "small";
 
@@ -60,6 +71,16 @@ const InstitutionalVideo = ({ size = "large", className = "" }: InstitutionalVid
                   </p>
                 </div>
               )}
+            </div>
+
+            {/* Action Button */}
+            <div className="text-center mt-8">
+              <Button 
+                onClick={scrollToVisitForm}
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Agende Sua Visita
+              </Button>
             </div>
           </div>
         </div>
