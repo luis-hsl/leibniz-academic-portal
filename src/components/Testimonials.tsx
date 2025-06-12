@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -91,7 +90,7 @@ const Testimonials = () => {
                     <OptimizedImage
                       src={student.image}
                       alt={`${student.name} - ${student.course} - ${student.university}`}
-                      className="w-full h-auto object-cover rounded-[5px] transition-transform duration-300 hover:scale-105"
+                      className="w-full h-auto object-cover rounded-[10px] transition-transform duration-300 hover:scale-105"
                       width={250}
                       height={330}
                       priority={index === 0}
