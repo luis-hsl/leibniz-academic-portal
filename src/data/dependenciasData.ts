@@ -1,5 +1,3 @@
-
-
 // =============================================================
 // DADOS DAS IMAGENS DAS DEPENDÊNCIAS DO COLÉGIO LEIBNIZ
 // =============================================================
@@ -14,7 +12,7 @@
 // ÁREA EXTERNA DO COLÉGIO - Imagens da fachada e paisagismo
 export const areaExternaImages = [
   {
-    src: "/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png",
+    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
     alt: "Vista lateral do Colégio Leibniz",
     title: "Vista Lateral"
   },
@@ -24,12 +22,12 @@ export const areaExternaImages = [
     title: "Área Externa com Paisagismo"
   },
   {
-    src: "/lovable-uploads/9c845d4f-e5ef-4be4-8d88-454847ec7bda.png",
+    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
     alt: "Vista completa da fachada do colégio",
     title: "Vista Completa da Fachada"
   },
   {
-    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
+    src: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc",
     alt: "Área externa ampla do colégio",
     title: "Área Externa Ampla"
   }
@@ -38,22 +36,22 @@ export const areaExternaImages = [
 // LABORATÓRIO DE ROBÓTICA - Imagens dos equipamentos e atividades STEM
 export const roboticsImages = [
   {
-    src: "/lovable-uploads/217e1761-9771-4e0e-abf5-3e0d84202460.png",
+    src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     alt: "Robótica educacional com LEGO",
     title: "Robótica Educacional com LEGO"
   },
   {
-    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
+    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     alt: "Programação e construção com robótica",
     title: "Programação e Construção"
   },
   {
-    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.png",
+    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     alt: "Desenvolvimento de projetos tecnológicos",
     title: "Desenvolvimento de Projetos"
   },
   {
-    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.png",
+    src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     alt: "Trabalho colaborativo em robótica",
     title: "Trabalho Colaborativo"
   }
@@ -185,4 +183,3 @@ export const fundamental2CorridorImages = [
 // - Mantenha os campos 'alt' e 'title' descritivos para acessibilidade
 // - As imagens aparecerão no carrossel na ordem definida aqui
 // =============================================================
-
