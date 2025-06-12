@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,8 +12,8 @@ import {
   roboticsImages,
   cantinaImages,
   laboratorisFisicaQuimicaImages,
-  laboratorioInformaticaImages,
-  bibliotecaPrincipalImages,
+  laboratorioTecnologiaImages,
+  bibliotecaImages,
   auditoriumImages,
   fundamental2CorridorImages
 } from "@/data/dependenciasData";
@@ -75,16 +76,16 @@ const Dependencias = () => {
       />
 
       <DependencySection
-        title="Laboratório de Informática"
-        description="Nosso laboratório de informática oferece um ambiente moderno equipado com computadores de última geração para desenvolvimento de projetos tecnológicos. Com design funcional e tecnologia avançada, este espaço promove a aprendizagem digital e prepara os alunos para os desafios do futuro, desenvolvendo competências em programação, informática e inovação tecnológica."
-        images={laboratorioInformaticaImages}
+        title="Laboratório de Tecnologia e Robótica"
+        description="Nosso laboratório de tecnologia oferece um ambiente moderno e colorido, equipado com computadores de última geração e laptops para desenvolvimento de projetos tecnológicos. Com mobiliário ergonômico e design inspirador, este espaço promove a aprendizagem digital e prepara os alunos para os desafios do futuro, desenvolvendo competências em programação, design e inovação tecnológica."
+        images={laboratorioTecnologiaImages}
         bgColor="bg-purple-50"
       />
 
       <DependencySection
-        title="Biblioteca Principal"
-        description="Nossa biblioteca principal oferece um ambiente tranquilo e organizado, especialmente projetado para estudantes do Ensino Fundamental II e Médio. Com mesas individuais de estudo, ambiente climatizado e um acervo completo de materiais didáticos, proporcionamos o espaço ideal para leitura, pesquisa e desenvolvimento acadêmico dos nossos alunos."
-        images={bibliotecaPrincipalImages}
+        title="Biblioteca do Ensino Fundamental II e Médio"
+        description="Nossa biblioteca oferece um ambiente tranquilo e organizado, especialmente projetado para estudantes do Ensino Fundamental II e Médio. Com mesas individuais de estudo, cadeiras coloridas e ergonômicas, ambiente climatizado e um acervo completo de materiais didáticos, proporcionamos o espaço ideal para leitura, pesquisa e desenvolvimento acadêmico dos nossos alunos."
+        images={bibliotecaImages}
         bgColor="bg-indigo-50"
       />
 

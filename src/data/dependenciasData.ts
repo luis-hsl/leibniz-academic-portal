@@ -75,40 +75,40 @@ export const laboratorisFisicaQuimicaImages = [
   }
 ];
 
-// Laboratório Informática Images - usando imagens que mostram o laboratório sem alunos
-export const laboratorioInformaticaImages = [
+// Laboratório Tecnologia Images - com alunos trabalhando
+export const laboratorioTecnologiaImages = [
   {
-    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
-    alt: "Laboratório de Informática com computadores modernos",
-    title: "Laboratório de Informática"
+    src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
+    alt: "Laboratório de tecnologia com alunos",
+    title: "Laboratório de Tecnologia"
   },
   {
     src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
-    alt: "Vista geral do laboratório de informática",
-    title: "Vista do Laboratório"
+    alt: "Alunos trabalhando em projetos tecnológicos",
+    title: "Projetos Tecnológicos"
   },
   {
-    src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
-    alt: "Equipamentos do laboratório de informática",
-    title: "Equipamentos de Informática"
+    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
+    alt: "Ambiente colorido do laboratório",
+    title: "Ambiente Moderno"
   }
 ];
 
-// Biblioteca Principal Images - usando imagens que mostram a biblioteca sem alunos
-export const bibliotecaPrincipalImages = [
+// Biblioteca Images - com alunos estudando
+export const bibliotecaImages = [
   {
     src: "/lovable-uploads/cd4e09f3-0765-415c-b018-59d5dffc9698.png",
-    alt: "Biblioteca Principal do colégio",
+    alt: "Biblioteca com alunos estudando",
     title: "Biblioteca Principal"
   },
   {
     src: "/lovable-uploads/de8be048-fb1c-4f6c-a24a-d1e77df57761.png",
-    alt: "Área de estudos da biblioteca principal",
+    alt: "Área de estudos da biblioteca",
     title: "Área de Estudos"
   },
   {
     src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
-    alt: "Acervo da biblioteca principal",
+    alt: "Acervo da biblioteca",
     title: "Acervo Bibliográfico"
   }
 ];
