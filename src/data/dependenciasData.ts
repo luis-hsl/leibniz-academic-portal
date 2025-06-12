@@ -1,5 +1,5 @@
-// Arquivo com imagens das dependências do colégio
 
+// Área Externa Images
 export const areaExternaImages = [
   {
     src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
@@ -8,192 +8,145 @@ export const areaExternaImages = [
   },
   {
     src: "/lovable-uploads/8b589287-247a-4b10-8999-fa49984ee71c.png",
-    alt: "Vista lateral da área externa do colégio",
-    title: "Vista Lateral"
+    alt: "Entrada do colégio com paisagismo",
+    title: "Entrada Principal"
   },
   {
     src: "/lovable-uploads/e0091d38-7b95-4e2c-9841-17f48704f260.png",
-    alt: "Área externa com jardim e paisagismo",
-    title: "Área Externa com Paisagismo"
-  },
-  {
-    src: "/lovable-uploads/df1e9af7-c6c1-4b9f-bdc0-9c1708352bc6.png",
-    alt: "Vista completa da fachada do colégio",
-    title: "Vista Completa da Fachada"
-  },
-  {
-    src: "/lovable-uploads/22d4db4c-9789-4bb6-9867-486618d39353.png",
-    alt: "Área externa ampla do Colégio Leibniz",
-    title: "Área Externa Ampla"
+    alt: "Área externa com jardim",
+    title: "Área Externa"
   }
 ];
 
+// Robotics Images
 export const roboticsImages = [
   {
     src: "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
-    alt: "Alunas trabalhando com robótica educacional e peças LEGO",
-    title: "Robótica Educacional com LEGO"
+    alt: "Laboratório de robótica com equipamentos modernos",
+    title: "Laboratório de Robótica"
   },
   {
     src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
-    alt: "Estudantes programando e construindo projetos de robótica",
-    title: "Programação e Construção"
+    alt: "Alunos trabalhando com kits de robótica",
+    title: "Atividades de Robótica"
   },
-  {
-    src: "/lovable-uploads/ea6b1bb4-f98d-4c9b-895c-8df1f343f616.png",
-    alt: "Aluna desenvolvendo projeto de robótica com tablet",
-    title: "Desenvolvimento de Projetos"
-  },
-  {
-    src: "/lovable-uploads/f4034a18-5a52-4ae5-9168-5c3528da52fc.png",
-    alt: "Alunos colaborando em atividades de robótica na biblioteca",
-    title: "Trabalho Colaborativo"
-  }
-];
-
-export const cantinaImages = [
   {
     src: "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
-    alt: "Vista geral da cantina com mesas e bancos para refeições",
-    title: "Área Principal da Cantina"
-  },
-  {
-    src: "/lovable-uploads/74989e08-8e10-473e-a8dd-d20727a2db27.png",
-    alt: "Cantina ampla com estrutura metálica e área de alimentação",
-    title: "Espaço Amplo para Refeições"
-  },
-  {
-    src: "/lovable-uploads/a6d62752-c8c3-482d-82a0-f35b4ec58927.png",
-    alt: "Área moderna da cantina com decoração colorida e iluminação",
-    title: "Ambiente Moderno e Acolhedor"
-  },
-  {
-    src: "/lovable-uploads/fdfd6f64-ba1f-48f9-88d6-a55ec0bd923a.png",
-    alt: "Cantina com mesas organizadas e balcão de atendimento",
-    title: "Organização e Funcionalidade"
+    alt: "Mesa de trabalho do laboratório de robótica",
+    title: "Mesa de Trabalho"
   }
 ];
 
-export const laboratorisFisicaQuimicaImages = [
+// Cantina Images
+export const cantinaImages = [
   {
     src: "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
-    alt: "Laboratório com modelo anatômico e equipamentos científicos",
-    title: "Equipamentos de Anatomia e Biologia"
+    alt: "Cantina do Ensino Fundamental",
+    title: "Cantina Principal"
   },
-  {
-    src: "/lovable-uploads/0ad86512-9c93-4583-b77e-05424dd376d3.png",
-    alt: "Modelo detalhado do olho humano para estudos de anatomia",
-    title: "Modelo Anatômico do Olho"
-  },
-  {
-    src: "/lovable-uploads/5fc30a69-0a87-4c59-95a5-f0a0ba588a09.png",
-    alt: "Laboratório equipado com esqueleto, microscópio e materiais didáticos",
-    title: "Espaço Completo de Ciências"
-  },
-  {
-    src: "/lovable-uploads/b6f2e52f-1522-45ea-9c01-14ed7c201373.png",
-    alt: "Ambiente do laboratório com modelos anatômicos e microscópio",
-    title: "Instrumentos de Pesquisa Científica"
-  },
-  {
-    src: "/lovable-uploads/8dc0f337-c520-4999-b679-8713d1295980.png",
-    alt: "Microscópio e tubos de ensaio para experimentos práticos",
-    title: "Equipamentos para Experimentação"
-  }
-];
-
-export const laboratorioTecnologiaImages = [
   {
     src: "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
-    alt: "Sala de informática com computadores e cadeiras coloridas organizadas",
-    title: "Ambiente Tecnológico Moderno"
+    alt: "Área de refeições da cantina",
+    title: "Área de Refeições"
   },
-  {
-    src: "/lovable-uploads/d164773b-f87d-4545-b26c-556579879929.png",
-    alt: "Vista do laboratório com laptops e ambiente colorido ao fundo",
-    title: "Espaço de Aprendizagem Digital"
-  },
-  {
-    src: "/lovable-uploads/ab36d915-0a98-4e2d-b81c-78fe5e3e334c.png",
-    alt: "Laboratório de informática com laptops e mobiliário colorido",
-    title: "Tecnologia e Design"
-  },
-  {
-    src: "/lovable-uploads/7164d697-742e-4ac2-8dcc-63701e0bf01d.png",
-    alt: "Computadores organizados na bancada do laboratório",
-    title: "Equipamentos de Última Geração"
-  },
-  {
-    src: "/lovable-uploads/5814f72e-8902-454f-ade2-817bb032b306.png",
-    alt: "Aluno utilizando laptop em mesa circular com ambiente colorido",
-    title: "Aprendizagem Interativa"
-  }
-];
-
-export const bibliotecaImages = [
   {
     src: "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
-    alt: "Biblioteca com mesas individuais, cadeiras coloridas e estantes organizadas",
-    title: "Ambiente de Estudos Organizado"
-  },
-  {
-    src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
-    alt: "Mesa de estudos com cadeiras coloridas e materiais didáticos ao fundo",
-    title: "Espaço de Leitura e Pesquisa"
-  },
-  {
-    src: "/lovable-uploads/b35c7e60-bba3-49ce-b2da-b3c53d7bbfd4.png",
-    alt: "Vista completa da biblioteca com mesas e acervo bibliográfico",
-    title: "Acervo e Mobiliário Moderno"
-  },
-  {
-    src: "/lovable-uploads/f4ddf793-391d-4150-b0a5-bbf5d030f138.png",
-    alt: "Área de estudos com mesas em formato de ilha e boa iluminação",
-    title: "Organização e Conforto"
+    alt: "Balcão de atendimento da cantina",
+    title: "Balcão de Atendimento"
   }
 ];
 
-export const auditoriumImages = [
+// Laboratórios Física e Química Images
+export const laboratorisFisicaQuimicaImages = [
   {
     src: "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png",
-    alt: "Auditório do Fundamental II com estudantes assistindo apresentação",
-    title: "Espaço de Apresentações e Eventos"
+    alt: "Laboratório de física e química",
+    title: "Laboratório de Ciências"
   },
-  {
-    src: "/lovable-uploads/590184c3-c7d0-4201-ae5d-e44a878d985b.png",
-    alt: "Vista panorâmica do auditório com cadeiras azuis e sistema de projeção",
-    title: "Ambiente Moderno para Palestras"
-  }
-];
-
-export const fundamental2CorridorImages = [
   {
     src: "/lovable-uploads/de3ef360-e9dc-4aa3-b7da-5ccc786b5302.png",
-    alt: "Corredor amplo do Fundamental II com armários de estudantes e decoração escolar",
-    title: "Corredor Principal dos Alunos"
+    alt: "Equipamentos do laboratório",
+    title: "Equipamentos Científicos"
   },
   {
-    src: "/lovable-uploads/7ebd443d-3795-4923-a927-9c4ca8c6bcb7.png",
-    alt: "Vista do corredor com pilares coloridos e acesso às salas de aula",
-    title: "Circulação e Acesso às Salas"
-  },
-  {
-    src: "/lovable-uploads/22d3b4cd-8bec-4517-8026-1fe3347a34a5.png",
-    alt: "Área do corredor com armários dos estudantes e mesa de ping pong",
-    title: "Espaço de Convivência Estudantil"
-  },
-  {
-    src: "/lovable-uploads/34b750bb-9f28-4238-afe2-dcee63f5bda8.png",
-    alt: "Corredor com painéis informativos e área de matrícula da escola",
-    title: "Informações e Comunicação Escolar"
-  },
-  {
-    src: "/lovable-uploads/02179b84-4e05-4e1a-9929-0e6e5c890211.png",
-    alt: "Área de recreação no corredor com mesa de ping pong e mesas de apoio",
-    title: "Espaço de Lazer e Descanso"
+    src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
+    alt: "Mesa de experimentos",
+    title: "Mesa de Experimentos"
   }
 ];
 
-export const educationInfantilImages: any[] = [];
-export const laboratoriosImages: any[] = [];
-export const quadraEsportivaImages: any[] = [];
+// Laboratório Tecnologia Images
+export const laboratorioTecnologiaImages = [
+  {
+    src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
+    alt: "Laboratório de tecnologia com computadores",
+    title: "Laboratório de Informática"
+  },
+  {
+    src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
+    alt: "Estações de trabalho do laboratório",
+    title: "Estações de Trabalho"
+  },
+  {
+    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
+    alt: "Ambiente do laboratório de tecnologia",
+    title: "Ambiente Tecnológico"
+  }
+];
+
+// Biblioteca Images
+export const bibliotecaImages = [
+  {
+    src: "/lovable-uploads/cd4e09f3-0765-415c-b018-59d5dffc9698.png",
+    alt: "Biblioteca do Ensino Fundamental e Médio",
+    title: "Biblioteca Principal"
+  },
+  {
+    src: "/lovable-uploads/de8be048-fb1c-4f6c-a24a-d1e77df57761.png",
+    alt: "Área de estudos da biblioteca",
+    title: "Área de Estudos"
+  },
+  {
+    src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
+    alt: "Acervo da biblioteca",
+    title: "Acervo Bibliográfico"
+  }
+];
+
+// Auditório Images
+export const auditoriumImages = [
+  {
+    src: "/lovable-uploads/8b589287-247a-4b10-8999-fa49984ee71c.png",
+    alt: "Auditório do Fundamental II",
+    title: "Auditório Principal"
+  },
+  {
+    src: "/lovable-uploads/e0091d38-7b95-4e2c-9841-17f48704f260.png",
+    alt: "Palco do auditório",
+    title: "Palco"
+  },
+  {
+    src: "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
+    alt: "Plateia do auditório",
+    title: "Plateia"
+  }
+];
+
+// Corredor Fundamental 2 Images
+export const fundamental2CorridorImages = [
+  {
+    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
+    alt: "Corredor do Ensino Fundamental II",
+    title: "Corredor Principal"
+  },
+  {
+    src: "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
+    alt: "Área de convivência no corredor",
+    title: "Área de Convivência"
+  },
+  {
+    src: "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
+    alt: "Armários dos estudantes",
+    title: "Armários dos Alunos"
+  }
+];
