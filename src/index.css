@@ -75,62 +75,54 @@
     @apply bg-background text-foreground;
     font-display: swap;
     line-height: 1.6;
-    /* Performance optimizations */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  /* Enhanced typography hierarchy */
+  /* Enhanced typography hierarchy - Completamente responsivo */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight;
-    /* Performance optimization */
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight;
     contain: layout style;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 leading-tight;
     contain: layout style;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 leading-tight;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-800 leading-tight;
     contain: layout style;
   }
 
   h4 {
-    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 leading-tight;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-700 leading-tight;
     contain: layout style;
   }
 
   h5 {
-    @apply text-lg md:text-xl lg:text-2xl font-medium text-gray-700 leading-tight;
+    @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium text-gray-700 leading-tight;
     contain: layout style;
   }
 
   h6 {
-    @apply text-base md:text-lg lg:text-xl font-medium text-gray-600 leading-tight;
+    @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-gray-600 leading-tight;
     contain: layout style;
   }
 
   p {
-    @apply text-base md:text-lg leading-relaxed text-gray-600;
+    @apply text-sm sm:text-base md:text-lg leading-relaxed text-gray-600;
   }
 
-  /* Enhanced image optimization with performance improvements */
+  /* Enhanced image optimization */
   img {
     @apply max-w-full h-auto;
     content-visibility: auto;
-    /* Critical performance improvements */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: optimizeQuality;
     transform: translateZ(0);
     backface-visibility: hidden;
-  }
-
-  /* Preload critical resources */
-  link[rel="preload"] {
-    as: image;
   }
 }
 
@@ -154,87 +146,49 @@
     will-change: opacity, transform;
   }
 
-  /* 3D Flip Card Styles */
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-
-  .transform-style-preserve-3d {
-    transform-style: preserve-3d;
-  }
-
-  .backface-hidden {
-    backface-visibility: hidden;
-  }
-
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-
-  /* Enhanced button styles */
+  /* Enhanced button styles - Completamente responsivos */
   .btn-primary {
-    @apply bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] sm:min-h-[52px] md:min-h-[56px];
     will-change: transform, box-shadow;
     transform: translateZ(0);
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-gray-900 font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg border-2 border-gray-300 hover:border-red-600 transition-all duration-300;
+    @apply bg-white hover:bg-gray-50 text-gray-900 font-semibold px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 rounded-lg border-2 border-gray-300 hover:border-red-600 transition-all duration-300 min-h-[48px] sm:min-h-[52px] md:min-h-[56px];
     will-change: border-color, background-color;
   }
 
   .btn-outline {
-    @apply border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg transition-all duration-300;
+    @apply border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-semibold px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 rounded-lg transition-all duration-300 min-h-[48px] sm:min-h-[52px] md:min-h-[56px];
     will-change: background-color, color;
   }
 
-  /* Enhanced spacing utilities */
+  /* Enhanced spacing utilities - Melhor responsividade */
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
   }
 
   .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+    @apply container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16;
   }
 
-  /* Enhanced typography classes */
-  .heading-primary {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6;
-  }
-
-  .heading-secondary {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 leading-tight mb-4;
-  }
-
-  .heading-tertiary {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-800 leading-tight mb-4;
-  }
-
-  .text-lead {
-    @apply text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-6;
-  }
-
-  .text-body {
-    @apply text-base md:text-lg leading-relaxed text-gray-600 mb-4;
-  }
-
-  /* Card enhancements */
+  /* Enhanced card styles */
   .card-enhanced {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-6 md:p-8;
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 p-4 sm:p-6 md:p-8 lg:p-10;
   }
 
-  /* Form enhancements */
+  /* Enhanced form styles */
   .form-input {
-    @apply w-full px-4 py-3 md:px-5 md:py-4 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-red-600 focus:ring-2 focus:ring-red-200 transition-all duration-300;
+    @apply w-full px-3 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5 text-sm sm:text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-red-600 focus:ring-2 focus:ring-red-200 transition-all duration-300 min-h-[48px] sm:min-h-[52px] md:min-h-[56px];
   }
 
   .form-label {
-    @apply block text-sm md:text-base font-semibold text-gray-700 mb-2;
+    @apply block text-xs sm:text-sm md:text-base font-semibold text-gray-700 mb-2;
   }
 
-  /* Navigation enhancements */
+  /* Enhanced navigation */
   .nav-link {
-    @apply text-gray-700 hover:text-red-600 font-semibold transition-all duration-300 relative;
+    @apply text-gray-700 hover:text-red-600 font-semibold transition-all duration-300 relative text-sm sm:text-base md:text-lg px-2 py-2 min-h-[44px] flex items-center;
   }
 
   .nav-link::after {
@@ -245,94 +199,18 @@
     @apply w-full;
   }
 
-  /* GPU optimizations */
+  /* Accessibility and touch improvements */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+
+  /* Performance optimizations */
   .gpu-optimized {
     transform: translateZ(0);
     backface-visibility: hidden;
   }
 
-  /* Loading states */
-  .skeleton {
-    @apply bg-gray-200 animate-pulse rounded;
-  }
-
-  /* Accessibility enhancements */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
-  }
-
-  /* Responsive text utilities */
-  .responsive-text-xs {
-    @apply text-xs sm:text-sm md:text-base;
-  }
-
-  .responsive-text-sm {
-    @apply text-sm sm:text-base md:text-lg;
-  }
-
-  .responsive-text-base {
-    @apply text-base sm:text-lg md:text-xl;
-  }
-
-  .responsive-text-lg {
-    @apply text-lg sm:text-xl md:text-2xl;
-  }
-
-  .responsive-text-xl {
-    @apply text-xl sm:text-2xl md:text-3xl;
-  }
-
-  /* Performance optimizations */
-  .gpu-accelerated {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-
-  .will-change-transform {
-    will-change: transform;
-  }
-
-  .will-change-opacity {
-    will-change: opacity;
-  }
-
-  .contain-layout {
-    contain: layout;
-  }
-
-  .contain-paint {
-    contain: paint;
-  }
-
-  .contain-size {
-    contain: size;
-  }
-
-  .contain-strict {
-    contain: strict;
-  }
-
-  /* Critical loading optimizations */
-  .critical-resource {
-    font-display: swap;
-    loading: eager;
-  }
-
-  .lazy-resource {
-    content-visibility: auto;
-    contain-intrinsic-size: 200px;
-  }
-
-  /* Image optimization classes */
-  .optimized-image {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: optimizeQuality;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-
-  /* Layout shift prevention */
+  /* Improved image aspect ratios */
   .aspect-ratio-16-9 {
     aspect-ratio: 16 / 9;
   }
@@ -369,8 +247,8 @@
   }
 }
 
-/* Enhanced mobile optimizations */
-@media (max-width: 768px) {
+/* Mobile-first optimizations */
+@media (max-width: 640px) {
   .container {
     @apply px-4;
   }
@@ -380,88 +258,68 @@
     @apply min-h-[44px];
   }
 
-  /* Improved mobile navigation */
-  .mobile-menu {
-    @apply fixed inset-0 bg-white z-50 overflow-y-auto;
-  }
-
   /* Mobile typography adjustments */
-  h1 { @apply text-3xl; }
-  h2 { @apply text-2xl; }
-  h3 { @apply text-xl; }
-  h4 { @apply text-lg; }
+  h1 { @apply text-2xl leading-tight; }
+  h2 { @apply text-xl leading-tight; }
+  h3 { @apply text-lg leading-tight; }
+  h4 { @apply text-base leading-tight; }
   
   /* Mobile spacing adjustments */
   .section-padding {
-    @apply py-8 sm:py-12;
+    @apply py-8;
   }
 
   /* Optimized mobile scrolling */
   body {
     -webkit-overflow-scrolling: touch;
   }
+
+  /* Mobile-specific button improvements */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply w-full text-center justify-center;
+  }
 }
 
 /* Tablet optimizations */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
   .container-custom {
     @apply px-6;
   }
   
-  h1 { @apply text-4xl; }
-  h2 { @apply text-3xl; }
-  h3 { @apply text-2xl; }
+  h1 { @apply text-3xl md:text-4xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  
+  .section-padding {
+    @apply py-12 md:py-16;
+  }
 }
 
 /* Desktop optimizations */
 @media (min-width: 1025px) {
   .container-custom {
-    @apply px-8;
+    @apply px-8 lg:px-12;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-24;
   }
 }
 
 /* Large desktop optimizations */
 @media (min-width: 1440px) {
   .container-custom {
-    @apply px-12;
-  }
-  
-  .heading-primary {
-    @apply text-7xl;
-  }
-  
-  .heading-secondary {
-    @apply text-6xl;
-  }
-}
-
-/* Print optimizations */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  * {
-    @apply text-black bg-white;
+    @apply px-16;
   }
   
   .section-padding {
-    @apply py-4;
+    @apply py-24 xl:py-28;
   }
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .btn-primary {
-    @apply border-2 border-white;
-  }
-  
-  .nav-link {
-    @apply border-b border-transparent hover:border-current;
-  }
-}
-
-/* Critical Performance Improvements */
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -484,42 +342,28 @@
   }
 }
 
-/* Optimize for different connection speeds */
-@media (prefers-reduced-data: reduce) {
-  /* Reduce non-critical animations and effects */
-  .animate-fade-in,
-  .animate-slide-up {
-    animation: none;
-    opacity: 1;
-    transform: none;
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    @apply border-2 border-white;
   }
   
-  /* Simplify shadows and effects */
-  .shadow-lg {
-    box-shadow: none;
+  .nav-link {
+    @apply border-b border-transparent hover:border-current;
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .no-print {
+    display: none !important;
   }
   
-  .hover:shadow-xl {
-    box-shadow: none;
+  * {
+    @apply text-black bg-white;
   }
-}
-
-/* Resource hints for better loading */
-.preload-hint::before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Critical path optimization */
-.above-fold {
-  content-visibility: visible;
-}
-
-.below-fold {
-  content-visibility: auto;
-  contain-intrinsic-size: 300px;
+  
+  .section-padding {
+    @apply py-4;
+  }
 }

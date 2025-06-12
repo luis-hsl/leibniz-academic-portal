@@ -26,20 +26,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState<string>('');
-  const [fallbackSrc, setFallbackSrc] = useState<string>('');
   const imgRef = useRef<HTMLImageElement>(null);
 
-  // Generate fallback source (PNG from WebP)
-  const generateFallbackSrc = (originalSrc: string) => {
-    if (originalSrc.endsWith('.webp')) {
-      return originalSrc.replace(/\.webp$/, '.png');
-    }
-    return originalSrc;
-  };
-
   useEffect(() => {
-    setFallbackSrc(generateFallbackSrc(src));
-    
     if (priority) {
       setCurrentSrc(src);
       return;
@@ -72,14 +61,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleError = () => {
     console.warn(`Failed to load image: ${currentSrc}`);
-    
-    // Try fallback to PNG if we haven't already
-    if (currentSrc.endsWith('.webp') && !hasError) {
-      console.log(`Trying fallback PNG: ${fallbackSrc}`);
-      setCurrentSrc(fallbackSrc);
-    } else {
-      setHasError(true);
-    }
+    setHasError(true);
   };
 
   return (
@@ -129,7 +111,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
               }`}
               loading={priority ? 'eager' : 'lazy'}
               decoding="async"
-              fetchPriority={priority ? 'high' : 'low'}
               sizes={sizes}
             />
           ) : (
