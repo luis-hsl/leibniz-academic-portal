@@ -12,7 +12,7 @@
 // ÁREA EXTERNA DO COLÉGIO - Imagens da fachada e paisagismo
 export const areaExternaImages = [
   {
-    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    src: "/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png",
     alt: "Vista lateral do Colégio Leibniz",
     title: "Vista Lateral"
   },
@@ -22,12 +22,12 @@ export const areaExternaImages = [
     title: "Área Externa com Paisagismo"
   },
   {
-    src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
     alt: "Vista completa da fachada do colégio",
     title: "Vista Completa da Fachada"
   },
   {
-    src: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc",
+    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
     alt: "Área externa ampla do colégio",
     title: "Área Externa Ampla"
   }
@@ -36,22 +36,22 @@ export const areaExternaImages = [
 // LABORATÓRIO DE ROBÓTICA - Imagens dos equipamentos e atividades STEM
 export const roboticsImages = [
   {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    src: "/lovable-uploads/cf73da90-9069-4857-a1c6-6417668d6778.png",
     alt: "Robótica educacional com LEGO",
     title: "Robótica Educacional com LEGO"
   },
   {
-    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    src: "/lovable-uploads/cc1f4e03-f73f-46d6-99e2-57db9dfbfa3a.png",
     alt: "Programação e construção com robótica",
     title: "Programação e Construção"
   },
   {
-    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    src: "/lovable-uploads/c18f8e5f-bc6c-4a00-a957-3b15732f2c18.png",
     alt: "Desenvolvimento de projetos tecnológicos",
     title: "Desenvolvimento de Projetos"
   },
   {
-    src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    src: "/lovable-uploads/f599e5cd-5b79-4f7b-afd0-42bbda705030.png",
     alt: "Trabalho colaborativo em robótica",
     title: "Trabalho Colaborativo"
   }
