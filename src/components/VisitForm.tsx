@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -80,9 +81,23 @@ const VisitForm = () => {
     // Track conversion
     trackVisitConversion();
 
-    // Send WhatsApp message with form data
-    const message = encodeURIComponent("Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Pode me ajudar?");
-    window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
+    // Create detailed WhatsApp message with all form data
+    const detailedMessage = `Olá, tenho interesse em agendar uma visita ao Colégio Leibniz. Seguem meus dados:
+
+📝 *Dados Pessoais:*
+• Nome: ${formData.name}
+• Email: ${formData.email}
+• Telefone: ${formData.phone}
+
+🎓 *Informações Acadêmicas:*
+• Nível pretendido: ${formData.level}${formData.shift ? `\n• Turno desejado: ${formData.shift}` : ''}
+
+📅 *Agendamento:*${formData.date ? `\n• Data preferencial: ${new Date(formData.date).toLocaleDateString('pt-BR')}` : ''}${formData.time ? `\n• Horário preferencial: ${formData.time}` : ''}
+
+Aguardo retorno para confirmar a visita. Obrigado!`;
+
+    const encodedMessage = encodeURIComponent(detailedMessage);
+    window.open(`https://wa.me/5566996781284?text=${encodedMessage}`, "_blank");
     
     toast({
       title: "Redirecionando para WhatsApp!",
@@ -315,3 +330,4 @@ const VisitForm = () => {
 };
 
 export default VisitForm;
+
