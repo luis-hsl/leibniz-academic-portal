@@ -1,3 +1,4 @@
+
 import { 
   Carousel,
   CarouselContent,
@@ -80,13 +81,13 @@ const Testimonials = () => {
               align: "center",
               loop: true,
               skipSnaps: false,
-              dragFree: true,
+              dragFree: false,
             }}
           >
             <CarouselContent className="flex gap-[15px] md:gap-2.5">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="basis-auto flex-shrink-0">
-                  <div className="w-48 sm:w-56 md:w-64">
+                <CarouselItem key={index} className="basis-full sm:basis-auto flex-shrink-0">
+                  <div className="w-48 sm:w-56 md:w-64 mx-auto sm:mx-0">
                     <OptimizedImage
                       src={student.image}
                       alt={`${student.name} - ${student.course} - ${student.university}`}
