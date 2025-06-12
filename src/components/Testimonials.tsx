@@ -83,7 +83,7 @@ const Testimonials = () => {
               dragFree: true,
             }}
           >
-            <CarouselContent className="flex gap-2.5">
+            <CarouselContent className="flex gap-[15px] md:gap-2.5">
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="basis-auto flex-shrink-0">
                   <div className="w-48 sm:w-56 md:w-64">
