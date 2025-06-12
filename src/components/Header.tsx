@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -71,10 +72,10 @@ const Header = () => {
                 <PopoverTrigger asChild>
                   <Button 
                     size="sm"
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-2 py-2 flex-shrink-0 flex items-center gap-1"
+                    className="bg-blue-600 hover:bg-red-600 active:bg-red-700 text-white text-xs px-2 py-2 flex-shrink-0 flex items-center gap-1 transition-all duration-300 hover:scale-105 hover:shadow-md"
                   >
                     Área do Aluno
-                    <ChevronDown className="h-3 w-3" />
+                    <ChevronDown className="h-3 w-3 transition-transform duration-300" />
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-56 p-2">
@@ -83,7 +84,7 @@ const Header = () => {
                       <Button
                         key={option.name}
                         variant="ghost"
-                        className="justify-start text-sm h-auto py-2 px-3"
+                        className="justify-start text-sm h-auto py-2 px-3 hover:bg-red-50 hover:text-red-600 transition-all duration-300"
                         onClick={() => openStudentPortal(option.url)}
                       >
                         {option.name}
@@ -96,7 +97,7 @@ const Header = () => {
               <Button 
                 onClick={openWhatsApp}
                 size="sm"
-                className="bg-green-600 hover:bg-green-700 text-white text-xs px-2 py-2 flex-shrink-0"
+                className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-xs px-2 py-2 flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-md"
               >
                 WhatsApp
               </Button>
@@ -161,19 +162,19 @@ const Header = () => {
             <Popover open={isStudentAreaOpen} onOpenChange={setIsStudentAreaOpen}>
               <PopoverTrigger asChild>
                 <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-red-600 active:bg-red-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
                 >
                   Área do Aluno
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isStudentAreaOpen ? 'rotate-180' : ''}`} />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-64 p-2">
+              <PopoverContent className="w-64 p-2 shadow-xl border-0 bg-white">
                 <div className="flex flex-col space-y-1">
                   {studentAreaOptions.map((option) => (
                     <Button
                       key={option.name}
                       variant="ghost"
-                      className="justify-start text-sm h-auto py-3 px-3"
+                      className="justify-start text-sm h-auto py-3 px-3 hover:bg-red-50 hover:text-red-600 active:bg-red-100 transition-all duration-300 rounded-md"
                       onClick={() => openStudentPortal(option.url)}
                     >
                       {option.name}
@@ -185,7 +186,7 @@ const Header = () => {
             
             <Button 
               onClick={openWhatsApp}
-              className="bg-green-600 hover:bg-green-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base"
+              className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
             >
               Fale Conosco
             </Button>
@@ -197,3 +198,4 @@ const Header = () => {
 };
 
 export default Header;
+
