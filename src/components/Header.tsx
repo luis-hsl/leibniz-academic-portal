@@ -29,10 +29,10 @@ const Header = () => {
   );
 
   const studentAreaOptions = [
-    { name: "Portal Bernoulli", url: "https://mb4.bernoulli.com.br/login" },
-    { name: "Portal do Professor", url: "https://www.sponteeducacional.net.br/" },
-    { name: "Portal do Aluno", url: "https://portal.sponteeducacional.net.br/vest" },
-    { name: "Portal Redação", url: "https://app.redacaonline.com.br/colegio-leibniz/aluno/login" },
+    { name: "Portal Bernoulli", url: "https://mb4.bernoulli.com.br/login", color: "bg-green-600 hover:bg-green-700 text-white" },
+    { name: "Portal do Professor", url: "https://www.sponteeducacional.net.br/", color: "bg-blue-600 hover:bg-blue-700 text-white" },
+    { name: "Portal do Aluno", url: "https://portal.sponteeducacional.net.br/vest", color: "bg-red-600 hover:bg-red-700 text-white" },
+    { name: "Portal Redação", url: "https://app.redacaonline.com.br/colegio-leibniz/aluno/login", color: "bg-yellow-600 hover:bg-yellow-700 text-white" },
   ];
 
   const openWhatsApp = () => {
@@ -79,12 +79,11 @@ const Header = () => {
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-56 p-2">
-                  <div className="flex flex-col space-y-1">
+                  <div className="flex flex-col space-y-2">
                     {studentAreaOptions.map((option) => (
                       <Button
                         key={option.name}
-                        variant="ghost"
-                        className="justify-start text-sm h-auto py-2 px-3 hover:bg-red-50 hover:text-red-600 transition-all duration-300"
+                        className={`justify-start text-sm h-auto py-2 px-3 transition-all duration-300 ${option.color}`}
                         onClick={() => openStudentPortal(option.url)}
                       >
                         {option.name}
@@ -169,12 +168,11 @@ const Header = () => {
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-64 p-2 shadow-xl border-0 bg-white">
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-2">
                   {studentAreaOptions.map((option) => (
                     <Button
                       key={option.name}
-                      variant="ghost"
-                      className="justify-start text-sm h-auto py-3 px-3 hover:bg-red-50 hover:text-red-600 active:bg-red-100 transition-all duration-300 rounded-md"
+                      className={`justify-start text-sm h-auto py-3 px-3 transition-all duration-300 ${option.color}`}
                       onClick={() => openStudentPortal(option.url)}
                     >
                       {option.name}
