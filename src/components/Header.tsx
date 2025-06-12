@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,7 +56,14 @@ const Header = () => {
               <Button 
                 onClick={openWhatsApp}
                 size="sm"
-                className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-2 flex-shrink-0"
+                className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-2 py-2 flex-shrink-0"
+              >
+                Área do Aluno
+              </Button>
+              <Button 
+                onClick={openWhatsApp}
+                size="sm"
+                className="bg-green-600 hover:bg-green-700 text-white text-xs px-2 py-2 flex-shrink-0"
               >
                 WhatsApp
               </Button>
@@ -116,12 +124,20 @@ const Header = () => {
             ))}
           </nav>
           
-          <Button 
-            onClick={openWhatsApp}
-            className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg"
-          >
-            Fale Conosco
-          </Button>
+          <div className="flex items-center space-x-3">
+            <Button 
+              onClick={openWhatsApp}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base"
+            >
+              Área do Aluno
+            </Button>
+            <Button 
+              onClick={openWhatsApp}
+              className="bg-green-600 hover:bg-green-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base"
+            >
+              Fale Conosco
+            </Button>
+          </div>
         </div>
       </div>
     </header>

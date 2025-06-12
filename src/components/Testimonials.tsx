@@ -83,18 +83,20 @@ const Testimonials = () => {
               dragFree: true,
             }}
           >
-            <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4 lg:-ml-6">
+            <CarouselContent className="flex gap-2.5">
               {studentImages.map((student, index) => (
-                <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 lg:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <OptimizedImage
-                    src={student.image}
-                    alt={`${student.name} - ${student.course} - ${student.university}`}
-                    className="w-full h-auto object-cover rounded-[5px] transition-transform duration-300 hover:scale-105"
-                    width={300}
-                    height={400}
-                    priority={index === 0}
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  />
+                <CarouselItem key={index} className="basis-auto flex-shrink-0">
+                  <div className="w-48 sm:w-56 md:w-64">
+                    <OptimizedImage
+                      src={student.image}
+                      alt={`${student.name} - ${student.course} - ${student.university}`}
+                      className="w-full h-auto object-cover rounded-[5px] transition-transform duration-300 hover:scale-105"
+                      width={250}
+                      height={330}
+                      priority={index === 0}
+                      sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
