@@ -1,5 +1,17 @@
 
-// Área Externa Images
+
+// =============================================================
+// DADOS DAS IMAGENS DAS DEPENDÊNCIAS DO COLÉGIO LEIBNIZ
+// =============================================================
+// 
+// INSTRUÇÕES PARA ALTERAR AS IMAGENS DO CARROSSEL:
+// 1. Localize a seção da dependência que deseja alterar abaixo
+// 2. Substitua o valor 'src' pela nova URL da imagem
+// 3. Atualize o 'alt' e 'title' com a nova descrição
+// 4. As imagens devem estar na pasta public/lovable-uploads/
+// =============================================================
+
+// ÁREA EXTERNA DO COLÉGIO - Imagens da fachada e paisagismo
 export const areaExternaImages = [
   {
     src: "/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png",
@@ -23,7 +35,7 @@ export const areaExternaImages = [
   }
 ];
 
-// Robotics Images
+// LABORATÓRIO DE ROBÓTICA - Imagens dos equipamentos e atividades STEM
 export const roboticsImages = [
   {
     src: "/lovable-uploads/217e1761-9771-4e0e-abf5-3e0d84202460.png",
@@ -47,7 +59,7 @@ export const roboticsImages = [
   }
 ];
 
-// Cantina Images
+// CANTINA DO ENSINO FUNDAMENTAL - Imagens do refeitório e área de alimentação
 export const cantinaImages = [
   {
     src: "/lovable-uploads/5cce79ec-901e-4fec-bacb-26dd7f1da01f.png",
@@ -66,7 +78,7 @@ export const cantinaImages = [
   }
 ];
 
-// Laboratórios Física e Química Images
+// LABORATÓRIOS DE FÍSICA E QUÍMICA - Imagens dos equipamentos científicos
 export const laboratorisFisicaQuimicaImages = [
   {
     src: "/lovable-uploads/b6f2e52f-1522-45ea-9c01-14ed7c201373.png",
@@ -90,7 +102,7 @@ export const laboratorisFisicaQuimicaImages = [
   }
 ];
 
-// Laboratório Tecnologia Images
+// LABORATÓRIO DE TECNOLOGIA - Imagens dos computadores e equipamentos digitais
 export const laboratorioTecnologiaImages = [
   {
     src: "/lovable-uploads/5814f72e-8902-454f-ade2-817bb032b306.png",
@@ -109,7 +121,7 @@ export const laboratorioTecnologiaImages = [
   }
 ];
 
-// Biblioteca Images
+// BIBLIOTECA - Imagens do acervo e espaços de estudo
 export const bibliotecaImages = [
   {
     src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
@@ -133,7 +145,7 @@ export const bibliotecaImages = [
   }
 ];
 
-// Auditório Images
+// AUDITÓRIO - Imagens do espaço para eventos e apresentações
 export const auditoriumImages = [
   {
     src: "/lovable-uploads/590184c3-c7d0-4201-ae5d-e44a878d985b.png",
@@ -147,7 +159,7 @@ export const auditoriumImages = [
   }
 ];
 
-// Corredor Fundamental 3 Images
+// CORREDOR DO FUNDAMENTAL II - Imagens dos espaços de circulação e convivência
 export const fundamental2CorridorImages = [
   {
     src: "/lovable-uploads/a463fe68-c2d3-4f63-bfb2-5883d43bbe5e.png",
@@ -165,3 +177,12 @@ export const fundamental2CorridorImages = [
     title: "Espaço de Convivência Estudantil"
   }
 ];
+
+// =============================================================
+// OBSERVAÇÕES IMPORTANTES:
+// - Todas as imagens devem estar na pasta public/lovable-uploads/
+// - O formato das URLs deve seguir: "/lovable-uploads/nome-do-arquivo.png"
+// - Mantenha os campos 'alt' e 'title' descritivos para acessibilidade
+// - As imagens aparecerão no carrossel na ordem definida aqui
+// =============================================================
+
