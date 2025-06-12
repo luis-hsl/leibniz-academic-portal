@@ -2,22 +2,22 @@
 // Área Externa Images
 export const areaExternaImages = [
   {
-    src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
+    src: "/lovable-uploads/f8ca4bb9-9726-4d0c-9c3d-f129620ec311.png",
     alt: "Vista lateral do Colégio Leibniz",
     title: "Vista Lateral"
   },
   {
-    src: "/lovable-uploads/8b589287-247a-4b10-8999-fa49984ee71c.png",
+    src: "/lovable-uploads/22d4db4c-9789-4bb6-9867-486618d39353.png",
     alt: "Área externa com paisagismo do colégio",
     title: "Área Externa com Paisagismo"
   },
   {
-    src: "/lovable-uploads/e0091d38-7b95-4e2c-9841-17f48704f260.png",
+    src: "/lovable-uploads/9c845d4f-e5ef-4be4-8d88-454847ec7bda.png",
     alt: "Vista completa da fachada do colégio",
     title: "Vista Completa da Fachada"
   },
   {
-    src: "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
+    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
     alt: "Área externa ampla do colégio",
     title: "Área Externa Ampla"
   }
@@ -26,22 +26,22 @@ export const areaExternaImages = [
 // Robotics Images
 export const roboticsImages = [
   {
-    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
+    src: "/lovable-uploads/217e1761-9771-4e0e-abf5-3e0d84202460.png",
     alt: "Robótica educacional com LEGO",
     title: "Robótica Educacional com LEGO"
   },
   {
-    src: "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
+    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
     alt: "Programação e construção com robótica",
     title: "Programação e Construção"
   },
   {
-    src: "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
+    src: "/lovable-uploads/6467ff59-4eb2-4c1e-a070-ed09e69caced.png",
     alt: "Desenvolvimento de projetos tecnológicos",
     title: "Desenvolvimento de Projetos"
   },
   {
-    src: "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
+    src: "/lovable-uploads/050a3b07-f372-42c5-ab10-db7a3229542f.png",
     alt: "Trabalho colaborativo em robótica",
     title: "Trabalho Colaborativo"
   }
@@ -50,17 +50,17 @@ export const roboticsImages = [
 // Cantina Images
 export const cantinaImages = [
   {
-    src: "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
+    src: "/lovable-uploads/5cce79ec-901e-4fec-bacb-26dd7f1da01f.png",
     alt: "Área principal da cantina",
     title: "Área Principal da Cantina"
   },
   {
-    src: "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png",
+    src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
     alt: "Espaço amplo para refeições",
     title: "Espaço Amplo para Refeições"
   },
   {
-    src: "/lovable-uploads/de3ef360-e9dc-4aa3-b7da-5ccc786b5302.png",
+    src: "/lovable-uploads/a6d62752-c8c3-482d-82a0-f35b4ec58927.png",
     alt: "Ambiente moderno e acolhedor da cantina",
     title: "Ambiente Moderno e Acolhedor"
   }
@@ -69,22 +69,22 @@ export const cantinaImages = [
 // Laboratórios Física e Química Images
 export const laboratorisFisicaQuimicaImages = [
   {
-    src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
+    src: "/lovable-uploads/b6f2e52f-1522-45ea-9c01-14ed7c201373.png",
     alt: "Equipamentos de anatomia e biologia",
     title: "Equipamentos de Anatomia e Biologia"
   },
   {
-    src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
+    src: "/lovable-uploads/eba9432f-aee4-4815-97b2-cac86e13794a.png",
     alt: "Espaço completo de ciências",
     title: "Espaço Completo de Ciências"
   },
   {
-    src: "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png",
+    src: "/lovable-uploads/b29218f7-e48d-4349-a4e0-ed1c1d8ece4d.png",
     alt: "Instrumentos de pesquisa científica",
     title: "Instrumentos de Pesquisa Científica"
   },
   {
-    src: "/lovable-uploads/bc48ba2d-00f3-4d05-8eaa-c6a90fac82e2.png",
+    src: "/lovable-uploads/97d5f54d-71d6-4ab4-b7cb-bc50a36712e9.png",
     alt: "Equipamentos para experimentação",
     title: "Equipamentos para Experimentação"
   }
@@ -93,17 +93,17 @@ export const laboratorisFisicaQuimicaImages = [
 // Laboratório Tecnologia Images
 export const laboratorioTecnologiaImages = [
   {
-    src: "/lovable-uploads/cd4e09f3-0765-415c-b018-59d5dffc9698.png",
+    src: "/lovable-uploads/5814f72e-8902-454f-ade2-817bb032b306.png",
     alt: "Tecnologia e design educacional",
     title: "Tecnologia e Design"
   },
   {
-    src: "/lovable-uploads/de8be048-fb1c-4f6c-a24a-d1e77df57761.png",
-    alt: "Equipamentos de última geração",
-    title: "Equipamentos de Última Geração"
+    src: "/lovable-uploads/7164d697-742e-4ac2-8dcc-63701e0bf01d.png",
+    alt: "Equipamentos de Ótima Qualidade",
+    title: "Equipamentos de Ótima Qualidade"
   },
   {
-    src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
+    src: "/lovable-uploads/d164773b-f87d-4545-b26c-556579879929.png",
     alt: "Aprendizagem interativa com tecnologia",
     title: "Aprendizagem Interativa"
   }
@@ -112,22 +112,22 @@ export const laboratorioTecnologiaImages = [
 // Biblioteca Images
 export const bibliotecaImages = [
   {
-    src: "/lovable-uploads/8b589287-247a-4b10-8999-fa49984ee71c.png",
+    src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
     alt: "Ambiente de estudos organizado",
     title: "Ambiente de Estudos Organizado"
   },
   {
-    src: "/lovable-uploads/e0091d38-7b95-4e2c-9841-17f48704f260.png",
+    src: "/lovable-uploads/744f47e2-d92b-4c6d-869a-19832c9137b2.png",
     alt: "Espaço de leitura e pesquisa",
     title: "Espaço de Leitura e Pesquisa"
   },
   {
-    src: "/lovable-uploads/fdc61607-18f2-4a6f-bb10-f9fc789fa308.png",
+    src: "/lovable-uploads/515ba1f1-7740-43ba-a854-6403931cb17b.png",
     alt: "Acervo e mobiliário moderno",
     title: "Acervo e Mobiliário Moderno"
   },
   {
-    src: "/lovable-uploads/480f5b7f-09dc-44f8-8194-ce89873e4bc5.png",
+    src: "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
     alt: "Organização e conforto",
     title: "Organização e Conforto"
   }
@@ -136,31 +136,31 @@ export const bibliotecaImages = [
 // Auditório Images
 export const auditoriumImages = [
   {
-    src: "/lovable-uploads/b45ba521-606f-4128-ac56-ab88f1be1367.png",
+    src: "/lovable-uploads/590184c3-c7d0-4201-ae5d-e44a878d985b.png",
     alt: "Espaço de apresentações e eventos",
     title: "Espaço de Apresentações e Eventos"
   },
   {
-    src: "/lovable-uploads/7f4cf9fe-e5d3-4a66-a280-65719107a386.png",
+    src: "/lovable-uploads/6df16631-7252-490e-b8e6-57043df4375f.png",
     alt: "Ambiente moderno para palestras",
     title: "Ambiente Moderno para Palestras"
   }
 ];
 
-// Corredor Fundamental 2 Images
+// Corredor Fundamental 3 Images
 export const fundamental2CorridorImages = [
   {
-    src: "/lovable-uploads/fb58d3be-9ca7-4e97-b4ed-7070e2d61682.png",
+    src: "/lovable-uploads/a463fe68-c2d3-4f63-bfb2-5883d43bbe5e.png",
     alt: "Corredor principal dos alunos",
     title: "Corredor Principal dos Alunos"
   },
   {
-    src: "/lovable-uploads/908428ad-b9c7-4b07-9ed0-1705cc71810a.png",
+    src: "/lovable-uploads/264df6ba-afd7-4ec7-a3d0-b05c4489b4ee.png",
     alt: "Circulação e acesso às salas",
     title: "Circulação e Acesso às Salas"
   },
   {
-    src: "/lovable-uploads/2bb3816c-b3fb-4e1e-9cfd-d800a82711cd.png",
+    src: "/lovable-uploads/22d3b4cd-8bec-4517-8026-1fe3347a34a5.png",
     alt: "Espaço de convivência estudantil",
     title: "Espaço de Convivência Estudantil"
   }
