@@ -49,9 +49,9 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
+      <InstitutionalVideo size="small" />
       <EducationSegments />
       <EducationLevels />
-      <InstitutionalVideo size="small" />
       <CollegeGallery />
       <FAQ />
       <Testimonials />
