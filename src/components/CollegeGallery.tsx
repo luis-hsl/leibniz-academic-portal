@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -13,8 +12,8 @@ import {
   roboticsImages,
   cantinaImages,
   laboratorisFisicaQuimicaImages,
-  laboratorioInformaticaImages,
-  bibliotecaPrincipalImages,
+  laboratorioTecnologiaImages,
+  bibliotecaImages,
   auditoriumImages,
   fundamental2CorridorImages
 } from "@/data/dependenciasData";
@@ -39,8 +38,8 @@ const CollegeGallery = () => {
     ...roboticsImages,
     ...cantinaImages,
     ...laboratorisFisicaQuimicaImages,
-    ...laboratorioInformaticaImages,
-    ...bibliotecaPrincipalImages,
+    ...laboratorioTecnologiaImages,
+    ...bibliotecaImages,
     ...auditoriumImages,
     ...fundamental2CorridorImages
   ];
