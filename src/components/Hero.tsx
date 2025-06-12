@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 import { useEffect } from "react";
@@ -81,3 +82,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
