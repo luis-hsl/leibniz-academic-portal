@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import EducationSegments from "@/components/EducationSegments";
 import EducationLevels from "@/components/EducationLevels";
+import InstitutionalVideo from "@/components/InstitutionalVideo";
 import CollegeGallery from "@/components/CollegeGallery";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
@@ -50,6 +51,7 @@ const Index = () => {
       <About />
       <EducationSegments />
       <EducationLevels />
+      <InstitutionalVideo size="small" />
       <CollegeGallery />
       <FAQ />
       <Testimonials />

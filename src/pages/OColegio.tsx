@@ -2,8 +2,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import InstitutionalVideo from "@/components/InstitutionalVideo";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building, Trophy, BookOpen, Play } from "lucide-react";
+import { Users, Building, Trophy, BookOpen } from "lucide-react";
 
 const OColegio = () => {
   return (
@@ -23,42 +24,7 @@ const OColegio = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Play className="h-8 w-8 text-red-600" />
-                <h2 className="text-4xl font-bold text-gray-900">Vídeo Institucional</h2>
-              </div>
-              <p className="text-xl text-gray-600">
-                Conheça mais sobre o Colégio Leibniz através do nosso vídeo institucional
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/07a2eF2caOo"
-                  title="Vídeo Institucional - Colégio Leibniz"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Colégio Leibniz - Excelência em Educação
-                </h3>
-                <p className="text-gray-600">
-                  Descubra nossa metodologia de ensino, infraestrutura moderna e o comprometimento 
-                  com a formação integral dos nossos alunos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <InstitutionalVideo size="large" />
 
       {/* Infrastructure Section */}
       <section className="py-20 bg-white">
