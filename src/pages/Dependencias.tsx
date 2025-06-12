@@ -17,20 +17,8 @@ import {
   auditoriumImages,
   fundamental2CorridorImages
 } from "@/data/dependenciasData";
-import { dependenciasCarouselImages } from "@/data/sharedImages";
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { useState } from "react";
-import OptimizedImage from "@/components/OptimizedImage";
 
 const Dependencias = () => {
-  const [api, setApi] = useState<any>();
-
   // Critical images for preloading (first WebP images from first sections)
   const criticalImages = [
     "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
@@ -58,62 +46,6 @@ const Dependencias = () => {
       <Header />
       
       <DependenciasHero />
-
-      {/* Galeria Principal de Dependências */}
-      <section className="py-16 md:py-20 lg:py-24 bg-blue-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Galeria das Dependências</h2>
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-                Uma visão geral dos principais espaços do Colégio Leibniz, onde seus filhos desenvolvem todo o potencial acadêmico e pessoal.
-              </p>
-            </div>
-
-            <Carousel
-              setApi={setApi}
-              className="w-full max-w-6xl mx-auto relative"
-              opts={{
-                align: "center",
-                loop: true,
-                skipSnaps: false,
-                dragFree: true,
-              }}
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {dependenciasCarouselImages.map((image, index) => (
-                  <CarouselItem key={`gallery-${image.title}-${index}`} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                    <div className="p-2">
-                      <div className="relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl bg-white">
-                        <OptimizedImage
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
-                          width={400}
-                          height={300}
-                          priority={index < 8}
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6">
-                          <h3 className="text-white font-semibold text-lg md:text-xl lg:text-2xl leading-tight">
-                            {image.title}
-                          </h3>
-                          <p className="text-white/70 text-sm md:text-base mt-2">
-                            {index + 1} de {dependenciasCarouselImages.length}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              
-              <CarouselPrevious className="absolute -left-4 md:-left-8 lg:-left-16 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-xl w-12 h-12 md:w-16 md:h-16" />
-              <CarouselNext className="absolute -right-4 md:-right-8 lg:-right-16 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-xl w-12 h-12 md:w-16 md:h-16" />
-            </Carousel>
-          </div>
-        </div>
-      </section>
 
       <DependencySection
         title="Área Externa do Colégio"
