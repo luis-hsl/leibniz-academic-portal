@@ -1,13 +1,15 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isStudentAreaOpen, setIsStudentAreaOpen] = useState(false);
   const isMobile = useIsMobile();
   const location = useLocation();
 
@@ -25,9 +27,21 @@ const Header = () => {
     item.name !== "Blog" && item.name !== "Contato"
   );
 
+  const studentAreaOptions = [
+    { name: "Portal Bernoulli", url: "https://mb4.bernoulli.com.br/login" },
+    { name: "Portal do Professor", url: "https://www.sponteeducacional.net.br/" },
+    { name: "Portal do Aluno", url: "https://portal.sponteeducacional.net.br/vest" },
+    { name: "Portal Redação", url: "https://app.redacaonline.com.br/colegio-leibniz/aluno/login" },
+  ];
+
   const openWhatsApp = () => {
     const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
+  };
+
+  const openStudentPortal = (url: string) => {
+    window.open(url, "_blank");
+    setIsStudentAreaOpen(false);
   };
 
   const isActive = (href: string) => {
@@ -53,13 +67,32 @@ const Header = () => {
             </Link>
             
             <div className="flex items-center space-x-2">
-              <Button 
-                onClick={openWhatsApp}
-                size="sm"
-                className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-2 py-2 flex-shrink-0"
-              >
-                Área do Aluno
-              </Button>
+              <Popover open={isStudentAreaOpen} onOpenChange={setIsStudentAreaOpen}>
+                <PopoverTrigger asChild>
+                  <Button 
+                    size="sm"
+                    className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-2 py-2 flex-shrink-0 flex items-center gap-1"
+                  >
+                    Área do Aluno
+                    <ChevronDown className="h-3 w-3" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-56 p-2">
+                  <div className="flex flex-col space-y-1">
+                    {studentAreaOptions.map((option) => (
+                      <Button
+                        key={option.name}
+                        variant="ghost"
+                        className="justify-start text-sm h-auto py-2 px-3"
+                        onClick={() => openStudentPortal(option.url)}
+                      >
+                        {option.name}
+                      </Button>
+                    ))}
+                  </div>
+                </PopoverContent>
+              </Popover>
+              
               <Button 
                 onClick={openWhatsApp}
                 size="sm"
@@ -125,12 +158,31 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-3">
-            <Button 
-              onClick={openWhatsApp}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base"
-            >
-              Área do Aluno
-            </Button>
+            <Popover open={isStudentAreaOpen} onOpenChange={setIsStudentAreaOpen}>
+              <PopoverTrigger asChild>
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base flex items-center gap-2"
+                >
+                  Área do Aluno
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-64 p-2">
+                <div className="flex flex-col space-y-1">
+                  {studentAreaOptions.map((option) => (
+                    <Button
+                      key={option.name}
+                      variant="ghost"
+                      className="justify-start text-sm h-auto py-3 px-3"
+                      onClick={() => openStudentPortal(option.url)}
+                    >
+                      {option.name}
+                    </Button>
+                  ))}
+                </div>
+              </PopoverContent>
+            </Popover>
+            
             <Button 
               onClick={openWhatsApp}
               className="bg-green-600 hover:bg-green-700 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base"
