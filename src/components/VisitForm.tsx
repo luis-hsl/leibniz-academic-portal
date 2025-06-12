@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,49 @@ const VisitForm = () => {
     date: "",
     time: ""
   });
+
+  // Get minimum date (January 1, 2025)
+  const getMinDate = () => {
+    const today = new Date();
+    const year2025 = new Date(2025, 0, 1);
+    return today > year2025 ? today.toISOString().split('T')[0] : year2025.toISOString().split('T')[0];
+  };
+
+  // Generate time options based on selected date
+  const getTimeOptions = () => {
+    if (!formData.date) return [];
+    
+    const selectedDate = new Date(formData.date);
+    const dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 6 = Saturday
+    
+    let timeOptions = [];
+    
+    if (dayOfWeek === 6) { // Saturday
+      // Saturday: 07:00 to 12:00
+      for (let hour = 7; hour <= 12; hour++) {
+        for (let minute = 0; minute < 60; minute += 30) {
+          if (hour === 12 && minute > 0) break; // Stop at 12:00
+          const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+          timeOptions.push(time);
+        }
+      }
+    } else if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
+      // Monday to Friday: 07:30 to 18:30
+      for (let hour = 7; hour <= 18; hour++) {
+        for (let minute = 0; minute < 60; minute += 30) {
+          if (hour === 7 && minute === 0) continue; // Skip 07:00, start at 07:30
+          if (hour === 18 && minute > 30) break; // Stop at 18:30
+          const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+          timeOptions.push(time);
+        }
+      }
+    } else {
+      // Sunday - no available times
+      return [];
+    }
+    
+    return timeOptions;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,11 +102,24 @@ const VisitForm = () => {
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
+    setFormData(prev => {
+      const newData = {
+        ...prev,
+        [field]: value
+      };
+      
+      // Reset time when date changes
+      if (field === 'date') {
+        newData.time = '';
+      }
+      
+      return newData;
+    });
   };
+
+  const timeOptions = getTimeOptions();
+  const selectedDate = formData.date ? new Date(formData.date) : null;
+  const dayOfWeek = selectedDate ? selectedDate.getDay() : null;
 
   return (
     <section id="agendar" className="section-padding bg-gradient-to-br from-red-600 to-blue-800">
@@ -157,16 +214,42 @@ const VisitForm = () => {
                         type="date"
                         value={formData.date}
                         onChange={(e) => handleInputChange("date", e.target.value)}
+                        min={getMinDate()}
                       />
+                      {dayOfWeek === 0 && formData.date && (
+                        <p className="text-sm text-red-600 mt-1">
+                          Não atendemos aos domingos. Por favor, escolha outro dia.
+                        </p>
+                      )}
                     </div>
                     <div>
                       <Label htmlFor="time">Horário Preferencial</Label>
-                      <Input
-                        id="time"
-                        type="time"
-                        value={formData.time}
-                        onChange={(e) => handleInputChange("time", e.target.value)}
-                      />
+                      <Select 
+                        value={formData.time} 
+                        onValueChange={(value) => handleInputChange("time", value)}
+                        disabled={!formData.date || dayOfWeek === 0}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecione o horário" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {timeOptions.map((time) => (
+                            <SelectItem key={time} value={time}>
+                              {time}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      {formData.date && dayOfWeek === 6 && (
+                        <p className="text-xs text-gray-600 mt-1">
+                          Sábado: 07:00 às 12:00
+                        </p>
+                      )}
+                      {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
+                        <p className="text-xs text-gray-600 mt-1">
+                          Seg-Sex: 07:30 às 18:30
+                        </p>
+                      )}
                     </div>
                   </div>
 
