@@ -1,4 +1,3 @@
-
 import { 
   Carousel,
   CarouselContent,
@@ -87,19 +86,15 @@ const Testimonials = () => {
             <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4 lg:-ml-6">
               {studentImages.map((student, index) => (
                 <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 lg:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-slide-up group aspect-[3/4]"
-                       style={{ animationDelay: `${index * 0.1}s` }}>
-                    <OptimizedImage
-                      src={student.image}
-                      alt={`${student.name} - ${student.course} - ${student.university}`}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 rounded-lg"
-                      width={300}
-                      height={400}
-                      priority={index === 0}
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-                  </div>
+                  <OptimizedImage
+                    src={student.image}
+                    alt={`${student.name} - ${student.course} - ${student.university}`}
+                    className="w-full h-auto object-cover rounded-[5px] transition-transform duration-300 hover:scale-105"
+                    width={300}
+                    height={400}
+                    priority={index === 0}
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
