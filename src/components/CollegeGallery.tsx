@@ -13,8 +13,8 @@ import {
   roboticsImages,
   cantinaImages,
   laboratorisFisicaQuimicaImages,
-  laboratorioTecnologiaImages,
-  bibliotecaImages,
+  laboratorioInformaticaImages,
+  bibliotecaPrincipalImages,
   auditoriumImages,
   fundamental2CorridorImages
 } from "@/data/dependenciasData";
@@ -39,8 +39,8 @@ const CollegeGallery = () => {
     ...roboticsImages,
     ...cantinaImages,
     ...laboratorisFisicaQuimicaImages,
-    ...laboratorioTecnologiaImages,
-    ...bibliotecaImages,
+    ...laboratorioInformaticaImages,
+    ...bibliotecaPrincipalImages,
     ...auditoriumImages,
     ...fundamental2CorridorImages
   ];
