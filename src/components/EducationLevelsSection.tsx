@@ -15,7 +15,7 @@ const EducationLevelsSection = () => {
     },
     {
       id: "fundamental1",
-      title: "Ensino Fundamental",
+      title: "Ensino Fundamental I",
       description: "Explorar e descobrir com curiosidade e interesse. Atividades mais estruturadas e significativas para estimular a capacidade de expressão verbal e textual, a interpretação de texto e a formação de leitores.",
       icon: "📚",
       color: "bg-blue-500",
@@ -25,7 +25,7 @@ const EducationLevelsSection = () => {
     },
     {
       id: "fundamental2",
-      title: "Ensino Fundamental",
+      title: "Ensino Fundamental II",
       description: "Novos desafios e uma visão crítica do mundo. Momento de desenvolver a análise crítica, o raciocínio lógico e uma visão global e cidadã, numa aprendizagem significativa para o futuro.",
       icon: "🎓",
       color: "bg-green-500",
