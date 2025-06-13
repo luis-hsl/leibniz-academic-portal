@@ -92,6 +92,22 @@ Turno Desejado: ${formData.turno}`;
     }
   };
 
+  // Define posicionamento específico para cada nível de ensino para focar nos rostos
+  const getImagePosition = () => {
+    switch (level.id) {
+      case "infantil":
+        return "center top"; // Foca na parte superior central para capturar rostos das crianças
+      case "fundamental1":
+        return "center 20%"; // Ajusta para focar nos rostos dos estudantes
+      case "fundamental2":
+        return "center 25%"; // Posiciona para capturar bem os rostos
+      case "medio":
+        return "center 30%"; // Foca nos rostos dos estudantes do ensino médio
+      default:
+        return "center center";
+    }
+  };
+
   return (
     <div className="perspective-1000 w-full h-[650px] relative">
       <div 
@@ -108,6 +124,7 @@ Turno Desejado: ${formData.turno}`;
                 src={level.image} 
                 alt={`Estudantes de ${level.title} - ${level.ageRange}`}
                 className="w-full h-full object-cover"
+                style={{ objectPosition: getImagePosition() }}
               />
               <div className="absolute top-4 left-4 bg-gray-600 bg-opacity-80 text-white px-3 py-1 rounded-full text-xs font-medium">
                 {level.ageRange}
