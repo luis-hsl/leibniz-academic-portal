@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import EducationLevels from "@/components/EducationLevels";
+import EducationLevelsSection from "@/components/EducationLevelsSection";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
 import CollegeGallery from "@/components/CollegeGallery";
 import FAQ from "@/components/FAQ";
@@ -17,6 +18,7 @@ import OptimizedAnalytics from "@/components/OptimizedAnalytics";
 import SEOHead from "@/components/SEOHead";
 import LightErrorMonitoringComponent from "@/components/LightErrorMonitoring";
 import ResourcePreloader from "@/components/ResourcePreloader";
+import "../styles/flip-animation.css";
 
 const Index = () => {
   useEffect(() => {
@@ -50,6 +52,7 @@ const Index = () => {
       <About />
       <InstitutionalVideo size="small" />
       <EducationLevels />
+      <EducationLevelsSection />
       <CollegeGallery />
       <FAQ />
       <Testimonials />
