@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -96,15 +95,15 @@ Turno Desejado: ${formData.turno}`;
   const getImagePosition = () => {
     switch (level.id) {
       case "infantil":
-        return "center top"; // Foca na parte superior central para capturar rostos das crianças
+        return "center 15%"; // Foca mais na parte superior para capturar bem os rostos das crianças
       case "fundamental1":
-        return "center 20%"; // Ajusta para focar nos rostos dos estudantes
+        return "center 10%"; // Posicionamento mais alto para focar nos rostos dos estudantes
       case "fundamental2":
-        return "center 25%"; // Posiciona para capturar bem os rostos
+        return "center 12%"; // Ajuste para capturar melhor os rostos
       case "medio":
-        return "center 30%"; // Foca nos rostos dos estudantes do ensino médio
+        return "center 18%"; // Foca mais nos rostos dos estudantes do ensino médio
       default:
-        return "center center";
+        return "center 10%";
     }
   };
 
