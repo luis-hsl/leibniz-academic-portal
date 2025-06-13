@@ -29,7 +29,7 @@ const EducationLevelsSection = () => {
       icon: "🎓",
       color: "bg-green-500",
       gradient: "bg-gradient-to-br from-green-500 via-emerald-400 to-green-600",
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/4223a8e5-5cbb-4352-bff7-fad5d0c7d664.png",
       ageRange: "11 a 14 anos"
     },
     {
