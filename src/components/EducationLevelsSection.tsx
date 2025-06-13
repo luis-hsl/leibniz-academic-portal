@@ -1,4 +1,3 @@
-
 import EducationLevelCard from "./EducationLevelCard";
 
 const EducationLevelsSection = () => {
@@ -10,7 +9,7 @@ const EducationLevelsSection = () => {
       icon: "🎨",
       color: "bg-pink-500",
       gradient: "bg-gradient-to-br from-pink-500 via-rose-400 to-pink-600",
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/2f1f5d03-9300-4d9c-a7a0-f3c7c3fd695e.png",
       ageRange: "2 a 5 anos"
     },
     {
