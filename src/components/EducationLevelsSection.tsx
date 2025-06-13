@@ -19,7 +19,7 @@ const EducationLevelsSection = () => {
       icon: "📚",
       color: "bg-blue-500",
       gradient: "bg-gradient-to-br from-blue-500 via-blue-400 to-blue-600",
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/4e7cac39-b935-4776-b7e1-c143aba0a331.png",
       ageRange: "6 a 10 anos"
     },
     {
