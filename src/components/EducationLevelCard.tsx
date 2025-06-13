@@ -14,6 +14,8 @@ interface EducationLevel {
   icon: string;
   color: string;
   gradient: string;
+  image: string;
+  ageRange: string;
 }
 
 interface FormData {
@@ -95,7 +97,7 @@ Turno Desejado: ${formData.turno}`;
   };
 
   return (
-    <div className="perspective-1000 w-full h-[400px]">
+    <div className="perspective-1000 w-full h-[500px] relative">
       <div 
         className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
           isFlipped ? 'rotate-y-180' : ''
@@ -103,133 +105,149 @@ Turno Desejado: ${formData.turno}`;
       >
         {/* Front Side */}
         <Card className={`absolute inset-0 w-full h-full backface-hidden ${level.gradient} border-0 shadow-xl overflow-hidden`}>
-          <div className="relative h-full flex flex-col justify-between p-6 text-white">
-            <div className="text-center">
-              <div className="text-6xl mb-4">{level.icon}</div>
-              <h3 className="text-2xl font-bold mb-3">{level.title}</h3>
-              <p className="text-white/90 leading-relaxed">{level.description}</p>
+          <div className="relative h-full flex flex-col text-white">
+            {/* Image Section */}
+            <div className="h-48 overflow-hidden relative">
+              <img 
+                src={level.image} 
+                alt={`Estudantes de ${level.title} - ${level.ageRange}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
             
-            <Button
-              onClick={() => setIsFlipped(true)}
-              className="w-full bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-              size="lg"
-            >
-              Agendar Visita
-            </Button>
+            {/* Content Section */}
+            <div className="flex-1 flex flex-col justify-between p-6">
+              <div className="text-center">
+                <div className="text-4xl mb-2">{level.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{level.title}</h3>
+                <p className="text-sm text-white/90 leading-relaxed mb-2">{level.ageRange}</p>
+                <p className="text-sm text-white/80 leading-relaxed">{level.description}</p>
+              </div>
+              
+              <Button
+                onClick={() => setIsFlipped(true)}
+                className="w-full bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105 mt-4"
+                size="lg"
+              >
+                Agendar Visita
+              </Button>
+            </div>
           </div>
         </Card>
 
         {/* Back Side */}
         <Card className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-white border-0 shadow-xl">
-          <div className="h-full flex flex-col p-6">
-            <div className="flex items-center justify-between mb-4">
+          <div className="h-full flex flex-col p-4 overflow-hidden">
+            <div className="flex items-center justify-between mb-3 flex-shrink-0">
               <h4 className="text-lg font-semibold text-gray-800">Agendar Visita</h4>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsFlipped(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-500 hover:text-gray-700 p-1 h-auto"
               >
                 ✕
               </Button>
             </div>
 
-            <form onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="nivel" className="text-sm font-medium">
-                  Nível de Ensino
-                </Label>
-                <Input
-                  id="nivel"
-                  type="text"
-                  value={level.title}
-                  readOnly
-                  className="bg-gray-50 text-gray-600"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="nome" className="text-sm font-medium">
-                  Nome Completo *
-                </Label>
-                <Input
-                  id="nome"
-                  type="text"
-                  value={formData.nome}
-                  onChange={(e) => handleInputChange("nome", e.target.value)}
-                  placeholder="Digite seu nome completo"
-                  className="w-full"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="telefone" className="text-sm font-medium">
-                  Telefone (com DDD) *
-                </Label>
-                <Input
-                  id="telefone"
-                  type="tel"
-                  value={formData.telefone}
-                  onChange={(e) => handleInputChange("telefone", e.target.value)}
-                  placeholder="(65) 99999-9999"
-                  className="w-full"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div className="space-y-2">
-                  <Label htmlFor="dataVisita" className="text-sm font-medium">
-                    Data da Visita *
+            <div className="flex-1 overflow-y-auto">
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="space-y-1">
+                  <Label htmlFor="nivel" className="text-xs font-medium">
+                    Nível de Ensino
                   </Label>
                   <Input
-                    id="dataVisita"
-                    type="date"
-                    value={formData.dataVisita}
-                    onChange={(e) => handleInputChange("dataVisita", e.target.value)}
-                    className="w-full"
+                    id="nivel"
+                    type="text"
+                    value={level.title}
+                    readOnly
+                    className="bg-gray-50 text-gray-600 text-sm h-8"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="horarioVisita" className="text-sm font-medium">
-                    Horário *
+                <div className="space-y-1">
+                  <Label htmlFor="nome" className="text-xs font-medium">
+                    Nome Completo *
                   </Label>
                   <Input
-                    id="horarioVisita"
-                    type="time"
-                    value={formData.horarioVisita}
-                    onChange={(e) => handleInputChange("horarioVisita", e.target.value)}
-                    className="w-full"
+                    id="nome"
+                    type="text"
+                    value={formData.nome}
+                    onChange={(e) => handleInputChange("nome", e.target.value)}
+                    placeholder="Digite seu nome completo"
+                    className="w-full text-sm h-8"
                   />
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="turno" className="text-sm font-medium">
-                  Turno Desejado *
-                </Label>
-                <Select value={formData.turno} onValueChange={(value) => handleInputChange("turno", value)}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Selecione o turno" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="manha">Manhã</SelectItem>
-                    <SelectItem value="tarde">Tarde</SelectItem>
-                    <SelectItem value="noite">Noite</SelectItem>
-                    <SelectItem value="integral">Integral</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+                <div className="space-y-1">
+                  <Label htmlFor="telefone" className="text-xs font-medium">
+                    Telefone (com DDD) *
+                  </Label>
+                  <Input
+                    id="telefone"
+                    type="tel"
+                    value={formData.telefone}
+                    onChange={(e) => handleInputChange("telefone", e.target.value)}
+                    placeholder="(65) 99999-9999"
+                    className="w-full text-sm h-8"
+                  />
+                </div>
 
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-red-600 hover:bg-red-700 text-white mt-auto"
-              >
-                {isSubmitting ? "Enviando..." : "Agendar"}
-              </Button>
-            </form>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <Label htmlFor="dataVisita" className="text-xs font-medium">
+                      Data da Visita *
+                    </Label>
+                    <Input
+                      id="dataVisita"
+                      type="date"
+                      value={formData.dataVisita}
+                      onChange={(e) => handleInputChange("dataVisita", e.target.value)}
+                      className="w-full text-sm h-8"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <Label htmlFor="horarioVisita" className="text-xs font-medium">
+                      Horário *
+                    </Label>
+                    <Input
+                      id="horarioVisita"
+                      type="time"
+                      value={formData.horarioVisita}
+                      onChange={(e) => handleInputChange("horarioVisita", e.target.value)}
+                      className="w-full text-sm h-8"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <Label htmlFor="turno" className="text-xs font-medium">
+                    Turno Desejado *
+                  </Label>
+                  <Select value={formData.turno} onValueChange={(value) => handleInputChange("turno", value)}>
+                    <SelectTrigger className="w-full h-8 text-sm">
+                      <SelectValue placeholder="Selecione o turno" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="manha">Manhã</SelectItem>
+                      <SelectItem value="tarde">Tarde</SelectItem>
+                      <SelectItem value="noite">Noite</SelectItem>
+                      <SelectItem value="integral">Integral</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white mt-4 h-9 text-sm"
+                >
+                  {isSubmitting ? "Enviando..." : "Agendar"}
+                </Button>
+              </form>
+            </div>
           </div>
         </Card>
       </div>
