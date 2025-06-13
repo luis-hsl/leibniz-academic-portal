@@ -1,11 +1,10 @@
 
-
 import { Button } from "@/components/ui/button";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 import { useEffect } from "react";
 
 const Hero = () => {
-  const heroBackgroundImage = "/lovable-uploads/de8be048-fb1c-4f6c-a24a-d1e77df57761.png";
+  const heroBackgroundImage = "/lovable-uploads/5240b651-94e6-47c3-bac5-2a30ba1e16e3.png";
 
   useEffect(() => {
     // Preload hero background image with high priority
@@ -82,4 +81,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
