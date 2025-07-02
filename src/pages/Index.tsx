@@ -3,14 +3,12 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import EducationLevels from "@/components/EducationLevels";
 import EducationLevelsSection from "@/components/EducationLevelsSection";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
 import CollegeGallery from "@/components/CollegeGallery";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import VisitForm from "@/components/VisitForm";
-import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -50,14 +48,12 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
-      <InstitutionalVideo size="small" />
-      <EducationLevels />
       <EducationLevelsSection />
+      <InstitutionalVideo size="small" />
       <CollegeGallery />
-      <FAQ />
       <Testimonials />
+      <FAQ />
       <VisitForm />
-      <Blog />
       <Contact />
       <Footer />
       <WhatsAppButton />
