@@ -76,10 +76,22 @@ const Footer = () => {
             <div className="mt-6">
               <h5 className="text-sm font-semibold mb-3 text-red-400">Redes Sociais</h5>
               <div className="flex space-x-3">
-                <a href="#" className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors">
+                <a 
+                  href="https://www.facebook.com/share/16ZqmDKz7N/?mibextid=wwXIfr" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors"
+                  aria-label="Facebook do Colégio Leibniz"
+                >
                   <Facebook className="h-4 w-4" />
                 </a>
-                <a href="#" className="bg-pink-600 p-2 rounded-full hover:bg-pink-700 transition-colors">
+                <a 
+                  href="https://www.instagram.com/colegio.leibniz?igsh=bHZpa2tzMHZwYm41" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-pink-600 p-2 rounded-full hover:bg-pink-700 transition-colors"
+                  aria-label="Instagram do Colégio Leibniz"
+                >
                   <Instagram className="h-4 w-4" />
                 </a>
                 <a href="#" className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
