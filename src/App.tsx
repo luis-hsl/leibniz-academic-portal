@@ -12,7 +12,6 @@ const SobreNos = lazy(() => import("./pages/SobreNos"));
 const NiveisEnsino = lazy(() => import("./pages/NiveisEnsino"));
 const OColegio = lazy(() => import("./pages/OColegio"));
 const ContatoPage = lazy(() => import("./pages/ContatoPage"));
-const BlogPage = lazy(() => import("./pages/BlogPage"));
 const Dependencias = lazy(() => import("./pages/Dependencias"));
 const AlunosAprovados = lazy(() => import("./pages/AlunosAprovados"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -51,7 +50,6 @@ const App = () => (
             <Route path="/dependencias" element={<Dependencias />} />
             <Route path="/alunos-aprovados" element={<AlunosAprovados />} />
             <Route path="/contato" element={<ContatoPage />} />
-            <Route path="/blog" element={<BlogPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

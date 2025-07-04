@@ -19,12 +19,11 @@ const Header = () => {
     { name: "Níveis de Ensino", href: "/niveis-ensino" },
     { name: "Dependências", href: "/dependencias" },
     { name: "Alunos Aprovados", href: "/alunos-aprovados" },
-    { name: "Blog", href: "/blog" },
     { name: "Contato", href: "/contato" },
   ];
 
   const desktopNavigation = navigation.filter(item => 
-    item.name !== "Blog" && item.name !== "Contato" && item.name !== "Alunos Aprovados"
+    item.name !== "Contato" && item.name !== "Alunos Aprovados"
   );
 
 
