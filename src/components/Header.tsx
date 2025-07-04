@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isStudentAreaOpen, setIsStudentAreaOpen] = useState(false);
+  
   const isMobile = useIsMobile();
   const location = useLocation();
 
@@ -28,22 +28,12 @@ const Header = () => {
     item.name !== "Blog" && item.name !== "Contato" && item.name !== "Alunos Aprovados" && item.name !== "Conheça Nosso Colégio"
   );
 
-  const studentAreaOptions = [
-    { name: "Portal Bernoulli", url: "https://mb4.bernoulli.com.br/login", color: "bg-green-600 hover:bg-green-700 text-white" },
-    { name: "Portal do Professor", url: "https://www.sponteeducacional.net.br/", color: "bg-blue-600 hover:bg-blue-700 text-white" },
-    { name: "Portal do Aluno", url: "https://portal.sponteeducacional.net.br/vest", color: "bg-red-600 hover:bg-red-700 text-white" },
-    { name: "Portal Redação", url: "https://app.redacaonline.com.br/colegio-leibniz/aluno/login", color: "bg-yellow-600 hover:bg-yellow-700 text-white" },
-  ];
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Olá, gostaria de falar com um atendente agora para tirar algumas dúvidas. Pode me ajudar?");
     window.open(`https://wa.me/5566996781284?text=${message}`, "_blank");
   };
 
-  const openStudentPortal = (url: string) => {
-    window.open(url, "_blank");
-    setIsStudentAreaOpen(false);
-  };
 
   const isActive = (href: string) => {
     if (href === "/" && location.pathname === "/") return true;
@@ -68,32 +58,7 @@ const Header = () => {
             </Link>
             
             <div className="flex items-center space-x-2">
-              <Popover open={isStudentAreaOpen} onOpenChange={setIsStudentAreaOpen}>
-                <PopoverTrigger asChild>
-                  <Button 
-                    size="sm"
-                    className="bg-red-600 text-white text-xs px-2 py-2 flex-shrink-0 flex items-center gap-1"
-                  >
-                    Área do Aluno
-                    <ChevronDown className="h-3 w-3" />
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-56 p-2">
-                  <div className="flex flex-col space-y-2">
-                    {studentAreaOptions.map((option) => (
-                      <Button
-                        key={option.name}
-                        className={`justify-start text-sm h-auto py-2 px-3 transition-all duration-300 ${option.color}`}
-                        onClick={() => openStudentPortal(option.url)}
-                      >
-                        {option.name}
-                      </Button>
-                    ))}
-                  </div>
-                </PopoverContent>
-              </Popover>
-              
-              <Button 
+              <Button
                 onClick={openWhatsApp}
                 size="sm"
                 className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-xs px-2 py-2 flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-md"
@@ -158,31 +123,7 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-3">
-            <Popover open={isStudentAreaOpen} onOpenChange={setIsStudentAreaOpen}>
-              <PopoverTrigger asChild>
-                <Button 
-                  className="bg-red-600 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base flex items-center gap-2"
-                >
-                  Área do Aluno
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isStudentAreaOpen ? 'rotate-180' : ''}`} />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-64 p-2 shadow-xl border-0 bg-white">
-                <div className="flex flex-col space-y-2">
-                  {studentAreaOptions.map((option) => (
-                    <Button
-                      key={option.name}
-                      className={`justify-start text-sm h-auto py-3 px-3 transition-all duration-300 ${option.color}`}
-                      onClick={() => openStudentPortal(option.url)}
-                    >
-                      {option.name}
-                    </Button>
-                  ))}
-                </div>
-              </PopoverContent>
-            </Popover>
-            
-            <Button 
+            <Button
               onClick={openWhatsApp}
               className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
             >
