@@ -18,12 +18,14 @@ const Header = () => {
     { name: "O Colégio", href: "/o-colegio" },
     { name: "Níveis de Ensino", href: "/niveis-ensino" },
     { name: "Dependências", href: "/dependencias" },
+    { name: "Alunos Aprovados", href: "/alunos-aprovados" },
+    { name: "Conheça Nosso Colégio", href: "/conheca-nosso-colegio" },
     { name: "Blog", href: "/blog" },
     { name: "Contato", href: "/contato" },
   ];
 
   const desktopNavigation = navigation.filter(item => 
-    item.name !== "Blog" && item.name !== "Contato"
+    item.name !== "Blog" && item.name !== "Contato" && item.name !== "Alunos Aprovados" && item.name !== "Conheça Nosso Colégio"
   );
 
   const studentAreaOptions = [
