@@ -18,12 +18,11 @@ const Header = () => {
     { name: "O Colégio", href: "/o-colegio" },
     { name: "Níveis de Ensino", href: "/niveis-ensino" },
     { name: "Dependências", href: "/dependencias" },
-    { name: "Alunos Aprovados", href: "/alunos-aprovados" },
     { name: "Contato", href: "/contato" },
   ];
 
   const desktopNavigation = navigation.filter(item => 
-    item.name !== "Contato" && item.name !== "Alunos Aprovados"
+    item.name !== "Contato"
   );
 
 
