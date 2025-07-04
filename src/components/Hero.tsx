@@ -4,7 +4,7 @@ import { trackVisitConversion, trackAttendantConversion } from "@/components/Ana
 import { useEffect } from "react";
 
 const Hero = () => {
-  const heroBackgroundImage = "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png";
+  const heroBackgroundImage = "/lovable-uploads/825becfd-61dd-46b2-9e4b-4b5b3ac801fb.png";
 
   useEffect(() => {
     // Preload hero background image with high priority
