@@ -15,7 +15,6 @@ const ContatoPage = lazy(() => import("./pages/ContatoPage"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const Dependencias = lazy(() => import("./pages/Dependencias"));
 const AlunosAprovados = lazy(() => import("./pages/AlunosAprovados"));
-const ConhecaNossoColegio = lazy(() => import("./pages/ConhecaNossoColegio"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -51,7 +50,6 @@ const App = () => (
             <Route path="/o-colegio" element={<OColegio />} />
             <Route path="/dependencias" element={<Dependencias />} />
             <Route path="/alunos-aprovados" element={<AlunosAprovados />} />
-            <Route path="/conheca-nosso-colegio" element={<ConhecaNossoColegio />} />
             <Route path="/contato" element={<ContatoPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="*" element={<NotFound />} />
