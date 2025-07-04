@@ -23,7 +23,6 @@ const Index = () => {
 
   // Define critical images for preloading
   const highPriorityImages = [
-    "/lovable-uploads/5240b651-94e6-47c3-bac5-2a30ba1e16e3.png", // New hero background
     "/lovable-uploads/e184216c-7a3a-4233-9e6b-25748975871f.png", // First college image
     "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png"  // First testimonial image
   ];
