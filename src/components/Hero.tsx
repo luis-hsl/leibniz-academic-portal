@@ -73,10 +73,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-blue-100 animate-fade-in leading-relaxed px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto">
-            Sistema Bernoulli de Ensino, tradição e referência em vestibulares e preparatórios para o ENEM.
-          </p>
-
+          
           {/* Alto Desempenho Acadêmico */}
           <div className="mb-8 md:mb-12">
             <p className="text-lg md:text-xl font-semibold text-yellow-300">
