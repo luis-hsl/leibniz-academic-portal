@@ -58,39 +58,6 @@ const Hero = () => {
             Sistema Bernoulli de Ensino, tradição e referência em vestibulares e preparatórios para o ENEM.
           </p>
 
-          <div className="mb-8 md:mb-12 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/20 mb-6">
-              <h3 className="text-xl md:text-2xl font-bold text-yellow-300 mb-4">Reconhecimento e Excelência</h3>
-              <div className="text-blue-100 text-base md:text-lg space-y-2">
-                <p>• 1º lugar no ENEM em Rondonópolis</p>
-                <p>• 6º lugar entre as melhores escolas do Mato Grosso</p>
-                <p>• A única escola de Rondonópolis entre as 15 melhores do estado</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl md:text-2xl font-bold text-yellow-300 mb-3">Formação de Líderes</h3>
-                <p className="text-blue-100 text-base md:text-lg">Transformamos estudantes em líderes preparados para os grandes desafios do futuro.</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl md:text-2xl font-bold text-yellow-300 mb-3">Proposta Pedagógica Inovadora</h3>
-                <p className="text-blue-100 text-base md:text-lg">Nosso ensino é baseado nas mais avançadas pesquisas nacionais e internacionais.</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl md:text-2xl font-bold text-yellow-300 mb-3">Aprovação nas Melhores Universidades</h3>
-                <p className="text-blue-100 text-base md:text-lg">Aqui, você conquista sua vaga nas maiores e mais respeitadas universidades do país.</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl md:text-2xl font-bold text-yellow-300 mb-3">Alto Desempenho Acadêmico</h3>
-                <p className="text-blue-100 text-base md:text-lg">Uma escola de resultados extraordinários e de alto impacto.</p>
-              </div>
-            </div>
-          </div>
-
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12 md:mb-16 px-4 sm:px-6 lg:px-0">
             <Button 
               onClick={openWhatsAppVisit}
