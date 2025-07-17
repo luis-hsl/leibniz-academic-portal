@@ -53,10 +53,36 @@ const Hero = () => {
             <span className="text-yellow-300 block mt-2 md:mt-4">Sucesso Acadêmico</span>
             no Colégio Leibniz
           </h1>
+
+          {/* Reconhecimento e Excelência */}
+          <div className="mb-6 md:mb-8 bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-white/20">
+            <h2 className="text-xl md:text-2xl font-bold text-yellow-300 mb-3">Reconhecimento e Excelência</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-sm md:text-base">
+              <div className="text-center">
+                <div className="text-lg md:text-xl font-bold text-white">1º lugar</div>
+                <div className="text-blue-100">no ENEM em Rondonópolis</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg md:text-xl font-bold text-white">6º lugar</div>
+                <div className="text-blue-100">entre as melhores escolas do Mato Grosso</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg md:text-xl font-bold text-white">A única escola</div>
+                <div className="text-blue-100">de Rondonópolis entre as 15 melhores do estado</div>
+              </div>
+            </div>
+          </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 text-blue-100 animate-fade-in leading-relaxed px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 text-blue-100 animate-fade-in leading-relaxed px-4 sm:px-6 lg:px-0 max-w-4xl mx-auto">
             Sistema Bernoulli de Ensino, tradição e referência em vestibulares e preparatórios para o ENEM.
           </p>
+
+          {/* Alto Desempenho Acadêmico */}
+          <div className="mb-8 md:mb-12">
+            <p className="text-lg md:text-xl font-semibold text-yellow-300">
+              Uma escola de resultados extraordinários e de alto impacto.
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12 md:mb-16 px-4 sm:px-6 lg:px-0">
             <Button 

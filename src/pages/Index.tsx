@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import EducationLevelsSection from "@/components/EducationLevelsSection";
+import UniversityApproval from "@/components/UniversityApproval";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
 import FAQ from "@/components/FAQ";
 import VisitForm from "@/components/VisitForm";
@@ -46,6 +47,7 @@ const Index = () => {
       <Hero />
       <About />
       <EducationLevelsSection />
+      <UniversityApproval />
       <InstitutionalVideo size="small" />
       <FAQ />
       <VisitForm />

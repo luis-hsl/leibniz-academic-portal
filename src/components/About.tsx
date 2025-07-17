@@ -34,10 +34,9 @@ const About = () => {
             <Card className="bg-blue-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Target className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Missão</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Formação de Líderes</h3>
                 <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
-                  Oferecer educação de qualidade e alta performance, preparando alunos 
-                  para os desafios acadêmicos e da vida.
+                  Transformamos estudantes em líderes preparados para os grandes desafios do futuro.
                 </p>
               </CardContent>
             </Card>
@@ -67,10 +66,9 @@ const About = () => {
             <Card className="bg-purple-600 text-white hover-scale">
               <CardContent className="p-4 sm:p-6 text-center">
                 <Lightbulb className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-yellow-300" />
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Metodologia</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white">Proposta Pedagógica Inovadora</h3>
                 <p className="text-purple-100 text-sm sm:text-base leading-relaxed">
-                  Sistema Bernoulli de Ensino com metodologias inovadoras 
-                  e corpo docente especializado.
+                  Nosso ensino é baseado nas mais avançadas pesquisas nacionais e internacionais.
                 </p>
               </CardContent>
             </Card>
