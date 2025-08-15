@@ -19,7 +19,7 @@ const educationLevels: EducationLevel[] = [
     id: "infantil",
     tag: "1º e 2º período",
     title: "Educação Infantil",
-    description: "Um olhar contextualizado para a criança de hoje. Incentivo à curiosidade e à exploração, estimulando o desenvolvimento socioemocional e linguístico e o prazer da descoberta.",
+    description: "Um ambiente seguro e acolhedor para os primeiros passos. Desenvolvemos a criatividade e o convívio social através do lúdico.",
     image: "/lovable-uploads/60dbf953-fb29-438f-8a97-93e962d46866.png",
     formTitle: "Inscrição - Educação Infantil"
   },
@@ -27,7 +27,7 @@ const educationLevels: EducationLevel[] = [
     id: "fundamental1",
     tag: "1º ao 5º ano",
     title: "Ensino Fundamental I",
-    description: "Construindo a base do conhecimento. Incentivamos a curiosidade, a leitura e o raciocínio lógico com projetos que conectam o aprendizado à vida.",
+    description: "A base para um futuro brilhante. Foco no raciocínio lógico, na leitura e em projetos que despertam a paixão por aprender.",
     image: "/lovable-uploads/78452bc1-cd1b-41f2-91f3-7ecd2f5524ec.png",
     formTitle: "Inscrição - Ensino Fundamental I"
   },
@@ -35,7 +35,7 @@ const educationLevels: EducationLevel[] = [
     id: "fundamental2",
     tag: "6º ao 9º ano",
     title: "Ensino Fundamental II",
-    description: "Desenvolvendo o pensamento crítico e a autonomia. Preparamos os estudantes para os desafios do Ensino Médio com metodologias inovadoras e acompanhamento personalizado.",
+    description: "Expandindo horizontes com autonomia e pensamento crítico. Preparamos os alunos para os desafios do conhecimento e da vida.",
     image: "/lovable-uploads/6fa7cd08-32f1-4b8c-969c-48611147486a.png",
     formTitle: "Inscrição - Ensino Fundamental II"
   },
@@ -43,7 +43,7 @@ const educationLevels: EducationLevel[] = [
     id: "medio",
     tag: "1ª à 3ª série",
     title: "Ensino Médio",
-    description: "Formação integral para o futuro. Combinamos excelência acadêmica com preparação para vestibulares, desenvolvendo competências para a vida universitária e profissional.",
+    description: "Preparação de alta performance para vestibulares e para a vida. Formando líderes com pensamento crítico e visão de futuro.",
     image: "/lovable-uploads/0aa66751-7776-4c66-8fd4-d50f118ce754.png",
     formTitle: "Inscrição - Ensino Médio"
   },
@@ -51,7 +51,7 @@ const educationLevels: EducationLevel[] = [
     id: "pre-vestibular",
     tag: "Preparatório",
     title: "Pré-Vestibular",
-    description: "Preparação intensiva para ENEM e vestibulares. Metodologia focada em resultados, com simulados, plantões de dúvidas e acompanhamento individual para garantir sua aprovação.",
+    description: "Foco total na sua aprovação. Metodologia intensiva, simulados e os melhores professores para garantir a vaga dos seus sonhos.",
     image: "/lovable-uploads/672ec9c8-05c1-4a0f-aa67-a819cb1cfd85.png",
     formTitle: "Inscrição - Pré-Vestibular"
   },
@@ -59,7 +59,7 @@ const educationLevels: EducationLevel[] = [
     id: "extracurriculares",
     tag: "Atividades",
     title: "Cursos Extracurriculares",
-    description: "Desenvolvendo talentos e habilidades. Oferecemos atividades complementares que estimulam a criatividade, o esporte e a cultura, formando cidadãos completos.",
+    description: "Talentos que vão além da sala de aula. Explore esportes, artes, tecnologia e idiomas em uma formação completa e divertida.",
     image: "/lovable-uploads/4470caf6-adf0-4120-9419-9d5dafe58eb4.png",
     formTitle: "Inscrição - Cursos Extracurriculares"
   }
