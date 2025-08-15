@@ -6,9 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackVisitConversion } from "@/components/Analytics";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 const VisitForm = () => {
   const { toast } = useToast();
@@ -18,7 +22,7 @@ const VisitForm = () => {
     phone: "",
     level: "",
     shift: "",
-    date: "",
+    date: null as Date | null,
     time: ""
   });
 
@@ -33,7 +37,7 @@ const VisitForm = () => {
   const getTimeOptions = () => {
     if (!formData.date) return [];
     
-    const selectedDate = new Date(formData.date);
+    const selectedDate = formData.date;
     const dayOfWeek = selectedDate.getDay(); // 0 = Sunday, 6 = Saturday
     
     let timeOptions = [];
@@ -92,7 +96,7 @@ const VisitForm = () => {
 🎓 *Informações Acadêmicas:*
 • Nível pretendido: ${formData.level}${formData.shift ? `\n• Turno desejado: ${formData.shift}` : ''}
 
-📅 *Agendamento:*${formData.date ? `\n• Data preferencial: ${new Date(formData.date).toLocaleDateString('pt-BR')}` : ''}${formData.time ? `\n• Horário preferencial: ${formData.time}` : ''}
+📅 *Agendamento:*${formData.date ? `\n• Data preferencial: ${formData.date.toLocaleDateString('pt-BR')}` : ''}${formData.time ? `\n• Horário preferencial: ${formData.time}` : ''}
 
 Aguardo retorno para confirmar a visita. Obrigado!`;
 
@@ -111,12 +115,12 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
       phone: "",
       level: "",
       shift: "",
-      date: "",
+      date: null,
       time: ""
     });
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string | Date | null) => {
     setFormData(prev => {
       const newData = {
         ...prev,
@@ -133,8 +137,24 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
   };
 
   const timeOptions = getTimeOptions();
-  const selectedDate = formData.date ? new Date(formData.date) : null;
+  const selectedDate = formData.date;
   const dayOfWeek = selectedDate ? selectedDate.getDay() : null;
+
+  // Get minimum date for the calendar (today or January 1, 2025)
+  const getMinCalendarDate = () => {
+    const today = new Date();
+    const year2025 = new Date(2025, 0, 1);
+    return today > year2025 ? today : year2025;
+  };
+
+  // Disable invalid dates (weekends and past dates)
+  const isDateDisabled = (date: Date) => {
+    const minDate = getMinCalendarDate();
+    const dayOfWeek = date.getDay();
+    
+    // Disable past dates and Sundays
+    return date < minDate || dayOfWeek === 0;
+  };
 
   return (
     <section id="agendar" className="section-padding bg-gradient-to-br from-red-600 to-blue-800">
@@ -224,13 +244,34 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                     </div>
                     <div>
                       <Label htmlFor="date">Data Preferencial</Label>
-                      <Input
-                        id="date"
-                        type="date"
-                        value={formData.date}
-                        onChange={(e) => handleInputChange("date", e.target.value)}
-                        min={getMinDate()}
-                      />
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className={cn(
+                              "w-full justify-start text-left font-normal",
+                              !formData.date && "text-muted-foreground"
+                            )}
+                          >
+                            <Calendar className="mr-2 h-4 w-4" />
+                            {formData.date ? (
+                              format(formData.date, "dd/MM/yyyy")
+                            ) : (
+                              <span>Selecione uma data</span>
+                            )}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0" align="start">
+                          <CalendarComponent
+                            mode="single"
+                            selected={formData.date || undefined}
+                            onSelect={(date) => handleInputChange("date", date || null)}
+                            disabled={isDateDisabled}
+                            initialFocus
+                            className={cn("p-3 pointer-events-auto")}
+                          />
+                        </PopoverContent>
+                      </Popover>
                       {dayOfWeek === 0 && formData.date && (
                         <p className="text-sm text-red-600 mt-1">
                           Não atendemos aos domingos. Por favor, escolha outro dia.
