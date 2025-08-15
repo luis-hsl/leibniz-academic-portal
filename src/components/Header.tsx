@@ -45,7 +45,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center flex-shrink-0">
               <img 
-                src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
+                src="/lovable-uploads/e9344ceb-6cab-42df-be96-aaa83c07f556.png" 
                 alt="Colégio Leibniz Logo" 
                 className="h-12 w-auto object-contain"
                 loading="eager"
@@ -99,7 +99,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
+              src="/lovable-uploads/e9344ceb-6cab-42df-be96-aaa83c07f556.png" 
               alt="Colégio Leibniz Logo" 
               className="h-16 lg:h-20 w-auto"
             />
