@@ -152,7 +152,7 @@ Turno: ${data.turno}`;
                 <div 
                   className={`transform-style-preserve-3d transition-transform duration-700 relative h-[580px] ${
                     flippedCards.has(level.id) ? 'rotate-y-180' : ''
-                  } ${!flippedCards.has(level.id) ? 'hover:scale-105' : ''}`}
+                  } ${!flippedCards.has(level.id) ? 'md:hover:scale-105' : ''}`}
                 >
                   {/* Frente do Card */}
                   <div className="backface-hidden absolute inset-0 bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300">
