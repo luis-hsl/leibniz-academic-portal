@@ -11,11 +11,11 @@ import VisitForm from "@/components/VisitForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import OptimizedAnalytics from "@/components/OptimizedAnalytics";
-import SEOHead from "@/components/SEOHead";
-import LightErrorMonitoringComponent from "@/components/LightErrorMonitoring";
-import ResourcePreloader from "@/components/ResourcePreloader";
-import "../styles/flip-animation.css";
+// import OptimizedAnalytics from "@/components/OptimizedAnalytics";
+// import SEOHead from "@/components/SEOHead";
+// import LightErrorMonitoringComponent from "@/components/LightErrorMonitoring";
+// import ResourcePreloader from "@/components/ResourcePreloader";
+// import "../styles/flip-animation.css";
 
 const Index = () => {
   useEffect(() => {
@@ -36,6 +36,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* SEO and performance helpers temporarily disabled for debugging
       <SEOHead />
       <ResourcePreloader 
         highPriorityImages={highPriorityImages}
@@ -43,6 +44,7 @@ const Index = () => {
       />
       <OptimizedAnalytics />
       <LightErrorMonitoringComponent />
+      */}
       <Header />
       <Hero />
       <About />
