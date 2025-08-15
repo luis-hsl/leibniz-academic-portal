@@ -156,24 +156,24 @@ Telefone: ${data.telefone}`;
                     {/* Área de Conteúdo */}
                     <div className="bg-white p-6 h-64 flex flex-col">
                       {/* Tag de Período */}
-                      <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start">
+                      <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start font-montserrat">
                         {level.tag}
                       </div>
                       
                       {/* Título */}
-                      <h3 className="text-[28px] font-bold text-[#003366] mb-2 font-['Poppins'] leading-tight">
+                      <h3 className="text-[28px] font-bold text-[#003366] mb-2 font-montserrat leading-tight">
                         {level.title}
                       </h3>
                       
                       {/* Texto Descritivo */}
-                      <p className="text-base text-[#333333] leading-[1.6] mb-6 flex-1 font-['Poppins'] font-normal">
+                      <p className="text-base text-[#333333] leading-[1.6] mb-6 flex-1 font-montserrat font-normal">
                         {level.description}
                       </p>
                       
                       {/* Botão CTA */}
                       <Button
                         onClick={() => handleCardFlip(level.id)}
-                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center"
+                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat"
                       >
                         Faça a Inscrição
                       </Button>
