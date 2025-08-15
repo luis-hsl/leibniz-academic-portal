@@ -12,6 +12,7 @@ import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackVisitConversion } from "@/components/Analytics";
 import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 
 const VisitForm = () => {
@@ -256,7 +257,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                           >
                             <Calendar className="mr-2 h-4 w-4" />
                             {formData.date ? (
-                              format(formData.date, "dd/MM/yyyy")
+                              format(formData.date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR })
                             ) : (
                               <span>Selecione uma data</span>
                             )}
@@ -269,6 +270,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                             onSelect={(date) => handleInputChange("date", date || null)}
                             disabled={isDateDisabled}
                             initialFocus
+                            locale={ptBR}
                             className={cn("p-3 pointer-events-auto")}
                           />
                         </PopoverContent>
@@ -300,7 +302,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                       </Select>
                       {formData.date && dayOfWeek === 6 && (
                         <p className="text-xs text-gray-600 mt-1">
-                          Sábado: 07:00 às 12:00
+                          <strong>Sábado disponível:</strong> 07:00 às 12:00
                         </p>
                       )}
                       {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
