@@ -1,7 +1,7 @@
 import { Target, TrendingUp, Users, GraduationCap } from "lucide-react";
 
 const UniversityApproval = () => {
-  const backgroundImage = "/lovable-uploads/b127aa27-ee91-40d5-aa33-731f9b44c4bb.png";
+  const backgroundImage = "/lovable-uploads/6be697da-c58a-4971-8815-d890f7fe8b21.png";
   
   return (
     <section 
