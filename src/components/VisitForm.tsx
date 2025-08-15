@@ -53,11 +53,10 @@ const VisitForm = () => {
         }
       }
     } else if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
-      // Monday to Friday: 07:30 to 18:30
+      // Monday to Friday: 07:00 to 18:00
       for (let hour = 7; hour <= 18; hour++) {
         for (let minute = 0; minute < 60; minute += 30) {
-          if (hour === 7 && minute === 0) continue; // Skip 07:00, start at 07:30
-          if (hour === 18 && minute > 30) break; // Stop at 18:30
+          if (hour === 18 && minute > 0) break; // Stop at 18:00
           const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
           timeOptions.push(time);
         }
@@ -313,7 +312,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                       )}
                       {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
                         <p className="text-xs text-gray-600 mt-1">
-                          Seg-Sex: 07:30 às 18:30
+                          <strong>Seg-Sex:</strong> 7h às 18h
                         </p>
                       )}
                     </div>
@@ -366,7 +365,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                     <h3 className="text-xl font-bold text-white">Horário de Funcionamento</h3>
                   </div>
                   <div className="space-y-1 text-white">
-                    <p className="text-white">Segunda a Sexta: 7h às 22h</p>
+                    <p className="text-white">Segunda a Sexta: 7h às 18h</p>
                     <p className="text-white">Sábado: 7h às 12h</p>
                     <p className="text-white">Domingo: Fechado</p>
                   </div>
