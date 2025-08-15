@@ -239,7 +239,6 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                         <SelectContent>
                           <SelectItem value="manha">Manhã</SelectItem>
                           <SelectItem value="tarde">Tarde</SelectItem>
-                          <SelectItem value="noite">Noite</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -271,7 +270,14 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                             disabled={isDateDisabled}
                             initialFocus
                             locale={ptBR}
+                            weekStartsOn={0}
                             className={cn("p-3 pointer-events-auto")}
+                            labels={{
+                              labelMonthDropdown: () => "Mês",
+                              labelYearDropdown: () => "Ano",
+                              labelNext: () => "Próximo mês",
+                              labelPrevious: () => "Mês anterior"
+                            }}
                           />
                         </PopoverContent>
                       </Popover>
