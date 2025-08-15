@@ -185,7 +185,7 @@ Horário da Visita: ${data.horarioVisita}`;
                       </h3>
                       
                       {/* Texto Descritivo */}
-                      <p className="text-base text-[#333333] leading-[1.6] mb-6 flex-1 font-montserrat font-normal">
+                      <p className="text-base text-[#333333] leading-[1.6] mb-auto font-montserrat font-normal flex-1">
                         {level.description}
                       </p>
                       
