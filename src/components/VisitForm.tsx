@@ -228,7 +228,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="space-y-4">
                     <div>
                       <Label htmlFor="shift">Turno Desejado</Label>
                       <Select value={formData.shift} onValueChange={(value) => handleInputChange("shift", value)}>
@@ -242,8 +242,9 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                         </SelectContent>
                       </Select>
                     </div>
+
                     <div>
-                      <Label htmlFor="date">Data Preferencial</Label>
+                      <Label>Data Preferencial</Label>
                       <Popover>
                         <PopoverTrigger asChild>
                           <Button
@@ -261,7 +262,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                             )}
                           </Button>
                         </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
+                        <PopoverContent className="w-auto p-0 z-50" align="start">
                           <CalendarComponent
                             mode="single"
                             selected={formData.date || undefined}
@@ -278,6 +279,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                         </p>
                       )}
                     </div>
+
                     <div>
                       <Label htmlFor="time">Horário Preferencial</Label>
                       <Select 
@@ -288,7 +290,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                         <SelectTrigger>
                           <SelectValue placeholder="Selecione o horário" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="z-50">
                           {timeOptions.map((time) => (
                             <SelectItem key={time} value={time}>
                               {time}
