@@ -74,7 +74,7 @@ interface FormData {
 }
 
 const EducationLevelCards = () => {
-  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(() => new Set());
   const [formData, setFormData] = useState<{ [key: string]: FormData }>({});
 
   const handleCardFlip = (levelId: string) => {
