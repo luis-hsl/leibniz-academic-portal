@@ -137,9 +137,9 @@ Telefone: ${data.telefone}`;
             {educationLevels.map((level) => (
               <div key={level.id} className="perspective-1000">
                 <div 
-                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[520px] group hover:scale-105 ${
+                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[520px] ${
                     flippedCards.has(level.id) ? 'rotate-y-180' : ''
-                  }`}
+                  } ${!flippedCards.has(level.id) ? 'hover:scale-105' : ''}`}
                 >
                   {/* Frente do Card */}
                   <div className="backface-hidden absolute inset-0 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
