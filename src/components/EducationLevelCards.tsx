@@ -44,7 +44,7 @@ const educationLevels: EducationLevel[] = [
     tag: "1ª à 3ª série",
     title: "Ensino Médio",
     description: "Preparação de alta performance para os vestibulares mais concorridos e para um futuro de sucesso.",
-    image: "/lovable-uploads/0aa66751-7776-4c66-8fd4-d50f118ce754.png",
+    image: "/lovable-uploads/672ec9c8-05c1-4a0f-aa67-a819cb1cfd85.png",
     formTitle: "Inscrição - Ensino Médio"
   },
   {
@@ -52,7 +52,7 @@ const educationLevels: EducationLevel[] = [
     tag: "Preparatório",
     title: "Pré-Vestibular",
     description: "Metodologia intensiva e foco total para garantir a sua aprovação nos vestibulares mais exigentes.",
-    image: "/lovable-uploads/672ec9c8-05c1-4a0f-aa67-a819cb1cfd85.png",
+    image: "/lovable-uploads/0aa66751-7776-4c66-8fd4-d50f118ce754.png",
     formTitle: "Inscrição - Pré-Vestibular"
   },
   {
