@@ -114,7 +114,7 @@ Telefone: ${data.telefone}
 Nome do Aluno: ${data.nomeAluno}
 Turno: ${data.turno}`;
 
-    const whatsappUrl = `https://wa.me/556534234097?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5566996781284?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     toast.success("Redirecionando para WhatsApp...");
