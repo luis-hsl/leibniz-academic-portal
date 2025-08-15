@@ -8,7 +8,7 @@ const GOOGLE_TAG_ID = 'AW-17141679234';
 const OptimizedAnalytics = () => {
   useEffect(() => {
     // Só carregar em produção
-    if (process.env.NODE_ENV !== 'production') return;
+    if (!import.meta.env.PROD) return;
 
     // Carregar scripts de forma otimizada e lazy
     const loadAnalytics = () => {
@@ -47,7 +47,7 @@ const OptimizedAnalytics = () => {
 
 // Funções de tracking otimizadas
 export const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
-  if (typeof window !== 'undefined' && window.gtag && process.env.NODE_ENV === 'production') {
+  if (typeof window !== 'undefined' && window.gtag && import.meta.env.PROD) {
     window.gtag('event', eventName, {
       event_category: 'engagement',
       send_to: GOOGLE_ANALYTICS_ID,
@@ -57,7 +57,7 @@ export const trackEvent = (eventName: string, parameters: Record<string, any> = 
 };
 
 export const trackFormConversion = () => {
-  if (typeof window !== 'undefined' && window.gtag && process.env.NODE_ENV === 'production') {
+  if (typeof window !== 'undefined' && window.gtag && import.meta.env.PROD) {
     window.gtag('event', 'conversion', {
       'send_to': 'AW-17141679234/PkufCLzAvtMaEIKJ5e0_'
     });

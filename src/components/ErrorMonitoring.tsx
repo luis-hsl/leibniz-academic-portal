@@ -66,7 +66,7 @@ class ErrorMonitoring {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.error('Error logged:', error);
     }
 
@@ -77,7 +77,7 @@ class ErrorMonitoring {
 
   private sendToErrorService(error: ErrorInfo) {
     // Only send critical errors in production
-    if (process.env.NODE_ENV === 'production') {
+    if (import.meta.env.PROD) {
       // Example implementation - replace with your error tracking service
       try {
         fetch('/api/errors', {
