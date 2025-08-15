@@ -11,8 +11,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { Calendar, Clock, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { trackVisitConversion } from "@/components/Analytics";
-import { format } from "date-fns";
-import { ptBR } from "date-fns/locale/pt-BR";
 import { cn } from "@/lib/utils";
 
 const VisitForm = () => {
@@ -255,7 +253,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                           >
                             <Calendar className="mr-2 h-4 w-4" />
                             {formData.date ? (
-                              format(formData.date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR })
+                              formData.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
                             ) : (
                               <span>Selecione uma data</span>
                             )}
@@ -268,9 +266,12 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                             onSelect={(date) => handleInputChange("date", date || null)}
                             disabled={isDateDisabled}
                             initialFocus
-                            locale={ptBR}
                             weekStartsOn={0}
                             className={cn("p-3 pointer-events-auto")}
+                            formatters={{
+                              formatCaption: (month: Date) => month.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }),
+                              formatWeekdayName: (date: Date) => date.toLocaleDateString('pt-BR', { weekday: 'short' })
+                            }}
                             labels={{
                               labelMonthDropdown: () => "Mês",
                               labelYearDropdown: () => "Ano",
