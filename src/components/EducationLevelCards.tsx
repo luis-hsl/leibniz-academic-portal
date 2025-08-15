@@ -71,8 +71,6 @@ interface FormData {
   telefone: string;
   nomeAluno: string;
   turno: string;
-  dataVisita: string;
-  horarioVisita: string;
 }
 
 const EducationLevelCards = () => {
@@ -103,7 +101,7 @@ const EducationLevelCards = () => {
 
   const handleFormSubmit = (levelId: string, levelTitle: string) => {
     const data = formData[levelId];
-    if (!data?.nomeResponsavel || !data?.email || !data?.telefone || !data?.nomeAluno || !data?.turno || !data?.dataVisita || !data?.horarioVisita) {
+    if (!data?.nomeResponsavel || !data?.email || !data?.telefone || !data?.nomeAluno || !data?.turno) {
       toast.error("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
@@ -114,9 +112,7 @@ Nome do Responsável: ${data.nomeResponsavel}
 Email: ${data.email}
 Telefone: ${data.telefone}
 Nome do Aluno: ${data.nomeAluno}
-Turno: ${data.turno}
-Data da Visita: ${data.dataVisita}
-Horário da Visita: ${data.horarioVisita}`;
+Turno: ${data.turno}`;
 
     const whatsappUrl = `https://wa.me/556534234097?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -131,10 +127,8 @@ Horário da Visita: ${data.horarioVisita}`;
         email: "", 
         telefone: "", 
         nomeAluno: "", 
-        turno: "", 
-        dataVisita: "", 
-        horarioVisita: "" 
-      } 
+        turno: "" 
+      }
     }));
     handleCardFlip(levelId);
   };
@@ -290,38 +284,6 @@ Horário da Visita: ${data.horarioVisita}`;
                         </select>
                       </div>
 
-                      <div>
-                        <Label htmlFor={`dataVisita-${level.id}`} className="text-[#333333] font-medium">
-                          Data da Visita *
-                        </Label>
-                        <Input
-                          id={`dataVisita-${level.id}`}
-                          type="date"
-                          value={formData[level.id]?.dataVisita || ""}
-                          onChange={(e) => handleInputChange(level.id, "dataVisita", e.target.value)}
-                          className="mt-1 border-gray-300 focus:border-[#003366] focus:ring-[#003366]"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor={`horarioVisita-${level.id}`} className="text-[#333333] font-medium">
-                          Horário da Visita *
-                        </Label>
-                        <select
-                          id={`horarioVisita-${level.id}`}
-                          value={formData[level.id]?.horarioVisita || ""}
-                          onChange={(e) => handleInputChange(level.id, "horarioVisita", e.target.value)}
-                          className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:border-[#003366] focus:ring-[#003366] focus:outline-none"
-                        >
-                          <option value="">Selecione o horário</option>
-                          <option value="08:00">08:00</option>
-                          <option value="09:00">09:00</option>
-                          <option value="10:00">10:00</option>
-                          <option value="14:00">14:00</option>
-                          <option value="15:00">15:00</option>
-                          <option value="16:00">16:00</option>
-                        </select>
-                      </div>
                     </div>
 
                     <Button
