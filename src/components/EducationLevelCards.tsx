@@ -142,33 +142,38 @@ Telefone: ${data.telefone}`;
                   } ${!flippedCards.has(level.id) ? 'hover:scale-105' : ''}`}
                 >
                   {/* Frente do Card */}
-                  <div className="backface-hidden absolute inset-0 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="backface-hidden absolute inset-0 bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300">
                     {/* Imagem */}
                     <div className="relative h-64">
                       <img 
                         src={level.image} 
                         alt={level.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-t-2xl"
                         loading="lazy"
                       />
-                      {/* Tag de Período */}
-                      <div className="absolute top-4 left-4 bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-full text-sm font-semibold">
-                        {level.tag}
-                      </div>
                     </div>
                     
                     {/* Área de Conteúdo */}
-                    <div className="bg-[#003366] text-white p-6 h-64 flex flex-col">
-                      <h3 className="text-2xl font-bold mb-4 font-['Poppins'] leading-tight">
+                    <div className="bg-white p-6 h-64 flex flex-col">
+                      {/* Tag de Período */}
+                      <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start">
+                        {level.tag}
+                      </div>
+                      
+                      {/* Título */}
+                      <h3 className="text-[28px] font-bold text-[#003366] mb-2 font-['Poppins'] leading-tight">
                         {level.title}
                       </h3>
-                      <p className="text-base opacity-90 mb-6 flex-1 font-['Poppins'] font-normal leading-relaxed">
+                      
+                      {/* Texto Descritivo */}
+                      <p className="text-base text-[#333333] leading-[1.6] mb-6 flex-1 font-['Poppins'] font-normal">
                         {level.description}
                       </p>
+                      
+                      {/* Botão CTA */}
                       <Button
                         onClick={() => handleCardFlip(level.id)}
-                        variant="outline"
-                        className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#003366] px-6 py-3 rounded-lg uppercase font-semibold text-sm transition-all duration-300"
+                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center"
                       >
                         Faça a Inscrição
                       </Button>
