@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import EducationLevelsSection from "@/components/EducationLevelsSection";
+import EducationLevelCards from "@/components/EducationLevelCards";
 
 const NiveisEnsino = () => {
   useEffect(() => {
@@ -28,7 +28,7 @@ const NiveisEnsino = () => {
         </div>
       </section>
 
-      <EducationLevelsSection />
+      <EducationLevelCards />
       
       <Footer />
       <WhatsAppButton />
