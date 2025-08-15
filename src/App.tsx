@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 // Lazy load das páginas para reduzir bundle inicial
-const Index = lazy(() => import("./pages/Index"));
+import Index from "./pages/Index";
 const SobreNos = lazy(() => import("./pages/SobreNos"));
 const NiveisEnsino = lazy(() => import("./pages/NiveisEnsino"));
 const OColegio = lazy(() => import("./pages/OColegio"));
