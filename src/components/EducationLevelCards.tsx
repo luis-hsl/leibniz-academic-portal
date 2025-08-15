@@ -173,7 +173,8 @@ Telefone: ${data.telefone}`;
                       {/* Botão CTA */}
                       <Button
                         onClick={() => handleCardFlip(level.id)}
-                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat"
+                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat mt-auto"
+                        type="button"
                       >
                         Faça a Inscrição
                       </Button>
