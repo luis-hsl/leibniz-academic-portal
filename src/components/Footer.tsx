@@ -18,7 +18,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold text-red-400">Colégio Leibniz</h3>
-                <p className="text-sm text-gray-300">Sistema Bernoulli</p>
+                <p className="text-sm text-gray-300">Excelência em Educação</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">

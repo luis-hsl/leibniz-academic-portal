@@ -11,9 +11,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Colégio Leibniz - Sistema Bernoulli de Ensino",
-  description = "Prepare-se para o Sucesso Acadêmico no Colégio Leibniz - Sistema Bernoulli de Ensino, tradição e referência em vestibulares e preparatórios para o ENEM.",
-  keywords = "colégio, leibniz, bernoulli, ensino, vestibular, enem, educação, escola, preparatório",
+  title = "Colégio Leibniz - Excelência em Educação",
+  description = "Prepare-se para o Sucesso Acadêmico no Colégio Leibniz, tradição e referência em vestibulares e preparatórios para o ENEM.",
+  keywords = "colégio, leibniz, ensino, vestibular, enem, educação, escola, preparatório",
   image = "/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png",
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = "website"
@@ -67,7 +67,7 @@ const SEOHead = ({
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Colégio Leibniz",
-      "alternateName": "Sistema Bernoulli de Ensino",
+      "alternateName": "Excelência em Educação",
       "description": description,
       "url": url,
       "logo": image,

@@ -72,8 +72,8 @@ const FAQ = () => {
       icon: <MessageCircle className="h-5 w-5" />,
       items: [
         {
-          question: "O que é o Sistema Bernoulli de Ensino?",
-          answer: "O Sistema Bernoulli é uma metodologia reconhecida nacionalmente, com material didático atualizado, plataforma digital integrada e foco na preparação para vestibulares e ENEM. Combina tradição pedagógica com inovação tecnológica para garantir excelência no aprendizado.",
+          question: "Qual é a metodologia de ensino do Colégio Leibniz?",
+          answer: "O Colégio Leibniz utiliza uma metodologia reconhecida nacionalmente, com material didático atualizado, plataforma digital integrada e foco na preparação para vestibulares e ENEM. Combina tradição pedagógica com inovação tecnológica para garantir excelência no aprendizado.",
           relatedAction: {
             text: "Conhecer mais sobre a metodologia",
             action: () => openWhatsAppVisit()
@@ -81,7 +81,7 @@ const FAQ = () => {
         },
         {
           question: "Como funcionam as aulas online e presenciais?",
-          answer: "Oferecemos ensino híbrido com aulas presenciais como base e plataforma digital complementar. Os alunos têm acesso a videoaulas, exercícios online, simulados e acompanhamento personalizado através da plataforma Bernoulli."
+          answer: "Oferecemos ensino híbrido com aulas presenciais como base e plataforma digital complementar. Os alunos têm acesso a videoaulas, exercícios online, simulados e acompanhamento personalizado através da nossa plataforma educacional."
         },
         {
           question: "Qual é a carga horária das aulas?",
@@ -115,7 +115,7 @@ const FAQ = () => {
         },
         {
           question: "O material didático está incluso?",
-          answer: "O material didático do Sistema Bernoulli está incluso na mensalidade, incluindo livros impressos, acesso à plataforma digital, apostilas complementares e materiais para atividades práticas."
+          answer: "O material didático está incluso na mensalidade, incluindo livros impressos, acesso à plataforma digital, apostilas complementares e materiais para atividades práticas."
         }
       ]
     },
@@ -147,7 +147,7 @@ const FAQ = () => {
         },
         {
           question: "Como funciona o sistema de avaliações?",
-          answer: "Utilizamos avaliação contínua com provas bimestrais, trabalhos, seminários e atividades práticas. O sistema Bernoulli inclui simulados regulares preparatórios para ENEM e vestibulares, com feedback detalhado de desempenho."
+          answer: "Utilizamos avaliação contínua com provas bimestrais, trabalhos, seminários e atividades práticas. Incluímos simulados regulares preparatórios para ENEM e vestibulares, com feedback detalhado de desempenho."
         },
         {
           question: "Qual é a política de uso de dispositivos eletrônicos?",

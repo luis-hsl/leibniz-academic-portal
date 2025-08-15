@@ -227,7 +227,7 @@ const SpecificContactForms = () => {
           
           <SpecificContactForm
             title="Ensino Fundamental"
-            description="Base sólida para o desenvolvimento acadêmico com metodologia Bernoulli."
+            description="Base sólida para o desenvolvimento acadêmico com metodologia diferenciada."
             defaultLevel="fundamental1"
             whatsappMessage="Olá! Tenho interesse em receber informações sobre o Ensino Fundamental do Colégio Leibniz."
           />

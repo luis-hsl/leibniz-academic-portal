@@ -23,7 +23,7 @@ const EducationLevels = () => {
       title: "Ensino Médio",
       description: "Foco no conhecimento acadêmico e desenvolvimento pessoal, preparando para o ENEM e vestibulares.",
       color: "bg-green-500",
-      details: "Preparação intensiva com metodologia Bernoulli para os principais vestibulares."
+      details: "Preparação intensiva para os principais vestibulares."
     },
     {
       icon: Trophy,
