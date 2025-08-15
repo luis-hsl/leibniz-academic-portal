@@ -156,7 +156,7 @@ Horário da Visita: ${data.horarioVisita}`;
             {educationLevels.map((level) => (
               <div key={level.id} className="perspective-1000">
                 <div 
-                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[520px] ${
+                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[580px] ${
                     flippedCards.has(level.id) ? 'rotate-y-180' : ''
                   } ${!flippedCards.has(level.id) ? 'hover:scale-105' : ''}`}
                 >
@@ -173,7 +173,7 @@ Horário da Visita: ${data.horarioVisita}`;
                     </div>
                     
                     {/* Área de Conteúdo */}
-                    <div className="bg-white p-6 h-64 flex flex-col">
+                    <div className="bg-white p-6 flex flex-col" style={{ height: 'calc(580px - 256px)' }}>
                       {/* Tag de Período */}
                       <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start font-montserrat">
                         {level.tag}
