@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm font-montserrat">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" style={{ color: '#fec10e' }} />
-                <span className="text-white/90">
+                <span className="text-white">
                   Av. Paulista, 720<br />
                   Parque Sagrada Família<br />
                   Rondonópolis - MT, 78735-223
@@ -78,15 +78,15 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" style={{ color: '#fec10e' }} />
-                <span className="text-white/90">(66) 3421-8824</span>
+                <span className="text-white">(66) 3421-8824</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" style={{ color: '#fec10e' }} />
-                <span className="text-white/90">(66) 99678-1284</span>
+                <span className="text-white">(66) 99678-1284</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" style={{ color: '#fec10e' }} />
-                <span className="text-white/90">admleibniz@gmail.com</span>
+                <span className="text-white">admleibniz@gmail.com</span>
               </div>
             </div>
           </div>
