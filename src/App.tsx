@@ -9,7 +9,7 @@ import { lazy, Suspense } from "react";
 // Lazy load das páginas para reduzir bundle inicial
 import Index from "./pages/Index";
 // const SobreNos = lazy(() => import("./pages/SobreNos")); // Removido
-const NiveisEnsino = lazy(() => import("./pages/NiveisEnsino"));
+// const NiveisEnsino = lazy(() => import("./pages/NiveisEnsino")); // Removido
 const OColegio = lazy(() => import("./pages/OColegio"));
 const ContatoPage = lazy(() => import("./pages/ContatoPage"));
 const Dependencias = lazy(() => import("./pages/Dependencias"));
@@ -44,7 +44,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             {/* <Route path="/sobre-nos" element={<SobreNos />} /> */}
-            <Route path="/niveis-ensino" element={<NiveisEnsino />} />
+            {/* <Route path="/niveis-ensino" element={<NiveisEnsino />} /> */}
             <Route path="/o-colegio" element={<OColegio />} />
             <Route path="/dependencias" element={<Dependencias />} />
             <Route path="/contato" element={<ContatoPage />} />
