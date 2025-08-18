@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CalendarIcon } from "lucide-react";
-import { Calendar } from "@/components/ui/calendar";
+import { CalendarIcon, User, Mail, Phone, GraduationCap, Calendar as CalendarLucide, Clock } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import backgroundImage from "@/assets/visit-form-background.jpg";
 
 interface FormData {
   nome: string;
@@ -75,30 +75,60 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 font-montserrat">
-              Agende Sua Visita
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-montserrat">
-              Venha conhecer de perto nossa infraestrutura e metodologia. Agende sua visita e descubra por que somos referência em educação.
-            </p>
-          </div>
+    <section 
+      id="agendar"
+      className="py-16 md:py-20 relative text-white overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('${backgroundImage}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'scroll'
+      }}
+    >
+      {/* Elementos gráficos de fundo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg className="absolute top-20 left-10 opacity-10" width="100" height="100" viewBox="0 0 100 100">
+          <path d="M20,50 Q50,20 80,50 T140,50" stroke="white" strokeWidth="2" fill="none" />
+        </svg>
+        <svg className="absolute bottom-20 right-10 opacity-10" width="120" height="120" viewBox="0 0 120 120">
+          <path d="M20,60 Q60,20 100,60 T180,60" stroke="white" strokeWidth="2" fill="none" />
+        </svg>
+      </div>
 
-          <div className="max-w-2xl mx-auto">
-            <Card className="shadow-2xl border-0 bg-card">
-              <CardHeader className="text-center bg-gradient-to-r from-primary to-secondary text-white rounded-t-lg pb-6">
-                <CardTitle className="text-2xl md:text-3xl font-bold font-montserrat text-primary-foreground">
-                  Formulário de Agendamento
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6 space-y-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Texto à esquerda */}
+            <div className="space-y-6">
+              <div className="inline-block bg-secondary backdrop-blur-sm rounded-full px-4 py-2 border border-secondary/30">
+                <span className="text-sm font-semibold text-primary">Agende uma Visita</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat">
+                Dê o primeiro passo para um futuro de excelência
+              </h2>
+              
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Preencha os campos ao lado para agendar sua visita. Nossa equipe entrará em contato para confirmar todos os detalhes.
+              </p>
+            </div>
+
+            {/* Cards do formulário à direita */}
+            <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Card 1: Informações do Responsável */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
+                      <User className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="pt-8 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Seus Dados</h3>
+                    
                     <div>
-                      <Label htmlFor="nome" className="text-foreground font-medium">
+                      <Label htmlFor="nome" className="text-primary font-medium text-sm">
                         Nome Completo *
                       </Label>
                       <Input
@@ -106,50 +136,62 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                         type="text"
                         value={formData.nome}
                         onChange={(e) => handleInputChange("nome", e.target.value)}
-                        className="mt-2"
+                        className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
                         placeholder="Digite seu nome completo"
                         required
                       />
                     </div>
 
-                    <div>
-                      <Label htmlFor="email" className="text-foreground font-medium">
-                        E-mail *
-                      </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
-                        className="mt-2"
-                        placeholder="seu@email.com"
-                        required
-                      />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="email" className="text-primary font-medium text-sm">
+                          E-mail *
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
+                          placeholder="seu@email.com"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <Label htmlFor="telefone" className="text-primary font-medium text-sm">
+                          Telefone/WhatsApp *
+                        </Label>
+                        <Input
+                          id="telefone"
+                          type="tel"
+                          value={formData.telefone}
+                          onChange={(e) => handleInputChange("telefone", e.target.value)}
+                          className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
+                          placeholder="(66) 99999-9999"
+                          required
+                        />
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="telefone" className="text-foreground font-medium">
-                        Telefone/WhatsApp *
-                      </Label>
-                      <Input
-                        id="telefone"
-                        type="tel"
-                        value={formData.telefone}
-                        onChange={(e) => handleInputChange("telefone", e.target.value)}
-                        className="mt-2"
-                        placeholder="(66) 99999-9999"
-                        required
-                      />
+                {/* Card 2: Interesse do Aluno */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
+                      <GraduationCap className="h-8 w-8 text-white" />
                     </div>
-
+                  </div>
+                  <div className="pt-8 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Nível de Interesse</h3>
+                    
                     <div>
-                      <Label htmlFor="nivelPretendido" className="text-foreground font-medium">
-                        Nível Pretendido *
+                      <Label htmlFor="nivelPretendido" className="text-primary font-medium text-sm">
+                        Série/Nível de Interesse *
                       </Label>
                       <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
-                        <SelectTrigger className="mt-2">
+                        <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
                           <SelectValue placeholder="Selecione o nível" />
                         </SelectTrigger>
                         <SelectContent>
@@ -161,86 +203,87 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                       </Select>
                     </div>
                   </div>
+                </div>
 
-                  <div>
-                    <Label htmlFor="turnoDesejado" className="text-foreground font-medium">
-                      Turno Desejado
-                    </Label>
-                    <Select value={formData.turnoDesejado} onValueChange={(value) => handleInputChange("turnoDesejado", value)}>
-                      <SelectTrigger className="mt-2">
-                        <SelectValue placeholder="Selecione" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="matutino">Matutino</SelectItem>
-                        <SelectItem value="vespertino">Vespertino</SelectItem>
-                        <SelectItem value="integral">Integral</SelectItem>
-                      </SelectContent>
-                    </Select>
+                {/* Card 3: Agendamento */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
+                      <CalendarLucide className="h-8 w-8 text-white" />
+                    </div>
                   </div>
+                  <div className="pt-8 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">Sua Visita</h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label className="text-primary font-medium text-sm">
+                          Data Preferencial
+                        </Label>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <Button
+                              variant="outline"
+                              className={cn(
+                                "w-full justify-start text-left font-normal mt-1 border-gray-200 focus:border-primary",
+                                !formData.dataPreferencial && "text-muted-foreground"
+                              )}
+                            >
+                              <CalendarIcon className="mr-2 h-4 w-4" />
+                              {formData.dataPreferencial ? (
+                                format(formData.dataPreferencial, "dd/MM/yyyy")
+                              ) : (
+                                <span>Selecione uma data</span>
+                              )}
+                            </Button>
+                          </PopoverTrigger>
+                          <PopoverContent className="w-auto p-0">
+                            <Calendar
+                              mode="single"
+                              selected={formData.dataPreferencial}
+                              onSelect={(date) => handleInputChange("dataPreferencial", date)}
+                              initialFocus
+                              className="pointer-events-auto"
+                            />
+                          </PopoverContent>
+                        </Popover>
+                      </div>
 
-                  <div>
-                    <Label className="text-foreground font-medium">
-                      Data Preferencial
-                    </Label>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className={cn(
-                            "w-full justify-start text-left font-normal mt-2",
-                            !formData.dataPreferencial && "text-muted-foreground"
-                          )}
-                        >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
-                          {formData.dataPreferencial ? (
-                            format(formData.dataPreferencial, "dd/MM/yyyy")
-                          ) : (
-                            <span>Selecione uma data</span>
-                          )}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0">
-                        <Calendar
-                          mode="single"
-                          selected={formData.dataPreferencial}
-                          onSelect={(date) => handleInputChange("dataPreferencial", date)}
-                          initialFocus
-                          className="pointer-events-auto"
-                        />
-                      </PopoverContent>
-                    </Popover>
+                      <div>
+                        <Label htmlFor="horarioPreferencial" className="text-primary font-medium text-sm">
+                          Horário Preferencial
+                        </Label>
+                        <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
+                          <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
+                            <SelectValue placeholder="Selecione o horário" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="08:00">08:00</SelectItem>
+                            <SelectItem value="09:00">09:00</SelectItem>
+                            <SelectItem value="10:00">10:00</SelectItem>
+                            <SelectItem value="11:00">11:00</SelectItem>
+                            <SelectItem value="14:00">14:00</SelectItem>
+                            <SelectItem value="15:00">15:00</SelectItem>
+                            <SelectItem value="16:00">16:00</SelectItem>
+                            <SelectItem value="17:00">17:00</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
                   </div>
+                </div>
 
-                  <div>
-                    <Label htmlFor="horarioPreferencial" className="text-foreground font-medium">
-                      Horário Preferencial
-                    </Label>
-                    <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
-                      <SelectTrigger className="mt-2">
-                        <SelectValue placeholder="Selecione o horário" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="08:00">08:00</SelectItem>
-                        <SelectItem value="09:00">09:00</SelectItem>
-                        <SelectItem value="10:00">10:00</SelectItem>
-                        <SelectItem value="11:00">11:00</SelectItem>
-                        <SelectItem value="14:00">14:00</SelectItem>
-                        <SelectItem value="15:00">15:00</SelectItem>
-                        <SelectItem value="16:00">16:00</SelectItem>
-                        <SelectItem value="17:00">17:00</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
+                {/* Botão Final */}
+                <div className="pt-6">
                   <Button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 text-lg"
+                    className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    Confirmar Visita
+                    CONFIRMAR AGENDAMENTO
                   </Button>
-                </form>
-              </CardContent>
-            </Card>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
