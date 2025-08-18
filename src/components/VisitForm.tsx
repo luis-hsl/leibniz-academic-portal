@@ -2,18 +2,23 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CalendarIcon } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import { Calendar, Clock, User, Mail, Phone, MessageSquare } from "lucide-react";
 
 interface FormData {
   nome: string;
   email: string;
   telefone: string;
-  dataVisita: string;
-  horario: string;
-  mensagem: string;
+  nivelPretendido: string;
+  turnoDesejado: string;
+  dataPreferencial: Date | undefined;
+  horarioPreferencial: string;
 }
 
 const VisitForm = () => {
@@ -21,12 +26,13 @@ const VisitForm = () => {
     nome: "",
     email: "",
     telefone: "",
-    dataVisita: "",
-    horario: "",
-    mensagem: ""
+    nivelPretendido: "",
+    turnoDesejado: "",
+    dataPreferencial: undefined,
+    horarioPreferencial: ""
   });
 
-  const handleInputChange = (field: keyof FormData, value: string) => {
+  const handleInputChange = (field: keyof FormData, value: string | Date | undefined) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -36,7 +42,7 @@ const VisitForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.nome || !formData.email || !formData.telefone || !formData.dataVisita || !formData.horario) {
+    if (!formData.nome || !formData.email || !formData.telefone || !formData.nivelPretendido) {
       toast.error("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
@@ -46,9 +52,10 @@ const VisitForm = () => {
 Nome: ${formData.nome}
 Email: ${formData.email}
 Telefone: ${formData.telefone}
-Data preferida: ${formData.dataVisita}
-Horário: ${formData.horario}
-${formData.mensagem ? `Mensagem: ${formData.mensagem}` : ''}`;
+Nível Pretendido: ${formData.nivelPretendido}
+${formData.turnoDesejado ? `Turno Desejado: ${formData.turnoDesejado}` : ''}
+${formData.dataPreferencial ? `Data Preferencial: ${format(formData.dataPreferencial, "dd/MM/yyyy")}` : ''}
+${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPreferencial}` : ''}`;
 
     const whatsappUrl = `https://wa.me/5566996781284?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -60,16 +67,12 @@ ${formData.mensagem ? `Mensagem: ${formData.mensagem}` : ''}`;
       nome: "",
       email: "",
       telefone: "",
-      dataVisita: "",
-      horario: "",
-      mensagem: ""
+      nivelPretendido: "",
+      turnoDesejado: "",
+      dataPreferencial: undefined,
+      horarioPreferencial: ""
     });
   };
-
-  // Get tomorrow's date for min date
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  const minDate = tomorrow.toISOString().split('T')[0];
 
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-white">
@@ -85,18 +88,17 @@ ${formData.mensagem ? `Mensagem: ${formData.mensagem}` : ''}`;
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <Card className="shadow-2xl border-0">
-              <CardHeader className="text-center bg-gradient-to-r from-primary to-secondary text-white rounded-t-lg">
-                <CardTitle className="text-2xl md:text-3xl font-bold font-montserrat">
+            <Card className="shadow-2xl border-0 bg-white">
+              <CardHeader className="pb-6">
+                <CardTitle className="text-2xl font-bold text-gray-900">
                   Formulário de Agendamento
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6 md:p-8">
+              <CardContent className="p-6 space-y-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="nome" className="text-foreground font-medium flex items-center gap-2">
-                        <User className="h-4 w-4" />
+                      <Label htmlFor="nome" className="text-gray-900 font-medium">
                         Nome Completo *
                       </Label>
                       <Input
@@ -111,9 +113,8 @@ ${formData.mensagem ? `Mensagem: ${formData.mensagem}` : ''}`;
                     </div>
 
                     <div>
-                      <Label htmlFor="email" className="text-foreground font-medium flex items-center gap-2">
-                        <Mail className="h-4 w-4" />
-                        Email *
+                      <Label htmlFor="email" className="text-gray-900 font-medium">
+                        E-mail *
                       </Label>
                       <Input
                         id="email"
@@ -121,90 +122,121 @@ ${formData.mensagem ? `Mensagem: ${formData.mensagem}` : ''}`;
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         className="mt-2"
-                        placeholder="Digite seu email"
+                        placeholder="seu@email.com"
                         required
                       />
                     </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="telefone" className="text-foreground font-medium flex items-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      Telefone/WhatsApp *
-                    </Label>
-                    <Input
-                      id="telefone"
-                      type="tel"
-                      value={formData.telefone}
-                      onChange={(e) => handleInputChange("telefone", e.target.value)}
-                      className="mt-2"
-                      placeholder="(66) 99999-9999"
-                      required
-                    />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="dataVisita" className="text-foreground font-medium flex items-center gap-2">
-                        <Calendar className="h-4 w-4" />
-                        Data Preferida *
+                      <Label htmlFor="telefone" className="text-gray-900 font-medium">
+                        Telefone/WhatsApp *
                       </Label>
                       <Input
-                        id="dataVisita"
-                        type="date"
-                        value={formData.dataVisita}
-                        onChange={(e) => handleInputChange("dataVisita", e.target.value)}
+                        id="telefone"
+                        type="tel"
+                        value={formData.telefone}
+                        onChange={(e) => handleInputChange("telefone", e.target.value)}
                         className="mt-2"
-                        min={minDate}
+                        placeholder="(66) 99999-9999"
                         required
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="horario" className="text-foreground font-medium flex items-center gap-2">
-                        <Clock className="h-4 w-4" />
-                        Horário *
+                      <Label htmlFor="nivelPretendido" className="text-gray-900 font-medium">
+                        Nível Pretendido *
                       </Label>
-                      <select
-                        id="horario"
-                        value={formData.horario}
-                        onChange={(e) => handleInputChange("horario", e.target.value)}
-                        className="mt-2 w-full border border-input rounded-md px-3 py-2 focus:border-ring focus:ring-ring focus:outline-none"
-                        required
-                      >
-                        <option value="">Selecione o horário</option>
-                        <option value="08:00">08:00</option>
-                        <option value="09:00">09:00</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                        <option value="14:00">14:00</option>
-                        <option value="15:00">15:00</option>
-                        <option value="16:00">16:00</option>
-                        <option value="17:00">17:00</option>
-                      </select>
+                      <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Selecione o nível" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="educacao-infantil">Educação Infantil</SelectItem>
+                          <SelectItem value="ensino-fundamental-1">Ensino Fundamental I</SelectItem>
+                          <SelectItem value="ensino-fundamental-2">Ensino Fundamental II</SelectItem>
+                          <SelectItem value="ensino-medio">Ensino Médio</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="mensagem" className="text-foreground font-medium flex items-center gap-2">
-                      <MessageSquare className="h-4 w-4" />
-                      Mensagem (Opcional)
+                    <Label htmlFor="turnoDesejado" className="text-gray-900 font-medium">
+                      Turno Desejado
                     </Label>
-                    <Textarea
-                      id="mensagem"
-                      value={formData.mensagem}
-                      onChange={(e) => handleInputChange("mensagem", e.target.value)}
-                      className="mt-2"
-                      placeholder="Deixe uma mensagem adicional (opcional)"
-                      rows={4}
-                    />
+                    <Select value={formData.turnoDesejado} onValueChange={(value) => handleInputChange("turnoDesejado", value)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Selecione" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="matutino">Matutino</SelectItem>
+                        <SelectItem value="vespertino">Vespertino</SelectItem>
+                        <SelectItem value="integral">Integral</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <Label className="text-gray-900 font-medium">
+                      Data Preferencial
+                    </Label>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal mt-2",
+                            !formData.dataPreferencial && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {formData.dataPreferencial ? (
+                            format(formData.dataPreferencial, "dd/MM/yyyy")
+                          ) : (
+                            <span>Selecione uma data</span>
+                          )}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0">
+                        <Calendar
+                          mode="single"
+                          selected={formData.dataPreferencial}
+                          onSelect={(date) => handleInputChange("dataPreferencial", date)}
+                          initialFocus
+                          className="pointer-events-auto"
+                        />
+                      </PopoverContent>
+                    </Popover>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="horarioPreferencial" className="text-gray-900 font-medium">
+                      Horário Preferencial
+                    </Label>
+                    <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Selecione o horário" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="08:00">08:00</SelectItem>
+                        <SelectItem value="09:00">09:00</SelectItem>
+                        <SelectItem value="10:00">10:00</SelectItem>
+                        <SelectItem value="11:00">11:00</SelectItem>
+                        <SelectItem value="14:00">14:00</SelectItem>
+                        <SelectItem value="15:00">15:00</SelectItem>
+                        <SelectItem value="16:00">16:00</SelectItem>
+                        <SelectItem value="17:00">17:00</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 text-lg"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 text-lg"
                   >
-                    Agendar Visita
+                    Confirmar Visita
                   </Button>
                 </form>
               </CardContent>
