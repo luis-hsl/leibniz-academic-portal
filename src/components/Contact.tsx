@@ -55,61 +55,129 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Contact Cards Grid */}
+          {/* Contact Cards Grid - Using same styling as main page */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50">
-                <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                    <info.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    {info.title}
-                  </h3>
-                  <p className="text-lg font-medium text-primary mb-2">
-                    {info.content}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    {info.description}
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300"
-                    onClick={() => window.open(info.action, '_blank')}
-                  >
-                    Entrar em Contato
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Hours Section */}
-          <div className="bg-card/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-border/50 shadow-lg">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Clock className="w-8 h-8 text-primary" />
+            {/* Localização */}
+            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -top-6 left-6">
+                <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                Horário de Funcionamento
-              </h3>
-              <p className="text-muted-foreground">
-                Nossos horários de atendimento para melhor atendê-lo
-              </p>
+              <div className="pt-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Localização</h3>
+                <div className="text-gray-600 text-sm leading-relaxed space-y-1 mb-4">
+                  <p>Avenida Paulista, 720</p>
+                  <p>Parque Sagrada Família</p>
+                  <p>Rondonópolis - MT, 78735-223</p>
+                </div>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                  onClick={() => window.open("https://maps.google.com/?q=Avenida+Paulista+720+Rondonópolis+MT", '_blank')}
+                >
+                  Ver no Mapa
+                </Button>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {schedules.map((schedule, index) => (
-                <div key={index} className="text-center p-6 bg-background/50 rounded-xl border border-border/30">
-                  <h4 className="text-lg font-semibold text-foreground mb-2">
-                    {schedule.day}
-                  </h4>
-                  <p className="text-primary font-medium text-lg">
-                    {schedule.time}
-                  </p>
+            {/* Telefone */}
+            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -top-6 left-6">
+                <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
+                  <Phone className="h-8 w-8 text-white" />
                 </div>
-              ))}
+              </div>
+              <div className="pt-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Telefone</h3>
+                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
+                  <a href="tel:6634218824" className="flex items-center hover:text-primary transition-colors">
+                    <Phone className="h-3 w-3 mr-2" />
+                    (66) 3421-8824
+                  </a>
+                  <p className="text-xs text-gray-500">Segunda a sexta, 7h às 18h</p>
+                </div>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                  onClick={() => window.open("tel:6634218824", '_blank')}
+                >
+                  Ligar Agora
+                </Button>
+              </div>
+            </div>
+
+            {/* WhatsApp */}
+            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -top-6 left-6">
+                <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
+                  <MessageCircle className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              <div className="pt-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">WhatsApp</h3>
+                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
+                  <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                    <MessageCircle className="h-3 w-3 mr-2" />
+                    (66) 99678-1284
+                  </a>
+                  <p className="text-xs text-gray-500">Atendimento rápido e personalizado</p>
+                </div>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                  onClick={() => window.open("https://wa.me/5566996781284", '_blank')}
+                >
+                  Enviar Mensagem
+                </Button>
+              </div>
+            </div>
+
+            {/* E-mail */}
+            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -top-6 left-6">
+                <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
+                  <Mail className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              <div className="pt-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">E-mail</h3>
+                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
+                  <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-primary transition-colors">
+                    <Mail className="h-3 w-3 mr-2" />
+                    admleibniz@gmail.com
+                  </a>
+                  <p className="text-xs text-gray-500">Resposta em até 24 horas</p>
+                </div>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+                  onClick={() => window.open("mailto:admleibniz@gmail.com", '_blank')}
+                >
+                  Enviar E-mail
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Hours Section - Using same styling as main page */}
+          <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+            <div className="absolute -top-6 left-6">
+              <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
+                <Clock className="h-8 w-8 text-white" />
+              </div>
+            </div>
+            <div className="pt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Horário de Funcionamento</h3>
+              <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                <p>Segunda à Sexta: 7h às 18h</p>
+                <p>Sábado: 7h às 12h</p>
+                <p>Domingo: Fechado</p>
+              </div>
             </div>
           </div>
 
