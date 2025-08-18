@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import backgroundImage from "@/assets/visit-form-background.jpg";
 
+const collegeImage = "/lovable-uploads/c3071e40-1c77-41ef-b48b-82cc6db2fdfa.png";
+
 interface FormData {
   nome: string;
   email: string;
@@ -79,7 +81,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
       id="agendar"
       className="py-16 md:py-20 relative text-white overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('${backgroundImage}')`,
+        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('${collegeImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
