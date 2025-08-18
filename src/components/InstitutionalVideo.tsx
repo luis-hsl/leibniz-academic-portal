@@ -73,15 +73,6 @@ const InstitutionalVideo = ({ size = "large", className = "" }: InstitutionalVid
               )}
             </div>
 
-            {/* Action Button */}
-            <div className="text-center mt-12 md:mt-16">
-              <Button 
-                onClick={scrollToVisitForm}
-                className="bg-green-600 hover:bg-green-700 text-white px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[56px]"
-              >
-                Agende Sua Visita
-              </Button>
-            </div>
           </div>
         </div>
       </section>
