@@ -1,35 +1,93 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import PageLayout from "@/components/layout/PageLayout";
+import PageContent from "@/components/layout/PageContent";
+import ImageGallery from "@/components/layout/ImageGallery";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building, Trophy, BookOpen } from "lucide-react";
 
 const OColegio = () => {
+  // Imagens para a galeria
+  const galleryImages = [
+    {
+      src: "/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png",
+      alt: "Fachada do Colégio Leibniz",
+      caption: "Fachada Principal"
+    },
+    {
+      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
+      alt: "Sala de aula moderna",
+      caption: "Salas Modernas"
+    },
+    {
+      src: "/lovable-uploads/2f1f5d03-9300-4d9c-a7a0-f3c7c3fd695e.png",
+      alt: "Laboratório de ciências",
+      caption: "Laboratórios"
+    },
+    {
+      src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
+      alt: "Biblioteca do colégio",
+      caption: "Biblioteca"
+    },
+    {
+      src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
+      alt: "Quadra esportiva",
+      caption: "Quadra Esportiva"
+    },
+    {
+      src: "/lovable-uploads/4223a8e5-5cbb-4352-bff7-fad5d0c7d664.png",
+      alt: "Área de convivência",
+      caption: "Área de Convivência"
+    }
+  ];
+
+  const contentText = (
+    <>
+      <p>
+        O Colégio Leibniz se destaca pela sua infraestrutura moderna e metodologia inovadora, 
+        proporcionando um ambiente acolhedor e estimulante para o desenvolvimento integral dos 
+        nossos alunos.
+      </p>
+      <p>
+        Nossos espaços foram cuidadosamente planejados para oferecer a melhor experiência 
+        educacional, combinando tecnologia de ponta com ambientes inspiradores que favorecem 
+        o aprendizado e o crescimento pessoal de cada estudante.
+      </p>
+      <p>
+        Com uma equipe de profissionais qualificados e uma proposta pedagógica diferenciada, 
+        formamos cidadãos preparados para os desafios do futuro, sempre priorizando valores 
+        éticos e excelência acadêmica.
+      </p>
+    </>
+  );
+
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      
-      {/* Hero Section - Sem título principal */}
-      <section className="bg-gradient-to-r from-red-600 to-purple-600 text-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center">
-            <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-white px-4 sm:px-0">
-              Infraestrutura moderna, metodologia inovadora e ambiente acolhedor para o desenvolvimento integral dos nossos alunos.
-            </p>
-          </div>
-        </div>
-      </section>
+    <PageLayout
+      title="O Colégio"
+      heroBackgroundImage="/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png"
+      breadcrumb="INÍCIO"
+      seoDescription="Conheça o Colégio Leibniz: infraestrutura moderna, metodologia inovadora e ambiente acolhedor para o desenvolvimento integral dos alunos."
+      seoKeywords="colégio leibniz, infraestrutura, metodologia, educação, escola"
+    >
+      {/* Conteúdo Principal */}
+      <PageContent
+        title="Nossa Infraestrutura"
+        content={contentText}
+        image="/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png"
+        imageAlt="Fachada do Colégio Leibniz"
+      />
 
       {/* Video Section */}
       <InstitutionalVideo size="large" />
 
-      {/* Infrastructure Section */}
+      {/* Infrastructure Cards Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 md:mb-20">
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+                Nossos Diferenciais
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Espaços modernos e equipamentos de última geração para proporcionar a melhor experiência educacional.
               </p>
             </div>
@@ -79,9 +137,13 @@ const OColegio = () => {
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+      {/* Galeria de Imagens */}
+      <ImageGallery
+        title="Conheça Nossos Espaços"
+        images={galleryImages}
+        gridCols={3}
+      />
+    </PageLayout>
   );
 };
 
