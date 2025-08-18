@@ -94,25 +94,30 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/e9344ceb-6cab-42df-be96-aaa83c07f556.png" 
               alt="Colégio Leibniz Logo" 
-              className="h-16 lg:h-20 w-auto"
+              className="h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105"
             />
           </Link>
           
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8 font-montserrat">
             {desktopNavigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm lg:text-base font-medium transition-colors hover:text-red-600 ${
-                  isActive(item.href) ? 'text-red-600' : 'text-gray-900'
+                className={`text-sm lg:text-base font-semibold transition-all duration-300 relative pb-1 ${
+                  isActive(item.href) 
+                    ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full' 
+                    : 'text-foreground hover:text-primary hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-accent hover:after:rounded-full hover:after:transition-all hover:after:duration-300'
                 }`}
+                style={{
+                  color: isActive(item.href) ? '#003366' : '#333333'
+                }}
               >
                 {item.name}
               </Link>
@@ -122,7 +127,11 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Button
               onClick={openWhatsApp}
-              className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-medium px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
+              className="font-montserrat font-semibold px-4 lg:px-6 py-3 lg:py-4 text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
+              style={{
+                backgroundColor: '#25D366',
+                color: 'white'
+              }}
             >
               Fale Conosco
             </Button>

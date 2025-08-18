@@ -5,114 +5,150 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer style={{ backgroundColor: '#003366' }} className="text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/70f51f89-d453-407b-b95c-5310164445ea.png" 
+                src="/lovable-uploads/e9344ceb-6cab-42df-be96-aaa83c07f556.png" 
                 alt="Colégio Leibniz" 
-                className="h-10 w-10"
+                className="h-12 w-auto"
               />
-              <div>
-                <h3 className="text-xl font-bold text-red-400">Colégio Leibniz</h3>
-                <p className="text-sm text-gray-300">Excelência em Educação</p>
-              </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-4 font-montserrat" style={{ color: '#fec10e' }}>
+              Colégio Leibniz
+            </h3>
+            <p className="text-white/90 text-sm leading-relaxed font-montserrat">
               Mais de 21 anos de experiência em educação de qualidade, 
-              preparando alunos para o sucesso acadêmico e pessoal.
+              preparando alunos para o sucesso acadêmico e pessoal com excelência e dedicação.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Mapa do Site */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-red-400">Links Rápidos</h4>
-            <ul className="space-y-2">
-              <li><a href="#inicio" className="text-gray-300 hover:text-white transition-colors">Início</a></li>
-              <li><a href="#sobre" className="text-gray-300 hover:text-white transition-colors">Sobre</a></li>
-              <li><a href="#ensino" className="text-gray-300 hover:text-white transition-colors">Níveis de Ensino</a></li>
-              <li><a href="#depoimentos" className="text-gray-300 hover:text-white transition-colors">Depoimentos</a></li>
-              <li><a href="#blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+            <h4 className="text-lg font-bold mb-4 font-montserrat" style={{ color: '#fec10e' }}>
+              Mapa do Site
+            </h4>
+            <ul className="space-y-2 font-montserrat">
+              <li>
+                <a href="/" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  Início
+                </a>
+              </li>
+              <li>
+                <a href="/sobre-nos" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  Sobre Nós
+                </a>
+              </li>
+              <li>
+                <a href="/o-colegio" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  O Colégio
+                </a>
+              </li>
+              <li>
+                <a href="/niveis-ensino" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  Níveis de Ensino
+                </a>
+              </li>
+              <li>
+                <a href="/dependencias" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  Dependências
+                </a>
+              </li>
+              <li>
+                <a href="/contato" className="text-white/90 hover:text-white transition-colors text-sm hover:underline">
+                  Contato
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Education Levels */}
+          {/* Informações de Contato */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-red-400">Níveis de Ensino</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-300">Ensino Infantil</li>
-              <li className="text-gray-300">Fundamental I e II</li>
-              <li className="text-gray-300">Ensino Médio</li>
-              <li className="text-gray-300">Preparatório ENEM</li>
-              <li className="text-gray-300">Cursos Extracurriculares</li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-red-400">Contato</h4>
-            <div className="space-y-3 text-sm">
+            <h4 className="text-lg font-bold mb-4 font-montserrat" style={{ color: '#fec10e' }}>
+              Contato
+            </h4>
+            <div className="space-y-3 text-sm font-montserrat">
               <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-red-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">
+                <MapPin className="h-4 w-4 mt-1 flex-shrink-0" style={{ color: '#fec10e' }} />
+                <span className="text-white/90">
                   Av. Paulista, 720<br />
-                  Rondonópolis - MT
+                  Parque Sagrada Família<br />
+                  Rondonópolis - MT, 78735-223
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-red-400" />
-                <span className="text-gray-300">(66) 3421-8824</span>
+                <Phone className="h-4 w-4" style={{ color: '#fec10e' }} />
+                <span className="text-white/90">(66) 3421-8824</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-red-400" />
-                <span className="text-gray-300">admleibniz@gmail.com</span>
+                <Phone className="h-4 w-4" style={{ color: '#fec10e' }} />
+                <span className="text-white/90">(66) 99678-1284</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" style={{ color: '#fec10e' }} />
+                <span className="text-white/90">admleibniz@gmail.com</span>
               </div>
             </div>
+          </div>
 
-            {/* Social Media */}
-            <div className="mt-6">
-              <h5 className="text-sm font-semibold mb-3 text-red-400">Redes Sociais</h5>
-              <div className="flex space-x-3">
-                <a 
-                  href="https://www.facebook.com/share/16ZqmDKz7N/?mibextid=wwXIfr" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  aria-label="Facebook do Colégio Leibniz"
-                >
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a 
-                  href="https://www.instagram.com/colegio.leibniz?igsh=bHZpa2tzMHZwYm41" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-pink-600 p-2 rounded-full hover:bg-pink-700 transition-colors"
-                  aria-label="Instagram do Colégio Leibniz"
-                >
-                  <Instagram className="h-4 w-4" />
-                </a>
-                <a href="#" className="bg-red-600 p-2 rounded-full hover:bg-red-700 transition-colors">
-                  <Youtube className="h-4 w-4" />
-                </a>
-              </div>
+          {/* Redes Sociais */}
+          <div>
+            <h4 className="text-lg font-bold mb-4 font-montserrat" style={{ color: '#fec10e' }}>
+              Redes Sociais
+            </h4>
+            <div className="flex space-x-3 mb-6">
+              <a 
+                href="https://www.facebook.com/share/16ZqmDKz7N/?mibextid=wwXIfr" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                style={{ backgroundColor: '#fec10e' }}
+                aria-label="Facebook do Colégio Leibniz"
+              >
+                <Facebook className="h-5 w-5" style={{ color: '#003366' }} />
+              </a>
+              <a 
+                href="https://www.instagram.com/colegio.leibniz?igsh=bHZpa2tzMHZwYm41" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                style={{ backgroundColor: '#fec10e' }}
+                aria-label="Instagram do Colégio Leibniz"
+              >
+                <Instagram className="h-5 w-5" style={{ color: '#003366' }} />
+              </a>
+              <a 
+                href="#" 
+                className="p-3 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                style={{ backgroundColor: '#fec10e' }}
+                aria-label="YouTube do Colégio Leibniz"
+              >
+                <Youtube className="h-5 w-5" style={{ color: '#003366' }} />
+              </a>
+            </div>
+            
+            <div className="text-xs text-white/80 font-montserrat">
+              <p className="mb-1">Horário de Funcionamento:</p>
+              <p>Seg-Sex: 7h às 18h</p>
+              <p>Sáb: 7h às 12h</p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
+            <p className="text-white/90 text-sm font-montserrat">
               © {currentYear} Colégio Leibniz. Todos os direitos reservados.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-300 text-sm hover:text-white transition-colors">
+            <div className="flex space-x-6 mt-4 md:mt-0 font-montserrat">
+              <a href="#" className="text-white/80 text-sm hover:text-white transition-colors hover:underline">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-gray-300 text-sm hover:text-white transition-colors">
+              <a href="#" className="text-white/80 text-sm hover:text-white transition-colors hover:underline">
                 Termos de Uso
               </a>
             </div>

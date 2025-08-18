@@ -17,12 +17,12 @@ const PageContent = ({ title, content, image, imageAlt, reverseLayout = false }:
           <div className={`grid lg:grid-cols-5 gap-12 lg:gap-16 items-center ${reverseLayout ? 'lg:grid-flow-col-dense' : ''}`}>
             {/* Content Column - 60% width (3/5) */}
             <div className={`lg:col-span-3 space-y-6 ${reverseLayout ? 'lg:order-2' : ''}`}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight font-montserrat">
                 {title}
               </h2>
               
               <div className="prose prose-lg max-w-none">
-                <div className="text-lg text-gray-700 leading-relaxed space-y-4">
+                <div className="text-lg text-muted-foreground leading-relaxed space-y-4 font-montserrat">
                   {content}
                 </div>
               </div>

@@ -35,7 +35,7 @@ const ImageGallery = ({ title, images, gridCols = 3 }: ImageGalleryProps) => {
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight font-montserrat">
               {title}
             </h2>
           </div>
@@ -60,7 +60,7 @@ const ImageGallery = ({ title, images, gridCols = 3 }: ImageGalleryProps) => {
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                    <p className="text-white font-semibold text-lg">
+                    <p className="text-white font-semibold text-lg font-montserrat">
                       {image.caption || image.alt}
                     </p>
                   </div>

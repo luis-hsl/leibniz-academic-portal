@@ -159,11 +159,11 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             {/* Coluna da Esquerda - Texto de Chamada (40%) */}
             <div className="lg:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight" style={{ color: '#003366' }}>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-montserrat" style={{ color: '#003366' }}>
                 Dê o primeiro passo para um futuro de excelência
               </h2>
               
-              <p className="text-lg leading-relaxed" style={{ color: '#333333' }}>
+              <p className="text-lg leading-relaxed font-montserrat" style={{ color: '#333333' }}>
                 Agende uma visita para conhecer de perto nossa estrutura, conversar com nossa equipe pedagógica e sentir a energia do Colégio Leibniz. Estamos prontos para receber sua família!
               </p>
               
@@ -194,7 +194,7 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Nome Completo */}
                     <div>
-                      <Label htmlFor="name" className="font-semibold text-lg mb-2 block" style={{ color: '#003366' }}>
+                      <Label htmlFor="name" className="font-semibold text-lg mb-2 block font-montserrat" style={{ color: '#003366' }}>
                         Nome Completo do Responsável *
                       </Label>
                       <Input

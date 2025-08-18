@@ -84,10 +84,10 @@ const OColegio = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 font-montserrat">
                 Nossos Diferenciais
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-montserrat">
                 Espaços modernos e equipamentos de última geração para proporcionar a melhor experiência educacional.
               </p>
             </div>
@@ -98,8 +98,8 @@ const OColegio = () => {
                   <div className="bg-primary/10 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
                     <BookOpen className="h-10 w-10 md:h-12 md:w-12 text-primary" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Salas Modernas</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">Salas climatizadas com tecnologia audiovisual avançada.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Salas Modernas</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Salas climatizadas com tecnologia audiovisual avançada.</p>
                 </CardContent>
               </Card>
 
@@ -108,8 +108,8 @@ const OColegio = () => {
                   <div className="bg-secondary/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
                     <Users className="h-10 w-10 md:h-12 md:w-12 text-secondary-foreground" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Laboratórios</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">Laboratórios de ciências e informática totalmente equipados.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Laboratórios</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Laboratórios de ciências e informática totalmente equipados.</p>
                 </CardContent>
               </Card>
 
@@ -118,8 +118,8 @@ const OColegio = () => {
                   <div className="bg-accent/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
                     <Trophy className="h-10 w-10 md:h-12 md:w-12 text-accent-foreground" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Quadra Esportiva</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">Espaço completo para atividades físicas e esportivas.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Quadra Esportiva</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Espaço completo para atividades físicas e esportivas.</p>
                 </CardContent>
               </Card>
 
@@ -128,8 +128,8 @@ const OColegio = () => {
                   <div className="bg-muted p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
                     <Building className="h-10 w-10 md:h-12 md:w-12 text-muted-foreground" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Biblioteca</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">Acervo rico e ambiente propício para estudos.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Biblioteca</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Acervo rico e ambiente propício para estudos.</p>
                 </CardContent>
               </Card>
             </div>
