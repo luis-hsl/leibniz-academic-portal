@@ -81,7 +81,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
       id="agendar"
       className="py-16 md:py-20 relative text-white overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('${collegeImage}')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${collegeImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
