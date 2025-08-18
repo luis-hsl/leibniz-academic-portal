@@ -155,208 +155,214 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
   };
 
   return (
-    <section id="agendar" className="py-16 md:py-20 lg:py-24 bg-muted/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-            {/* Coluna da Esquerda - Contexto e Confiança (40%) */}
-            <div className="lg:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
-                Dê o primeiro passo para um futuro de excelência
-              </h2>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Agende uma visita para conhecer de perto nossa estrutura, conversar com nossa equipe pedagógica e sentir a energia do Colégio Leibniz. Estamos prontos para receber sua família!
-              </p>
-              
-              {/* Imagem opcional */}
-              <div className="hidden lg:block">
-                <img
-                  src="/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png"
-                  alt="Equipe pedagógica do Colégio Leibniz"
-                  className="w-full h-auto rounded-2xl shadow-lg"
+    <section 
+      id="agendar" 
+      className="relative py-20 md:py-24 lg:py-32 min-h-screen flex items-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.95)), url('/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Título e Texto Centralizado */}
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Dê o primeiro passo para um futuro de excelência
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Agende uma visita para conhecer nossa estrutura e conversar com a equipe pedagógica
+            </p>
+          </div>
+
+          {/* Formulário com Glassmorphism */}
+          <div 
+            className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl"
+            style={{
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)'
+            }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Nome Completo */}
+              <div className="text-left">
+                <Label htmlFor="name" className="text-white font-semibold text-lg mb-2 block">
+                  Nome Completo do Responsável *
+                </Label>
+                <Input
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange("name", e.target.value)}
+                  placeholder="Digite seu nome completo"
+                  required
+                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white focus:bg-white/25 transition-all duration-300"
                 />
               </div>
-              
-              {/* Informações de contato para mobile */}
-              <div className="lg:hidden space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <span className="text-muted-foreground">(66) 99678-1284</span>
+
+              {/* E-mail e Telefone */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="text-left">
+                  <Label htmlFor="email" className="text-white font-semibold text-lg mb-2 block">
+                    E-mail *
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                    placeholder="seu@email.com"
+                    required
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white focus:bg-white/25 transition-all duration-300"
+                  />
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <span className="text-muted-foreground">Seg-Sex: 7h às 18h | Sáb: 7h às 12h</span>
+                <div className="text-left">
+                  <Label htmlFor="phone" className="text-white font-semibold text-lg mb-2 block">
+                    Telefone/WhatsApp *
+                  </Label>
+                  <Input
+                    id="phone"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                    placeholder="(66) 99999-9999"
+                    required
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white focus:bg-white/25 transition-all duration-300"
+                  />
                 </div>
               </div>
-            </div>
 
-            {/* Coluna da Direita - Formulário (60%) */}
-            <div className="lg:col-span-3">
-              <Card className="shadow-2xl border-0 bg-background">
-                <CardContent className="p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Linha 1: Nome Completo (100%) */}
-                    <div>
-                      <Label htmlFor="name" className="text-primary font-semibold">
-                        Nome Completo do Responsável *
-                      </Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
-                        placeholder="Digite seu nome completo"
-                        required
-                        className="mt-2 border-border focus:border-primary"
+              {/* Nível de Interesse */}
+              <div className="text-left">
+                <Label htmlFor="level" className="text-white font-semibold text-lg mb-2 block">
+                  Série/Nível de Interesse *
+                </Label>
+                <Select value={formData.level} onValueChange={(value) => handleInputChange("level", value)}>
+                  <SelectTrigger className="bg-white/20 border-white/30 text-white focus:border-white focus:bg-white/25 transition-all duration-300">
+                    <SelectValue placeholder="Selecione o nível pretendido" className="text-white/70" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white/95 backdrop-blur-lg border-white/30">
+                    <SelectItem value="infantil">Ensino Infantil</SelectItem>
+                    <SelectItem value="fundamental1">Fundamental I</SelectItem>
+                    <SelectItem value="fundamental2">Fundamental II</SelectItem>
+                    <SelectItem value="medio">Ensino Médio</SelectItem>
+                    <SelectItem value="preparatorio">Preparatório ENEM/Vestibular</SelectItem>
+                    <SelectItem value="extracurricular">Cursos Extracurriculares</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Data e Horário */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="text-left">
+                  <Label className="text-white font-semibold text-lg mb-2 block">
+                    Data Preferencial
+                  </Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          "w-full justify-start text-left font-normal bg-white/20 border-white/30 text-white hover:bg-white/25 focus:border-white transition-all duration-300",
+                          !formData.date && "text-white/70"
+                        )}
+                      >
+                        <Calendar className="mr-2 h-4 w-4" />
+                        {formData.date ? (
+                          formData.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
+                        ) : (
+                          <span>Selecione uma data</span>
+                        )}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0 z-50 bg-white/95 backdrop-blur-lg border-white/30" align="start">
+                      <CalendarComponent
+                        mode="single"
+                        selected={formData.date || undefined}
+                        onSelect={(date) => handleInputChange("date", date || null)}
+                        disabled={isDateDisabled}
+                        initialFocus
+                        weekStartsOn={0}
+                        className={cn("p-3 pointer-events-auto")}
+                        formatters={{
+                          formatCaption: (month: Date) => month.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }),
+                          formatWeekdayName: (date: Date) => date.toLocaleDateString('pt-BR', { weekday: 'short' })
+                        }}
+                        labels={{
+                          labelMonthDropdown: () => "Mês",
+                          labelYearDropdown: () => "Ano",
+                          labelNext: () => "Próximo mês",
+                          labelPrevious: () => "Mês anterior"
+                        }}
                       />
-                    </div>
+                    </PopoverContent>
+                  </Popover>
+                  {dayOfWeek === 0 && formData.date && (
+                    <p className="text-sm text-red-300 mt-1">
+                      Não atendemos aos domingos. Por favor, escolha outro dia.
+                    </p>
+                  )}
+                </div>
 
-                    {/* Linha 2: E-mail (50%) e Telefone (50%) */}
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="email" className="text-primary font-semibold">
-                          E-mail *
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
-                          placeholder="seu@email.com"
-                          required
-                          className="mt-2 border-border focus:border-primary"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="phone" className="text-primary font-semibold">
-                          Telefone/WhatsApp *
-                        </Label>
-                        <Input
-                          id="phone"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
-                          placeholder="(66) 99999-9999"
-                          required
-                          className="mt-2 border-border focus:border-primary"
-                        />
-                      </div>
-                    </div>
+                <div className="text-left">
+                  <Label htmlFor="time" className="text-white font-semibold text-lg mb-2 block">
+                    Horário Preferencial
+                  </Label>
+                  <Select 
+                    value={formData.time} 
+                    onValueChange={(value) => handleInputChange("time", value)}
+                    disabled={!formData.date || dayOfWeek === 0}
+                  >
+                    <SelectTrigger className="bg-white/20 border-white/30 text-white focus:border-white focus:bg-white/25 transition-all duration-300 disabled:opacity-50">
+                      <SelectValue placeholder="Selecione o horário" className="text-white/70" />
+                    </SelectTrigger>
+                    <SelectContent className="z-50 bg-white/95 backdrop-blur-lg border-white/30">
+                      {timeOptions.map((time) => (
+                        <SelectItem key={time} value={time}>
+                          {time}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {formData.date && dayOfWeek === 6 && (
+                    <p className="text-xs text-white/70 mt-1">
+                      <strong>Sábado:</strong> 07:00 às 12:00
+                    </p>
+                  )}
+                  {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
+                    <p className="text-xs text-white/70 mt-1">
+                      <strong>Seg-Sex:</strong> 7h às 18h
+                    </p>
+                  )}
+                </div>
+              </div>
 
-                    {/* Linha 3: Série/Nível de Interesse (100%) */}
-                    <div>
-                      <Label htmlFor="level" className="text-primary font-semibold">
-                        Série/Nível de Interesse *
-                      </Label>
-                      <Select value={formData.level} onValueChange={(value) => handleInputChange("level", value)}>
-                        <SelectTrigger className="mt-2 border-border focus:border-primary">
-                          <SelectValue placeholder="Selecione o nível pretendido" />
-                        </SelectTrigger>
-                        <SelectContent className="bg-background border-border">
-                          <SelectItem value="infantil">Ensino Infantil</SelectItem>
-                          <SelectItem value="fundamental1">Fundamental I</SelectItem>
-                          <SelectItem value="fundamental2">Fundamental II</SelectItem>
-                          <SelectItem value="medio">Ensino Médio</SelectItem>
-                          <SelectItem value="preparatorio">Preparatório ENEM/Vestibular</SelectItem>
-                          <SelectItem value="extracurricular">Cursos Extracurriculares</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+              {/* Botão de Envio - Destaque Visual */}
+              <div className="pt-6">
+                <Button 
+                  type="submit" 
+                  className="w-full bg-accent hover:bg-accent/90 text-primary text-xl py-6 font-bold tracking-wide uppercase shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                  style={{
+                    background: '#fec10e',
+                    color: '#003366'
+                  }}
+                >
+                  🎯 Agendar Minha Visita
+                </Button>
+              </div>
+            </form>
+          </div>
 
-                    {/* Linha 4: Data Preferencial (50%) e Horário (50%) */}
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <Label className="text-primary font-semibold">
-                          Data Preferencial
-                        </Label>
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <Button
-                              variant="outline"
-                              className={cn(
-                                "w-full justify-start text-left font-normal mt-2 border-border focus:border-primary",
-                                !formData.date && "text-muted-foreground"
-                              )}
-                            >
-                              <Calendar className="mr-2 h-4 w-4" />
-                              {formData.date ? (
-                                formData.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
-                              ) : (
-                                <span>Selecione uma data</span>
-                              )}
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent className="w-auto p-0 z-50 bg-background border-border" align="start">
-                            <CalendarComponent
-                              mode="single"
-                              selected={formData.date || undefined}
-                              onSelect={(date) => handleInputChange("date", date || null)}
-                              disabled={isDateDisabled}
-                              initialFocus
-                              weekStartsOn={0}
-                              className={cn("p-3 pointer-events-auto")}
-                              formatters={{
-                                formatCaption: (month: Date) => month.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }),
-                                formatWeekdayName: (date: Date) => date.toLocaleDateString('pt-BR', { weekday: 'short' })
-                              }}
-                              labels={{
-                                labelMonthDropdown: () => "Mês",
-                                labelYearDropdown: () => "Ano",
-                                labelNext: () => "Próximo mês",
-                                labelPrevious: () => "Mês anterior"
-                              }}
-                            />
-                          </PopoverContent>
-                        </Popover>
-                        {dayOfWeek === 0 && formData.date && (
-                          <p className="text-sm text-destructive mt-1">
-                            Não atendemos aos domingos. Por favor, escolha outro dia.
-                          </p>
-                        )}
-                      </div>
-
-                      <div>
-                        <Label htmlFor="time" className="text-primary font-semibold">
-                          Horário Preferencial
-                        </Label>
-                        <Select 
-                          value={formData.time} 
-                          onValueChange={(value) => handleInputChange("time", value)}
-                          disabled={!formData.date || dayOfWeek === 0}
-                        >
-                          <SelectTrigger className="mt-2 border-border focus:border-primary">
-                            <SelectValue placeholder="Selecione o horário" />
-                          </SelectTrigger>
-                          <SelectContent className="z-50 bg-background border-border">
-                            {timeOptions.map((time) => (
-                              <SelectItem key={time} value={time}>
-                                {time}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        {formData.date && dayOfWeek === 6 && (
-                          <p className="text-xs text-muted-foreground mt-1">
-                            <strong>Sábado:</strong> 07:00 às 12:00
-                          </p>
-                        )}
-                        {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
-                          <p className="text-xs text-muted-foreground mt-1">
-                            <strong>Seg-Sex:</strong> 7h às 18h
-                          </p>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Botão de Envio */}
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6 font-bold tracking-wide uppercase shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Agendar Minha Visita
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+          {/* Informações de Contato Resumidas */}
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-white/90">
+            <div className="flex items-center space-x-2">
+              <Phone className="h-5 w-5" />
+              <span>(66) 99678-1284</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Clock className="h-5 w-5" />
+              <span>Seg-Sex: 7h às 18h</span>
             </div>
           </div>
         </div>
