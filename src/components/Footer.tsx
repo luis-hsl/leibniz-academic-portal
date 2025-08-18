@@ -17,9 +17,6 @@ const Footer = () => {
                 className="h-12 w-auto"
               />
             </div>
-            <h3 className="text-xl font-bold mb-4 font-montserrat" style={{ color: '#fec10e' }}>
-              Colégio Leibniz
-            </h3>
             <p className="text-white/90 text-sm leading-relaxed font-montserrat">
               Mais de 21 anos de experiência em educação de qualidade, 
               preparando alunos para o sucesso acadêmico e pessoal com excelência e dedicação.
