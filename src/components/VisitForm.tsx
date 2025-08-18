@@ -9,7 +9,6 @@ import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import backgroundImage from "@/assets/visit-form-background.jpg";
 
 const collegeImage = "/lovable-uploads/c3071e40-1c77-41ef-b48b-82cc6db2fdfa.png";
 
@@ -101,86 +100,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Texto e informações de contato à esquerda */}
-            <div className="space-y-6">
-              <div className="inline-block bg-secondary backdrop-blur-sm rounded-full px-4 py-2 border border-secondary/30">
-                <span className="text-sm font-semibold text-primary">Agende uma Visita</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat">
-                Dê o primeiro passo para um futuro de excelência
-              </h2>
-              
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Preencha os campos ao lado para agendar sua visita. Nossa equipe entrará em contato para confirmar todos os detalhes.
-              </p>
-
-              {/* Cards de informações de contato */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                {/* Localização */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                  <div className="absolute -top-6 left-6">
-                    <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
-                      <MapPin className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="pt-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Localização</h3>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-1">
-                      <p>Avenida Paulista, 720</p>
-                      <p>Parque Sagrada Família</p>
-                      <p>Rondonópolis - MT, 78735-223</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Contatos */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                  <div className="absolute -top-6 left-6">
-                    <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
-                      <Phone className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="pt-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Contatos</h3>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-2">
-                      <a href="tel:6634218824" className="flex items-center hover:text-primary transition-colors">
-                        <Phone className="h-3 w-3 mr-2" />
-                        (66) 3421-8824
-                      </a>
-                      <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                        <Phone className="h-3 w-3 mr-2" />
-                        (66) 99678-1284
-                      </a>
-                      <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-primary transition-colors">
-                        <Mail className="h-3 w-3 mr-2" />
-                        admleibniz@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Horário de Funcionamento */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 md:col-span-2">
-                  <div className="absolute -top-6 left-6">
-                    <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
-                      <Clock className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <div className="pt-8">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Horário de Funcionamento</h3>
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-1">
-                      <p>Segunda à Sexta: 7h às 18h</p>
-                      <p>Sábado: 7h às 12h</p>
-                      <p>Domingo: Fechado</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cards do formulário à direita */}
-            <div className="space-y-6">
+            {/* Cards do formulário - aparecem primeiro no mobile */}
+            <div className="space-y-6 order-1 lg:order-2">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Card 1: Informações do Responsável */}
                 <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
@@ -348,6 +269,84 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                   </Button>
                 </div>
               </form>
+            </div>
+
+            {/* Texto e informações de contato - aparecem depois no mobile */}
+            <div className="space-y-6 order-2 lg:order-1">
+              <div className="inline-block bg-secondary backdrop-blur-sm rounded-full px-4 py-2 border border-secondary/30">
+                <span className="text-sm font-semibold text-primary">Agende uma Visita</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat">
+                Dê o primeiro passo para um futuro de excelência
+              </h2>
+              
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Preencha os campos ao lado para agendar sua visita. Nossa equipe entrará em contato para confirmar todos os detalhes.
+              </p>
+
+              {/* Cards de informações de contato */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                {/* Localização */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
+                      <MapPin className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="pt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Localização</h3>
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                      <p>Avenida Paulista, 720</p>
+                      <p>Parque Sagrada Família</p>
+                      <p>Rondonópolis - MT, 78735-223</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Contatos */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
+                      <Phone className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="pt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Contatos</h3>
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-2">
+                      <a href="tel:6634218824" className="flex items-center hover:text-primary transition-colors">
+                        <Phone className="h-3 w-3 mr-2" />
+                        (66) 3421-8824
+                      </a>
+                      <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                        <Phone className="h-3 w-3 mr-2" />
+                        (66) 99678-1284
+                      </a>
+                      <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-primary transition-colors">
+                        <Mail className="h-3 w-3 mr-2" />
+                        admleibniz@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Horário de Funcionamento */}
+                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 md:col-span-2">
+                  <div className="absolute -top-6 left-6">
+                    <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
+                      <Clock className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="pt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Horário de Funcionamento</h3>
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                      <p>Segunda à Sexta: 7h às 18h</p>
+                      <p>Sábado: 7h às 12h</p>
+                      <p>Domingo: Fechado</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
