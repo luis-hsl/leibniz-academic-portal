@@ -5,7 +5,6 @@ import About from "@/components/About";
 import EducationLevelCards from "@/components/EducationLevelCards";
 import UniversityApproval from "@/components/UniversityApproval";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
-import FAQ from "@/components/FAQ";
 import VisitForm from "@/components/VisitForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -24,7 +23,6 @@ const Index = () => {
       <EducationLevelCards />
       <UniversityApproval />
       <InstitutionalVideo size="small" />
-      <FAQ />
       <VisitForm />
       <Contact />
       <Footer />
