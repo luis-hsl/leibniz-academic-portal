@@ -37,10 +37,10 @@ const Contact = () => {
               <MapPin className="h-8 w-8 text-accent mr-4" style={{ color: '#fec10e' }} />
               <h3 className="text-xl font-semibold text-white">Localização</h3>
             </div>
-            <div className="space-y-3 text-white">
-              <p>Avenida Paulista, 720</p>
-              <p>Parque Sagrada Família</p>
-              <p>Rondonópolis - MT, 78735-223</p>
+            <div className="space-y-3">
+              <p className="text-white font-medium">Avenida Paulista, 720</p>
+              <p className="text-white font-medium">Parque Sagrada Família</p>
+              <p className="text-white font-medium">Rondonópolis - MT, 78735-223</p>
             </div>
           </div>
 
@@ -98,10 +98,10 @@ const Contact = () => {
               <Clock className="h-8 w-8 text-accent mr-4" style={{ color: '#fec10e' }} />
               <h3 className="text-xl font-semibold text-white">Funcionamento</h3>
             </div>
-            <div className="space-y-3 text-white">
-              <p>Segunda à sexta: 7h às 23h</p>
-              <p>Sábado: 7h às 18h</p>
-              <p>Domingo: Fechado</p>
+            <div className="space-y-3">
+              <p className="text-white font-medium">Segunda à sexta: 7h às 23h</p>
+              <p className="text-white font-medium">Sábado: 7h às 18h</p>
+              <p className="text-white font-medium">Domingo: Fechado</p>
             </div>
           </div>
         </div>
