@@ -68,7 +68,7 @@ const InteractiveDependencyCard = ({
       {/* Expanded Modal */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-          <div className="relative max-w-6xl w-full h-[85vh] max-h-[90vh] bg-white rounded-2xl overflow-hidden">
+          <div className="relative w-[95%] max-w-[900px] max-h-[80vh] bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
             {/* Close Button */}
             <button
               onClick={() => setIsExpanded(false)}
@@ -77,14 +77,13 @@ const InteractiveDependencyCard = ({
               <X className="w-6 h-6" />
             </button>
 
-            <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
-              {/* Image Section */}
-              <div className="relative bg-gray-100 h-full">
-                <OptimizedImage
-                  src={images[currentImageIndex].src}
-                  alt={images[currentImageIndex].alt}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+            {/* Image Section - 70% width */}
+            <div className="relative flex-[0_0_70%] h-[250px] md:h-[400px] bg-gray-100">
+              <OptimizedImage
+                src={images[currentImageIndex].src}
+                alt={images[currentImageIndex].alt}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
                 
                 {/* Image Navigation */}
                 {images.length > 1 && (
@@ -110,36 +109,35 @@ const InteractiveDependencyCard = ({
                 )}
               </div>
 
-              {/* Content Section */}
-              <div className="p-8 flex flex-col justify-center overflow-auto">
-                <h2 className="text-3xl font-bold text-primary mb-6 font-montserrat">
-                  {title}
-                </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  {description}
-                </p>
+            {/* Content Section - 30% width */}
+            <div className="flex-1 p-6 md:p-8 flex flex-col justify-center overflow-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6 font-montserrat">
+                {title}
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4 md:mb-6">
+                {description}
+              </p>
 
-                {/* Image Thumbnails */}
-                {images.length > 1 && (
-                  <div className="grid grid-cols-4 gap-2">
-                    {images.map((image, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`aspect-square rounded-lg overflow-hidden ${
-                          index === currentImageIndex ? 'ring-2 ring-primary' : ''
-                        }`}
-                      >
-                        <OptimizedImage
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-full object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* Image Thumbnails */}
+              {images.length > 1 && (
+                <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+                  {images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`aspect-square rounded-lg overflow-hidden transition-all ${
+                        index === currentImageIndex ? 'ring-2 ring-primary' : 'hover:ring-1 hover:ring-gray-300'
+                      }`}
+                    >
+                      <OptimizedImage
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
