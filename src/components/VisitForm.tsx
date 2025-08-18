@@ -155,66 +155,103 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
   };
 
   return (
-    <section id="agendar" className="section-padding bg-gradient-to-br from-red-600 to-blue-800">
-      <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Agende Sua Visita</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Venha conhecer nossa estrutura, metodologia e equipe. Agende uma visita personalizada e descubra por que somos referência em educação.
-            </p>
-          </div>
+    <section id="agendar" className="py-16 md:py-20 lg:py-24 bg-muted/50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            {/* Coluna da Esquerda - Contexto e Confiança (40%) */}
+            <div className="lg:col-span-2 space-y-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                Dê o primeiro passo para um futuro de excelência
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Agende uma visita para conhecer de perto nossa estrutura, conversar com nossa equipe pedagógica e sentir a energia do Colégio Leibniz. Estamos prontos para receber sua família!
+              </p>
+              
+              {/* Imagem opcional */}
+              <div className="hidden lg:block">
+                <img
+                  src="/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png"
+                  alt="Equipe pedagógica do Colégio Leibniz"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
+              </div>
+              
+              {/* Informações de contato para mobile */}
+              <div className="lg:hidden space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span className="text-muted-foreground">(66) 99678-1284</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Clock className="h-5 w-5 text-primary" />
+                  <span className="text-muted-foreground">Seg-Sex: 7h às 18h | Sáb: 7h às 12h</span>
+                </div>
+              </div>
+            </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Form */}
-            <Card className="shadow-2xl">
-              <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Formulário de Agendamento</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+            {/* Coluna da Direita - Formulário (60%) */}
+            <div className="lg:col-span-3">
+              <Card className="shadow-2xl border-0 bg-background">
+                <CardContent className="p-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Linha 1: Nome Completo (100%) */}
                     <div>
-                      <Label htmlFor="name">Nome Completo *</Label>
+                      <Label htmlFor="name" className="text-primary font-semibold">
+                        Nome Completo do Responsável *
+                      </Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         placeholder="Digite seu nome completo"
                         required
+                        className="mt-2 border-border focus:border-primary"
                       />
                     </div>
-                    <div>
-                      <Label htmlFor="email">E-mail *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
-                        placeholder="seu@email.com"
-                        required
-                      />
-                    </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="phone">Telefone/WhatsApp *</Label>
-                      <Input
-                        id="phone"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="(66) 99999-9999"
-                        required
-                      />
+                    {/* Linha 2: E-mail (50%) e Telefone (50%) */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="email" className="text-primary font-semibold">
+                          E-mail *
+                        </Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          placeholder="seu@email.com"
+                          required
+                          className="mt-2 border-border focus:border-primary"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone" className="text-primary font-semibold">
+                          Telefone/WhatsApp *
+                        </Label>
+                        <Input
+                          id="phone"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange("phone", e.target.value)}
+                          placeholder="(66) 99999-9999"
+                          required
+                          className="mt-2 border-border focus:border-primary"
+                        />
+                      </div>
                     </div>
+
+                    {/* Linha 3: Série/Nível de Interesse (100%) */}
                     <div>
-                      <Label htmlFor="level">Nível Pretendido *</Label>
+                      <Label htmlFor="level" className="text-primary font-semibold">
+                        Série/Nível de Interesse *
+                      </Label>
                       <Select value={formData.level} onValueChange={(value) => handleInputChange("level", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecione o nível" />
+                        <SelectTrigger className="mt-2 border-border focus:border-primary">
+                          <SelectValue placeholder="Selecione o nível pretendido" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-background border-border">
                           <SelectItem value="infantil">Ensino Infantil</SelectItem>
                           <SelectItem value="fundamental1">Fundamental I</SelectItem>
                           <SelectItem value="fundamental2">Fundamental II</SelectItem>
@@ -224,152 +261,100 @@ Aguardo retorno para confirmar a visita. Obrigado!`;
                         </SelectContent>
                       </Select>
                     </div>
-                  </div>
 
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="shift">Turno Desejado</Label>
-                      <Select value={formData.shift} onValueChange={(value) => handleInputChange("shift", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecione" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="manha">Manhã</SelectItem>
-                          <SelectItem value="tarde">Tarde</SelectItem>
-                        </SelectContent>
-                      </Select>
+                    {/* Linha 4: Data Preferencial (50%) e Horário (50%) */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <Label className="text-primary font-semibold">
+                          Data Preferencial
+                        </Label>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <Button
+                              variant="outline"
+                              className={cn(
+                                "w-full justify-start text-left font-normal mt-2 border-border focus:border-primary",
+                                !formData.date && "text-muted-foreground"
+                              )}
+                            >
+                              <Calendar className="mr-2 h-4 w-4" />
+                              {formData.date ? (
+                                formData.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
+                              ) : (
+                                <span>Selecione uma data</span>
+                              )}
+                            </Button>
+                          </PopoverTrigger>
+                          <PopoverContent className="w-auto p-0 z-50 bg-background border-border" align="start">
+                            <CalendarComponent
+                              mode="single"
+                              selected={formData.date || undefined}
+                              onSelect={(date) => handleInputChange("date", date || null)}
+                              disabled={isDateDisabled}
+                              initialFocus
+                              weekStartsOn={0}
+                              className={cn("p-3 pointer-events-auto")}
+                              formatters={{
+                                formatCaption: (month: Date) => month.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }),
+                                formatWeekdayName: (date: Date) => date.toLocaleDateString('pt-BR', { weekday: 'short' })
+                              }}
+                              labels={{
+                                labelMonthDropdown: () => "Mês",
+                                labelYearDropdown: () => "Ano",
+                                labelNext: () => "Próximo mês",
+                                labelPrevious: () => "Mês anterior"
+                              }}
+                            />
+                          </PopoverContent>
+                        </Popover>
+                        {dayOfWeek === 0 && formData.date && (
+                          <p className="text-sm text-destructive mt-1">
+                            Não atendemos aos domingos. Por favor, escolha outro dia.
+                          </p>
+                        )}
+                      </div>
+
+                      <div>
+                        <Label htmlFor="time" className="text-primary font-semibold">
+                          Horário Preferencial
+                        </Label>
+                        <Select 
+                          value={formData.time} 
+                          onValueChange={(value) => handleInputChange("time", value)}
+                          disabled={!formData.date || dayOfWeek === 0}
+                        >
+                          <SelectTrigger className="mt-2 border-border focus:border-primary">
+                            <SelectValue placeholder="Selecione o horário" />
+                          </SelectTrigger>
+                          <SelectContent className="z-50 bg-background border-border">
+                            {timeOptions.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        {formData.date && dayOfWeek === 6 && (
+                          <p className="text-xs text-muted-foreground mt-1">
+                            <strong>Sábado:</strong> 07:00 às 12:00
+                          </p>
+                        )}
+                        {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
+                          <p className="text-xs text-muted-foreground mt-1">
+                            <strong>Seg-Sex:</strong> 7h às 18h
+                          </p>
+                        )}
+                      </div>
                     </div>
 
-                    <div>
-                      <Label>Data Preferencial</Label>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className={cn(
-                              "w-full justify-start text-left font-normal",
-                              !formData.date && "text-muted-foreground"
-                            )}
-                          >
-                            <Calendar className="mr-2 h-4 w-4" />
-                            {formData.date ? (
-                              formData.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
-                            ) : (
-                              <span>Selecione uma data</span>
-                            )}
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0 z-50" align="start">
-                          <CalendarComponent
-                            mode="single"
-                            selected={formData.date || undefined}
-                            onSelect={(date) => handleInputChange("date", date || null)}
-                            disabled={isDateDisabled}
-                            initialFocus
-                            weekStartsOn={0}
-                            className={cn("p-3 pointer-events-auto")}
-                            formatters={{
-                              formatCaption: (month: Date) => month.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }),
-                              formatWeekdayName: (date: Date) => date.toLocaleDateString('pt-BR', { weekday: 'short' })
-                            }}
-                            labels={{
-                              labelMonthDropdown: () => "Mês",
-                              labelYearDropdown: () => "Ano",
-                              labelNext: () => "Próximo mês",
-                              labelPrevious: () => "Mês anterior"
-                            }}
-                          />
-                        </PopoverContent>
-                      </Popover>
-                      {dayOfWeek === 0 && formData.date && (
-                        <p className="text-sm text-red-600 mt-1">
-                          Não atendemos aos domingos. Por favor, escolha outro dia.
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <Label htmlFor="time">Horário Preferencial</Label>
-                      <Select 
-                        value={formData.time} 
-                        onValueChange={(value) => handleInputChange("time", value)}
-                        disabled={!formData.date || dayOfWeek === 0}
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecione o horário" />
-                        </SelectTrigger>
-                        <SelectContent className="z-50">
-                          {timeOptions.map((time) => (
-                            <SelectItem key={time} value={time}>
-                              {time}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      {formData.date && dayOfWeek === 6 && (
-                        <p className="text-xs text-gray-600 mt-1">
-                          <strong>Sábado disponível:</strong> 07:00 às 12:00
-                        </p>
-                      )}
-                      {formData.date && dayOfWeek >= 1 && dayOfWeek <= 5 && (
-                        <p className="text-xs text-gray-600 mt-1">
-                          <strong>Seg-Sex:</strong> 7h às 18h
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-red-600 hover:bg-red-700 text-white text-lg py-3"
-                  >
-                    Confirmar Visita
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card className="bg-white/10 backdrop-blur-sm text-white border-white/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <MapPin className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold text-white">Localização</h3>
-                  </div>
-                  <p className="text-white">
-                    Avenida Paulista, 720<br />
-                    Parque Sagrada Família<br />
-                    Rondonópolis - MT, 78735-223
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 backdrop-blur-sm text-white border-white/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Phone className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold text-white">Contatos</h3>
-                  </div>
-                  <div className="space-y-2 text-white">
-                    <p className="text-white">📞 (66) 3421-8824</p>
-                    <p className="text-white">📱 (66) 99678-1284</p>
-                    <p className="text-white">✉️ admleibniz@gmail.com</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 backdrop-blur-sm text-white border-white/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Clock className="h-6 w-6 text-yellow-300" />
-                    <h3 className="text-xl font-bold text-white">Horário de Funcionamento</h3>
-                  </div>
-                  <div className="space-y-1 text-white">
-                    <p className="text-white">Segunda a Sexta: 7h às 18h</p>
-                    <p className="text-white">Sábado: 7h às 12h</p>
-                    <p className="text-white">Domingo: Fechado</p>
-                  </div>
+                    {/* Botão de Envio */}
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6 font-bold tracking-wide uppercase shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      Agendar Minha Visita
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
             </div>
