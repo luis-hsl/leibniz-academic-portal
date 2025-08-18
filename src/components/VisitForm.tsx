@@ -114,8 +114,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                     <h3 className="text-xl font-bold text-gray-900 mb-4">Seus Dados</h3>
                     
                     <div>
-                      <Label htmlFor="nome" className="text-primary font-medium text-sm">
-                        Nome Completo *
+                      <Label htmlFor="nome" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        Nome Completo do Responsável
                       </Label>
                       <Input
                         id="nome"
@@ -130,8 +130,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="email" className="text-primary font-medium text-sm">
-                          E-mail *
+                        <Label htmlFor="email" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                          E-mail do Responsável
                         </Label>
                         <Input
                           id="email"
@@ -145,8 +145,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                       </div>
 
                       <div>
-                        <Label htmlFor="telefone" className="text-primary font-medium text-sm">
-                          Telefone/WhatsApp *
+                        <Label htmlFor="telefone" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                          Telefone/WhatsApp do Responsável
                         </Label>
                         <Input
                           id="telefone"
@@ -173,8 +173,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                     <h3 className="text-xl font-bold text-gray-900 mb-4">Nível de Interesse</h3>
                     
                     <div>
-                      <Label htmlFor="nivelPretendido" className="text-primary font-medium text-sm">
-                        Série/Nível de Interesse *
+                      <Label htmlFor="nivelPretendido" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        Série/Nível de Interesse do Aluno
                       </Label>
                       <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
                         <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
@@ -203,8 +203,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label className="text-primary font-medium text-sm">
-                          Data Preferencial
+                        <Label className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                          Data Preferencial para Visita
                         </Label>
                         <Popover>
                           <PopoverTrigger asChild>
@@ -236,8 +236,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                       </div>
 
                       <div>
-                        <Label htmlFor="horarioPreferencial" className="text-primary font-medium text-sm">
-                          Horário Preferencial
+                        <Label htmlFor="horarioPreferencial" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                          Horário Preferencial para Visita
                         </Label>
                         <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
                           <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
