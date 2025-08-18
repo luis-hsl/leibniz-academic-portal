@@ -77,13 +77,13 @@ const InteractiveDependencyCard = ({
               <X className="w-6 h-6" />
             </button>
 
-            <div className="grid lg:grid-cols-2 h-full">
+            <div className="grid lg:grid-cols-2 h-full max-h-[90vh]">
               {/* Image Section */}
-              <div className="relative bg-gray-100">
+              <div className="relative bg-gray-100 min-h-[50vh] lg:min-h-full">
                 <OptimizedImage
                   src={images[currentImageIndex].src}
                   alt={images[currentImageIndex].alt}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 
                 {/* Image Navigation */}
