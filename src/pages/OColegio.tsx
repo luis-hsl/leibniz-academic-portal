@@ -2,6 +2,8 @@ import PageLayout from "@/components/layout/PageLayout";
 import PageContent from "@/components/layout/PageContent";
 import ImageGallery from "@/components/layout/ImageGallery";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
+import ValuesSection from "@/components/ValuesSection";
+import VisitForm from "@/components/VisitForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building, Trophy, BookOpen } from "lucide-react";
 
@@ -70,7 +72,7 @@ const OColegio = () => {
     >
       {/* Conteúdo Principal */}
       <PageContent
-        title="Nossa Infraestrutura"
+        title="Nossa História e Missão"
         content={contentText}
         image="/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png"
         imageAlt="Fachada do Colégio Leibniz"
@@ -137,12 +139,18 @@ const OColegio = () => {
         </div>
       </section>
 
+      {/* Seção de Valores */}
+      <ValuesSection />
+
       {/* Galeria de Imagens */}
       <ImageGallery
         title="Conheça Nossos Espaços"
         images={galleryImages}
         gridCols={3}
       />
+
+      {/* Formulário de Agendamento de Visita */}
+      <VisitForm />
     </PageLayout>
   );
 };
