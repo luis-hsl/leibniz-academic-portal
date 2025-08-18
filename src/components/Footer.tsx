@@ -128,9 +128,10 @@ const Footer = () => {
             </div>
             
             <div className="text-xs text-white font-montserrat">
-              <p className="mb-1">Horário de Funcionamento:</p>
-              <p>Seg-Sex: 7h às 18h</p>
-              <p>Sáb: 7h às 12h</p>
+              <p className="mb-1 text-white">Funcionamento:</p>
+              <p className="text-white">Segunda à sexta: 7h às 23h</p>
+              <p className="text-white">Sábado: 7h às 18h</p>
+              <p className="text-white">Domingo: Fechado</p>
             </div>
           </div>
         </div>
