@@ -8,36 +8,36 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(61) 3333-4444",
+      content: "(66) 3421-8824",
       description: "Segunda a sexta, 7h às 18h",
-      action: "tel:+556133334444"
-    },
-    {
-      icon: Mail,
-      title: "E-mail",
-      content: "contato@colegiolebniz.com.br",
-      description: "Resposta em até 24 horas",
-      action: "mailto:contato@colegiolebniz.com.br"
-    },
-    {
-      icon: MapPin,
-      title: "Endereço",
-      content: "SGAS 915, Conjunto B",
-      description: "Asa Sul, Brasília - DF",
-      action: "https://maps.google.com/?q=SGAS+915+Conjunto+B+Brasília"
+      action: "tel:6634218824"
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      content: "(61) 99999-8888",
+      content: "(66) 99678-1284",
       description: "Atendimento rápido e personalizado",
-      action: "https://wa.me/5561999998888"
+      action: "https://wa.me/5566996781284"
+    },
+    {
+      icon: Mail,
+      title: "E-mail",
+      content: "admleibniz@gmail.com",
+      description: "Resposta em até 24 horas",
+      action: "mailto:admleibniz@gmail.com"
+    },
+    {
+      icon: MapPin,
+      title: "Endereço",
+      content: "Avenida Paulista, 720",
+      description: "Parque Sagrada Família, Rondonópolis - MT",
+      action: "https://maps.google.com/?q=Avenida+Paulista+720+Rondonópolis+MT"
     }
   ];
 
   const schedules = [
-    { day: "Segunda a Sexta", time: "7h00 às 18h00" },
-    { day: "Sábado", time: "8h00 às 12h00" },
+    { day: "Segunda à Sexta", time: "7h às 18h" },
+    { day: "Sábado", time: "7h às 12h" },
     { day: "Domingo", time: "Fechado" }
   ];
 
