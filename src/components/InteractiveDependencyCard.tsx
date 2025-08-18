@@ -68,7 +68,7 @@ const InteractiveDependencyCard = ({
       {/* Expanded Modal */}
       {isExpanded && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-          <div className="relative w-[95%] max-w-[900px] max-h-[80vh] md:h-[80vh] bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
+          <div className="relative w-[95%] max-w-[900px] max-h-[80vh] bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
             {/* Close Button */}
             <button
               onClick={() => setIsExpanded(false)}
@@ -78,7 +78,7 @@ const InteractiveDependencyCard = ({
             </button>
 
             {/* Image Section - 70% width */}
-            <div className="relative flex-[0_0_70%] h-[250px] md:h-full bg-gray-100 overflow-hidden">
+            <div className="relative flex-[0_0_70%] h-[250px] md:h-[400px] bg-gray-100">
               <OptimizedImage
                 src={images[currentImageIndex].src}
                 alt={images[currentImageIndex].alt}
