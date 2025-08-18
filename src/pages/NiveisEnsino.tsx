@@ -2,47 +2,12 @@
 import { useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import PageContent from "@/components/layout/PageContent";
-import ImageGallery from "@/components/layout/ImageGallery";
 import EducationLevelCards from "@/components/EducationLevelCards";
 
 const NiveisEnsino = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // Imagens para a galeria dos níveis de ensino
-  const educationImages = [
-    {
-      src: "/lovable-uploads/4470caf6-adf0-4120-9419-9d5dafe58eb4.png",
-      alt: "Ensino Infantil",
-      caption: "Ensino Infantil"
-    },
-    {
-      src: "/lovable-uploads/49d1f717-adb4-4cee-98b6-0e7803b500b6.png",
-      alt: "Ensino Fundamental I",
-      caption: "Ensino Fundamental I"
-    },
-    {
-      src: "/lovable-uploads/4e7cac39-b935-4776-b7e1-c143aba0a331.png",
-      alt: "Ensino Fundamental II",
-      caption: "Ensino Fundamental II"
-    },
-    {
-      src: "/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png",
-      alt: "Ensino Médio",
-      caption: "Ensino Médio"
-    },
-    {
-      src: "/lovable-uploads/515ba1f1-7740-43ba-a854-6403931cb17b.png",
-      alt: "Preparatório para Vestibulares",
-      caption: "Preparatório"
-    },
-    {
-      src: "/lovable-uploads/5814f72e-8902-454f-ade2-817bb032b306.png",
-      alt: "Atividades extracurriculares",
-      caption: "Atividades Extras"
-    }
-  ];
 
   const contentText = (
     <>
@@ -83,12 +48,6 @@ const NiveisEnsino = () => {
       {/* Cards dos Níveis de Ensino */}
       <EducationLevelCards />
 
-      {/* Galeria de Imagens */}
-      <ImageGallery
-        title="Nossos Níveis de Ensino"
-        images={educationImages}
-        gridCols={3}
-      />
     </PageLayout>
   );
 };
