@@ -88,9 +88,9 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <Card className="shadow-2xl border-0 bg-white">
-              <CardHeader className="pb-6">
-                <CardTitle className="text-2xl font-bold text-gray-900">
+            <Card className="shadow-2xl border-0 bg-card">
+              <CardHeader className="text-center bg-gradient-to-r from-primary to-secondary text-white rounded-t-lg pb-6">
+                <CardTitle className="text-2xl md:text-3xl font-bold font-montserrat text-primary-foreground">
                   Formulário de Agendamento
                 </CardTitle>
               </CardHeader>
@@ -98,7 +98,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="nome" className="text-gray-900 font-medium">
+                      <Label htmlFor="nome" className="text-foreground font-medium">
                         Nome Completo *
                       </Label>
                       <Input
@@ -113,7 +113,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                     </div>
 
                     <div>
-                      <Label htmlFor="email" className="text-gray-900 font-medium">
+                      <Label htmlFor="email" className="text-foreground font-medium">
                         E-mail *
                       </Label>
                       <Input
@@ -130,7 +130,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="telefone" className="text-gray-900 font-medium">
+                      <Label htmlFor="telefone" className="text-foreground font-medium">
                         Telefone/WhatsApp *
                       </Label>
                       <Input
@@ -145,7 +145,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                     </div>
 
                     <div>
-                      <Label htmlFor="nivelPretendido" className="text-gray-900 font-medium">
+                      <Label htmlFor="nivelPretendido" className="text-foreground font-medium">
                         Nível Pretendido *
                       </Label>
                       <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
@@ -163,7 +163,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                   </div>
 
                   <div>
-                    <Label htmlFor="turnoDesejado" className="text-gray-900 font-medium">
+                    <Label htmlFor="turnoDesejado" className="text-foreground font-medium">
                       Turno Desejado
                     </Label>
                     <Select value={formData.turnoDesejado} onValueChange={(value) => handleInputChange("turnoDesejado", value)}>
@@ -179,7 +179,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                   </div>
 
                   <div>
-                    <Label className="text-gray-900 font-medium">
+                    <Label className="text-foreground font-medium">
                       Data Preferencial
                     </Label>
                     <Popover>
@@ -212,7 +212,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                   </div>
 
                   <div>
-                    <Label htmlFor="horarioPreferencial" className="text-gray-900 font-medium">
+                    <Label htmlFor="horarioPreferencial" className="text-foreground font-medium">
                       Horário Preferencial
                     </Label>
                     <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
@@ -234,7 +234,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
 
                   <Button
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 text-lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 text-lg"
                   >
                     Confirmar Visita
                   </Button>
