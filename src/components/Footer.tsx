@@ -127,7 +127,7 @@ const Footer = () => {
               </a>
             </div>
             
-            <div className="text-xs text-white/80 font-montserrat">
+            <div className="text-xs text-white font-montserrat">
               <p className="mb-1">Horário de Funcionamento:</p>
               <p>Seg-Sex: 7h às 18h</p>
               <p>Sáb: 7h às 12h</p>
