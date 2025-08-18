@@ -1,6 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
 import PageContent from "@/components/layout/PageContent";
-import ImageGallery from "@/components/layout/ImageGallery";
 import InstitutionalVideo from "@/components/InstitutionalVideo";
 import ValuesSection from "@/components/ValuesSection";
 import VisitForm from "@/components/VisitForm";
@@ -8,40 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Users, Building, Trophy, BookOpen } from "lucide-react";
 
 const OColegio = () => {
-  // Imagens para a galeria
-  const galleryImages = [
-    {
-      src: "/lovable-uploads/2784febf-3d6e-4519-a30c-fc0df6826ec8.png",
-      alt: "Fachada do Colégio Leibniz",
-      caption: "Fachada Principal"
-    },
-    {
-      src: "/lovable-uploads/29b2ff3c-66d9-4e32-91ea-59d1ccaa7c34.png",
-      alt: "Sala de aula moderna",
-      caption: "Salas Modernas"
-    },
-    {
-      src: "/lovable-uploads/2f1f5d03-9300-4d9c-a7a0-f3c7c3fd695e.png",
-      alt: "Laboratório de ciências",
-      caption: "Laboratórios"
-    },
-    {
-      src: "/lovable-uploads/36d3fb86-af9f-4488-ba40-4154b1e5d209.png",
-      alt: "Biblioteca do colégio",
-      caption: "Biblioteca"
-    },
-    {
-      src: "/lovable-uploads/3eeb7c0e-e277-4ed2-80d2-fa502cd40936.png",
-      alt: "Quadra esportiva",
-      caption: "Quadra Esportiva"
-    },
-    {
-      src: "/lovable-uploads/4223a8e5-5cbb-4352-bff7-fad5d0c7d664.png",
-      alt: "Área de convivência",
-      caption: "Área de Convivência"
-    }
-  ];
-
   const contentText = (
     <>
       <p>
@@ -141,13 +106,6 @@ const OColegio = () => {
 
       {/* Seção de Valores */}
       <ValuesSection />
-
-      {/* Galeria de Imagens */}
-      <ImageGallery
-        title="Conheça Nossos Espaços"
-        images={galleryImages}
-        gridCols={3}
-      />
 
       {/* Formulário de Agendamento de Visita */}
       <VisitForm />

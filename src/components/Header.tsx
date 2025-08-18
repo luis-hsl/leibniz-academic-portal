@@ -14,7 +14,6 @@ const Header = () => {
 
   const navigation = [
     { name: "Início", href: "/" },
-    { name: "Sobre Nós", href: "/sobre-nos" },
     { name: "O Colégio", href: "/o-colegio" },
     { name: "Níveis de Ensino", href: "/niveis-ensino" },
     { name: "Dependências", href: "/dependencias" },
