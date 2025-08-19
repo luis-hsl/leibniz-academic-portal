@@ -150,150 +150,165 @@ Turno: ${data.turno}`;
             {educationLevels.map((level) => (
               <div key={level.id} className="perspective-1000">
                 <div 
-                  className={`nivel-ensino-card transform-style-preserve-3d transition-transform duration-700 relative h-auto min-h-[400px] md:min-h-[580px] flex flex-col ${
+                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[400px] ${
                     flippedCards.has(level.id) ? 'rotate-y-180' : ''
-                  } ${!flippedCards.has(level.id) ? 'md:hover:scale-105' : ''}`}
+                  }`}
                 >
                   {/* Frente do Card */}
-                  <div className="backface-hidden absolute inset-0 bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    {/* Imagem */}
-                    <div className="card-image relative w-full h-[200px] md:h-[60%]">
-                      <img 
-                        src={level.image} 
-                        alt={level.title}
-                        className="w-full h-full object-contain md:object-cover object-center rounded-t-2xl bg-gray-50"
-                        loading="lazy"
-                      />
-                    </div>
+                  <div 
+                    className="backface-hidden absolute inset-0 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between p-6"
+                    style={{
+                      height: '400px',
+                      backgroundImage: `url(${level.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  >
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#003366]/70 via-[#003366]/50 to-[#003366]/80 z-10"></div>
                     
-                    {/* Área de Conteúdo */}
-                    <div className="card-content bg-white p-4 md:p-6 flex flex-col flex-1 md:h-[40%] justify-between">
+                    {/* Conteúdo */}
+                    <div className="relative z-20 flex flex-col justify-between h-full">
                       {/* Tag de Período */}
-                      <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start font-montserrat">
+                      <div className="bg-[#fec10e] text-[#003366] px-4 py-2 rounded-[20px] text-sm font-semibold self-start">
                         {level.tag}
                       </div>
                       
-                      {/* Título */}
-                      <h3 className="text-[28px] font-bold text-[#003366] mb-2 font-montserrat leading-tight">
-                        {level.title}
-                      </h3>
-                      
-                      {/* Texto Descritivo */}
-                      <p className="text-base text-[#333333] leading-[1.6] mb-auto font-montserrat font-normal flex-1">
-                        {level.description}
-                      </p>
-                      
-                      {/* Botão CTA */}
-                      <div className="card-cta mt-auto">
+                      <div className="flex-1 flex flex-col justify-end">
+                        {/* Título */}
+                        <h3 className="text-[28px] font-bold text-white mb-3 leading-tight">
+                          {level.title}
+                        </h3>
+                        
+                        {/* Texto Descritivo */}
+                        <p className="text-base text-white/90 leading-[1.5] mb-6">
+                          {level.description}
+                        </p>
+                        
+                        {/* Botão CTA */}
                         <Button
                           onClick={() => handleCardFlip(level.id)}
-                          className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat"
+                          className="bg-[#fec10e] text-[#003366] hover:bg-[#e6ad0c] hover:-translate-y-0.5 px-6 py-[14px] rounded-lg font-semibold text-base transition-all duration-300 self-start"
                           type="button"
                         >
-                          Faça a Inscrição
+                          FAÇA A INSCRIÇÃO
                         </Button>
                       </div>
                     </div>
                   </div>
 
                   {/* Verso do Card - Formulário */}
-                  <div className="backface-hidden rotate-y-180 absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col">
-                    <div className="flex items-center justify-between mb-6">
-                      <h3 className="text-xl font-bold text-[#003366]">
-                        {level.formTitle}
-                      </h3>
+                  <div 
+                    className="backface-hidden rotate-y-180 absolute inset-0 rounded-2xl p-6 flex flex-col"
+                    style={{
+                      height: '400px',
+                      backgroundImage: `url(${level.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  >
+                    {/* Overlay para o formulário */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#003366]/90 via-[#003366]/85 to-[#003366]/95 z-10 rounded-2xl"></div>
+                    
+                    <div className="relative z-20 flex flex-col h-full">
+                      <div className="flex items-center justify-between mb-6">
+                        <h3 className="text-xl font-bold text-white">
+                          {level.formTitle}
+                        </h3>
+                        <Button
+                          onClick={() => handleCardFlip(level.id)}
+                          variant="ghost"
+                          size="sm"
+                          className="text-white hover:bg-white/10"
+                        >
+                          <ArrowLeft className="h-4 w-4" />
+                        </Button>
+                      </div>
+
+                      <div className="flex-1 space-y-3 overflow-y-auto">
+                        <div>
+                          <Label htmlFor={`nomeResponsavel-${level.id}`} className="text-white font-medium">
+                            Nome do Responsável *
+                          </Label>
+                          <Input
+                            id={`nomeResponsavel-${level.id}`}
+                            type="text"
+                            value={formData[level.id]?.nomeResponsavel || ""}
+                            onChange={(e) => handleInputChange(level.id, "nomeResponsavel", e.target.value)}
+                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            placeholder="Digite o nome do responsável"
+                          />
+                        </div>
+
+                        <div>
+                          <Label htmlFor={`email-${level.id}`} className="text-white font-medium">
+                            Email *
+                          </Label>
+                          <Input
+                            id={`email-${level.id}`}
+                            type="email"
+                            value={formData[level.id]?.email || ""}
+                            onChange={(e) => handleInputChange(level.id, "email", e.target.value)}
+                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            placeholder="Digite seu email"
+                          />
+                        </div>
+
+                        <div>
+                          <Label htmlFor={`telefone-${level.id}`} className="text-white font-medium">
+                            Telefone/WhatsApp *
+                          </Label>
+                          <Input
+                            id={`telefone-${level.id}`}
+                            type="tel"
+                            value={formData[level.id]?.telefone || ""}
+                            onChange={(e) => handleInputChange(level.id, "telefone", e.target.value)}
+                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            placeholder="(65) 99999-9999"
+                          />
+                        </div>
+
+                        <div>
+                          <Label htmlFor={`nomeAluno-${level.id}`} className="text-white font-medium">
+                            Nome do Aluno *
+                          </Label>
+                          <Input
+                            id={`nomeAluno-${level.id}`}
+                            type="text"
+                            value={formData[level.id]?.nomeAluno || ""}
+                            onChange={(e) => handleInputChange(level.id, "nomeAluno", e.target.value)}
+                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            placeholder="Digite o nome do aluno"
+                          />
+                        </div>
+
+                        <div>
+                          <Label htmlFor={`turno-${level.id}`} className="text-white font-medium">
+                            Turno *
+                          </Label>
+                          <select
+                            id={`turno-${level.id}`}
+                            value={formData[level.id]?.turno || ""}
+                            onChange={(e) => handleInputChange(level.id, "turno", e.target.value)}
+                            className="mt-1 w-full bg-white/90 border border-white/20 rounded-md px-3 py-2 focus:border-[#fec10e] focus:ring-[#fec10e] focus:outline-none text-[#003366]"
+                          >
+                            <option value="">Selecione o turno</option>
+                            <option value="matutino">Matutino</option>
+                            <option value="vespertino">Vespertino</option>
+                            <option value="integral">Integral</option>
+                          </select>
+                        </div>
+                      </div>
+
                       <Button
-                        onClick={() => handleCardFlip(level.id)}
-                        variant="ghost"
-                        size="sm"
-                        className="text-[#003366] hover:bg-[#003366]/10"
+                        onClick={() => handleFormSubmit(level.id, level.title)}
+                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#e6ad0c] hover:-translate-y-0.5 font-semibold py-3 mt-6 transition-all duration-300"
                       >
-                        <ArrowLeft className="h-4 w-4" />
+                        Enviar Inscrição
                       </Button>
                     </div>
-
-                    <div className="flex-1 space-y-3 overflow-y-auto">
-                      <div>
-                        <Label htmlFor={`nomeResponsavel-${level.id}`} className="text-[#333333] font-medium">
-                          Nome do Responsável *
-                        </Label>
-                        <Input
-                          id={`nomeResponsavel-${level.id}`}
-                          type="text"
-                          value={formData[level.id]?.nomeResponsavel || ""}
-                          onChange={(e) => handleInputChange(level.id, "nomeResponsavel", e.target.value)}
-                          className="mt-1 border-gray-300 focus:border-[#003366] focus:ring-[#003366]"
-                          placeholder="Digite o nome do responsável"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor={`email-${level.id}`} className="text-[#333333] font-medium">
-                          Email *
-                        </Label>
-                        <Input
-                          id={`email-${level.id}`}
-                          type="email"
-                          value={formData[level.id]?.email || ""}
-                          onChange={(e) => handleInputChange(level.id, "email", e.target.value)}
-                          className="mt-1 border-gray-300 focus:border-[#003366] focus:ring-[#003366]"
-                          placeholder="Digite seu email"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor={`telefone-${level.id}`} className="text-[#333333] font-medium">
-                          Telefone/WhatsApp *
-                        </Label>
-                        <Input
-                          id={`telefone-${level.id}`}
-                          type="tel"
-                          value={formData[level.id]?.telefone || ""}
-                          onChange={(e) => handleInputChange(level.id, "telefone", e.target.value)}
-                          className="mt-1 border-gray-300 focus:border-[#003366] focus:ring-[#003366]"
-                          placeholder="(65) 99999-9999"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor={`nomeAluno-${level.id}`} className="text-[#333333] font-medium">
-                          Nome do Aluno *
-                        </Label>
-                        <Input
-                          id={`nomeAluno-${level.id}`}
-                          type="text"
-                          value={formData[level.id]?.nomeAluno || ""}
-                          onChange={(e) => handleInputChange(level.id, "nomeAluno", e.target.value)}
-                          className="mt-1 border-gray-300 focus:border-[#003366] focus:ring-[#003366]"
-                          placeholder="Digite o nome do aluno"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor={`turno-${level.id}`} className="text-[#333333] font-medium">
-                          Turno *
-                        </Label>
-                        <select
-                          id={`turno-${level.id}`}
-                          value={formData[level.id]?.turno || ""}
-                          onChange={(e) => handleInputChange(level.id, "turno", e.target.value)}
-                          className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:border-[#003366] focus:ring-[#003366] focus:outline-none"
-                        >
-                          <option value="">Selecione o turno</option>
-                          <option value="matutino">Matutino</option>
-                          <option value="vespertino">Vespertino</option>
-                          <option value="integral">Integral</option>
-                        </select>
-                      </div>
-
-                    </div>
-
-                    <Button
-                      onClick={() => handleFormSubmit(level.id, level.title)}
-                      className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 font-semibold py-3 mt-6"
-                    >
-                      Enviar Inscrição
-                    </Button>
                   </div>
                 </div>
               </div>
