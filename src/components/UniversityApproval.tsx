@@ -24,13 +24,13 @@ const UniversityApproval = () => {
             {/* Texto à esquerda */}
             <div className="space-y-6">
               <div className="inline-block bg-energy-yellow/20 backdrop-blur-sm rounded-full px-4 py-2 border border-energy-yellow/30">
-                <span className="text-sm font-semibold text-energy-yellow">Resultados Comprovados</span>
+                <span className="text-sm font-semibold text-energy-yellow">O DNA do Colégio Leibniz</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">Aprovação nas Melhores U</h2>
               
               <p className="text-xl text-off-white/80 leading-relaxed">
-                O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para os maiores e melhores universidades do País.
+                Nossa metodologia de alta performance prepara os alunos para conquistar vagas nas instituições mais concorridas do país e do mundo.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ const UniversityApproval = () => {
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-dark-blue mb-3">Metodologia Focada</h3>
                   <p className="text-dark-blue/70 text-sm leading-relaxed">
-                    Currículo intensivo e totalmente alinhado com as matrizes do ENEM e dos principais vestibulares do país.
+                    O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para as maiores e melhores universidades do País.
                   </p>
                 </div>
               </div>
