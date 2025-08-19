@@ -10,7 +10,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
-const collegeImage = "/lovable-uploads/e2ec3aed-4bbb-45da-a345-58cbe979381b.png";
+const collegeImage = "/lovable-uploads/ccf6d0dd-1d54-4a76-b79f-ccb796d4949e.png";
 
 interface FormData {
   nome: string;
