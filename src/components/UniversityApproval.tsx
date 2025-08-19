@@ -63,7 +63,7 @@ const UniversityApproval = () => {
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Simulados e Avaliações</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Realizamos simulados periódicos em condições reais de prova, com relatórios de desempenho detalhados para cada aluno.
+                    Avaliações de aprendizagens semanais que prepara o aluno para adquirir a alta performance nos resultados. Relatório de Desempenho do aluno, mostra os indicadores de desempenho dos resultados por disciplina, facilitando diagnosticar as dificuldades e aprimorar os níveis de conhecimentos. Simulados totalmente preparados para os grandes desafios do ENEM e vestibulares isolados.
                   </p>
                 </div>
               </div>
