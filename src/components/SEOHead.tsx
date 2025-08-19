@@ -11,7 +11,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({ 
-  title = "Colégio Leibniz - Excelência em Educação",
+  title = "Colégio Leibniz",
   description = "Prepare-se para o Sucesso Acadêmico no Colégio Leibniz, tradição e referência em vestibulares e preparatórios para o ENEM.",
   keywords = "colégio, leibniz, ensino, vestibular, enem, educação, escola, preparatório",
   image = "/lovable-uploads/4f312db7-f2f6-44a1-a91e-24eb6e23ea95.png",
