@@ -150,24 +150,24 @@ Turno: ${data.turno}`;
             {educationLevels.map((level) => (
               <div key={level.id} className="perspective-1000">
                 <div 
-                  className={`nivel-ensino-card transform-style-preserve-3d transition-transform duration-700 relative h-auto min-h-[400px] md:min-h-[580px] flex flex-col ${
+                  className={`transform-style-preserve-3d transition-transform duration-700 relative h-[580px] ${
                     flippedCards.has(level.id) ? 'rotate-y-180' : ''
                   } ${!flippedCards.has(level.id) ? 'md:hover:scale-105' : ''}`}
                 >
                   {/* Frente do Card */}
-                  <div className="backface-hidden absolute inset-0 bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                  <div className="backface-hidden absolute inset-0 bg-white rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:shadow-xl transition-shadow duration-300">
                     {/* Imagem */}
-                    <div className="card-image relative w-full h-[200px] md:h-[60%]">
+                    <div className="relative h-64">
                       <img 
                         src={level.image} 
                         alt={level.title}
-                        className="w-full h-full object-contain md:object-cover object-center rounded-t-2xl bg-gray-50"
+                        className="w-full h-full object-cover rounded-t-2xl"
                         loading="lazy"
                       />
                     </div>
                     
                     {/* Área de Conteúdo */}
-                    <div className="card-content bg-white p-4 md:p-6 flex flex-col flex-1 md:h-[40%] justify-between">
+                    <div className="bg-white p-6 flex flex-col" style={{ height: 'calc(580px - 256px)' }}>
                       {/* Tag de Período */}
                       <div className="inline-block bg-[#fec10e] text-[#003366] px-3 py-1.5 rounded-[20px] text-sm font-semibold mb-4 self-start font-montserrat">
                         {level.tag}
@@ -184,15 +184,13 @@ Turno: ${data.turno}`;
                       </p>
                       
                       {/* Botão CTA */}
-                      <div className="card-cta mt-auto">
-                        <Button
-                          onClick={() => handleCardFlip(level.id)}
-                          className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat"
-                          type="button"
-                        >
-                          Faça a Inscrição
-                        </Button>
-                      </div>
+                      <Button
+                        onClick={() => handleCardFlip(level.id)}
+                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#fec10e]/90 px-6 py-[14px] rounded-lg uppercase font-bold text-sm transition-all duration-300 text-center font-montserrat mt-auto"
+                        type="button"
+                      >
+                        Faça a Inscrição
+                      </Button>
                     </div>
                   </div>
 
