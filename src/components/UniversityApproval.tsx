@@ -46,7 +46,7 @@ const UniversityApproval = () => {
                 <div className="pt-8">
                   <h3 className="text-xl font-bold text-dark-blue mb-3">Metodologia Focada</h3>
                   <p className="text-dark-blue/70 text-sm leading-relaxed">
-                    O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para as maiores e melhores universidades do País.
+                    Currículo intensivo e totalmente alinhado com as matrizes do ENEM e dos principais vestibulares do país
                   </p>
                 </div>
               </div>
