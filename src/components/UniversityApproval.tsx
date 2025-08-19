@@ -30,7 +30,7 @@ const UniversityApproval = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">Aprovação nas Melhores U</h2>
               
               <p className="text-xl text-off-white/80 leading-relaxed">
-                Nossa metodologia de alta performance prepara os alunos para conquistar vagas nas instituições mais concorridas do país e do mundo.
+                O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para os maiores e melhores universidades do País.
               </p>
             </div>
 
