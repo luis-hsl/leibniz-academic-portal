@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { trackVisitConversion, trackAttendantConversion } from "@/components/Analytics";
 import { useEffect } from "react";
+import QRBadge from "@/components/QRBadge";
 const Hero = () => {
   const heroBackgroundImage = "/lovable-uploads/825becfd-61dd-46b2-9e4b-4b5b3ac801fb.png";
   useEffect(() => {
@@ -34,6 +35,7 @@ const Hero = () => {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'scroll'
   }}>
+      <QRBadge />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 animate-fade-in leading-tight text-white font-montserrat">
