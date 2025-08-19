@@ -23,9 +23,7 @@ const UniversityApproval = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Texto à esquerda */}
             <div className="space-y-6">
-              <div className="inline-block bg-energy-yellow/20 backdrop-blur-sm rounded-full px-4 py-2 border border-energy-yellow/30">
-                <span className="text-sm font-semibold text-energy-yellow">O DNA do Colégio Leibniz</span>
-              </div>
+              
               
               <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">O DNA do Colégio Leibniz</h2>
               
