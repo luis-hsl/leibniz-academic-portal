@@ -64,7 +64,7 @@ const Header = () => {
               
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" className="p-2 flex-shrink-0 min-h-[40px] min-w-[40px] touch-target text-off-white border-off-white/30">
+                  <Button variant="secondary" size="sm" className="p-2 flex-shrink-0 min-h-[40px] min-w-[40px] touch-target bg-off-white text-dark-blue border-off-white hover:bg-off-white/90">
                     <Menu className="h-4 w-4" />
                   </Button>
                 </SheetTrigger>
