@@ -52,9 +52,9 @@ const UniversityApproval = () => {
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Metodologia Focada</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">DNA Leibniz</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Currículo intensivo e totalmente alinhado com as matrizes de competência do ENEM e dos principais vestibulares do país.
+                    O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para os maiores e melhores universidades do País.
                   </p>
                 </div>
               </div>
