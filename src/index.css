@@ -7,42 +7,49 @@
 
 @layer base {
   :root {
-    /* Colégio Leibniz Brand Colors */
-    --leibniz-blue: 210 100% 20%; /* #003366 - Azul Leibniz */
-    --leibniz-gold: 45 98% 52%; /* #fec10e - Amarelo Ouro */
-    --leibniz-white: 0 0% 100%; /* #ffffff - Branco Puro */
-    --leibniz-text: 0 0% 20%; /* #333333 - Cinza Texto */
-    --leibniz-background: 0 0% 96%; /* #f4f4f4 - Cinza Fundo */
+    /* Colégio Leibniz Official Brand Colors 2025 */
+    --dark-blue: 227 97% 14%; /* #011044 - Cor principal da marca */
+    --digital-blue: 219 87% 44%; /* #0f53d0 - Azul moderno e dinâmico */
+    --digital-cyan: 186 88% 49%; /* #0fd5ec - Juventude e energia */
+    --energy-yellow: 49 95% 62%; /* #fad741 - Vitalidade e energia escolar */
+    --off-white: 0 0% 98%; /* #fafafa - Tom suave para contraste */
     
-    /* Shadcn UI Variables with Leibniz Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
-    --primary: 210 100% 20%; /* Azul Leibniz */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 45 98% 52%; /* Amarelo Ouro */
-    --secondary-foreground: 210 100% 20%;
+    /* Legacy colors for compatibility */
+    --leibniz-blue: 227 97% 14%; /* Updated to dark-blue */
+    --leibniz-gold: 49 95% 62%; /* Updated to energy-yellow */
+    --leibniz-white: 0 0% 98%; /* Updated to off-white */
+    --leibniz-text: 227 97% 14%; /* Updated to dark-blue */
+    --leibniz-background: 0 0% 98%; /* Updated to off-white */
+    
+    /* Shadcn UI Variables with Official 2025 Brand Colors */
+    --background: 0 0% 98%; /* off-white */
+    --foreground: 227 97% 14%; /* dark-blue */
+    --card: 0 0% 98%; /* off-white */
+    --card-foreground: 227 97% 14%; /* dark-blue */
+    --popover: 0 0% 98%; /* off-white */
+    --popover-foreground: 227 97% 14%; /* dark-blue */
+    --primary: 227 97% 14%; /* dark-blue */
+    --primary-foreground: 0 0% 98%; /* off-white */
+    --secondary: 49 95% 62%; /* energy-yellow */
+    --secondary-foreground: 227 97% 14%; /* dark-blue */
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 210 100% 20%;
-    --accent-foreground: 0 0% 100%;
+    --muted-foreground: 227 60% 40%; /* dark-blue with reduced opacity */
+    --accent: 219 87% 44%; /* digital-blue */
+    --accent-foreground: 0 0% 98%; /* off-white */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 210 100% 20%;
+    --ring: 219 87% 44%; /* digital-blue */
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 210 100% 20%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-background: 0 0% 98%; /* off-white */
+    --sidebar-foreground: 227 97% 14%; /* dark-blue */
+    --sidebar-primary: 227 97% 14%; /* dark-blue */
+    --sidebar-primary-foreground: 0 0% 98%; /* off-white */
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 227 97% 14%; /* dark-blue */
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 210 100% 20%;
+    --sidebar-ring: 219 87% 44%; /* digital-blue */
   }
 
   .dark {

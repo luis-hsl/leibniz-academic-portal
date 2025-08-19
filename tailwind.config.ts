@@ -22,6 +22,21 @@ export default {
 				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			colors: {
+				// Official Colégio Leibniz Brand Colors 2025
+				'dark-blue': 'hsl(var(--dark-blue))',
+				'digital-blue': 'hsl(var(--digital-blue))',
+				'digital-cyan': 'hsl(var(--digital-cyan))',
+				'energy-yellow': 'hsl(var(--energy-yellow))',
+				'off-white': 'hsl(var(--off-white))',
+				
+				// Legacy compatibility colors
+				'leibniz-blue': 'hsl(var(--leibniz-blue))',
+				'leibniz-gold': 'hsl(var(--leibniz-gold))',
+				'leibniz-white': 'hsl(var(--leibniz-white))',
+				'leibniz-text': 'hsl(var(--leibniz-text))',
+				'leibniz-background': 'hsl(var(--leibniz-background))',
+				
+				// Shadcn UI system colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
