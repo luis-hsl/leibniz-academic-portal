@@ -1,19 +1,13 @@
 import { Target, TrendingUp, Users, GraduationCap } from "lucide-react";
-
 const UniversityApproval = () => {
   const backgroundImage = "/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png";
-  
-  return (
-    <section 
-      className="py-16 md:py-20 relative text-white overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(37, 99, 235, 0.85), rgba(37, 99, 235, 0.85)), url('${backgroundImage}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'scroll'
-      }}
-    >
+  return <section className="py-16 md:py-20 relative text-white overflow-hidden" style={{
+    backgroundImage: `linear-gradient(rgba(37, 99, 235, 0.85), rgba(37, 99, 235, 0.85)), url('${backgroundImage}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll'
+  }}>
       {/* Elementos gráficos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <svg className="absolute top-20 left-10 opacity-10" width="100" height="100" viewBox="0 0 100 100">
@@ -52,7 +46,7 @@ const UniversityApproval = () => {
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">DNA Leibniz</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Metodologia Focada</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para os maiores e melhores universidades do País.
                   </p>
@@ -107,8 +101,6 @@ const UniversityApproval = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default UniversityApproval;
