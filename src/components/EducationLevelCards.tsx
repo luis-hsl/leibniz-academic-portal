@@ -138,7 +138,7 @@ Turno: ${data.turno}`;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-dark-blue mb-6">
               Níveis de Ensino
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -166,12 +166,12 @@ Turno: ${data.turno}`;
                     }}
                   >
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#003366]/70 via-[#003366]/50 to-[#003366]/80 z-10"></div>
-                    
-                    {/* Conteúdo */}
-                    <div className="relative z-20 flex flex-col justify-between h-full">
-                      {/* Tag de Período */}
-                      <div className="bg-[#fec10e] text-[#003366] px-4 py-2 rounded-[20px] text-sm font-semibold self-start">
+                     <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/70 via-dark-blue/50 to-dark-blue/80 z-10"></div>
+                     
+                     {/* Conteúdo */}
+                     <div className="relative z-20 flex flex-col justify-between h-full">
+                       {/* Tag de Período */}
+                       <div className="bg-energy-yellow text-dark-blue px-4 py-2 rounded-[20px] text-sm font-semibold self-start">
                         {level.tag}
                       </div>
                       
@@ -187,12 +187,12 @@ Turno: ${data.turno}`;
                         </p>
                         
                         {/* Botão CTA */}
-                        <Button
-                          onClick={() => handleCardFlip(level.id)}
-                          className="bg-[#fec10e] text-[#003366] hover:bg-[#e6ad0c] hover:-translate-y-0.5 px-6 py-[14px] rounded-lg font-semibold text-base transition-all duration-300 self-start"
-                          type="button"
-                        >
-                          FAÇA A INSCRIÇÃO
+                         <Button
+                           onClick={() => handleCardFlip(level.id)}
+                           className="bg-energy-yellow text-dark-blue hover:bg-energy-yellow/90 hover:-translate-y-0.5 px-6 py-[14px] rounded-lg font-semibold text-base transition-all duration-300 self-start"
+                           type="button"
+                         >
+                           FAÇA A INSCRIÇÃO
                         </Button>
                       </div>
                     </div>
@@ -210,7 +210,7 @@ Turno: ${data.turno}`;
                     }}
                   >
                     {/* Overlay para o formulário */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#003366]/90 via-[#003366]/85 to-[#003366]/95 z-10 rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/90 via-dark-blue/85 to-dark-blue/95 z-10 rounded-2xl"></div>
                     
                     <div className="relative z-20 flex flex-col h-full">
                       <div className="flex items-center justify-between mb-6">
@@ -237,7 +237,7 @@ Turno: ${data.turno}`;
                             type="text"
                             value={formData[level.id]?.nomeResponsavel || ""}
                             onChange={(e) => handleInputChange(level.id, "nomeResponsavel", e.target.value)}
-                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            className="mt-1 bg-white/90 border-white/20 focus:border-energy-yellow focus:ring-energy-yellow text-dark-blue"
                             placeholder="Digite o nome do responsável"
                           />
                         </div>
@@ -251,7 +251,7 @@ Turno: ${data.turno}`;
                             type="email"
                             value={formData[level.id]?.email || ""}
                             onChange={(e) => handleInputChange(level.id, "email", e.target.value)}
-                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            className="mt-1 bg-white/90 border-white/20 focus:border-energy-yellow focus:ring-energy-yellow text-dark-blue"
                             placeholder="Digite seu email"
                           />
                         </div>
@@ -265,7 +265,7 @@ Turno: ${data.turno}`;
                             type="tel"
                             value={formData[level.id]?.telefone || ""}
                             onChange={(e) => handleInputChange(level.id, "telefone", e.target.value)}
-                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            className="mt-1 bg-white/90 border-white/20 focus:border-energy-yellow focus:ring-energy-yellow text-dark-blue"
                             placeholder="(65) 99999-9999"
                           />
                         </div>
@@ -279,7 +279,7 @@ Turno: ${data.turno}`;
                             type="text"
                             value={formData[level.id]?.nomeAluno || ""}
                             onChange={(e) => handleInputChange(level.id, "nomeAluno", e.target.value)}
-                            className="mt-1 bg-white/90 border-white/20 focus:border-[#fec10e] focus:ring-[#fec10e] text-[#003366]"
+                            className="mt-1 bg-white/90 border-white/20 focus:border-energy-yellow focus:ring-energy-yellow text-dark-blue"
                             placeholder="Digite o nome do aluno"
                           />
                         </div>
@@ -292,7 +292,7 @@ Turno: ${data.turno}`;
                             id={`turno-${level.id}`}
                             value={formData[level.id]?.turno || ""}
                             onChange={(e) => handleInputChange(level.id, "turno", e.target.value)}
-                            className="mt-1 w-full bg-white/90 border border-white/20 rounded-md px-3 py-2 focus:border-[#fec10e] focus:ring-[#fec10e] focus:outline-none text-[#003366]"
+                            className="mt-1 w-full bg-white/90 border border-white/20 rounded-md px-3 py-2 focus:border-energy-yellow focus:ring-energy-yellow focus:outline-none text-dark-blue"
                           >
                             <option value="">Selecione o turno</option>
                             <option value="matutino">Matutino</option>
@@ -304,7 +304,7 @@ Turno: ${data.turno}`;
 
                       <Button
                         onClick={() => handleFormSubmit(level.id, level.title)}
-                        className="w-full bg-[#fec10e] text-[#003366] hover:bg-[#e6ad0c] hover:-translate-y-0.5 font-semibold py-3 mt-6 transition-all duration-300"
+                        className="w-full bg-energy-yellow text-dark-blue hover:bg-energy-yellow/90 hover:-translate-y-0.5 font-semibold py-3 mt-6 transition-all duration-300"
                       >
                         Enviar Inscrição
                       </Button>
