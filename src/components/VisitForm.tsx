@@ -137,9 +137,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                         type="text"
                         value={formData.nome}
                         onChange={(e) => handleInputChange("nome", e.target.value)}
-                        className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
+                        className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue text-gray-900"
                         placeholder="Digite seu nome completo"
                         required
+                        style={{ color: '#011044' }}
                       />
                     </div>
 
@@ -153,9 +154,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
+                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue text-gray-900"
                           placeholder="seu@email.com"
                           required
+                          style={{ color: '#011044' }}
                         />
                       </div>
 
@@ -168,9 +170,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                           type="tel"
                           value={formData.telefone}
                           onChange={(e) => handleInputChange("telefone", e.target.value)}
-                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
+                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue text-gray-900"
                           placeholder="(66) 99999-9999"
                           required
+                          style={{ color: '#011044' }}
                         />
                       </div>
                     </div>
@@ -192,10 +195,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                         Série/Nível de Interesse do Aluno
                       </Label>
                       <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
-                        <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue">
+                        <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue text-gray-900" style={{ color: '#011044' }}>
                           <SelectValue placeholder="Selecione o nível" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-white text-gray-900">
                           <SelectItem value="educacao-infantil">Educação Infantil</SelectItem>
                           <SelectItem value="ensino-fundamental-1">Ensino Fundamental I</SelectItem>
                           <SelectItem value="ensino-fundamental-2">Ensino Fundamental II</SelectItem>
@@ -226,9 +229,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                             <Button
                               variant="outline"
                               className={cn(
-                                "w-full justify-start text-left font-normal mt-1 border-dark-blue/20 focus:border-digital-blue",
-                                !formData.dataPreferencial && "text-dark-blue/60"
+                                "w-full justify-start text-left font-normal mt-1 border-dark-blue/20 focus:border-digital-blue text-gray-900",
+                                !formData.dataPreferencial && "text-gray-500"
                               )}
+                              style={{ color: '#011044' }}
                             >
                               <CalendarIcon className="mr-2 h-4 w-4" />
                               {formData.dataPreferencial ? (
@@ -255,10 +259,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                           Horário Preferencial para Visita
                         </Label>
                         <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
-                          <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue">
+                          <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue text-gray-900" style={{ color: '#011044' }}>
                             <SelectValue placeholder="Selecione o horário" />
                           </SelectTrigger>
-                          <SelectContent>
+                          <SelectContent className="bg-white text-gray-900">
                             <SelectItem value="08:00">08:00</SelectItem>
                             <SelectItem value="09:00">09:00</SelectItem>
                             <SelectItem value="10:00">10:00</SelectItem>
