@@ -78,9 +78,9 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
   return (
     <section 
       id="agendar"
-      className="py-16 md:py-20 relative text-white overflow-hidden"
+      className="py-16 md:py-20 relative text-off-white overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${collegeImage}')`,
+        backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.6), hsl(var(--dark-blue) / 0.6)), url('${collegeImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
@@ -90,10 +90,10 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
       {/* Elementos gráficos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <svg className="absolute top-20 left-10 opacity-10" width="100" height="100" viewBox="0 0 100 100">
-          <path d="M20,50 Q50,20 80,50 T140,50" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M20,50 Q50,20 80,50 T140,50" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
         <svg className="absolute bottom-20 right-10 opacity-10" width="120" height="120" viewBox="0 0 120 120">
-          <path d="M20,60 Q60,20 100,60 T180,60" stroke="white" strokeWidth="2" fill="none" />
+          <path d="M20,60 Q60,20 100,60 T180,60" stroke="currentColor" strokeWidth="2" fill="none" />
         </svg>
       </div>
 
@@ -102,15 +102,15 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Texto - aparece primeiro no mobile */}
             <div className="space-y-6 order-1 lg:order-1">
-              <div className="inline-block bg-secondary backdrop-blur-sm rounded-full px-4 py-2 border border-secondary/30">
-                <span className="text-sm font-semibold text-primary">Agende uma Visita</span>
+              <div className="inline-block bg-energy-yellow/20 backdrop-blur-sm rounded-full px-4 py-2 border border-energy-yellow/30">
+                <span className="text-sm font-semibold text-energy-yellow">Agende uma Visita</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat">
+              <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight font-montserrat">
                 Dê o primeiro passo para um futuro de excelência
               </h2>
               
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-xl text-off-white/80 leading-relaxed">
                 Preencha os campos ao lado para agendar sua visita. Nossa equipe entrará em contato para confirmar todos os detalhes.
               </p>
             </div>
@@ -119,17 +119,17 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
             <div className="space-y-6 order-2 lg:order-2">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Card 1: Informações do Responsável */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
                   <div className="absolute -top-6 left-6">
-                    <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
-                      <User className="h-8 w-8 text-white" />
+                    <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
+                      <User className="h-8 w-8 text-dark-blue" />
                     </div>
                   </div>
                   <div className="pt-8 space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Seus Dados</h3>
+                    <h3 className="text-xl font-bold text-dark-blue mb-4">Seus Dados</h3>
                     
                     <div>
-                      <Label htmlFor="nome" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                      <Label htmlFor="nome" className="text-dark-blue font-semibold text-sm font-montserrat">
                         Nome Completo do Responsável
                       </Label>
                       <Input
@@ -137,7 +137,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                         type="text"
                         value={formData.nome}
                         onChange={(e) => handleInputChange("nome", e.target.value)}
-                        className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
+                        className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
                         placeholder="Digite seu nome completo"
                         required
                       />
@@ -145,7 +145,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="email" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        <Label htmlFor="email" className="text-dark-blue font-semibold text-sm font-montserrat">
                           E-mail do Responsável
                         </Label>
                         <Input
@@ -153,14 +153,14 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
+                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
                           placeholder="seu@email.com"
                           required
                         />
                       </div>
 
                       <div>
-                        <Label htmlFor="telefone" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        <Label htmlFor="telefone" className="text-dark-blue font-semibold text-sm font-montserrat">
                           Telefone/WhatsApp do Responsável
                         </Label>
                         <Input
@@ -168,7 +168,7 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                           type="tel"
                           value={formData.telefone}
                           onChange={(e) => handleInputChange("telefone", e.target.value)}
-                          className="mt-1 border-gray-200 focus:border-primary focus:ring-primary"
+                          className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue"
                           placeholder="(66) 99999-9999"
                           required
                         />
@@ -178,21 +178,21 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                 </div>
 
                 {/* Card 2: Interesse do Aluno */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
                   <div className="absolute -top-6 left-6">
-                    <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
-                      <GraduationCap className="h-8 w-8 text-white" />
+                    <div className="bg-energy-yellow rounded-2xl p-4 shadow-lg">
+                      <GraduationCap className="h-8 w-8 text-dark-blue" />
                     </div>
                   </div>
                   <div className="pt-8 space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Nível de Interesse</h3>
+                    <h3 className="text-xl font-bold text-dark-blue mb-4">Nível de Interesse</h3>
                     
                     <div>
-                      <Label htmlFor="nivelPretendido" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                      <Label htmlFor="nivelPretendido" className="text-dark-blue font-semibold text-sm font-montserrat">
                         Série/Nível de Interesse do Aluno
                       </Label>
                       <Select value={formData.nivelPretendido} onValueChange={(value) => handleInputChange("nivelPretendido", value)}>
-                        <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
+                        <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue">
                           <SelectValue placeholder="Selecione o nível" />
                         </SelectTrigger>
                         <SelectContent>
@@ -207,18 +207,18 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                 </div>
 
                 {/* Card 3: Agendamento */}
-                <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
                   <div className="absolute -top-6 left-6">
-                    <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
-                      <CalendarLucide className="h-8 w-8 text-white" />
+                    <div className="bg-digital-blue rounded-2xl p-4 shadow-lg">
+                      <CalendarLucide className="h-8 w-8 text-off-white" />
                     </div>
                   </div>
                   <div className="pt-8 space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Sua Visita</h3>
+                    <h3 className="text-xl font-bold text-dark-blue mb-4">Sua Visita</h3>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        <Label className="text-dark-blue font-semibold text-sm font-montserrat">
                           Data Preferencial para Visita
                         </Label>
                         <Popover>
@@ -226,8 +226,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                             <Button
                               variant="outline"
                               className={cn(
-                                "w-full justify-start text-left font-normal mt-1 border-gray-200 focus:border-primary",
-                                !formData.dataPreferencial && "text-muted-foreground"
+                                "w-full justify-start text-left font-normal mt-1 border-dark-blue/20 focus:border-digital-blue",
+                                !formData.dataPreferencial && "text-dark-blue/60"
                               )}
                             >
                               <CalendarIcon className="mr-2 h-4 w-4" />
@@ -251,11 +251,11 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                       </div>
 
                       <div>
-                        <Label htmlFor="horarioPreferencial" className="text-primary font-semibold text-sm font-montserrat" style={{ color: '#003366' }}>
+                        <Label htmlFor="horarioPreferencial" className="text-dark-blue font-semibold text-sm font-montserrat">
                           Horário Preferencial para Visita
                         </Label>
                         <Select value={formData.horarioPreferencial} onValueChange={(value) => handleInputChange("horarioPreferencial", value)}>
-                          <SelectTrigger className="mt-1 border-gray-200 focus:border-primary focus:ring-primary">
+                          <SelectTrigger className="mt-1 border-dark-blue/20 focus:border-digital-blue focus:ring-digital-blue">
                             <SelectValue placeholder="Selecione o horário" />
                           </SelectTrigger>
                           <SelectContent>
@@ -278,7 +278,8 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
                 <div className="pt-6">
                   <Button
                     type="submit"
-                    className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    variant="energy"
+                    className="w-full font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     CONFIRMAR AGENDAMENTO
                   </Button>
@@ -291,15 +292,15 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
           <div className="max-w-7xl mx-auto mt-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Localização */}
-              <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
                 <div className="absolute -top-6 left-6">
-                  <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
-                    <MapPin className="h-8 w-8 text-white" />
+                  <div className="bg-digital-blue rounded-2xl p-4 shadow-lg">
+                    <MapPin className="h-8 w-8 text-off-white" />
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Localização</h3>
-                  <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                  <h3 className="text-xl font-bold text-dark-blue mb-3">Localização</h3>
+                  <div className="text-dark-blue/70 text-sm leading-relaxed space-y-1">
                     <p>Avenida Paulista, 720</p>
                     <p>Parque Sagrada Família</p>
                     <p>Rondonópolis - MT, 78735-223</p>
@@ -308,24 +309,24 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
               </div>
 
               {/* Contatos */}
-              <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
                 <div className="absolute -top-6 left-6">
-                  <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
-                    <Phone className="h-8 w-8 text-white" />
+                  <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
+                    <Phone className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Contatos</h3>
-                  <div className="text-gray-600 text-sm leading-relaxed space-y-2">
-                    <a href="tel:6634218824" className="flex items-center hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-dark-blue mb-3">Contatos</h3>
+                  <div className="text-dark-blue/70 text-sm leading-relaxed space-y-2">
+                    <a href="tel:6634218824" className="flex items-center hover:text-dark-blue transition-colors">
                       <Phone className="h-3 w-3 mr-2" />
                       (66) 3421-8824
                     </a>
-                    <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                    <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-dark-blue transition-colors">
                       <Phone className="h-3 w-3 mr-2" />
                       (66) 99678-1284
                     </a>
-                    <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-primary transition-colors">
+                    <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-dark-blue transition-colors">
                       <Mail className="h-3 w-3 mr-2" />
                       admleibniz@gmail.com
                     </a>
@@ -334,15 +335,15 @@ ${formData.horarioPreferencial ? `Horário Preferencial: ${formData.horarioPrefe
               </div>
 
               {/* Horário de Funcionamento */}
-              <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
+              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
                 <div className="absolute -top-6 left-6">
-                  <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
-                    <Clock className="h-8 w-8 text-white" />
+                  <div className="bg-energy-yellow rounded-2xl p-4 shadow-lg">
+                    <Clock className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Horário de Funcionamento</h3>
-                  <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+                  <h3 className="text-xl font-bold text-dark-blue mb-3">Horário de Funcionamento</h3>
+                  <div className="text-dark-blue/70 text-sm leading-relaxed space-y-1">
                     <p>Segunda à Sexta: 7h às 18h</p>
                     <p>Sábado: 7h às 12h</p>
                     <p>Domingo: Fechado</p>
