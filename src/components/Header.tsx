@@ -38,7 +38,7 @@ const Header = () => {
 
   if (isMobile) {
     return (
-      <header className="bg-white shadow-md sticky top-0 z-50">
+      <header className="bg-dark-blue text-off-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-3 sm:px-4">
           <div className="flex justify-between items-center h-14 sm:h-16">
             <Link to="/" className="flex items-center flex-shrink-0">
@@ -56,14 +56,15 @@ const Header = () => {
               <Button
                 onClick={openWhatsApp}
                 size="sm"
-                className="bg-green-600 hover:bg-green-700 active:bg-green-800 text-white text-xs px-2 py-2 sm:px-3 sm:py-2 flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-md min-h-[40px] touch-target"
+                variant="energy"
+                className="text-xs px-2 py-2 sm:px-3 sm:py-2 flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-md min-h-[40px] touch-target"
               >
                 WhatsApp
               </Button>
               
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" className="p-2 flex-shrink-0 min-h-[40px] min-w-[40px] touch-target">
+                  <Button variant="outline" size="sm" className="p-2 flex-shrink-0 min-h-[40px] min-w-[40px] touch-target text-off-white border-off-white/30">
                     <Menu className="h-4 w-4" />
                   </Button>
                 </SheetTrigger>
@@ -73,8 +74,8 @@ const Header = () => {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className={`text-lg font-medium transition-colors hover:text-red-600 py-3 px-2 min-h-[44px] flex items-center touch-target ${
-                          isActive(item.href) ? 'text-red-600' : 'text-gray-900'
+                        className={`text-lg font-medium transition-colors hover:text-accent py-3 px-2 min-h-[44px] flex items-center touch-target ${
+                          isActive(item.href) ? 'text-accent' : 'text-foreground'
                         }`}
                         onClick={() => setIsOpen(false)}
                       >
@@ -92,7 +93,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <header className="bg-dark-blue text-off-white shadow-lg sticky top-0 z-50 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="flex justify-between items-center h-16 md:h-18 lg:h-20 xl:h-22">
           <Link to="/" className="flex items-center">
@@ -110,12 +111,9 @@ const Header = () => {
                 to={item.href}
                 className={`text-sm lg:text-base xl:text-lg font-semibold transition-all duration-300 relative pb-1 px-2 py-2 min-h-[44px] flex items-center touch-target ${
                   isActive(item.href) 
-                    ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full' 
-                    : 'text-foreground hover:text-primary hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-accent hover:after:rounded-full hover:after:transition-all hover:after:duration-300'
+                    ? 'text-accent after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent after:rounded-full' 
+                    : 'text-off-white/90 hover:text-accent hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-accent hover:after:rounded-full hover:after:transition-all hover:after:duration-300'
                 }`}
-                style={{
-                  color: isActive(item.href) ? '#003366' : '#333333'
-                }}
               >
                 {item.name}
               </Link>
@@ -125,11 +123,8 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Button
               onClick={openWhatsApp}
+              variant="energy"
               className="font-montserrat font-semibold px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg transform min-h-[44px] touch-target"
-              style={{
-                backgroundColor: '#25D366',
-                color: 'white'
-              }}
             >
               <span className="hidden sm:inline">Fale Conosco</span>
               <span className="sm:hidden">Contato</span>
