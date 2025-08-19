@@ -5,7 +5,7 @@ const UniversityApproval = () => {
   
   return (
     <section className="py-16 md:py-20 relative bg-dark-blue text-off-white overflow-hidden" style={{
-      backgroundImage: `linear-gradient(rgba(var(--dark-blue) / 0.9), rgba(var(--dark-blue) / 0.9)), url('${backgroundImage}')`,
+      backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.9), hsl(var(--dark-blue) / 0.9)), url('${backgroundImage}')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
