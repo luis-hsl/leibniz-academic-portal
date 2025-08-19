@@ -27,7 +27,7 @@ const UniversityApproval = () => {
                 <span className="text-sm font-semibold text-energy-yellow">O DNA do Colégio Leibniz</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">Aprovação nas Melhores U</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">O DNA do Colégio Leibniz</h2>
               
               <p className="text-xl text-off-white/80 leading-relaxed">
                 O DNA do colégio Leibniz é focado na metodologia de alta performance, que prepara o aluno para os grandes desafios da vida e para as maiores e melhores universidades do País.
