@@ -26,10 +26,10 @@ const queryClient = new QueryClient({
 
 // Componente de loading otimizado
 const PageLoader = () => (
-  <div className="min-h-screen bg-white flex items-center justify-center">
+  <div className="min-h-screen bg-off-white flex items-center justify-center">
     <div className="animate-pulse">
-      <div className="bg-gray-200 h-8 w-48 mx-auto mb-4 rounded"></div>
-      <div className="bg-gray-200 h-4 w-32 mx-auto rounded"></div>
+      <div className="bg-dark-blue/20 h-8 w-48 mx-auto mb-4 rounded"></div>
+      <div className="bg-digital-blue/20 h-4 w-32 mx-auto rounded"></div>
     </div>
   </div>
 );

@@ -47,14 +47,14 @@ const OColegio = () => {
       <InstitutionalVideo size="large" />
 
       {/* Infrastructure Cards Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-off-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 font-montserrat">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-blue mb-6 font-montserrat">
                 Nossos Diferenciais
               </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-montserrat">
+              <p className="text-xl md:text-2xl text-dark-blue/70 max-w-4xl mx-auto leading-relaxed font-montserrat">
                 Espaços modernos e equipamentos de última geração para proporcionar a melhor experiência educacional.
               </p>
             </div>
@@ -62,41 +62,41 @@ const OColegio = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
               <Card className="hover-scale shadow-lg hover:shadow-2xl transition-all duration-500">
                 <CardContent className="p-6 md:p-8 text-center">
-                  <div className="bg-primary/10 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
-                    <BookOpen className="h-10 w-10 md:h-12 md:w-12 text-primary" />
+                  <div className="bg-digital-blue/10 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
+                    <BookOpen className="h-10 w-10 md:h-12 md:w-12 text-digital-blue" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Salas Modernas</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Salas climatizadas com tecnologia audiovisual avançada.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-dark-blue mb-4 font-montserrat">Salas Modernas</h3>
+                  <p className="text-dark-blue/70 text-lg leading-relaxed font-montserrat">Salas climatizadas com tecnologia audiovisual avançada.</p>
                 </CardContent>
               </Card>
 
               <Card className="hover-scale shadow-lg hover:shadow-2xl transition-all duration-500">
                 <CardContent className="p-6 md:p-8 text-center">
-                  <div className="bg-secondary/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
-                    <Users className="h-10 w-10 md:h-12 md:w-12 text-secondary-foreground" />
+                  <div className="bg-energy-yellow/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
+                    <Users className="h-10 w-10 md:h-12 md:w-12 text-dark-blue" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Laboratórios</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Laboratórios de ciências e informática totalmente equipados.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-dark-blue mb-4 font-montserrat">Laboratórios</h3>
+                  <p className="text-dark-blue/70 text-lg leading-relaxed font-montserrat">Laboratórios de ciências e informática totalmente equipados.</p>
                 </CardContent>
               </Card>
 
               <Card className="hover-scale shadow-lg hover:shadow-2xl transition-all duration-500">
                 <CardContent className="p-6 md:p-8 text-center">
-                  <div className="bg-accent/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
-                    <Trophy className="h-10 w-10 md:h-12 md:w-12 text-accent-foreground" />
+                  <div className="bg-digital-cyan/20 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
+                    <Trophy className="h-10 w-10 md:h-12 md:w-12 text-dark-blue" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Quadra Esportiva</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Espaço completo para atividades físicas e esportivas.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-dark-blue mb-4 font-montserrat">Quadra Esportiva</h3>
+                  <p className="text-dark-blue/70 text-lg leading-relaxed font-montserrat">Espaço completo para atividades físicas e esportivas.</p>
                 </CardContent>
               </Card>
 
               <Card className="hover-scale shadow-lg hover:shadow-2xl transition-all duration-500">
                 <CardContent className="p-6 md:p-8 text-center">
-                  <div className="bg-muted p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
-                    <Building className="h-10 w-10 md:h-12 md:w-12 text-muted-foreground" />
+                  <div className="bg-dark-blue/10 p-6 md:p-8 rounded-full w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
+                    <Building className="h-10 w-10 md:h-12 md:w-12 text-dark-blue" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 font-montserrat">Biblioteca</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed font-montserrat">Acervo rico e ambiente propício para estudos.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-dark-blue mb-4 font-montserrat">Biblioteca</h3>
+                  <p className="text-dark-blue/70 text-lg leading-relaxed font-montserrat">Acervo rico e ambiente propício para estudos.</p>
                 </CardContent>
               </Card>
             </div>

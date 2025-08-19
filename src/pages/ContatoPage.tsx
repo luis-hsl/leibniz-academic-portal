@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import Contact from "@/components/Contact";
@@ -18,14 +17,14 @@ const ContatoPage = () => {
       showCTA={false}
     >
       {/* Map Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-muted/50">
+      <section className="py-16 md:py-20 lg:py-24 bg-off-white/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-blue mb-6">
                 Nossa Localização
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-dark-blue/70 max-w-3xl mx-auto leading-relaxed">
                 Visite-nos e conheça nossa infraestrutura de perto. Estamos localizados em uma região privilegiada e de fácil acesso.
               </p>
             </div>
