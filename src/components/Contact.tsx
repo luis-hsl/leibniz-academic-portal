@@ -102,7 +102,7 @@ const Contact = () => {
                   variant="outline" 
                   size="sm"
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                  onClick={() => window.open("tel:6634218824", '_blank')}
+                  onClick={() => window.location.href = "tel:6634218824"}
                 >
                   Ligar Agora
                 </Button>
@@ -129,7 +129,10 @@ const Contact = () => {
                   variant="outline" 
                   size="sm"
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                  onClick={() => window.open("https://wa.me/5566996781284", '_blank')}
+                  onClick={() => {
+                    const message = encodeURIComponent("Olá! Gostaria de saber mais informações sobre o Colégio Leibniz.");
+                    window.open(`https://wa.me/5566996781284?text=${message}`, '_blank');
+                  }}
                 >
                   Enviar Mensagem
                 </Button>
@@ -156,7 +159,7 @@ const Contact = () => {
                   variant="outline" 
                   size="sm"
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                  onClick={() => window.open("mailto:admleibniz@gmail.com", '_blank')}
+                  onClick={() => window.location.href = "mailto:admleibniz@gmail.com?subject=Informações sobre o Colégio Leibniz"}
                 >
                   Enviar E-mail
                 </Button>
