@@ -34,7 +34,7 @@ const PageLayout = ({
   ctaBackgroundImage
 }: PageLayoutProps) => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-off-white">
       {seoDescription && (
         <SEOHead 
           title={`${title} - Colégio Leibniz`}

@@ -24,7 +24,7 @@ const PageCTA = ({
 
   const ctaStyle = backgroundImage 
     ? {
-        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('${backgroundImage}')`,
+        backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.85), hsl(var(--dark-blue) / 0.85)), url('${backgroundImage}')`,,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat'
@@ -33,7 +33,7 @@ const PageCTA = ({
 
   return (
     <section 
-      className={`py-16 md:py-20 lg:py-24 ${backgroundImage ? 'text-white' : 'bg-blue-900 text-white'}`}
+      className={`py-16 md:py-20 lg:py-24 ${backgroundImage ? 'text-off-white' : 'bg-dark-blue text-off-white'}`}}
       style={ctaStyle}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,8 @@ const PageCTA = ({
           <Button 
             size="lg"
             onClick={buttonAction || handleDefaultAction}
-            className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            variant="energy"
+            className="font-bold px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <Calendar className="mr-3 h-6 w-6" />
             {buttonText}

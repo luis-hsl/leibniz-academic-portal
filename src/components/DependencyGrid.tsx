@@ -55,19 +55,19 @@ const dependencies = [
 
 const DependencyGrid = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-off-white to-off-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 font-montserrat">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-blue mb-6 font-montserrat">
               Nossa Infraestrutura
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-dark-blue/70 mb-8 max-w-3xl mx-auto">
               O Colégio Leibniz possui uma infraestrutura moderna e completa, cuidadosamente 
               planejada para oferecer o melhor ambiente de aprendizado para nossos alunos.
             </p>
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full font-semibold">
+            <div className="inline-flex items-center gap-2 bg-dark-blue/10 text-dark-blue px-6 py-3 rounded-full font-semibold">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
               {dependencies.length} Ambientes Únicos para Explorar
             </div>

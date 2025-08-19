@@ -58,15 +58,15 @@ const Contact = () => {
           {/* Contact Cards Grid - Using same styling as main page */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {/* Localização */}
-            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
               <div className="absolute -top-6 left-6">
-                <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
+              <div className="bg-digital-blue rounded-2xl p-4 shadow-lg">
                   <MapPin className="h-8 w-8 text-white" />
                 </div>
               </div>
               <div className="pt-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Localização</h3>
-                <div className="text-gray-600 text-sm leading-relaxed space-y-1 mb-4">
+                <h3 className="text-xl font-bold text-dark-blue mb-3">Localização</h3>
+                <div className="text-dark-blue/70 text-sm leading-relaxed space-y-1 mb-4">
                   <p>Avenida Paulista, 720</p>
                   <p>Parque Sagrada Família</p>
                   <p>Rondonópolis - MT, 78735-223</p>
@@ -83,20 +83,20 @@ const Contact = () => {
             </div>
 
             {/* Telefone */}
-            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
               <div className="absolute -top-6 left-6">
-                <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
-                  <Phone className="h-8 w-8 text-white" />
+              <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
+                <Phone className="h-8 w-8 text-dark-blue" />
                 </div>
               </div>
               <div className="pt-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Telefone</h3>
-                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
+                <h3 className="text-xl font-bold text-dark-blue mb-3">Telefone</h3>
+                <div className="text-dark-blue/70 text-sm leading-relaxed space-y-2 mb-4">
                   <a href="tel:6634218824" className="flex items-center hover:text-primary transition-colors">
                     <Phone className="h-3 w-3 mr-2" />
                     (66) 3421-8824
                   </a>
-                  <p className="text-xs text-gray-500">Segunda a sexta, 7h às 18h</p>
+                  <p className="text-xs text-dark-blue/60">Segunda a sexta, 7h às 18h</p>
                 </div>
                 <Button 
                   variant="outline" 
@@ -110,16 +110,16 @@ const Contact = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
               <div className="absolute -top-6 left-6">
-                <div className="bg-green-500 rounded-2xl p-4 shadow-lg">
-                  <MessageCircle className="h-8 w-8 text-white" />
+              <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
+                <MessageCircle className="h-8 w-8 text-dark-blue" />
                 </div>
               </div>
               <div className="pt-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">WhatsApp</h3>
-                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
-                  <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-dark-blue mb-3">WhatsApp</h3>
+                <div className="text-dark-blue/70 text-sm leading-relaxed space-y-2 mb-4">
+                  <a href="https://wa.me/5566996781284" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-dark-blue transition-colors">
                     <MessageCircle className="h-3 w-3 mr-2" />
                     (66) 99678-1284
                   </a>
@@ -140,20 +140,20 @@ const Contact = () => {
             </div>
 
             {/* E-mail */}
-            <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+            <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
               <div className="absolute -top-6 left-6">
-                <div className="bg-blue-500 rounded-2xl p-4 shadow-lg">
-                  <Mail className="h-8 w-8 text-white" />
+              <div className="bg-digital-blue rounded-2xl p-4 shadow-lg">
+                <Mail className="h-8 w-8 text-off-white" />
                 </div>
               </div>
               <div className="pt-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">E-mail</h3>
-                <div className="text-gray-600 text-sm leading-relaxed space-y-2 mb-4">
+                <h3 className="text-xl font-bold text-dark-blue mb-3">E-mail</h3>
+                <div className="text-dark-blue/70 text-sm leading-relaxed space-y-2 mb-4">
                   <a href="mailto:admleibniz@gmail.com" className="flex items-center hover:text-primary transition-colors">
                     <Mail className="h-3 w-3 mr-2" />
                     admleibniz@gmail.com
                   </a>
-                  <p className="text-xs text-gray-500">Resposta em até 24 horas</p>
+                  <p className="text-xs text-dark-blue/60">Resposta em até 24 horas</p>
                 </div>
                 <Button 
                   variant="outline" 
@@ -168,15 +168,15 @@ const Contact = () => {
           </div>
 
           {/* Hours Section - Using same styling as main page */}
-          <div className="bg-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
+          <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
             <div className="absolute -top-6 left-6">
-              <div className="bg-yellow-500 rounded-2xl p-4 shadow-lg">
-                <Clock className="h-8 w-8 text-white" />
+            <div className="bg-energy-yellow rounded-2xl p-4 shadow-lg">
+              <Clock className="h-8 w-8 text-dark-blue" />
               </div>
             </div>
             <div className="pt-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Horário de Funcionamento</h3>
-              <div className="text-gray-600 text-sm leading-relaxed space-y-1">
+              <h3 className="text-xl font-bold text-dark-blue mb-3">Horário de Funcionamento</h3>
+              <div className="text-dark-blue/70 text-sm leading-relaxed space-y-1">
                 <p>Segunda à Sexta: 7h às 18h</p>
                 <p>Sábado: 7h às 12h</p>
                 <p>Domingo: Fechado</p>

@@ -11,18 +11,18 @@ interface PageContentProps {
 
 const PageContent = ({ title, content, image, imageAlt, reverseLayout = false }: PageContentProps) => {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white">
+    <section className="py-16 md:py-20 lg:py-24 bg-off-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className={`grid lg:grid-cols-5 gap-12 lg:gap-16 items-stretch ${reverseLayout ? 'lg:grid-flow-col-dense' : ''}`}>
             {/* Content Column - 60% width (3/5) */}
             <div className={`lg:col-span-3 space-y-6 ${reverseLayout ? 'lg:order-2' : ''}`}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight font-montserrat">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-blue leading-tight font-montserrat">
                 {title}
               </h2>
               
               <div className="prose prose-lg max-w-none">
-                <div className="text-lg text-muted-foreground leading-relaxed space-y-4 font-montserrat">
+                <div className="text-lg text-dark-blue/70 leading-relaxed space-y-4 font-montserrat">
                   {content}
                 </div>
               </div>

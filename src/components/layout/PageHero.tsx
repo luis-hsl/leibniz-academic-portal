@@ -11,7 +11,7 @@ const PageHero = ({ title, backgroundImage, breadcrumb = "INÍCIO" }: PageHeroPr
     <section 
       className="relative py-20 md:py-24 lg:py-32 text-white overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('${backgroundImage}')`,
+        backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.7), hsl(var(--dark-blue) / 0.7)), url('${backgroundImage}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
@@ -21,7 +21,7 @@ const PageHero = ({ title, backgroundImage, breadcrumb = "INÍCIO" }: PageHeroPr
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Breadcrumbs */}
-          <div className="flex items-center justify-center mb-6 text-blue-200">
+          <div className="flex items-center justify-center mb-6 text-energy-yellow">
             <span className="text-sm font-medium uppercase tracking-wider">{breadcrumb}</span>
             <ChevronRight className="h-4 w-4 mx-2" />
             <span className="text-sm font-medium uppercase tracking-wider text-white">{title}</span>
