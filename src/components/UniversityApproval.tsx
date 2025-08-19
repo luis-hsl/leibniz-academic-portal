@@ -1,16 +1,13 @@
 import { Target, TrendingUp, Users, GraduationCap } from "lucide-react";
-
 const UniversityApproval = () => {
   const backgroundImage = "/lovable-uploads/42661bf5-74d2-4f7b-992f-48770e566cb3.png";
-  
-  return (
-    <section className="py-16 md:py-20 relative bg-dark-blue text-off-white overflow-hidden" style={{
-      backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.9), hsl(var(--dark-blue) / 0.9)), url('${backgroundImage}')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'scroll'
-    }}>
+  return <section className="py-16 md:py-20 relative bg-dark-blue text-off-white overflow-hidden" style={{
+    backgroundImage: `linear-gradient(hsl(var(--dark-blue) / 0.9), hsl(var(--dark-blue) / 0.9)), url('${backgroundImage}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'scroll'
+  }}>
       {/* Elementos gráficos de fundo */}
       <div className="absolute inset-0 overflow-hidden">
         <svg className="absolute top-20 left-10 opacity-10" width="100" height="100" viewBox="0 0 100 100">
@@ -30,9 +27,7 @@ const UniversityApproval = () => {
                 <span className="text-sm font-semibold text-energy-yellow">Resultados Comprovados</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">
-                Aprovação nas Melhores Universidades
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-off-white leading-tight">Aprovação nas Melhores U</h2>
               
               <p className="text-xl text-off-white/80 leading-relaxed">
                 Nossa metodologia de alta performance prepara os alunos para conquistar vagas nas instituições mais concorridas do país e do mundo.
@@ -104,7 +99,6 @@ const UniversityApproval = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default UniversityApproval;
