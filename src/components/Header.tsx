@@ -59,7 +59,7 @@ const Header = () => {
                 variant="energy"
                 className="text-xs px-2 py-2 sm:px-3 sm:py-2 flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-md min-h-[40px] touch-target"
               >
-                WhatsApp
+                Fale Conosco
               </Button>
               
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
