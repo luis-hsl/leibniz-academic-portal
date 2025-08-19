@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { QrCode, Trophy } from "lucide-react";
+import { QrCode, Trophy, ExternalLink } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -61,13 +61,26 @@ const QRBadge = () => {
                 </span>
               </div>
               
-              <Button 
-                onClick={() => setIsOpen(false)}
-                variant="outline"
-                className="w-full mt-2 py-3 text-base font-medium"
-              >
-                Fechar
-              </Button>
+              
+              <div className="flex flex-col gap-3 w-full mt-2">
+                <Button 
+                  onClick={() => {
+                    window.open('https://primeirahora.com.br/colegio-leibniz-e-destaque-no-enem-e-lidera-ranking-entre-escolas-de-rondonopolis/#:~:text=No%20ranking%20estadual%2C%20o%20Leibniz,protagonismo%20na%20educa%C3%A7%C3%A3o%20mato%2Dgrossense.', '_blank');
+                  }}
+                  className="w-full py-3 text-base font-medium bg-energy-yellow hover:bg-energy-yellow/90 text-dark-blue"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Ler Matéria Online
+                </Button>
+                
+                <Button 
+                  onClick={() => setIsOpen(false)}
+                  variant="outline"
+                  className="w-full py-3 text-base font-medium"
+                >
+                  Fechar
+                </Button>
+              </div>
             </div>
           </DialogContent>
         </Dialog>
