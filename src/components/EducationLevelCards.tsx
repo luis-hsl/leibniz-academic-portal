@@ -162,7 +162,8 @@ Turno: ${data.turno}`;
                       backgroundImage: `url(${level.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
+                      backgroundRepeat: 'no-repeat',
+                      transform: 'rotateY(0deg)'
                     }}
                   >
                     {/* Overlay */}
@@ -200,13 +201,14 @@ Turno: ${data.turno}`;
 
                   {/* Verso do Card - Formulário */}
                   <div 
-                    className="backface-hidden rotate-y-180 absolute inset-0 rounded-2xl p-6 flex flex-col"
+                    className="backface-hidden absolute inset-0 rounded-2xl p-6 flex flex-col"
                     style={{
                       height: '400px',
                       backgroundImage: `url(${level.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
+                      backgroundRepeat: 'no-repeat',
+                      transform: 'rotateY(180deg)'
                     }}
                   >
                     {/* Overlay para o formulário */}
