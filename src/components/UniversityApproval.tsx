@@ -87,9 +87,9 @@ const UniversityApproval = () => {
                   </div>
                 </div>
                 <div className="pt-8">
-                  <h3 className="text-xl font-bold text-dark-blue mb-3">Professores Especialistas</h3>
+                  <h3 className="text-xl font-bold text-dark-blue mb-3">OLIMPO - Olimpíada de Matemática</h3>
                   <p className="text-dark-blue/70 text-sm leading-relaxed">
-                    Nossa equipe é formada por professores com vasta experiência em pré-vestibular, focados em estratégias de prova e aprovação.
+                    Desperta o interesse pela matemática através de desafios olímpicos, identifica talentos, promove a cultura matemática e permite aos estudantes aplicarem conhecimentos em um ambiente competitivo e estimulante.
                   </p>
                 </div>
               </div>
