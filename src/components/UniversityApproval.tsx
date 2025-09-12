@@ -65,7 +65,7 @@ const UniversityApproval = () => {
               </div>
 
               {/* Card 3: Suporte Individualizado */}
-              <div className="rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <div className="rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-visible">{/* Changed overflow-hidden to overflow-visible */}
                 {/* Background Image with Dark Overlay */}
                 <div 
                   className="absolute inset-0 rounded-3xl"
