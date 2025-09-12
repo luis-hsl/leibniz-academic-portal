@@ -78,8 +78,8 @@ const UniversityApproval = () => {
                 />
                 
                 <div className="absolute -top-6 left-6 z-10">
-                  <div className="bg-off-white rounded-2xl p-4 shadow-lg">
-                    <Users className="h-8 w-8 text-digital-cyan" />
+                  <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
+                    <Users className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
                 <div className="pt-8 relative z-10">
