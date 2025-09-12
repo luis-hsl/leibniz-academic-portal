@@ -112,16 +112,27 @@ const UniversityApproval = () => {
                 </div>
               </div>
 
-              {/* Card 4: Professores Especialistas */}
-              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                <div className="absolute -top-6 left-6">
-                  <div className="bg-dark-blue rounded-2xl p-4 shadow-lg">
-                    <GraduationCap className="h-8 w-8 text-off-white" />
+              {/* Card 4: OLIMPO - Olimpíada de Matemática */}
+              <div className="rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-visible">
+                {/* Background Image with Dark Overlay */}
+                <div 
+                  className="absolute inset-0 rounded-3xl"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.6)), url('/lovable-uploads/d27d3737-1ef0-435c-aa7f-2039ee4de097.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                
+                <div className="absolute -top-6 left-6 z-10">
+                  <div className="bg-energy-yellow rounded-2xl p-4 shadow-lg">
+                    <GraduationCap className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-dark-blue mb-3">OLIMPO - Olimpíada de Matemática</h3>
-                  <p className="text-dark-blue/70 text-sm leading-relaxed">
+                <div className="pt-8 relative z-10">
+                  <h3 className="text-xl font-bold text-off-white mb-3">OLIMPO - Olimpíada de Matemática</h3>
+                  <p className="text-off-white/80 text-sm leading-relaxed">
                     Desperta o interesse pela matemática através de desafios olímpicos, identifica talentos, promove a cultura matemática e permite aos estudantes aplicarem conhecimentos em um ambiente competitivo e estimulante.
                   </p>
                 </div>
