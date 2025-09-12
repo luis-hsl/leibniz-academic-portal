@@ -50,15 +50,26 @@ const UniversityApproval = () => {
               </div>
 
               {/* Card 2: Simulados e Avaliações */}
-              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                <div className="absolute -top-6 left-6">
+              <div className="rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-visible">
+                {/* Background Image with Dark Overlay */}
+                <div 
+                  className="absolute inset-0 rounded-3xl"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('/lovable-uploads/b85e8ae6-09ba-4bc8-8904-fef68cf6a5b3.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                
+                <div className="absolute -top-6 left-6 z-10">
                   <div className="bg-energy-yellow rounded-2xl p-4 shadow-lg">
                     <TrendingUp className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-dark-blue mb-3">Simulados e Avaliações</h3>
-                  <p className="text-dark-blue/70 text-sm leading-relaxed">
+                <div className="pt-8 relative z-10">
+                  <h3 className="text-xl font-bold text-off-white mb-3">Simulados e Avaliações</h3>
+                  <p className="text-off-white/80 text-sm leading-relaxed">
                     Avaliações de aprendizagens semanais que prepara o aluno para adquirir a alta performance nos resultados. Relatório de Desempenho do aluno, mostra os indicadores de desempenho dos resultados por disciplina, facilitando diagnosticar as dificuldades e aprimorar os níveis de conhecimentos. Simulados totalmente preparados para os grandes desafios do ENEM e vestibulares isolados.
                   </p>
                 </div>
