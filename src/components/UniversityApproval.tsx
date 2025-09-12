@@ -55,7 +55,7 @@ const UniversityApproval = () => {
                 <div 
                   className="absolute inset-0 rounded-3xl"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('/lovable-uploads/b85e8ae6-09ba-4bc8-8904-fef68cf6a5b3.png')`,
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.6)), url('/lovable-uploads/b85e8ae6-09ba-4bc8-8904-fef68cf6a5b3.png')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center',
                     backgroundRepeat: 'no-repeat'
@@ -81,7 +81,7 @@ const UniversityApproval = () => {
                 <div 
                   className="absolute inset-0 rounded-3xl"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.8)), url('/lovable-uploads/38f57037-513a-478e-8755-5b0ac65e059c.png')`,
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.6)), url('/lovable-uploads/38f57037-513a-478e-8755-5b0ac65e059c.png')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center',
                     backgroundRepeat: 'no-repeat'
