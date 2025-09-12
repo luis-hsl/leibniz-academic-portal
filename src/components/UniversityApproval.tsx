@@ -65,13 +65,24 @@ const UniversityApproval = () => {
               </div>
 
               {/* Card 3: Suporte Individualizado */}
-              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                <div className="absolute -top-6 left-6">
+              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-hidden">
+                {/* Background Image Overlay */}
+                <div 
+                  className="absolute inset-0 rounded-3xl opacity-15"
+                  style={{
+                    backgroundImage: `url('/lovable-uploads/38f57037-513a-478e-8755-5b0ac65e059c.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                
+                <div className="absolute -top-6 left-6 z-10">
                   <div className="bg-digital-cyan rounded-2xl p-4 shadow-lg">
                     <Users className="h-8 w-8 text-dark-blue" />
                   </div>
                 </div>
-                <div className="pt-8">
+                <div className="pt-8 relative z-10">
                   <h3 className="text-xl font-bold text-dark-blue mb-3">Suporte Individualizado</h3>
                   <p className="text-dark-blue/70 text-sm leading-relaxed">
                     Oferecemos orientação vocacional, planos de estudo personalizados e suporte socioemocional para lidar com a pressão dos exames.
