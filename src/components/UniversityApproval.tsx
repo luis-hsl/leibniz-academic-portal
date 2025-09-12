@@ -35,15 +35,26 @@ const UniversityApproval = () => {
             {/* Cards à direita */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Card 1: Metodologia Focada */}
-              <div className="bg-off-white rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300">
-                <div className="absolute -top-6 left-6">
+              <div className="rounded-3xl p-6 shadow-2xl relative transform hover:scale-105 transition-transform duration-300 overflow-visible">
+                {/* Background Image with Dark Overlay */}
+                <div 
+                  className="absolute inset-0 rounded-3xl"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.6)), url('/lovable-uploads/2d60d431-7354-45d3-9415-2bce0673031f.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                />
+                
+                <div className="absolute -top-6 left-6 z-10">
                   <div className="bg-digital-blue rounded-2xl p-4 shadow-lg">
                     <Target className="h-8 w-8 text-off-white" />
                   </div>
                 </div>
-                <div className="pt-8">
-                  <h3 className="text-xl font-bold text-dark-blue mb-3">Metodologia Focada</h3>
-                  <p className="text-dark-blue/70 text-sm leading-relaxed">
+                <div className="pt-8 relative z-10">
+                  <h3 className="text-xl font-bold text-off-white mb-3">Metodologia Focada</h3>
+                  <p className="text-off-white/80 text-sm leading-relaxed">
                     Currículo intensivo e totalmente alinhado com as matrizes do ENEM e dos principais vestibulares do país
                   </p>
                 </div>
